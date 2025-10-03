@@ -82,39 +82,41 @@
 
     <!-- My Experience Section -->
     <section class="experience-section">
-        <h2>MY EXPERIENCE</h2>
-        <div class="experience-timeline">
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3>Master's in Management</h3>
-                        <p class="company">IE Business School, Madrid</p>
+        <div class="experience-container">
+            <h2>MY EXPERIENCE</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Master's in Management</h3>
+                            <p class="company">IE Business School, Madrid</p>
+                        </div>
+                        <span class="timeline">2024 — Present</span>
                     </div>
-                    <span class="timeline">2024 — Present</span>
+                    <p class="experience-description">Pursuing advanced business education while building expertise in digital marketing, entrepreneurship, and data-driven decision making. Applying academic knowledge to real-world SEO and web development projects.</p>
                 </div>
-                <p class="experience-description">Pursuing advanced business education while building expertise in digital marketing, entrepreneurship, and data-driven decision making. Applying academic knowledge to real-world SEO and web development projects.</p>
-            </div>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3>Freelance Web Developer & SEO Specialist</h3>
-                        <p class="company">Self-Employed</p>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Freelance Web Developer & SEO Specialist</h3>
+                            <p class="company">Self-Employed</p>
+                        </div>
+                        <span class="timeline">2023 — Present</span>
                     </div>
-                    <span class="timeline">2023 — Present</span>
+                    <p class="experience-description">Building conversion-focused websites and implementing local SEO strategies for small businesses. Specializing in dentists, spas, car care, and HVAC companies. Using modern tools like Claude Code, Cursor, Astro, React, and Tailwind to deliver fast, optimised websites that rank on Google and drive real business results.</p>
                 </div>
-                <p class="experience-description">Building conversion-focused websites and implementing local SEO strategies for small businesses. Specializing in dentists, spas, car care, and HVAC companies. Using modern tools like Claude Code, Cursor, Astro, React, and Tailwind to deliver fast, optimised websites that rank on Google and drive real business results.</p>
-            </div>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3>Venture Capital Analyst</h3>
-                        <p class="company">Porto, Portugal</p>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Venture Capital Analyst</h3>
+                            <p class="company">Porto, Portugal</p>
+                        </div>
+                        <span class="timeline">2022 — 2024</span>
                     </div>
-                    <span class="timeline">2022 — 2024</span>
+                    <p class="experience-description">2 years of experience analysing tech startups, market trends, and investment opportunities. Developed strong analytical skills and understanding of what makes businesses succeed online—knowledge I now apply to helping small businesses grow through SEO and web development.</p>
                 </div>
-                <p class="experience-description">2 years of experience analysing tech startups, market trends, and investment opportunities. Developed strong analytical skills and understanding of what makes businesses succeed online—knowledge I now apply to helping small businesses grow through SEO and web development.</p>
             </div>
         </div>
     </section>
@@ -434,54 +436,60 @@ body {
     border-top: 1px solid #333;
 }
 
+.experience-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+}
+
 .experience-section h2 {
     font-family: var(--font-heading);
     font-size: 76px;
     letter-spacing: -0.76px;
-    margin-bottom: 48px;
+    line-height: 1;
 }
 
 .experience-timeline {
-    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
 
 .experience-item {
-    padding: 40px 0;
-    border-bottom: 1px solid #333;
-}
-
-.experience-item:last-child {
-    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .experience-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 16px;
     gap: 24px;
 }
 
 .experience-header h3 {
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     margin-bottom: 8px;
+    line-height: 1.3;
 }
 
 .company {
-    font-size: 16px;
-    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-accent);
 }
 
 .timeline {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--color-text);
     white-space: nowrap;
 }
 
 .experience-description {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.5;
     color: var(--color-text);
 }
 
@@ -631,6 +639,11 @@ body {
         padding: 60px 32px;
     }
 
+    .experience-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
     .contact-section {
         grid-template-columns: 1fr;
         padding: 60px 32px;
@@ -721,13 +734,17 @@ body {
         font-size: 48px;
     }
 
+    .experience-timeline {
+        gap: 60px;
+    }
+
     .experience-header {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .experience-header h3 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .contact-section {
