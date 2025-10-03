@@ -83,35 +83,52 @@
             <p>Real results from a recent local SEO project</p>
         </div>
 
-        <div class="case-study">
-            <div class="case-study-header">
-                <h3>Porto Car Care — Local SEO Lift</h3>
-                <p class="context">Auto detailing shop in Porto competing with outdated sites.</p>
+        <div class="project-showcase">
+            <div class="project-image-card">
+                <img src="https://via.placeholder.com/600x400/1a1a1a/c7c7c7?text=Porto+Car+Care" alt="Porto Car Care">
             </div>
 
-            <div class="case-study-body">
-                <div class="what-i-did">
-                    <h4>What I Did</h4>
-                    <p>Keyword research, programmatic service × city pages, schema setup, GMB optimisation, technical fixes and faster speed.</p>
+            <div class="project-content">
+                <div class="project-information">
+                    <div class="project-title-description">
+                        <h3>Porto Car Care — Local SEO Lift</h3>
+                        <p>Auto detailing shop in Porto competing with outdated sites. Keyword research, programmatic service × city pages, schema setup, GMB optimisation, technical fixes and faster speed.</p>
+                    </div>
+
+                    <div class="project-info-table">
+                        <h4>PROJECT INFO</h4>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span class="info-label">Results</span>
+                                <span class="info-value">3× more impressions</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Rankings</span>
+                                <span class="info-value">+12 positions</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Keywords</span>
+                                <span class="info-value">+25 new keywords</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="results">
-                    <h4>Results</h4>
-                    <ul>
-                        <li>3× more impressions</li>
-                        <li>+12 positions in rankings</li>
-                        <li>+25 new keywords</li>
-                    </ul>
+                <div class="project-links-wrapper">
+                    <a href="#contact" class="project-link-underline">
+                        <span>BOOK A SIMILAR SEO BOOST</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="/projects" class="project-link-underline">
+                        <span>SEE MORE PROJECTS</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z" fill="currentColor"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
-
-            <div class="case-study-cta">
-                <a href="#contact" class="btn-primary">Book a similar SEO boost for your business</a>
-            </div>
-        </div>
-
-        <div class="see-more-projects">
-            <a href="/projects" class="btn-secondary">See More Projects</a>
         </div>
     </section>
 
@@ -481,107 +498,146 @@ body {
     border-top: 1px solid #333;
 }
 
-.case-study {
-    background-color: var(--color-dark);
-    border: 1px solid #333;
-    border-radius: 16px;
-    padding: 48px;
-    margin-bottom: 48px;
-}
-
-.case-study-header {
-    margin-bottom: 32px;
-}
-
-.case-study-header h3 {
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    color: var(--color-text);
-}
-
-.context {
-    font-size: 18px;
-    color: var(--color-text);
-    opacity: 0.8;
-}
-
-.case-study-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.project-showcase {
+    display: flex;
     gap: 48px;
-    margin-bottom: 32px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid #333;
+    align-items: center;
 }
 
-.what-i-did h4,
-.results h4 {
+.project-image-card {
+    width: 600px;
+    height: 600px;
+    background-color: var(--color-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.project-information {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.project-title-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-title-description h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--color-text);
+}
+
+.project-title-description p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-text);
+}
+
+.project-info-table {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-info-table h4 {
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 16px;
-    color: var(--color-accent);
-}
-
-.what-i-did p {
-    font-size: 16px;
-    line-height: 1.7;
     color: var(--color-text);
 }
 
-.results ul {
-    list-style: none;
-    padding: 0;
-}
-
-.results li {
-    font-size: 18px;
-    line-height: 1.8;
-    color: var(--color-text);
-    padding-left: 24px;
-    position: relative;
-}
-
-.results li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--color-accent);
-    font-weight: bold;
-}
-
-.case-study-cta {
+.info-list {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid #484848;
 }
 
-.see-more-projects {
+.info-row {
     display: flex;
-    justify-content: center;
-}
-
-.btn-secondary {
-    display: inline-flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    border: 1px solid var(--color-text);
-    color: var(--color-text);
-    padding: 16px 32px;
-    border-radius: 27px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
+    padding: 16px 0;
+    border-top: 1px solid #484848;
 }
 
-.btn-secondary:hover {
+.info-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.project-links-wrapper {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.project-link-underline {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--color-accent);
+    transition: opacity 0.3s ease;
+}
+
+.project-link-underline:hover {
+    opacity: 0.8;
+}
+
+.project-link-underline > div:first-child,
+.project-link-underline > span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.project-link-underline span {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.project-link-underline svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.project-link-underline::after {
+    content: '';
+    height: 2px;
     background-color: var(--color-accent);
-    border-color: var(--color-accent);
-    color: var(--color-bg);
-    transform: translateY(-2px);
+    width: 100%;
 }
 
 /* Featured Projects - keeping for projects page */
@@ -1044,17 +1100,18 @@ body {
         padding: 40px 16px;
     }
 
-    .case-study {
-        padding: 32px 24px;
+    .project-showcase {
+        flex-direction: column;
+        gap: 40px;
     }
 
-    .case-study-header h3 {
+    .project-image-card {
+        width: 100%;
+        height: 400px;
+    }
+
+    .project-title-description h3 {
         font-size: 28px;
-    }
-
-    .case-study-body {
-        grid-template-columns: 1fr;
-        gap: 32px;
     }
 
     .featured-projects {
