@@ -1,0 +1,498 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Luís Madeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/#work">Work</a>
+            <a href="/about">About</a>
+            <a href="/#contact">Contact</a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Projects Hero -->
+    <section class="projects-hero">
+        <h1>CASE STUDIES</h1>
+        <p>Real results from local SEO and web development projects</p>
+    </section>
+
+    <!-- All Case Studies -->
+    <section class="all-case-studies">
+        <!-- Case Study 1 -->
+        <div class="case-study">
+            <div class="case-study-header">
+                <h3>Porto Car Care — Local SEO Lift</h3>
+                <p class="context">Auto detailing shop in Porto competing with outdated sites.</p>
+            </div>
+
+            <div class="case-study-body">
+                <div class="what-i-did">
+                    <h4>What I Did</h4>
+                    <p>Keyword research, programmatic service × city pages, schema setup, GMB optimisation, technical fixes and faster speed.</p>
+                </div>
+
+                <div class="results">
+                    <h4>Results</h4>
+                    <ul>
+                        <li>3× more impressions</li>
+                        <li>+12 positions in rankings</li>
+                        <li>+25 new keywords</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-study-cta">
+                <a href="/#contact" class="btn-primary">Book a similar SEO boost for your business</a>
+            </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="case-study">
+            <div class="case-study-header">
+                <h3>Local SEO for Dental Practice</h3>
+                <p class="context">Dental clinic looking to increase local visibility and appointment bookings.</p>
+            </div>
+
+            <div class="case-study-body">
+                <div class="what-i-did">
+                    <h4>What I Did</h4>
+                    <p>Technical SEO improvements, Google Business Profile optimisation, and local citation building.</p>
+                </div>
+
+                <div class="results">
+                    <h4>Results</h4>
+                    <ul>
+                        <li>250% increase in Google impressions</li>
+                        <li>40% more appointment bookings</li>
+                        <li>Achieved within 3 months</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-study-cta">
+                <a href="/#contact" class="btn-primary">Get similar results for your practice</a>
+            </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="case-study">
+            <div class="case-study-header">
+                <h3>High-Converting Landing Page for Spa</h3>
+                <p class="context">Luxury spa needing a modern, conversion-focused online presence.</p>
+            </div>
+
+            <div class="case-study-body">
+                <div class="what-i-did">
+                    <h4>What I Did</h4>
+                    <p>Built using Astro and Tailwind CSS with clear CTAs, mobile-first responsive design, and optimised page speed.</p>
+                </div>
+
+                <div class="results">
+                    <h4>Results</h4>
+                    <ul>
+                        <li>35% increase in booking conversions</li>
+                        <li>Google PageSpeed score: 98/100</li>
+                        <li>Delivered in 2 weeks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-study-cta">
+                <a href="/#contact" class="btn-primary">Build your converting landing page</a>
+            </div>
+        </div>
+
+        <!-- Case Study 4 -->
+        <div class="case-study">
+            <div class="case-study-header">
+                <h3>HVAC Company Website Redesign</h3>
+                <p class="context">Local HVAC company struggling with outdated website and poor search rankings.</p>
+            </div>
+
+            <div class="case-study-body">
+                <div class="what-i-did">
+                    <h4>What I Did</h4>
+                    <p>Redesigned using Figma templates and React. Focused on local search visibility, clear service pages, and mobile responsiveness.</p>
+                </div>
+
+                <div class="results">
+                    <h4>Results</h4>
+                    <ul>
+                        <li>First page ranking for 12+ local keywords</li>
+                        <li>Achieved within 2 months</li>
+                        <li>50% increase in contact form submissions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-study-cta">
+                <a href="/#contact" class="btn-primary">Redesign your website for better rankings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to grow your business?</h2>
+        <p>Let's discuss how local SEO and a conversion-focused website can help you get more clients.</p>
+        <a href="/#contact" class="btn-primary">Get in touch</a>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Projects Hero */
+.projects-hero {
+    padding: 120px 108px 80px;
+    text-align: center;
+}
+
+.projects-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 88px;
+    letter-spacing: -0.88px;
+    margin-bottom: 24px;
+}
+
+.projects-hero p {
+    font-size: 20px;
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+/* All Case Studies */
+.all-case-studies {
+    padding: 40px 108px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.case-study {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 48px;
+}
+
+.case-study-header {
+    margin-bottom: 32px;
+}
+
+.case-study-header h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.context {
+    font-size: 18px;
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+.case-study-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #333;
+}
+
+.what-i-did h4,
+.results h4 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    color: var(--color-accent);
+}
+
+.what-i-did p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results li {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--color-text);
+    padding-left: 24px;
+    position: relative;
+}
+
+.results li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.case-study-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 108px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .projects-hero {
+        padding: 80px 32px 60px;
+    }
+
+    .all-case-studies {
+        padding: 40px 32px 60px;
+    }
+
+    .case-study-body {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .cta-section {
+        padding: 60px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .projects-hero {
+        padding: 60px 16px 40px;
+    }
+
+    .projects-hero h1 {
+        font-size: 57px;
+    }
+
+    .all-case-studies {
+        padding: 32px 16px 40px;
+    }
+
+    .case-study {
+        padding: 32px 24px;
+    }
+
+    .case-study-header h3 {
+        font-size: 28px;
+    }
+
+    .cta-section {
+        padding: 40px 16px;
+    }
+
+    .cta-section h2 {
+        font-size: 48px;
+    }
+}
+</style>
