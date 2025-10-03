@@ -1,0 +1,474 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World News Blog - Luís Madeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/#work">Work</a>
+            <a href="/#about">About</a>
+            <a href="/#contact">Contact</a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <a href="/#work" class="back-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" fill="currentColor"/>
+            </svg>
+            Back to Projects
+        </a>
+        <h1>Blog site for World News</h1>
+        <p class="project-description">Mastered CSS Grid complexities in building an innovative blog site. Navigated intricate design decisions, iterating layouts for an optimal user experience. Leveraged the flexibility of Grid for a responsive, visually stunning platform.</p>
+    </section>
+
+    <!-- Project Image -->
+    <section class="project-hero">
+        <div class="project-hero-image">
+            <img src="https://via.placeholder.com/1200x800/1a1a1a/c7c7c7?text=World+News+Blog" alt="World News Blog Site">
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="details-grid">
+            <div class="details-column">
+                <h2>PROJECT INFO</h2>
+                <div class="info-list">
+                    <div class="info-item">
+                        <span class="info-label">Client</span>
+                        <span class="info-value">World News</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Year</span>
+                        <span class="info-value">2023</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Role</span>
+                        <span class="info-value">Front-end Developer</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Technologies</span>
+                        <span class="info-value">CSS Grid, HTML, JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-column">
+                <h2>OVERVIEW</h2>
+                <p>This project demonstrates advanced CSS Grid techniques to create a sophisticated blog layout. The design prioritizes readability and content hierarchy while maintaining a modern, clean aesthetic.</p>
+                <p>Special focus was placed on creating a flexible grid system that adapts seamlessly across different screen sizes. The layout includes complex article grids, featured content sections, and dynamic category filtering.</p>
+
+                <div class="project-links-detail">
+                    <a href="#" class="project-link">
+                        <span>VIEW WEBSITE</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="cta-section">
+        <h2>Interested in working together?</h2>
+        <a href="/#contact" class="btn-primary">GET IN TOUCH</a>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Project Header */
+.project-header {
+    padding: 80px 108px 60px;
+    max-width: 1200px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--color-accent);
+}
+
+.project-header h1 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    line-height: 1.1;
+    letter-spacing: -0.76px;
+    margin-bottom: 24px;
+    color: var(--color-text);
+}
+
+.project-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-text);
+    max-width: 900px;
+}
+
+/* Project Hero Image */
+.project-hero {
+    padding: 0 108px 80px;
+}
+
+.project-hero-image {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    background-color: var(--color-dark);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.project-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Project Details */
+.project-details {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 80px;
+    max-width: 1200px;
+}
+
+.details-column h2 {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    margin-bottom: 32px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #333;
+}
+
+.info-label {
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.details-column p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.project-links-detail {
+    display: flex;
+    gap: 24px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--color-accent);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 120px 108px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .project-header {
+        padding: 60px 32px 40px;
+    }
+
+    .project-hero {
+        padding: 0 32px 60px;
+    }
+
+    .project-details {
+        padding: 60px 32px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .cta-section {
+        padding: 80px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .project-header {
+        padding: 40px 16px 32px;
+    }
+
+    .project-header h1 {
+        font-size: 48px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+
+    .project-hero {
+        padding: 0 16px 40px;
+    }
+
+    .project-hero-image {
+        height: 400px;
+    }
+
+    .project-details {
+        padding: 40px 16px;
+    }
+
+    .details-grid {
+        gap: 40px;
+    }
+
+    .details-column h2 {
+        font-size: 24px;
+    }
+
+    .cta-section {
+        padding: 60px 16px;
+    }
+
+    .cta-section h2 {
+        font-size: 40px;
+    }
+}
+</style>
