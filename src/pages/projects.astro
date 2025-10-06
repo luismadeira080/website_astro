@@ -396,6 +396,29 @@ body {
     color: var(--color-text);
 }
 
+.project-title-description h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 32px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-title-description ul {
+    list-style-type: disc;
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+.project-title-description ul li {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
 .project-info-table {
     display: flex;
     flex-direction: column;
@@ -538,9 +561,18 @@ body {
         padding: 40px 32px 60px;
     }
 
-    .case-study-body {
-        grid-template-columns: 1fr;
-        gap: 32px;
+    .project-showcase {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .project-reverse {
+        flex-direction: column;
+    }
+
+    .project-image-card {
+        width: 100%;
+        max-width: 600px;
     }
 
     .cta-section {
@@ -602,14 +634,53 @@ body {
 
     .all-case-studies {
         padding: 32px 16px 40px;
+        gap: 80px;
     }
 
-    .case-study {
-        padding: 32px 24px;
+    .project-showcase {
+        gap: 32px;
     }
 
-    .case-study-header h3 {
+    .project-image-card {
+        height: 400px;
+    }
+
+    .project-title-description h3 {
         font-size: 28px;
+    }
+
+    .project-title-description h4 {
+        font-size: 18px;
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+
+    .project-title-description ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .project-title-description ul li {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+
+    .info-row {
+        padding: 12px 0;
+    }
+
+    .info-label, .info-value {
+        font-size: 14px;
+    }
+
+    .project-links-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-link-underline {
+        width: 100%;
     }
 
     .cta-section {
