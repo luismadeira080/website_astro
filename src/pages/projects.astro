@@ -57,24 +57,7 @@
                         <span class="metric-text">Calls</span>
                     </div>
                 </div>
-                <div class="collapsible-section">
-                    <button class="collapsible-header">
-                        <span>View Details</span>
-                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="collapsible-content">
-                        <h4>What I Did</h4>
-                        <ul>
-                            <li>Mapped keywords for services and "near me" searches</li>
-                            <li>Built programmatic service × city pages</li>
-                            <li>Optimised GMB and tracking setup</li>
-                            <li>Fixed on-page SEO and schema</li>
-                        </ul>
-                        <a href="/#contact" class="card-cta">Book a Similar Project</a>
-                    </div>
-                </div>
+                <a href="/#contact" class="card-cta">Book a Similar Project</a>
             </div>
         </div>
 
@@ -101,24 +84,7 @@
                         <span class="metric-text">Ready</span>
                     </div>
                 </div>
-                <div class="collapsible-section">
-                    <button class="collapsible-header">
-                        <span>View Details</span>
-                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="collapsible-content">
-                        <h4>What I Did</h4>
-                        <ul>
-                            <li>Designed and built custom landing page</li>
-                            <li>Implemented basic on-page SEO</li>
-                            <li>Set up mobile-responsive design</li>
-                            <li>Created clear booking CTAs</li>
-                        </ul>
-                        <a href="/#contact" class="card-cta">Build Your Landing Page</a>
-                    </div>
-                </div>
+                <a href="/#contact" class="card-cta">Build Your Landing Page</a>
             </div>
         </div>
 
@@ -145,24 +111,7 @@
                         <span class="metric-text">Load Time</span>
                     </div>
                 </div>
-                <div class="collapsible-section">
-                    <button class="collapsible-header">
-                        <span>View Details</span>
-                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="collapsible-content">
-                        <h4>What I Did</h4>
-                        <ul>
-                            <li>Built with Astro for optimal performance</li>
-                            <li>Implemented mobile-first responsive design</li>
-                            <li>Optimised Core Web Vitals</li>
-                            <li>Set up conversion tracking</li>
-                        </ul>
-                        <a href="/#contact" class="card-cta">Build Your Landing Page</a>
-                    </div>
-                </div>
+                <a href="/#contact" class="card-cta">Build Your Landing Page</a>
             </div>
         </div>
     </section>
@@ -193,23 +142,6 @@
                 });
             });
         }
-
-        // Collapsible sections
-        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
-        collapsibleHeaders.forEach(header => {
-            header.addEventListener('click', () => {
-                const section = header.parentElement;
-                const content = section.querySelector('.collapsible-content');
-                const isOpen = section.classList.contains('open');
-
-                // Toggle current section
-                if (isOpen) {
-                    section.classList.remove('open');
-                } else {
-                    section.classList.add('open');
-                }
-            });
-        });
     </script>
 </body>
 </html>
@@ -417,80 +349,6 @@ body {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-}
-
-/* Collapsible Sections in Cards */
-.project-card .collapsible-section {
-    border: none;
-    border-radius: 0;
-    margin-top: auto;
-}
-
-.project-card .collapsible-section:hover {
-    border-color: transparent;
-}
-
-.project-card .collapsible-header {
-    padding: 0;
-    font-size: 15px;
-    font-weight: 600;
-    background-color: transparent;
-}
-
-.project-card .collapsible-header:hover {
-    background-color: transparent;
-}
-
-.project-card .collapsible-header span {
-    font-size: 14px;
-}
-
-.project-card .collapsible-header .chevron {
-    width: 20px;
-    height: 20px;
-}
-
-.project-card .collapsible-content {
-    padding: 0;
-    margin-top: 16px;
-}
-
-.project-card .collapsible-section.open .collapsible-content {
-    padding: 16px 0 0 0;
-    border-top: 1px solid #333;
-}
-
-.project-card .collapsible-content h4 {
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--color-text);
-    margin-bottom: 12px;
-}
-
-.project-card .collapsible-content ul {
-    list-style-type: none;
-    margin: 0 0 20px 0;
-    padding: 0;
-}
-
-.project-card .collapsible-content ul li {
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--color-text);
-    opacity: 0.85;
-    padding: 6px 0;
-    padding-left: 20px;
-    position: relative;
-}
-
-.project-card .collapsible-content ul li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--color-accent);
-    font-size: 14px;
 }
 
 .card-cta {
