@@ -89,32 +89,58 @@
             </div>
 
             <div class="project-content">
-                <div class="project-information">
-                    <div class="project-title-description">
-                        <h3>Porto Car Care — Local SEO Lift</h3>
-                        <p>Auto detailing shop in Porto competing with outdated sites. Keyword research, programmatic service × city pages, schema setup, GMB optimisation, technical fixes and faster speed.</p>
-                    </div>
+                <div class="project-header">
+                    <h3>Porto Car Care — Local SEO Lift</h3>
+                    <p class="project-summary">Auto detailing shop in Porto competing with outdated sites. Delivered programmatic SEO strategy that tripled visibility.</p>
+                </div>
 
-                    <div class="project-info-table">
-                        <h4>PROJECT INFO</h4>
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span class="info-label">Visibility</span>
-                                <span class="info-value">+3× more visibility on Google</span>
-                            </div>
-                            <div class="info-row">
-                                <span class="info-label">Rankings</span>
-                                <span class="info-value">+12 positions higher in rankings</span>
-                            </div>
-                            <div class="info-row">
-                                <span class="info-label">Keywords</span>
-                                <span class="info-value">+25 new keywords ranking</span>
-                            </div>
-                            <div class="info-row">
-                                <span class="info-label">Calls</span>
-                                <span class="info-value">+40% more calls from Google searches</span>
-                            </div>
-                        </div>
+                <div class="key-metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">+3×</div>
+                        <div class="metric-label">Visibility</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">+12</div>
+                        <div class="metric-label">Rank Positions</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">+40%</div>
+                        <div class="metric-label">More Calls</div>
+                    </div>
+                </div>
+
+                <div class="collapsible-section">
+                    <button class="collapsible-header">
+                        <span>What I Did</span>
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Mapped main keywords for key services and "near me" searches</li>
+                            <li>Built specific service × city pages programmatically</li>
+                            <li>Optimised Google Business Profile and tracking setup</li>
+                            <li>Improved speed and mobile experience</li>
+                            <li>Fixed on-page SEO (titles, headings, internal links, schema)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="collapsible-section">
+                    <button class="collapsible-header">
+                        <span>Results</span>
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>+3× organic visibility (impressions) in 2 weeks</li>
+                            <li>+12 average ranking positions gained</li>
+                            <li>+25 new non-brand keywords ranking</li>
+                            <li>+40% more calls through Google Business Profile</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -267,6 +293,26 @@
                 contactForm.reset();
             });
         }
+
+        // Collapsible sections
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+        collapsibleHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                const content = section.querySelector('.collapsible-content');
+                const isOpen = section.classList.contains('open');
+
+                // Close all other sections
+                document.querySelectorAll('.collapsible-section').forEach(s => {
+                    s.classList.remove('open');
+                });
+
+                // Toggle current section
+                if (!isOpen) {
+                    section.classList.add('open');
+                }
+            });
+        });
     </script>
 </body>
 </html>
@@ -505,12 +551,12 @@ body {
 .project-showcase {
     display: flex;
     gap: 48px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .project-image-card {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     background-color: var(--color-dark);
     border-radius: 12px;
     overflow: hidden;
@@ -530,72 +576,144 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 48px;
-}
-
-.project-information {
-    display: flex;
-    flex-direction: column;
     gap: 32px;
 }
 
-.project-title-description {
+.project-header {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
-.project-title-description h3 {
+.project-header h3 {
     font-size: 32px;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.2;
     color: var(--color-text);
 }
 
-.project-title-description p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: var(--color-text);
-}
-
-.project-info-table {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.project-info-table h4 {
+.project-summary {
     font-size: 16px;
-    font-weight: 600;
+    line-height: 1.6;
+    color: var(--color-text);
+    opacity: 0.9;
+}
+
+/* Key Metrics */
+.key-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.metric-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.metric-card:hover {
+    border-color: var(--color-accent);
+}
+
+.metric-value {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: var(--color-text);
+    opacity: 0.8;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--color-text);
 }
 
-.info-list {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #484848;
+/* Collapsible Sections */
+.collapsible-section {
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
 }
 
-.info-row {
+.collapsible-section:hover {
+    border-color: #484848;
+}
+
+.collapsible-header {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
-    border-top: 1px solid #484848;
+    cursor: pointer;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
-.info-label {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--color-text);
+.collapsible-header:hover {
+    background-color: rgba(211, 233, 122, 0.05);
 }
 
-.info-value {
-    font-size: 16px;
-    font-weight: 500;
+.collapsible-header span {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.collapsible-header .chevron {
+    transition: transform 0.3s ease;
+    stroke: var(--color-text);
+}
+
+.collapsible-section.open .chevron {
+    transform: rotate(180deg);
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 24px;
+}
+
+.collapsible-section.open .collapsible-content {
+    max-height: 500px;
+    padding: 0 24px 24px 24px;
+}
+
+.collapsible-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.collapsible-content ul li {
+    font-size: 15px;
+    line-height: 1.7;
     color: var(--color-text);
+    opacity: 0.9;
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.collapsible-content ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
 }
 
 .project-links-wrapper {
@@ -1111,11 +1229,41 @@ body {
 
     .project-image-card {
         width: 100%;
-        height: 400px;
+        height: 350px;
     }
 
-    .project-title-description h3 {
+    .project-header h3 {
         font-size: 28px;
+    }
+
+    .project-summary {
+        font-size: 15px;
+    }
+
+    .key-metrics {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .metric-card {
+        padding: 20px;
+    }
+
+    .metric-value {
+        font-size: 40px;
+    }
+
+    .metric-label {
+        font-size: 13px;
+    }
+
+    .collapsible-header {
+        font-size: 16px;
+        padding: 16px 20px;
+    }
+
+    .collapsible-content ul li {
+        font-size: 14px;
     }
 
     .featured-projects {
