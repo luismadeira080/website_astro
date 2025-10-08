@@ -1,0 +1,1044 @@
+---
+import SEO from '../components/SEO.astro';
+import Schema from '../components/Schema.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Web Development & SEO Services | Luís Madeira"
+        description="Professional web development and local SEO services in Portugal. Fast landing pages and SEO-optimized websites that drive traffic, calls, and conversions for local businesses."
+        locale="en"
+    />
+
+    <!-- Structured Data -->
+    <Schema type="Service" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/#work">Work</a>
+            <a href="/about">About</a>
+            <a href="/#contact">Contact</a>
+            <LanguageSwitcher currentPath="/services" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <h1>WEB DEVELOPMENT & SEO SERVICES</h1>
+        <p>Fast, modern websites and landing pages built to rank on Google and convert visitors into customers</p>
+        <a href="/#contact" class="btn-primary">GET STARTED</a>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview-section">
+        <div class="overview-content">
+            <h2>HELPING LOCAL BUSINESSES SUCCEED ONLINE</h2>
+            <p>I specialize in two core services designed to help Portuguese businesses grow their online presence. Whether you need a simple landing page for a campaign or a full SEO-optimized website to dominate local search results, I deliver clean, fast, and conversion-focused solutions.</p>
+            <p>My approach combines modern web development with proven SEO strategies. Every project is built with performance, user experience, and search engine visibility in mind. No bloated code, no confusing dashboards—just results that matter: more traffic, more calls, more clients.</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid-section">
+        <!-- Service 1: Landing Pages -->
+        <div class="service-card">
+            <div class="service-tag">Fast Delivery</div>
+            <h3>Landing Pages that Convert</h3>
+            <p class="service-description">Professional, conversion-focused landing pages delivered quickly. Perfect for promotions, ad campaigns, or businesses that need a simple but effective online presence.</p>
+
+            <div class="service-details">
+                <h4>What's Included:</h4>
+                <ul class="service-features">
+                    <li>Modern, mobile-responsive design</li>
+                    <li>Fast loading speed (optimized for Core Web Vitals)</li>
+                    <li>Clear call-to-action buttons</li>
+                    <li>Contact form integration</li>
+                    <li>Basic on-page SEO</li>
+                    <li>Google Analytics setup</li>
+                </ul>
+
+                <div class="service-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">1-2 weeks</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Perfect for</span>
+                        <span class="meta-value">Campaigns, events, new businesses</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/#contact" class="service-cta">Get a Landing Page</a>
+        </div>
+
+        <!-- Service 2: SEO-Optimized Websites -->
+        <div class="service-card featured">
+            <div class="service-tag">Most Popular</div>
+            <h3>SEO-Optimized Websites</h3>
+            <p class="service-description">Complete websites designed and built to rank higher on Google. Includes custom design, SEO-focused copywriting, and technical optimization to help local businesses get more organic traffic and leads.</p>
+
+            <div class="service-details">
+                <h4>What's Included:</h4>
+                <ul class="service-features">
+                    <li>Custom design tailored to your brand</li>
+                    <li>SEO-optimized content and copywriting</li>
+                    <li>Technical SEO setup (schema markup, sitemaps, meta tags)</li>
+                    <li>Local SEO optimization (Google Business Profile integration)</li>
+                    <li>Mobile-responsive, fast-loading pages</li>
+                    <li>Contact forms and booking integrations</li>
+                    <li>Google Analytics and Search Console setup</li>
+                    <li>Training on how to update content</li>
+                </ul>
+
+                <div class="service-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">4-8 weeks</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Perfect for</span>
+                        <span class="meta-value">Local services, clinics, restaurants, shops</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/#contact" class="service-cta">Start Your Website</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="why-section">
+        <h2>WHY WORK WITH ME</h2>
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <h4>Local Market Expertise</h4>
+                <p>I understand the Portuguese market and local search behavior. My SEO strategies are tailored for businesses competing in Portuguese cities like Porto, Lisboa, Braga, and Coimbra.</p>
+            </div>
+            <div class="reason-card">
+                <h4>Proven Results</h4>
+                <p>Real metrics from real projects: 3× visibility increases, top-10 Google rankings, 40% more calls. I focus on outcomes that drive business growth, not vanity metrics.</p>
+            </div>
+            <div class="reason-card">
+                <h4>Modern Technology</h4>
+                <p>Built with Astro, a cutting-edge static site generator that delivers blazing-fast websites. Fast sites rank better and convert more visitors into customers.</p>
+            </div>
+            <div class="reason-card">
+                <h4>Transparent Process</h4>
+                <p>Clear communication throughout the project. You'll know exactly what's being done, why it matters, and what results to expect. No jargon, no surprises.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <h2>HOW IT WORKS</h2>
+        <div class="process-steps">
+            <div class="step">
+                <span class="step-number">01</span>
+                <h4>Discovery</h4>
+                <p>We discuss your business goals, target audience, and competitors. I analyze your market and identify the keywords and strategies that will drive results.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">02</span>
+                <h4>Strategy</h4>
+                <p>I create a detailed plan for your website or landing page, including design direction, content structure, SEO strategy, and success metrics.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">03</span>
+                <h4>Development</h4>
+                <p>I design and build your site using modern web technologies. You'll see progress updates and have opportunities to provide feedback throughout development.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">04</span>
+                <h4>Launch</h4>
+                <p>Your site goes live with all technical SEO elements in place. I handle domain setup, analytics integration, and ensure everything works perfectly across all devices.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">05</span>
+                <h4>Optimization</h4>
+                <p>For SEO websites, I monitor performance and make ongoing improvements. You'll receive monthly reports showing rankings, traffic, and conversion metrics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <h2>TRANSPARENT PRICING</h2>
+        <div class="pricing-content">
+            <p>Every project is unique, but here's what you can expect:</p>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h4>Landing Page</h4>
+                    <p class="price">Starting at €500</p>
+                    <p class="price-description">Single-page site with contact form, mobile optimization, and basic SEO setup. Perfect for testing a new service or running ad campaigns.</p>
+                </div>
+                <div class="pricing-card featured-pricing">
+                    <h4>SEO-Optimized Website</h4>
+                    <p class="price">Starting at €2,000</p>
+                    <p class="price-description">Multi-page website with custom design, SEO content, technical optimization, and ongoing support. Built to rank and drive consistent leads.</p>
+                </div>
+            </div>
+            <p class="pricing-note">All projects include a discovery call to provide an accurate quote based on your specific needs. No hidden fees.</p>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies-section">
+        <h2>REAL RESULTS</h2>
+        <p class="section-subtitle">See how I've helped businesses like yours</p>
+        <div class="case-studies-grid">
+            <div class="case-study-card">
+                <img src="/final fnal final.svg" alt="Porto Car Care - Local SEO success story">
+                <div class="case-study-content">
+                    <h4>Porto Car Care</h4>
+                    <p>Tripled organic visibility for an auto detailing shop through programmatic SEO.</p>
+                    <div class="results">
+                        <span>+3× Visibility</span>
+                        <span>+12 Positions</span>
+                        <span>+40% Calls</span>
+                    </div>
+                    <a href="/projects" class="project-link">View Case Study →</a>
+                </div>
+            </div>
+            <div class="case-study-card">
+                <img src="/brunno-rodrigues.svg" alt="Brunno Rodrigues - Landing page example">
+                <div class="case-study-content">
+                    <h4>Brunno Rodrigues</h4>
+                    <p>Professional landing page for a massage therapist with clear booking CTAs.</p>
+                    <div class="results">
+                        <span>2 Weeks</span>
+                        <span>Mobile Optimized</span>
+                        <span>SEO Ready</span>
+                    </div>
+                    <a href="/projects" class="project-link">View Case Study →</a>
+                </div>
+            </div>
+            <div class="case-study-card">
+                <img src="/porto-massage-studio.svg" alt="Porto Massage Studio - Website example">
+                <div class="case-study-content">
+                    <h4>Porto Massage Studio</h4>
+                    <p>Massage studio landing page with online booking and service presentation.</p>
+                    <div class="results">
+                        <span>2 Weeks</span>
+                        <span>Mobile Optimized</span>
+                        <span>SEO Ready</span>
+                    </div>
+                    <a href="/projects" class="project-link">View Case Study →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>How long does it take to see SEO results?</h4>
+                <p>SEO is a long-term strategy. You'll typically see initial improvements in 2-3 months, with significant results in 4-6 months. Landing pages can start driving traffic immediately with paid ads.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you provide ongoing support?</h4>
+                <p>Yes. For SEO-optimized websites, I offer ongoing optimization packages. For landing pages, I provide basic support and can assist with updates as needed.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I update the website myself?</h4>
+                <p>Absolutely. I build sites that are easy to update. I'll provide training and documentation so you can make content changes without technical knowledge.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What if I already have a website?</h4>
+                <p>I can audit your existing site and recommend improvements, or build a new one from scratch if that's more cost-effective. We'll discuss the best approach during our discovery call.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you work with businesses outside Portugal?</h4>
+                <p>While I specialize in the Portuguese market, I can work with international clients. My SEO expertise is strongest for European Portuguese keywords and local search.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What industries do you work with?</h4>
+                <p>I work with a wide range of local businesses: medical clinics, restaurants, spas, auto services, professional services, and more. If you serve customers locally, I can help.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>READY TO GROW YOUR BUSINESS?</h2>
+        <p>Let's discuss how a professional website and local SEO can help you get more customers.</p>
+        <a href="/#contact" class="btn-primary">START YOUR PROJECT</a>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.services-hero {
+    padding: 120px 108px 80px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 88px;
+    letter-spacing: -0.88px;
+    margin-bottom: 24px;
+}
+
+.services-hero p {
+    font-size: 20px;
+    color: var(--color-text);
+    opacity: 0.8;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+/* Overview Section */
+.overview-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.overview-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.overview-content h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.overview-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+/* Services Grid */
+.services-grid-section {
+    padding: 80px 108px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    border-top: 1px solid #333;
+}
+
+.service-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.service-card.featured {
+    border-color: var(--color-accent);
+}
+
+.service-tag {
+    display: inline-block;
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    margin-bottom: 24px;
+}
+
+.service-card h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.service-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    opacity: 0.85;
+    margin-bottom: 32px;
+}
+
+.service-details h4 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.service-features li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.service-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.service-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin-bottom: 32px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meta-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.meta-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.service-cta {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 12px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-top: auto;
+}
+
+.service-cta:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+/* Why Choose Me Section */
+.why-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.why-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.reason-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.reason-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--color-accent);
+}
+
+.reason-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* Process Section */
+.process-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.process-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.step-number {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+.step h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.step p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.pricing-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.pricing-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-content > p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.pricing-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 48px;
+    text-align: center;
+}
+
+.pricing-card.featured-pricing {
+    border-color: var(--color-accent);
+}
+
+.pricing-card h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.price {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.price-description {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.pricing-note {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Case Studies Section */
+.case-studies-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.case-studies-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 48px;
+    opacity: 0.8;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.case-study-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.case-study-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.case-study-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background-color: #0d0d0d;
+}
+
+.case-study-content {
+    padding: 32px;
+}
+
+.case-study-content h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.case-study-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.results span {
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.project-link:hover {
+    opacity: 0.7;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.faq-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--color-accent);
+}
+
+.faq-item p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 108px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .services-hero {
+        padding: 80px 32px 60px;
+    }
+
+    .services-hero h1 {
+        font-size: 64px;
+    }
+
+    .overview-section,
+    .services-grid-section,
+    .why-section,
+    .process-section,
+    .pricing-section,
+    .case-studies-section,
+    .faq-section,
+    .cta-section {
+        padding: 60px 32px;
+    }
+
+    .overview-content h2,
+    .why-section h2,
+    .process-section h2,
+    .pricing-section h2,
+    .case-studies-section h2,
+    .faq-section h2,
+    .cta-section h2 {
+        font-size: 48px;
+    }
+
+    .services-grid-section,
+    .reasons-grid,
+    .pricing-cards,
+    .case-studies-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .services-hero {
+        padding: 60px 16px 40px;
+    }
+
+    .services-hero h1 {
+        font-size: 48px;
+    }
+
+    .services-hero p {
+        font-size: 16px;
+    }
+
+    .overview-section,
+    .services-grid-section,
+    .why-section,
+    .process-section,
+    .pricing-section,
+    .case-studies-section,
+    .faq-section,
+    .cta-section {
+        padding: 40px 16px;
+    }
+
+    .overview-content h2,
+    .why-section h2,
+    .process-section h2,
+    .pricing-section h2,
+    .case-studies-section h2,
+    .faq-section h2,
+    .cta-section h2 {
+        font-size: 40px;
+    }
+
+    .service-card,
+    .reason-card,
+    .pricing-card {
+        padding: 32px;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .step-number {
+        font-size: 40px;
+    }
+}
+</style>

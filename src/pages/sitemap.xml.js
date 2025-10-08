@@ -59,6 +59,16 @@ export async function GET() {
         { lang: 'pt', url: '/pt/projetos' }
       ]
     },
+    {
+      url: '/services',
+      lastmod,
+      changefreq: 'monthly',
+      priority: '0.9',
+      alternates: [
+        { lang: 'en', url: '/services' },
+        { lang: 'pt', url: '/pt/servicos' }
+      ]
+    },
 
     // Portuguese Pages
     {
@@ -89,6 +99,16 @@ export async function GET() {
       alternates: [
         { lang: 'en', url: '/projects' },
         { lang: 'pt', url: '/pt/projetos' }
+      ]
+    },
+    {
+      url: '/pt/servicos',
+      lastmod,
+      changefreq: 'monthly',
+      priority: '0.9',
+      alternates: [
+        { lang: 'en', url: '/services' },
+        { lang: 'pt', url: '/pt/servicos' }
       ]
     },
 
