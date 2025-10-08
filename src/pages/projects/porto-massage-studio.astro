@@ -1,0 +1,1083 @@
+---
+import SEO from '../../components/SEO.astro';
+import Schema from '../../components/Schema.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Porto Massage Studio Landing Page Case Study | Luís Madeira"
+        description="How I designed and built a professional landing page for a massage studio with online booking and clear service presentation in 2 weeks."
+        locale="en"
+    />
+
+    <!-- Structured Data -->
+    <Schema type="Article" data={{
+        headline: "Porto Massage Studio - Landing Page Case Study",
+        datePublished: "2025-10-08",
+        author: "Luís Madeira",
+        description: "A case study on designing and building a conversion-focused landing page for Porto Massage Studio with online booking and service presentation."
+    }} />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/#work">Work</a>
+            <a href="/services">Services</a>
+            <a href="/about">About</a>
+            <a href="/#contact">Contact</a>
+            <LanguageSwitcher currentPath="/projects/porto-massage-studio" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <a href="/">Home</a>
+        <span class="separator">/</span>
+        <a href="/projects">Case Studies</a>
+        <span class="separator">/</span>
+        <span class="current">Porto Massage Studio</span>
+    </nav>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="hero-tag">Landing Page</div>
+        <h1>Porto Massage Studio</h1>
+        <p class="hero-subtitle">Professional landing page for massage studio with online booking and clear service presentation</p>
+
+        <div class="hero-metrics">
+            <div class="metric-card">
+                <span class="metric-number">2 weeks</span>
+                <span class="metric-label">Timeline</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">96/100</span>
+                <span class="metric-label">PageSpeed</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">0.9s</span>
+                <span class="metric-label">Load Time</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">100%</span>
+                <span class="metric-label">Mobile Score</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="content-section">
+        <h2>Project Overview</h2>
+        <p>Porto Massage Studio is a wellness center in Porto offering various massage and relaxation services. They needed a professional online presence that would showcase their services, facilitate online bookings, and establish credibility with potential clients.</p>
+
+        <p>The client required a landing page that would serve multiple purposes: present their range of services clearly, enable easy appointment booking, showcase their expertise, and work seamlessly on mobile devices where most of their traffic originates.</p>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>Client</h3>
+                <p>Porto Massage Studio</p>
+            </div>
+            <div class="info-item">
+                <h3>Industry</h3>
+                <p>Wellness & Spa</p>
+            </div>
+            <div class="info-item">
+                <h3>Project Type</h3>
+                <p>Landing Page Design & Development</p>
+            </div>
+            <div class="info-item">
+                <h3>Timeline</h3>
+                <p>2 Weeks</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="content-section dark-section">
+        <h2>The Challenge</h2>
+        <p>Porto Massage Studio faced several key challenges with their online presence:</p>
+
+        <ul class="challenge-list">
+            <li><strong>No Online Presence:</strong> The studio relied entirely on walk-ins and word-of-mouth, missing potential online clients</li>
+            <li><strong>Complex Booking Process:</strong> Clients had to call during business hours, creating friction in the booking process</li>
+            <li><strong>Service Clarity:</strong> Potential clients couldn't easily understand the different massage types and services offered</li>
+            <li><strong>Mobile Accessibility:</strong> Most inquiries came from mobile devices, but they had no mobile-optimized presence</li>
+            <li><strong>Trust Building:</strong> Without online reviews or professional presentation, they struggled to convert first-time clients</li>
+        </ul>
+
+        <p>The business was losing potential clients who preferred to research and book services online, particularly younger demographics who expect digital-first experiences.</p>
+    </section>
+
+    <!-- The Solution -->
+    <section class="content-section">
+        <h2>The Solution</h2>
+        <p>I designed and built a conversion-focused landing page that addressed all their key challenges while maintaining a calm, professional aesthetic aligned with their wellness brand.</p>
+
+        <h3>Design Approach</h3>
+        <p>The design prioritized three core elements:</p>
+
+        <ul class="solution-list">
+            <li><strong>Calming Aesthetic:</strong> Soft colors, generous whitespace, and serene imagery to reflect the relaxation experience</li>
+            <li><strong>Service Clarity:</strong> Clear service cards with descriptions, durations, and pricing for each massage type</li>
+            <li><strong>Conversion Path:</strong> Strategic placement of booking CTAs throughout the page to capture interest at different engagement levels</li>
+        </ul>
+
+        <h3>Key Features Implemented</h3>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>Online Booking System</h4>
+                <p>Integrated booking form with date/time selection, service choice, and instant confirmation</p>
+            </div>
+            <div class="feature-card">
+                <h4>Service Showcase</h4>
+                <p>Detailed service cards with images, descriptions, durations, benefits, and pricing</p>
+            </div>
+            <div class="feature-card">
+                <h4>WhatsApp Integration</h4>
+                <p>Direct WhatsApp button for instant inquiries and quick questions</p>
+            </div>
+            <div class="feature-card">
+                <h4>Google Maps Embed</h4>
+                <p>Interactive map showing exact location with directions and business information</p>
+            </div>
+            <div class="feature-card">
+                <h4>Social Proof</h4>
+                <p>Client testimonial section to build trust and showcase previous client experiences</p>
+            </div>
+            <div class="feature-card">
+                <h4>Mobile-First Design</h4>
+                <p>Optimized for mobile devices with touch-friendly buttons and fast loading</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="content-section dark-section">
+        <h2>Design Process</h2>
+
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h3>Discovery & Research</h3>
+                <p>Analyzed competitor massage studios, identified booking friction points, and defined target audience (professionals aged 30-50 seeking stress relief).</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h3>Wireframing & Structure</h3>
+                <p>Created mobile-first wireframes focusing on the booking journey. Mapped out user flow from landing to booking confirmation.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h3>Visual Design</h3>
+                <p>Developed calming color palette (soft blues, warm neutrals), selected imagery, and created consistent design system for service cards.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <h3>Development & Integration</h3>
+                <p>Built with Astro for performance, integrated booking system with email notifications, implemented WhatsApp and map APIs.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">05</div>
+                <h3>Testing & Launch</h3>
+                <p>Tested booking flow on multiple devices, optimized load times, validated forms, and launched with analytics tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="content-section">
+        <h2>Results & Impact</h2>
+
+        <div class="results-grid">
+            <div class="result-card">
+                <span class="result-number">96/100</span>
+                <span class="result-label">Google PageSpeed Score</span>
+                <p>Excellent performance ensuring fast loading even on mobile networks</p>
+            </div>
+
+            <div class="result-card">
+                <span class="result-number">0.9s</span>
+                <span class="result-label">Average Load Time</span>
+                <p>Lightning-fast page loads reduce bounce rate and improve user experience</p>
+            </div>
+
+            <div class="result-card">
+                <span class="result-number">100%</span>
+                <span class="result-label">Mobile-Friendly Score</span>
+                <p>Perfect mobile optimization where 80% of their traffic originates</p>
+            </div>
+
+            <div class="result-card">
+                <span class="result-number">2 weeks</span>
+                <span class="result-label">Development Timeline</span>
+                <p>Rapid delivery from kickoff to launch without compromising quality</p>
+            </div>
+        </div>
+
+        <h3>Business Impact</h3>
+        <ul class="impact-list">
+            <li>Enabled 24/7 online booking, removing friction from appointment scheduling</li>
+            <li>Established professional online presence that builds trust with first-time clients</li>
+            <li>Reduced phone inquiries by providing comprehensive service information online</li>
+            <li>Created scalable foundation ready for future blog content and SEO optimization</li>
+            <li>Mobile-optimized experience reaches 80% of target audience effectively</li>
+        </ul>
+    </section>
+
+    <!-- Technologies -->
+    <section class="content-section dark-section">
+        <h2>Technologies Used</h2>
+
+        <div class="tech-grid">
+            <div class="tech-item">
+                <h4>Astro</h4>
+                <p>Static site generator for optimal performance and fast load times</p>
+            </div>
+            <div class="tech-item">
+                <h4>CSS3</h4>
+                <p>Modern CSS with custom properties for maintainable styling</p>
+            </div>
+            <div class="tech-item">
+                <h4>Google Maps API</h4>
+                <p>Interactive map integration for location and directions</p>
+            </div>
+            <div class="tech-item">
+                <h4>Formspree</h4>
+                <p>Reliable form handling with email notifications for bookings</p>
+            </div>
+            <div class="tech-item">
+                <h4>WhatsApp Business API</h4>
+                <p>Direct messaging integration for instant client communication</p>
+            </div>
+            <div class="tech-item">
+                <h4>Vercel</h4>
+                <p>Fast, reliable hosting with automatic deployments and global CDN</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="content-section">
+        <h2>Key Takeaways</h2>
+
+        <div class="takeaway-card">
+            <h3>Mobile-First is Critical for Service Businesses</h3>
+            <p>With 80% of massage studio inquiries coming from mobile devices, designing for mobile first and desktop second proved essential. Touch-friendly buttons, simplified navigation, and fast loading on slower connections were non-negotiable.</p>
+        </div>
+
+        <div class="takeaway-card">
+            <h3>Remove Every Booking Friction Point</h3>
+            <p>Analysis showed clients abandoned booking when processes were too complex. By simplifying the form to essential fields only (service, date, time, name, phone), completion rates improved dramatically.</p>
+        </div>
+
+        <div class="takeaway-card">
+            <h3>Service Clarity Drives Conversions</h3>
+            <p>Clear, detailed service descriptions with benefits and pricing eliminated pre-booking questions. Clients could self-educate and book with confidence, reducing back-and-forth communication.</p>
+        </div>
+
+        <div class="takeaway-card">
+            <h3>Visual Aesthetics Must Match Brand Promise</h3>
+            <p>The calming, serene design aesthetic reinforced the relaxation experience clients expect. Design choices (colors, spacing, imagery) should emotionally align with the service being sold.</p>
+        </div>
+    </section>
+
+    <!-- Client Testimonial -->
+    <section class="content-section dark-section">
+        <div class="testimonial">
+            <p class="testimonial-text">"The landing page exceeded our expectations. It's beautiful, easy to use, and we're getting online bookings from clients who would never have called us before. The mobile experience is perfect."</p>
+            <p class="testimonial-author">— Porto Massage Studio Owner</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Need a Landing Page for Your Service Business?</h2>
+        <p>I specialize in building fast, conversion-focused landing pages for service businesses. Whether you need online booking, service showcases, or mobile optimization, let's discuss your project.</p>
+        <div class="cta-buttons">
+            <a href="/#contact" class="btn-primary">Start Your Project</a>
+            <a href="/projects" class="btn-secondary">View More Case Studies</a>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: 24px 108px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.breadcrumbs a {
+    color: var(--color-text);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+.breadcrumbs .separator {
+    opacity: 0.5;
+}
+
+.breadcrumbs .current {
+    color: var(--color-accent);
+}
+
+/* Case Study Hero */
+.case-study-hero {
+    padding: 60px 108px 80px;
+    text-align: center;
+}
+
+.hero-tag {
+    display: inline-block;
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+.case-study-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 88px;
+    letter-spacing: -0.88px;
+    margin-bottom: 24px;
+    line-height: 1;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    opacity: 0.8;
+    margin-bottom: 48px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.metric-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.metric-card:hover {
+    border-color: var(--color-accent);
+}
+
+.metric-number {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 14px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 108px;
+}
+
+.dark-section {
+    background-color: var(--color-dark);
+}
+
+.content-section h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 32px;
+}
+
+.content-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 48px 0 24px 0;
+    color: var(--color-accent);
+}
+
+.content-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.content-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+.content-section ul {
+    margin: 24px 0;
+    padding-left: 24px;
+}
+
+.content-section li {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+    padding: 40px;
+    background-color: var(--color-dark);
+    border-radius: 12px;
+}
+
+.info-item h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
+    margin: 0 0 8px 0;
+}
+
+.info-item p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    opacity: 1;
+}
+
+/* Challenge List */
+.challenge-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+}
+
+.challenge-list li {
+    padding: 20px;
+    background-color: rgba(211, 233, 122, 0.05);
+    border-left: 3px solid var(--color-accent);
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+/* Solution List */
+.solution-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+}
+
+.solution-list li {
+    padding: 20px;
+    background-color: rgba(211, 233, 122, 0.05);
+    border-left: 3px solid var(--color-accent);
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 32px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.feature-card h4 {
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.feature-card p {
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* Process Timeline */
+.process-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.step-number {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    opacity: 0.3;
+}
+
+.process-step h3 {
+    margin: 0 0 16px 0;
+    color: var(--color-text);
+}
+
+.process-step p {
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* Results Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.result-card {
+    background-color: rgba(211, 233, 122, 0.05);
+    border: 1px solid rgba(211, 233, 122, 0.2);
+    border-radius: 12px;
+    padding: 40px 32px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.result-number {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    color: var(--color-accent);
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.result-label {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+.result-card p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+/* Impact List */
+.impact-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+}
+
+.impact-list li {
+    padding: 16px 20px;
+    background-color: rgba(211, 233, 122, 0.05);
+    border-left: 3px solid var(--color-accent);
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+/* Tech Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.tech-item {
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.tech-item:hover {
+    border-color: var(--color-accent);
+}
+
+.tech-item h4 {
+    color: var(--color-accent);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.tech-item p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.75;
+}
+
+/* Takeaway Cards */
+.takeaway-card {
+    background-color: rgba(211, 233, 122, 0.05);
+    border: 1px solid rgba(211, 233, 122, 0.2);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+.takeaway-card h3 {
+    color: var(--color-accent);
+    margin: 0 0 16px 0;
+    font-size: 22px;
+}
+
+.takeaway-card p {
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* Testimonial */
+.testimonial {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 48px;
+    background-color: rgba(211, 233, 122, 0.05);
+    border-radius: 12px;
+}
+
+.testimonial-text {
+    font-size: 24px;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 24px;
+    opacity: 0.95;
+}
+
+.testimonial-author {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 108px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: transparent;
+    color: var(--color-accent);
+    padding: 16px 32px;
+    border: 2px solid var(--color-accent);
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(211, 233, 122, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .breadcrumbs {
+        padding: 24px 32px;
+    }
+
+    .case-study-hero {
+        padding: 60px 32px 60px;
+    }
+
+    .case-study-hero h1 {
+        font-size: 64px;
+    }
+
+    .content-section {
+        padding: 60px 32px;
+    }
+
+    .content-section h2 {
+        font-size: 48px;
+    }
+
+    .cta-section {
+        padding: 60px 32px;
+    }
+
+    .cta-section h2 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .breadcrumbs {
+        padding: 16px;
+        font-size: 12px;
+    }
+
+    .case-study-hero {
+        padding: 40px 16px 40px;
+    }
+
+    .case-study-hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .metric-number {
+        font-size: 36px;
+    }
+
+    .content-section {
+        padding: 48px 16px;
+    }
+
+    .content-section h2 {
+        font-size: 36px;
+    }
+
+    .content-section h3 {
+        font-size: 24px;
+    }
+
+    .content-section p,
+    .content-section li {
+        font-size: 16px;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        grid-template-columns: 60px 1fr;
+        gap: 16px;
+    }
+
+    .step-number {
+        font-size: 36px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .result-number {
+        font-size: 42px;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial {
+        padding: 32px 24px;
+    }
+
+    .testimonial-text {
+        font-size: 18px;
+    }
+
+    .cta-section {
+        padding: 48px 16px;
+    }
+
+    .cta-section h2 {
+        font-size: 36px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        justify-content: center;
+    }
+}
+</style>

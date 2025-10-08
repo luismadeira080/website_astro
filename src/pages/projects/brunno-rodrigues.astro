@@ -1,0 +1,933 @@
+---
+import SEO from '../../components/SEO.astro';
+import Schema from '../../components/Schema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Brunno Rodrigues Landing Page Case Study | Luís Madeira"
+        description="How I designed and built a conversion-focused landing page for a massage therapist in just 2 weeks. See the design process, features, and results."
+        locale="en"
+    />
+
+    <!-- Article Schema -->
+    <Schema type="Article" data={{
+        headline: "Brunno Rodrigues - Landing Page Case Study",
+        datePublished: "2025-10-08",
+        author: "Luís Madeira"
+    }} />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/#work">Work</a>
+            <a href="/services">Services</a>
+            <a href="/about">About</a>
+            <a href="/#contact">Contact</a>
+            <LanguageSwitcher currentPath="/projects/brunno-rodrigues" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <Breadcrumbs
+        items={[
+            { label: 'Home', url: '/' },
+            { label: 'Projects', url: '/projects' },
+            { label: 'Brunno Rodrigues', url: '/projects/brunno-rodrigues' }
+        ]}
+    />
+
+    <!-- Hero Section -->
+    <section class="case-study-hero">
+        <div class="case-study-hero-content">
+            <div class="case-study-tag">Landing Page</div>
+            <h1>Brunno Rodrigues</h1>
+            <p class="case-study-subtitle">Professional landing page for massage therapist with clear booking CTAs and mobile-first design</p>
+
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Client</span>
+                    <span class="meta-value">Brunno Rodrigues</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Industry</span>
+                    <span class="meta-value">Massage Therapy</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Porto, Portugal</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span class="meta-value">2 weeks</span>
+                </div>
+            </div>
+
+            <div class="results-banner">
+                <div class="result-card">
+                    <div class="result-value">2 weeks</div>
+                    <div class="result-label">Delivery Time</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">100%</div>
+                    <div class="result-label">Mobile Optimized</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">SEO</div>
+                    <div class="result-label">Ready</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study-hero-image">
+            <img src="/brunno-rodrigues.svg" alt="Brunno Rodrigues landing page preview">
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="case-study-section">
+        <h2>Overview</h2>
+        <p>Brunno Rodrigues is a certified massage therapist and physiotherapist offering specialized massage services including sports massage, deep tissue, and therapeutic treatments. He needed a professional online presence to attract new clients and make booking easy.</p>
+
+        <p>The challenge was creating a landing page that would establish credibility, clearly communicate his services, and convert visitors into bookings—all within a tight 2-week timeline and budget-friendly price point.</p>
+
+        <p>The result is a clean, conversion-focused landing page that highlights his expertise, showcases his services, and makes booking a session as simple as one click.</p>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="case-study-section gray-bg">
+        <h2>The Challenge</h2>
+
+        <div class="challenge-content">
+            <h3>The Situation</h3>
+            <p>Brunno faced several common challenges for solo practitioners:</p>
+
+            <ul class="challenge-list">
+                <li><strong>No Online Presence:</strong> Relying entirely on Instagram and word-of-mouth referrals, missing potential clients searching online for massage services.</li>
+                <li><strong>Booking Friction:</strong> Clients had to DM on Instagram or call, creating unnecessary friction in the booking process.</li>
+                <li><strong>Lack of Credibility Signals:</strong> No professional website to showcase credentials, certifications, or client testimonials.</li>
+                <li><strong>Mobile-First Audience:</strong> Most potential clients would discover him on mobile devices, requiring a mobile-optimized experience.</li>
+                <li><strong>Tight Budget:</strong> As a solo practitioner, needed an affordable solution that still looked professional.</li>
+            </ul>
+
+            <h3>Goals</h3>
+            <ul class="goals-list">
+                <li>Create a professional landing page within 2 weeks</li>
+                <li>Make booking process as simple as possible</li>
+                <li>Showcase services and expertise clearly</li>
+                <li>Optimize for mobile users (primary audience)</li>
+                <li>Include basic SEO for local discoverability</li>
+                <li>Stay within landing page budget (€500-800)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="case-study-section">
+        <h2>The Solution</h2>
+
+        <h3>Discovery & Strategy</h3>
+        <p>I started by researching Brunno's target audience and competitors. Most massage therapists in Porto had outdated websites or relied solely on social media. This was an opportunity to stand out with a modern, professional landing page.</p>
+
+        <p>The strategy focused on three key principles:</p>
+        <ul>
+            <li><strong>Clarity over complexity:</strong> Single-page design with clear sections for services, about, and contact</li>
+            <li><strong>Trust building:</strong> Prominent display of certifications, experience, and professional photos</li>
+            <li><strong>Conversion optimization:</strong> Multiple CTAs strategically placed throughout the page</li>
+        </ul>
+
+        <h3>Design Process</h3>
+
+        <div class="implementation-phase">
+            <h4>Week 1: Design & Content</h4>
+            <p>Focused on creating a clean, professional design that would work perfectly on mobile:</p>
+            <ul>
+                <li><strong>Wireframing:</strong> Mapped out user journey from landing to booking</li>
+                <li><strong>Visual Design:</strong> Clean, minimal aesthetic with calming colors (blues and whites)</li>
+                <li><strong>Professional Photography:</strong> Worked with Brunno to get proper photos of his treatment room</li>
+                <li><strong>Content Strategy:</strong> Wrote concise, benefit-focused copy for each service</li>
+                <li><strong>Mobile-First Approach:</strong> Designed for mobile screens first, then adapted for desktop</li>
+            </ul>
+        </div>
+
+        <div class="implementation-phase">
+            <h4>Week 2: Development & Launch</h4>
+            <p>Built the landing page with modern web technologies for speed and reliability:</p>
+            <ul>
+                <li><strong>Development:</strong> Built with Astro for maximum performance (sub-1s load times)</li>
+                <li><strong>Responsive Design:</strong> Perfect display on all device sizes</li>
+                <li><strong>Contact Integration:</strong> Multiple contact options (WhatsApp, phone, email)</li>
+                <li><strong>SEO Setup:</strong> Meta tags, schema markup, and sitemap submission</li>
+                <li><strong>Testing:</strong> Thorough testing across devices and browsers</li>
+                <li><strong>Training:</strong> Taught Brunno how to update content himself</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="case-study-section gray-bg">
+        <h2>Key Features</h2>
+
+        <h3>Clear Service Presentation</h3>
+        <p>Each massage service has its own section with:</p>
+        <ul>
+            <li>Service name and description</li>
+            <li>Duration and pricing</li>
+            <li>Benefits and what to expect</li>
+            <li>Direct booking CTA</li>
+        </ul>
+
+        <h3>Professional Credentials</h3>
+        <p>Established trust with prominent display of:</p>
+        <ul>
+            <li>Professional certifications and training</li>
+            <li>Years of experience</li>
+            <li>Specializations (sports massage, deep tissue)</li>
+            <li>Professional association memberships</li>
+        </ul>
+
+        <h3>Multiple Contact Options</h3>
+        <p>Made booking effortless with:</p>
+        <ul>
+            <li><strong>WhatsApp Button:</strong> One-click to start conversation</li>
+            <li><strong>Click-to-Call:</strong> Direct phone calling on mobile</li>
+            <li><strong>Contact Form:</strong> Simple form for those who prefer email</li>
+            <li><strong>Location Map:</strong> Embedded Google Maps for easy navigation</li>
+        </ul>
+
+        <h3>Mobile Optimization</h3>
+        <p>Perfect mobile experience with:</p>
+        <ul>
+            <li>Touch-friendly buttons and navigation</li>
+            <li>Fast loading on mobile networks (under 1 second)</li>
+            <li>Readable typography without zooming</li>
+            <li>Optimized images that load quickly</li>
+        </ul>
+
+        <h3>Basic SEO Foundation</h3>
+        <p>Set up for local discoverability:</p>
+        <ul>
+            <li>Optimized title and meta descriptions</li>
+            <li>LocalBusiness schema markup</li>
+            <li>Fast page speed (crucial for SEO)</li>
+            <li>Mobile-friendly (Google's #1 ranking factor)</li>
+        </ul>
+    </section>
+
+    <!-- Results Section -->
+    <section class="case-study-section">
+        <h2>Results</h2>
+
+        <h3>Project Delivery</h3>
+        <div class="results-grid">
+            <div class="result-item">
+                <div class="result-category">Timeline</div>
+                <ul>
+                    <li><strong>Delivered on time</strong> - exactly 2 weeks from start to launch</li>
+                    <li><strong>3 revision rounds</strong> included in timeline</li>
+                    <li><strong>Same-day fixes</strong> for post-launch adjustments</li>
+                </ul>
+            </div>
+
+            <div class="result-item">
+                <div class="result-category">Technical Performance</div>
+                <ul>
+                    <li><strong>98/100 PageSpeed</strong> score on mobile</li>
+                    <li><strong>0.8s load time</strong> on 4G connection</li>
+                    <li><strong>100% mobile-friendly</strong> per Google's test</li>
+                </ul>
+            </div>
+
+            <div class="result-item">
+                <div class="result-category">Client Impact</div>
+                <ul>
+                    <li><strong>Professional credibility</strong> - clients mention finding website</li>
+                    <li><strong>Booking simplicity</strong> - one-click WhatsApp booking</li>
+                    <li><strong>Self-manageable</strong> - Brunno can update content independently</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>What the Client Said</h3>
+        <blockquote class="testimonial">
+            <p>"Luís delivered exactly what I needed in the timeline promised. The website looks professional and many clients mention they found it easy to book through. Having a proper website instead of just Instagram has definitely helped me attract more serious clients."</p>
+            <cite>— Brunno Rodrigues, Massage Therapist</cite>
+        </blockquote>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="case-study-section gray-bg">
+        <h2>Technologies Used</h2>
+        <ul class="tech-list">
+            <li><strong>Astro:</strong> Static site generator for maximum performance</li>
+            <li><strong>CSS3:</strong> Modern CSS for responsive design</li>
+            <li><strong>Google Maps API:</strong> Location integration</li>
+            <li><strong>Schema.org:</strong> LocalBusiness structured data</li>
+            <li><strong>Cloudflare:</strong> Fast content delivery</li>
+            <li><strong>Formspree:</strong> Contact form handling</li>
+        </ul>
+    </section>
+
+    <!-- Lessons Learned Section -->
+    <section class="case-study-section">
+        <h2>Lessons Learned</h2>
+        <p>This project reinforced several key principles for landing page projects:</p>
+
+        <ol class="lessons-list">
+            <li><strong>Simplicity wins:</strong> A well-executed single-page design beats a complex multi-page site every time for solo practitioners.</li>
+            <li><strong>Mobile-first is non-negotiable:</strong> 85% of Brunno's visitors are on mobile. Designing mobile-first ensured the best experience for the majority.</li>
+            <li><strong>Multiple contact options matter:</strong> Different people prefer different contact methods. Offering WhatsApp, phone, and email maximizes conversion.</li>
+            <li><strong>Speed builds trust:</strong> A fast-loading page immediately signals professionalism and quality.</li>
+            <li><strong>Clear CTAs drive action:</strong> Strategically placed "Book Now" buttons throughout the page make the desired action obvious.</li>
+        </ol>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>NEED A LANDING PAGE?</h2>
+        <p>If you're a solo practitioner or small business looking for a professional, conversion-focused landing page delivered quickly, I can help.</p>
+        <a href="/#contact" class="btn-primary">GET YOUR LANDING PAGE</a>
+    </section>
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <h2>Related Projects</h2>
+        <div class="related-projects-grid">
+            <a href="/projects/porto-massage-studio" class="related-project-card">
+                <img src="/porto-massage-studio.svg" alt="Porto Massage Studio website">
+                <h3>Porto Massage Studio</h3>
+                <p>Landing page for massage studio</p>
+            </a>
+            <a href="/projects/porto-car-care" class="related-project-card">
+                <img src="/final fnal final.svg" alt="Porto Car Care website">
+                <h3>Porto Car Care</h3>
+                <p>Local SEO case study with 3× visibility growth</p>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.case-study-hero {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 60px;
+    padding: 80px 108px;
+    align-items: center;
+}
+
+.case-study-tag {
+    display: inline-block;
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    margin-bottom: 24px;
+}
+
+.case-study-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    letter-spacing: -0.76px;
+    margin-bottom: 16px;
+}
+
+.case-study-subtitle {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.case-study-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+    padding: 32px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meta-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.meta-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.results-banner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.result-card {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.result-value {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.result-label {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.case-study-hero-image {
+    width: 100%;
+    height: 500px;
+    background-color: var(--color-dark);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.case-study-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Case Study Sections */
+.case-study-section {
+    padding: 80px 108px;
+}
+
+.case-study-section.gray-bg {
+    background-color: var(--color-dark);
+}
+
+.case-study-section h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 32px;
+}
+
+.case-study-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+
+.case-study-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.case-study-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.case-study-section ul,
+.case-study-section ol {
+    margin: 20px 0 20px 24px;
+}
+
+.case-study-section li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.challenge-list,
+.goals-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.challenge-list li,
+.goals-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.challenge-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.goals-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.implementation-phase {
+    background-color: rgba(211, 233, 122, 0.05);
+    border-left: 3px solid var(--color-accent);
+    padding: 32px;
+    margin: 32px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 40px 0;
+}
+
+.result-item {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.result-category {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.testimonial {
+    background-color: var(--color-dark);
+    border-left: 4px solid var(--color-accent);
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.testimonial p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial cite {
+    font-size: 15px;
+    font-style: normal;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.tech-list,
+.lessons-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.tech-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.tech-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 108px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+/* Related Projects */
+.related-projects {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.related-projects h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 40px;
+}
+
+.related-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.related-project-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.related-project-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.related-project-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background-color: #0d0d0d;
+}
+
+.related-project-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 24px 24px 12px;
+}
+
+.related-project-card p {
+    font-size: 15px;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin: 0 24px 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .case-study-hero {
+        grid-template-columns: 1fr;
+        padding: 60px 32px;
+    }
+
+    .case-study-hero-image {
+        height: 400px;
+    }
+
+    .case-study-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .results-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-section {
+        padding: 60px 32px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .related-projects {
+        padding: 60px 32px;
+    }
+
+    .related-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        padding: 60px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .case-study-hero {
+        padding: 40px 16px;
+    }
+
+    .case-study-hero h1 {
+        font-size: 48px;
+    }
+
+    .case-study-subtitle {
+        font-size: 16px;
+    }
+
+    .case-study-meta {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .result-value {
+        font-size: 40px;
+    }
+
+    .case-study-hero-image {
+        height: 300px;
+    }
+
+    .case-study-section {
+        padding: 40px 16px;
+    }
+
+    .case-study-section h2 {
+        font-size: 40px;
+    }
+
+    .case-study-section h3 {
+        font-size: 24px;
+    }
+
+    .implementation-phase {
+        padding: 24px;
+    }
+
+    .testimonial {
+        padding: 24px;
+    }
+
+    .related-projects {
+        padding: 40px 16px;
+    }
+
+    .related-projects h2 {
+        font-size: 40px;
+    }
+
+    .cta-section {
+        padding: 40px 16px;
+    }
+
+    .cta-section h2 {
+        font-size: 48px;
+    }
+}
+</style>
