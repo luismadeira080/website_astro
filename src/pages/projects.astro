@@ -72,7 +72,10 @@ import LanguageSwitcher from '../components/LanguageSwitcher.astro';
                         <span class="metric-text">Calls</span>
                     </div>
                 </div>
-                <a href="/#contact" class="card-cta">Book a Similar Project</a>
+                <div class="project-card-actions">
+                    <a href="/projects/porto-car-care" class="project-link">Read Full Case Study →</a>
+                    <a href="/#contact" class="card-cta">Book a Similar Project</a>
+                </div>
             </div>
         </div>
 
@@ -364,6 +367,26 @@ body {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+.project-card-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease;
+}
+
+.project-link:hover {
+    opacity: 0.7;
 }
 
 .card-cta {
