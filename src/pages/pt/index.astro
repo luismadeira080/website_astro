@@ -1,0 +1,1523 @@
+---
+import SEO from '../../components/SEO.astro';
+import Schema from '../../components/Schema.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Luís Madeira - Criação de Websites e SEO Local em Portugal"
+        description="Crio websites profissionais e otimizados para SEO que geram clientes. Landing pages, websites empresariais e SEO local para negócios em Portugal."
+        locale="pt"
+    />
+
+    <!-- Structured Data -->
+    <Schema type="Organization" />
+    <Schema type="LocalBusiness" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="logo">luís madeira</div>
+        <div class="nav-links">
+            <a href="#work">Trabalhos</a>
+            <a href="#about">Sobre</a>
+            <a href="#contact">Contacto</a>
+            <LanguageSwitcher currentPath="/" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>WEBSITES QUE APARECEM<br>NO GOOGLE E TRAZEM CLIENTES</h1>
+                <p class="hero-subtitle">Crio websites rápidos e profissionais com SEO local forte. O objetivo: mais visibilidade, mais chamadas, mais clientes.</p>
+            </div>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-primary">CONTACTE-ME</a>
+                <a href="https://www.linkedin.com/in/lumadeira" class="social-icon" target="_blank" aria-label="LinkedIn">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/351924466899" class="social-icon" target="_blank" aria-label="WhatsApp">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="tel:+351924466899" class="social-icon" aria-label="Call me">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/profile.jpeg" alt="Luís Madeira - Web Developer and SEO Specialist">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="section-header">
+            <h2>O QUE OFEREÇO</h2>
+            <p>Dois serviços focados para ajudar o seu negócio a crescer online</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <h3>Landing Pages que Convertem</h3>
+                <p>Entrega rápida de landing pages modernas e limpas. Ideal para promoções, anúncios ou negócios que precisam de uma presença online simples que converte visitantes em leads.</p>
+                <a href="#contact" class="service-cta">Pedir landing page</a>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <h3>Websites Otimizados para SEO</h3>
+                <p>Websites completos desenhados e construídos para aparecer melhor no Google. Inclui design, conteúdo e configuração SEO para que negócios locais tenham mais tráfego, mais chamadas e mais clientes.</p>
+                <a href="#contact" class="service-cta">Começar projeto de website</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section id="work" class="case-study-section">
+        <div class="section-header">
+            <h2>CASO DE ESTUDO</h2>
+            <p>Resultados reais de um projeto recente de SEO local</p>
+        </div>
+
+        <div class="project-showcase">
+            <div class="project-image-card">
+                <img src="/final fnal final.svg" alt="Porto Car Care - Auto detailing website with local SEO optimization">
+            </div>
+
+            <div class="project-content">
+                <div class="project-header">
+                    <h3>Porto Car Care — Aumento de SEO Local</h3>
+                    <p class="project-summary">Loja de estética automóvel no Porto a competir com sites desatualizados. Implementei estratégia programática de SEO que triplicou a visibilidade.</p>
+                </div>
+
+                <div class="key-metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">+3×</div>
+                        <div class="metric-label">Visibilidade no Google</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">+12</div>
+                        <div class="metric-label">Ganho Médio de Posições</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">+40%</div>
+                        <div class="metric-label">Mais Chamadas Telefónicas</div>
+                    </div>
+                </div>
+
+                <div class="collapsible-section">
+                    <button class="collapsible-header">
+                        <span>O que Fiz</span>
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Realizei pesquisa de palavras-chave locais para pesquisas "perto de mim" de alta intenção e consultas específicas de serviços no mercado do Porto</li>
+                            <li>Criei 8 páginas de serviço programáticas com conteúdo único, marcação Schema.org e meta tags otimizadas</li>
+                            <li>Implementei SEO técnico incluindo sitemap XML, robots.txt, ligações internas e navegação breadcrumb</li>
+                            <li>Configurei rastreamento GA4 em todos os CTAs de telefone e Google Search Console para monitorização de desempenho</li>
+                            <li>Otimizei elementos on-page (HTML semântico, meta tags geográficas, design mobile-first, Core Web Vitals)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="collapsible-section">
+                    <button class="collapsible-header">
+                        <span>Resultados</span>
+                        <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>+3× visibilidade orgânica (impressões) em 2 semanas</li>
+                            <li>+12 posições médias ganhas no ranking</li>
+                            <li>+25 novas palavras-chave não-branded a rankear</li>
+                            <li>+40% mais chamadas através do Perfil de Empresa Google</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-links-wrapper">
+                    <a href="#contact" class="project-link-underline">
+                        <span>MARCAR UM IMPULSO SEO SEMELHANTE</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="/pt/projetos" class="project-link-underline">
+                        <span>VER MAIS PROJETOS</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <h2>SOBRE MIM</h2>
+        <div class="about-content">
+            <div class="about-intro">
+                <h3>Crio websites e landing pages que convertem. Especializado em SEO local para pequenos negócios.</h3>
+            </div>
+            <div class="about-description">
+                <p>Atualmente a fazer o Mestrado em Gestão na IE Business School em Madrid, natural do Porto. Com 2 anos de experiência em Venture Capital e uma paixão por tecnologia, ajudo negócios locais (dentistas, spas, estética automóvel, AVAC e outros) a aparecerem melhor no Google e a conseguirem mais clientes. Uso ferramentas modernas como Claude Code, Cursor, Figma, Astro, React e Tailwind para criar websites limpos e rápidos que realmente geram tráfego e conversões. O meu foco: resultados mensuráveis através de SEO técnico, experiência de utilizador otimizada e estratégias baseadas em dados.</p>
+                <a href="/pt/sobre" class="text-link">MAIS SOBRE MIM</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-info">
+            <div class="contact-left">
+                <h2>VAMOS CONECTAR</h2>
+                <div class="contact-details">
+                    <p>Diga olá: <a href="mailto:luismadeira@ruimadeira.pt">luismadeira@ruimadeira.pt</a></p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/lumadeira" target="_blank" aria-label="LinkedIn">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/351924466899" target="_blank" aria-label="WhatsApp">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="tel:+351924466899" aria-label="Call me">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="copyright">© 2024 Luís Madeira</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form id="contact-form" action="https://formspree.io/f/manpdppz" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="João Silva" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto</label>
+                    <input type="text" id="subject" name="subject" placeholder="Pedido de orçamento" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Conte-me sobre o seu projeto..." required></textarea>
+                </div>
+                <input type="hidden" name="_subject" value="New contact form submission from website">
+                <button type="submit" class="btn-submit" id="submit-btn">ENVIAR</button>
+            </form>
+            <div id="form-success" class="form-success" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>Message Sent!</h3>
+                <p>Thanks for reaching out. I'll get back to you soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        let lastScroll = 0;
+        const nav = document.querySelector('.navigation');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Collapsible sections
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+        collapsibleHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                const content = section.querySelector('.collapsible-content');
+                const isOpen = section.classList.contains('open');
+
+                // Close all other sections
+                document.querySelectorAll('.collapsible-section').forEach(s => {
+                    s.classList.remove('open');
+                });
+
+                // Toggle current section
+                if (!isOpen) {
+                    section.classList.add('open');
+                }
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formSuccess = document.getElementById('form-success');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    // Disable button and show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'SENDING...';
+
+                    // Get form data
+                    const formData = new FormData(contactForm);
+
+                    try {
+                        // Submit to Formspree
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            // Success! Trigger confetti
+                            confetti({
+                                particleCount: 150,
+                                spread: 100,
+                                origin: { y: 0.6 },
+                                colors: ['#d3e97a', '#c7c7c7', '#ffffff', '#1a1a1a']
+                            });
+
+                            // Additional burst for extra celebration
+                            setTimeout(function() {
+                                confetti({
+                                    particleCount: 100,
+                                    angle: 60,
+                                    spread: 55,
+                                    origin: { x: 0 },
+                                    colors: ['#d3e97a', '#c7c7c7', '#ffffff']
+                                });
+                            }, 200);
+
+                            setTimeout(function() {
+                                confetti({
+                                    particleCount: 100,
+                                    angle: 120,
+                                    spread: 55,
+                                    origin: { x: 1 },
+                                    colors: ['#d3e97a', '#c7c7c7', '#ffffff']
+                                });
+                            }, 400);
+
+                            // Hide form and show success message
+                            contactForm.style.display = 'none';
+                            formSuccess.style.display = 'block';
+
+                            // Reset form
+                            contactForm.reset();
+
+                            // Show form again after 5 seconds
+                            setTimeout(function() {
+                                contactForm.style.display = 'block';
+                                formSuccess.style.display = 'none';
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = 'SUBMIT';
+                            }, 5000);
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    } catch (error) {
+                        // Error handling
+                        alert('Oops! There was a problem submitting your form. Please try again or email me directly at luismadeira@ruimadeira.pt');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'SUBMIT';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    gap: 60px;
+    padding: 80px 108px;
+    min-height: calc(100vh - 96px);
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: 88px;
+    line-height: 1.1;
+    letter-spacing: -0.88px;
+    color: var(--color-text);
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin-bottom: 40px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
+}
+
+.hero-image {
+    width: 600px;
+    height: 700px;
+    background-color: var(--color-text);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+}
+
+.service-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: border-color 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--color-accent);
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    letter-spacing: -0.36px;
+    color: var(--color-text);
+    line-height: 1.1;
+}
+
+.service-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+    flex-grow: 1;
+}
+
+.service-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: fit-content;
+}
+
+.service-cta:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+/* Case Study Section */
+.case-study-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.project-showcase {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+
+.project-image-card {
+    width: 500px;
+    height: 500px;
+    background-color: var(--color-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-header h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+.project-summary {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    opacity: 0.9;
+}
+
+/* Key Metrics */
+.key-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.metric-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.metric-card:hover {
+    border-color: var(--color-accent);
+}
+
+.metric-value {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.metric-label {
+    font-size: 12px;
+    color: var(--color-text);
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+/* Collapsible Sections */
+.collapsible-section {
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.collapsible-section:hover {
+    border-color: #484848;
+}
+
+.collapsible-header {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible-header:hover {
+    background-color: rgba(211, 233, 122, 0.05);
+}
+
+.collapsible-header span {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.collapsible-header .chevron {
+    transition: transform 0.3s ease;
+    stroke: var(--color-text);
+}
+
+.collapsible-section.open .chevron {
+    transform: rotate(180deg);
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 24px;
+}
+
+.collapsible-section.open .collapsible-content {
+    max-height: 500px;
+    padding: 0 24px 24px 24px;
+}
+
+.collapsible-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.collapsible-content ul li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-text);
+    opacity: 0.9;
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.collapsible-content ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.project-links-wrapper {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.project-link-underline {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--color-accent);
+    transition: opacity 0.3s ease;
+}
+
+.project-link-underline:hover {
+    opacity: 0.8;
+}
+
+.project-link-underline > div:first-child,
+.project-link-underline > span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.project-link-underline span {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.project-link-underline svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.project-link-underline::after {
+    content: '';
+    height: 2px;
+    background-color: var(--color-accent);
+    width: 100%;
+}
+
+/* Featured Projects - keeping for projects page */
+.featured-projects {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.section-header {
+    margin-bottom: 80px;
+}
+
+.section-header h2 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    letter-spacing: -0.76px;
+    margin-bottom: 16px;
+}
+
+.section-header p {
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.project-reverse {
+    direction: rtl;
+}
+
+.project-reverse > * {
+    direction: ltr;
+}
+
+.project-image {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color: var(--color-dark);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--color-text);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.project-content {
+    padding: 60px 0;
+}
+
+.project-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-content h3 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.project-content a:hover h3 {
+    color: var(--color-accent);
+}
+
+.project-image {
+    display: block;
+    text-decoration: none;
+}
+
+.project-content > p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    color: var(--color-text);
+}
+
+.project-info {
+    margin-bottom: 32px;
+}
+
+.project-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--color-text);
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #333;
+}
+
+.info-label {
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.project-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--color-accent);
+}
+
+.project-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.about-section h2 {
+    font-family: var(--font-heading);
+    font-size: 91px;
+    letter-spacing: -0.91px;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+}
+
+.about-intro h3 {
+    font-size: 45px;
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+.about-description p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--color-accent);
+}
+
+/* Contact Section */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.contact-left h2 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    letter-spacing: -0.76px;
+    margin-bottom: 32px;
+}
+
+.contact-details {
+    margin-bottom: 32px;
+}
+
+.contact-details p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.contact-details a {
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-accent);
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--color-accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 120px;
+}
+
+.social-links a {
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-accent);
+}
+
+.copyright {
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+/* Contact Form */
+.contact-form {
+    padding-top: 0;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 16px;
+    font-size: 16px;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 48px;
+    border: none;
+    border-radius: 27px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Form Success Message */
+.form-success {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-accent);
+    border-radius: 16px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    animation: scaleIn 0.5s ease 0.2s both;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.form-success h3 {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    color: var(--color-accent);
+    margin-bottom: 12px;
+    letter-spacing: -0.36px;
+}
+
+.form-success p {
+    font-size: 16px;
+    color: var(--color-text);
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 32px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .services-section {
+        padding: 60px 32px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .featured-projects {
+        padding: 60px 32px;
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .about-section {
+        padding: 60px 32px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 60px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .hero {
+        padding: 40px 16px;
+        min-height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 64px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+
+    .services-section {
+        padding: 40px 16px;
+    }
+
+    .service-card h3 {
+        font-size: 28px;
+    }
+
+    .case-study-section {
+        padding: 40px 16px;
+    }
+
+    .project-showcase {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .project-image-card {
+        width: 100%;
+        height: 350px;
+    }
+
+    .project-header h3 {
+        font-size: 28px;
+    }
+
+    .project-summary {
+        font-size: 15px;
+    }
+
+    .key-metrics {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .metric-card {
+        padding: 20px;
+    }
+
+    .metric-value {
+        font-size: 40px;
+    }
+
+    .metric-label {
+        font-size: 13px;
+    }
+
+    .collapsible-header {
+        font-size: 16px;
+        padding: 16px 20px;
+    }
+
+    .collapsible-content ul li {
+        font-size: 14px;
+    }
+
+    .featured-projects {
+        padding: 40px 16px;
+    }
+
+    .section-header h2 {
+        font-size: 48px;
+    }
+
+    .section-header p {
+        font-size: 16px;
+    }
+
+    .projects-grid {
+        gap: 80px;
+    }
+
+    .project-image {
+        height: 343px;
+    }
+
+    .project-content h3 {
+        font-size: 32px;
+    }
+
+    .project-content {
+        padding: 0;
+    }
+
+    .about-section {
+        padding: 40px 16px;
+    }
+
+    .about-section h2 {
+        font-size: 57px;
+    }
+
+    .about-intro h3 {
+        font-size: 32px;
+    }
+
+    .contact-section {
+        padding: 40px 16px;
+    }
+
+    .contact-left h2 {
+        font-size: 48px;
+    }
+
+    .contact-details p {
+        font-size: 16px;
+    }
+
+    .social-links {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .btn-primary {
+        padding: 14px 24px;
+        font-size: 12px;
+    }
+
+    .social-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .section-header h2 {
+        font-size: 40px;
+    }
+
+    .project-content h3 {
+        font-size: 28px;
+    }
+
+    .about-section h2 {
+        font-size: 40px;
+    }
+
+    .about-intro h3 {
+        font-size: 24px;
+    }
+
+    .contact-left h2 {
+        font-size: 40px;
+    }
+}
+</style>
