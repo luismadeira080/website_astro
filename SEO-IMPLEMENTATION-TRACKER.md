@@ -161,25 +161,56 @@
 
 ## 🟢 PHASE 3: PROGRAMMATIC SEO (Weeks 5-8) - **MEDIUM**
 
-### Task 3.1: Create City Page Template ⏳
-**Status:** Not Started
-**File:** `src/pages/pt/criacao-websites/[city].astro`
+### Task 3.1: Create City Page Template ✅
+**Status:** Completed
+**Files:** `src/pages/pt/criacao-websites-[city].astro`
 **Cities:** Lisboa, Porto, Braga, Coimbra, Aveiro, Faro, Setúbal, Leiria
-**Pages Generated:** 8
+**Pages Generated:** 8 (218KB total)
+**Commit:** 2ba6322
+**Completed:** October 8, 2025
+**Features:**
+- City-specific SEO targeting "criação de websites em [City]"
+- Local market context and expertise positioning
+- 3 service cards with SEO local emphasis
+- 6 industry sectors per city
+- 4 reasons to choose local expert
+- 2-tier pricing (Essential/Premium)
+- 6 city-specific FAQs
+- Nearby cities cross-linking
+- Full mobile responsiveness
+- Service schema markup
 
 ---
 
-### Task 3.2: Create Industry Page Template ⏳
-**Status:** Not Started
-**File:** `src/pages/pt/websites-para/[industry].astro`
+### Task 3.2: Create Industry Page Template ✅
+**Status:** Completed
+**Files:** `src/pages/pt/websites-para-[industry].astro`
 **Industries:** spas, clinicas-dentarias, restaurantes, oficinas
-**Pages Generated:** 4
+**Pages Generated:** 4 (151KB total)
+**Commit:** 2ba6322
+**Completed:** October 8, 2025
+**Features:**
+- Industry-specific pain points (4 per page)
+- Tailored features (6 per industry)
+- SEO strategy for vertical keywords
+- Real case studies (Porto Car Care for oficinas)
+- Industry-specific pricing and process
+- 6 industry FAQs per page
+- Testimonials section
+- Service schema markup
 
 ---
 
-### Task 3.3: Update Sitemap with Programmatic Pages ⏳
-**Status:** Not Started
-**File:** `src/pages/sitemap.xml.js` (modify)
+### Task 3.3: Update Sitemap with Programmatic Pages ✅
+**Status:** Completed
+**File:** `src/pages/sitemap.xml.js`
+**Commit:** 2ba6322
+**Completed:** October 8, 2025
+**Added:**
+- 6 case study pages (EN + PT alternates)
+- 8 city pages (priority 0.7-0.9)
+- 4 industry pages (priority 0.8)
+- Total: 18 new URLs in sitemap
 
 ---
 
@@ -255,7 +286,7 @@
 
 ### Short-term (Month 2)
 - [x] All content created (services, case studies)
-- [ ] Programmatic pages live (12 pages)
+- [x] Programmatic pages live (12 pages - 8 cities + 4 industries)
 - [ ] Core Web Vitals pass
 - [ ] Analytics tracking
 
@@ -306,10 +337,10 @@
 
 ---
 
-**Last Updated:** October 8, 2025 (20:52)
-**Current Phase:** Phase 2 - Content Creation ✅ **COMPLETE**
-**Next Tasks:** Phase 3 - Programmatic SEO (City and Industry pages)
-**Progress:** Phase 1 ✅ | Phase 2 ✅ (7/7 tasks completed)
+**Last Updated:** October 8, 2025 (21:55)
+**Current Phase:** Phase 3 - Programmatic SEO ✅ **COMPLETE**
+**Next Tasks:** Phase 4 - Blog & Content (Optional)
+**Progress:** Phase 1 ✅ | Phase 2 ✅ | Phase 3 ✅ (3/3 tasks completed)
 
 **🎉 Phase 1 Milestone Achieved:**
 - ✅ Multilingual infrastructure (EN at /, PT at /pt/)
@@ -331,3 +362,19 @@
 - Total pages: 16 (8 EN + 8 PT)
 - English: /, /about, /projects, /services, /projects/porto-car-care, /projects/brunno-rodrigues, /projects/porto-massage-studio
 - Portuguese: /pt/, /pt/sobre, /pt/projetos, /pt/servicos, /pt/projetos/porto-car-care, /pt/projetos/brunno-rodrigues, /pt/projetos/porto-massage-studio
+
+**🎉 Phase 3 Complete - Programmatic SEO:**
+- ✅ Task 3.1: City-specific landing pages (8 cities - 218KB)
+- ✅ Task 3.2: Industry-specific landing pages (4 industries - 151KB)
+- ✅ Task 3.3: Sitemap updated with 18 new URLs
+- **Total new pages:** 12 programmatic landing pages
+- **Keywords targeted:** 50+ long-tail Portuguese keywords
+- **Cities covered:** Lisboa, Porto, Braga, Coimbra, Aveiro, Faro, Setúbal, Leiria
+- **Industries covered:** Spas, Clínicas Dentárias, Restaurantes, Oficinas
+- **Commit:** 2ba6322
+
+**📊 Total Website Pages:**
+- **28 pages total** (8 EN base + 8 PT base + 12 programmatic PT)
+- **English:** 8 pages (/, /about, /projects, /services + 3 case studies)
+- **Portuguese:** 20 pages (base pages + 3 case studies + 8 cities + 4 industries)
+- **Total size:** ~1.5MB of optimized content
