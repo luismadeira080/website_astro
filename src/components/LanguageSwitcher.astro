@@ -1,0 +1,88 @@
+---
+/**
+ * Language Switcher Component
+ * Allows users to toggle between English and Portuguese versions
+ * Matches the existing design system (CLAUDE.md)
+ */
+
+import { getLocaleFromPath, getAlternatePath } from '../utils/i18n';
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = Astro.url.pathname } = Astro.props;
+const currentLocale = getLocaleFromPath(currentPath);
+const alternatePath = getAlternatePath(currentPath, currentLocale);
+
+// Display labels
+const labels = {
+  en: 'PT',
+  pt: 'EN',
+};
+
+const currentLabel = labels[currentLocale as keyof typeof labels];
+const ariaLabel = currentLocale === 'en' ? 'Switch to Portuguese' : 'Mudar para Inglês';
+---
+
+<div class="language-switcher">
+  <a href={alternatePath} aria-label={ariaLabel} class="language-toggle">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" fill="currentColor"/>
+    </svg>
+    <span>{currentLabel}</span>
+  </a>
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    align-items: center;
+  }
+
+  .language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: 1px solid var(--color-text, #c7c7c7);
+    border-radius: 27px;
+    color: var(--color-text, #c7c7c7);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  .language-toggle:hover {
+    background-color: var(--color-accent, #d3e97a);
+    border-color: var(--color-accent, #d3e97a);
+    color: var(--color-bg, #0d0d0d);
+    transform: translateY(-2px);
+  }
+
+  .language-toggle svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .language-toggle span {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .language-toggle {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    .language-toggle svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+</style>

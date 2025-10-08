@@ -1,0 +1,168 @@
+---
+/**
+ * Schema Markup Component
+ * Adds structured data (JSON-LD) to pages
+ * Helps Google understand your business, services, and content
+ * Supports: Organization, LocalBusiness, Service, Article, FAQPage, BreadcrumbList
+ */
+
+export interface Props {
+  type: 'Organization' | 'LocalBusiness' | 'Service' | 'Article' | 'FAQPage' | 'BreadcrumbList' | 'CreativeWork';
+  data?: any;
+}
+
+const { type, data = {} } = Astro.props;
+const siteURL = Astro.site?.href || 'https://yourdomain.com';
+
+// Base organization schema (used across all pages)
+const baseOrganization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteURL}#organization`,
+  'name': 'Luís Madeira',
+  'url': siteURL,
+  'logo': `${siteURL}profile.jpeg`,
+  'contactPoint': {
+    '@type': 'ContactPoint',
+    'telephone': '+351924466899',
+    'contactType': 'customer service',
+    'email': 'luismadeira@ruimadeira.pt',
+    'areaServed': 'PT',
+    'availableLanguage': ['English', 'Portuguese']
+  },
+  'sameAs': [
+    'https://www.linkedin.com/in/lumadeira'
+  ],
+  'founder': {
+    '@type': 'Person',
+    'name': 'Luís Madeira',
+    'jobTitle': 'Web Developer & SEO Specialist'
+  }
+};
+
+// Schema templates
+const schemas = {
+  Organization: baseOrganization,
+
+  LocalBusiness: {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${siteURL}#localbusiness`,
+    'name': 'Luís Madeira - Web Developer',
+    'image': `${siteURL}profile.jpeg`,
+    'description': 'Professional web development and local SEO services for businesses in Portugal',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressCountry': 'PT',
+      'addressLocality': data?.city || 'Porto',
+      'addressRegion': 'Porto'
+    },
+    'geo': data?.geo || {
+      '@type': 'GeoCoordinates',
+      'latitude': 41.1579,
+      'longitude': -8.6291
+    },
+    'url': siteURL,
+    'telephone': '+351924466899',
+    'email': 'luismadeira@ruimadeira.pt',
+    'priceRange': '€€',
+    'openingHours': 'Mo-Fr 09:00-18:00',
+    'areaServed': {
+      '@type': 'Country',
+      'name': 'Portugal'
+    }
+  },
+
+  Service: {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'serviceType': data?.serviceType || 'Web Development',
+    'description': data?.description || 'Professional web development and SEO services',
+    'provider': {
+      '@id': `${siteURL}#organization`
+    },
+    'areaServed': data?.areaServed || {
+      '@type': 'Country',
+      'name': 'Portugal'
+    },
+    'hasOfferCatalog': {
+      '@type': 'OfferCatalog',
+      'name': 'Web Development Services',
+      'itemListElement': data?.services || [
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Landing Page Creation'
+          }
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'SEO-Optimized Website Development'
+          }
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Local SEO Services'
+          }
+        }
+      ]
+    }
+  },
+
+  Article: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': data?.title,
+    'description': data?.description,
+    'image': data?.image ? `${siteURL}${data.image}` : `${siteURL}profile.jpeg`,
+    'datePublished': data?.datePublished,
+    'dateModified': data?.dateModified || data?.datePublished,
+    'author': {
+      '@type': 'Person',
+      'name': 'Luís Madeira',
+      'url': `${siteURL}about`
+    },
+    'publisher': {
+      '@id': `${siteURL}#organization`
+    }
+  },
+
+  CreativeWork: {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    'name': data?.title,
+    'description': data?.description,
+    'image': data?.image ? `${siteURL}${data.image}` : undefined,
+    'author': {
+      '@type': 'Person',
+      'name': 'Luís Madeira'
+    },
+    'about': {
+      '@type': 'Service',
+      'name': data?.serviceType || 'Web Development'
+    },
+    'dateCreated': data?.dateCreated
+  },
+
+  FAQPage: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': data?.questions || []
+  },
+
+  BreadcrumbList: {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': data?.breadcrumbs || []
+  }
+};
+
+const schema = schemas[type] || schemas.Organization;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)}></script>

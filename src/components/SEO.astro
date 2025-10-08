@@ -1,0 +1,91 @@
+---
+/**
+ * SEO Meta Component
+ * Adds comprehensive SEO meta tags to pages
+ * Includes: Title, Description, Open Graph, Twitter Cards, Hreflang
+ * All invisible to users but critical for Google rankings
+ */
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  noindex?: boolean;
+  locale?: string;
+  alternateLocale?: string;
+  alternatePath?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = '/profile.jpeg',
+  ogType = 'website',
+  noindex = false,
+  locale = 'en',
+  alternateLocale,
+  alternatePath,
+} = Astro.props;
+
+const siteName = 'Luís Madeira - Web Developer & SEO Specialist';
+const fullTitle = `${title} | ${siteName}`;
+const canonicalURL = canonical || Astro.url.href;
+const siteURL = Astro.site?.href || 'https://yourdomain.com';
+
+// Construct full image URL
+const ogImageURL = ogImage.startsWith('http')
+  ? ogImage
+  : new URL(ogImage, siteURL).href;
+
+// Determine hreflang URLs
+const currentPath = Astro.url.pathname;
+const enURL = locale === 'pt'
+  ? currentPath.replace('/pt/', '/').replace('/pt', '/')
+  : currentPath;
+const ptURL = locale === 'en'
+  ? `/pt${currentPath}`
+  : currentPath;
+
+const enFullURL = new URL(enURL, siteURL).href;
+const ptFullURL = new URL(ptURL, siteURL).href;
+
+// Determine og:locale
+const ogLocale = locale === 'pt' ? 'pt_PT' : 'en_US';
+const ogLocaleAlternate = locale === 'pt' ? 'en_US' : 'pt_PT';
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImageURL} />
+<meta property="og:locale" content={ogLocale} />
+<meta property="og:locale:alternate" content={ogLocaleAlternate} />
+<meta property="og:site_name" content={siteName} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={fullTitle} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImageURL} />
+
+<!-- Hreflang for bilingual support -->
+<link rel="alternate" hreflang="en" href={enFullURL} />
+<link rel="alternate" hreflang="pt" href={ptFullURL} />
+<link rel="alternate" hreflang="x-default" href={enFullURL} />
+
+<!-- Additional SEO -->
+<meta name="author" content="Luís Madeira" />
+<meta name="language" content={locale === 'pt' ? 'Portuguese' : 'English'} />

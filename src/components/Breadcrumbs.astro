@@ -1,0 +1,100 @@
+---
+/**
+ * Breadcrumbs Component
+ * Shows navigation path and improves SEO
+ * Includes structured data for Google rich results
+ * Matches existing design system
+ */
+
+export interface Props {
+  items: { label: string; href: string }[];
+}
+
+const { items } = Astro.props;
+const siteURL = Astro.site?.href || 'https://yourdomain.com';
+
+// Generate schema for breadcrumbs
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': items.map((item, index) => ({
+    '@type': 'ListItem',
+    'position': index + 1,
+    'name': item.label,
+    'item': new URL(item.href, siteURL).href
+  }))
+};
+---
+
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+  <ol>
+    {items.map((item, index) => (
+      <li>
+        {index < items.length - 1 ? (
+          <>
+            <a href={item.href}>{item.label}</a>
+            <span class="separator">/</span>
+          </>
+        ) : (
+          <span aria-current="page">{item.label}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+<style>
+  .breadcrumbs {
+    margin-bottom: 32px;
+    padding: 16px 0;
+  }
+
+  .breadcrumbs ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumbs li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .separator {
+    color: #666;
+    user-select: none;
+  }
+
+  .breadcrumbs a {
+    color: var(--color-text, #c7c7c7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .breadcrumbs a:hover {
+    color: var(--color-accent, #d3e97a);
+  }
+
+  .breadcrumbs [aria-current="page"] {
+    color: #999;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .breadcrumbs {
+      margin-bottom: 24px;
+      padding: 12px 0;
+    }
+
+    .breadcrumbs ol {
+      font-size: 12px;
+    }
+  }
+</style>
