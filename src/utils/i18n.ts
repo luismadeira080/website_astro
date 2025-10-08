@@ -49,7 +49,7 @@ export const translations = {
       solutionTitle: 'Solution',
 
       viewProject: 'View full project',
-      contactCTA: 'INTERESTED? LET'S TALK',
+      contactCTA: 'INTERESTED? LET\'S TALK',
     },
 
     // About Section
@@ -66,7 +66,7 @@ export const translations = {
     // Contact Section
     contact: {
       sectionTitle: 'GET IN TOUCH',
-      sectionSubtitle: 'Ready to start your project? Let's talk.',
+      sectionSubtitle: 'Ready to start your project? Let\'s talk.',
 
       nameLabel: 'Name',
       namePlaceholder: 'John Doe',
