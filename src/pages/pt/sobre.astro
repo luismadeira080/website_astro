@@ -1,0 +1,729 @@
+---
+import SEO from '../../components/SEO.astro';
+import Schema from '../../components/Schema.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Sobre Mim - Luís Madeira | Criação de Websites e SEO"
+        description="Estudante de mestrado na IE Business School com 2 anos de experiência em VC. Especializado em SEO local e desenvolvimento web para negócios portugueses."
+        locale="pt"
+    />
+
+    <!-- Structured Data -->
+    <Schema type="Organization" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/pt/#work">Trabalhos</a>
+            <a href="/pt/sobre">Sobre</a>
+            <a href="/pt/#contact">Contacto</a>
+            <LanguageSwitcher currentPath="/sobre" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <h1>SOBRE MIM</h1>
+        <div class="about-intro-content">
+            <h2>Crio websites e landing pages que realmente convertem e geram tráfego. Especializado em SEO local para pequenos negócios.</h2>
+            <div class="about-description">
+                <p>Atualmente a fazer o Mestrado em Gestão na IE Business School em Madrid, natural do Porto. Com 2 anos de experiência em Venture Capital e uma paixão por tecnologia, ajudo negócios locais (dentistas, spas, estética automóvel, AVAC e outros) a aparecerem melhor no Google e a conseguirem mais clientes. Uso ferramentas modernas como Claude Code, Cursor, Figma, Astro, React e Tailwind para criar websites limpos e rápidos que realmente geram tráfego e conversões. O meu foco: resultados mensuráveis através de SEO técnico, experiência de utilizador otimizada e estratégias baseadas em dados.</p>
+                <div class="about-actions">
+                    <a href="tel:+351924466899" class="btn-primary">
+                        LIGAR-ME
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 16.42V19.956C21 20.506 20.552 20.955 20.002 20.956C19.92 20.956 19.838 20.95 19.757 20.939C16.183 20.473 12.778 19.062 9.889 16.852C7.207 14.824 5.055 12.209 3.621 9.179C1.604 5.857 1.027 1.943 2.021 0.52C2.138 0.344 2.312 0.213 2.513 0.151C2.715 0.088 2.931 0.098 3.126 0.177L6.598 1.613C6.989 1.778 7.208 2.208 7.124 2.629L6.507 5.941C6.454 6.214 6.292 6.456 6.057 6.613L4.658 7.621C5.706 10.277 7.386 12.662 9.561 14.561L10.999 13.621C11.223 13.478 11.494 13.429 11.755 13.486L14.925 14.221C15.345 14.315 15.654 14.695 15.654 15.129V18.956C15.654 19.236 15.541 19.503 15.339 19.698C15.137 19.892 14.863 19.998 14.583 19.995C13.865 19.988 13.149 19.892 12.45 19.71" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" class="social-icon" target="_blank">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/351924466899" class="social-icon" target="_blank">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382C17.284 14.29 16.362 13.838 16.194 13.774C16.026 13.71 15.906 13.678 15.786 13.866C15.666 14.054 15.31 14.478 15.206 14.598C15.102 14.718 14.998 14.734 14.81 14.642C14.622 14.55 14.022 14.354 13.306 13.718C12.75 13.222 12.378 12.61 12.274 12.422C12.17 12.234 12.262 12.138 12.354 12.046C12.438 11.962 12.542 11.83 12.634 11.726C12.726 11.622 12.758 11.542 12.822 11.422C12.886 11.302 12.854 11.198 12.81 11.106C12.766 11.014 12.378 10.09 12.226 9.714C12.074 9.338 11.922 9.37 11.81 9.354C11.698 9.338 11.578 9.338 11.458 9.338C11.338 9.338 11.134 9.382 10.966 9.57C10.798 9.758 10.31 10.21 10.31 11.134C10.31 12.058 11.006 12.95 11.098 13.07C11.19 13.19 12.378 15.022 14.206 15.838C14.646 16.026 14.998 16.138 15.274 16.226C15.714 16.366 16.118 16.346 16.438 16.302C16.794 16.254 17.524 15.854 17.676 15.422C17.828 14.99 17.828 14.622 17.784 14.558C17.74 14.494 17.62 14.45 17.472 14.382ZM12.002 21.838C10.282 21.838 8.594 21.318 7.15 20.346L6.8 20.13L3.486 21.038L4.41 17.806L4.174 17.438C3.126 15.958 2.57 14.21 2.57 12.414C2.57 7.342 6.654 3.25 12.002 3.25C14.586 3.25 17.026 4.21 18.902 5.994C20.778 7.778 21.794 10.226 21.794 12.726C21.794 17.798 17.71 21.838 12.002 21.838ZM20.49 3.634C18.278 1.414 15.294 0.158 12.002 0.158C5.546 0.158 0.322 5.382 0.322 11.838C0.322 13.854 0.85 15.838 1.854 17.598L0.194 23.674L6.382 22.042C8.078 22.966 9.986 23.454 11.934 23.454H11.938C18.39 23.454 23.682 18.23 23.682 11.774C23.682 8.546 22.458 5.614 20.49 3.634Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Capabilities Section -->
+    <section class="capabilities-section">
+        <h2>AS MINHAS CAPACIDADES</h2>
+        <div class="capabilities-content">
+            <p>Estou constantemente a expandir o meu conjunto de competências para entregar melhores resultados aos clientes. Desde SEO técnico a frameworks modernos de desenvolvimento web, mantenho-me à frente das tendências da indústria para fornecer soluções de ponta que impulsionam o crescimento real do negócio.</p>
+            <div class="skills-grid">
+                <span class="skill-tag">LOCAL SEO</span>
+                <span class="skill-tag">TECHNICAL SEO</span>
+                <span class="skill-tag">ASTRO</span>
+                <span class="skill-tag">REACT</span>
+                <span class="skill-tag">TAILWIND CSS</span>
+                <span class="skill-tag">FIGMA</span>
+                <span class="skill-tag">CLAUDE CODE</span>
+                <span class="skill-tag">CURSOR</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Experience Section -->
+    <section class="experience-section">
+        <div class="experience-container">
+            <h2>MY EXPERIENCE</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Master's in Management</h3>
+                            <p class="company">IE Business School, Madrid</p>
+                        </div>
+                        <span class="timeline">2025 — Present</span>
+                    </div>
+                    <p class="experience-description">Pursuing advanced business education while building expertise in digital marketing, entrepreneurship, and data-driven decision making. Applying academic knowledge to real-world SEO and web development projects.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Freelance Web Developer & SEO Specialist</h3>
+                            <p class="company">Self-Employed</p>
+                        </div>
+                        <span class="timeline">2025 — Present</span>
+                    </div>
+                    <p class="experience-description">Building conversion-focused websites and implementing local SEO strategies for small businesses. Specializing in dentists, spas, car care, and HVAC companies. Using modern tools like Claude Code, Cursor, Astro, React, and Tailwind to deliver fast, optimised websites that rank on Google and drive real business results.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Venture Capital Analyst</h3>
+                            <p class="company">Lisbon, Portugal</p>
+                        </div>
+                        <span class="timeline">2023 — 2025</span>
+                    </div>
+                    <p class="experience-description">2 years of experience analysing tech startups, market trends, and investment opportunities. Developed strong analytical skills and understanding of what makes businesses succeed online—knowledge I now apply to helping small businesses grow through SEO and web development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-info">
+            <div class="contact-left">
+                <h2>LET'S CONNECT</h2>
+                <div class="contact-details">
+                    <p>Say hello at <a href="mailto:luismadeira@ruimadeira.pt">luismadeira@ruimadeira.pt</a></p>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/351924466899" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382C17.284 14.29 16.362 13.838 16.194 13.774C16.026 13.71 15.906 13.678 15.786 13.866C15.666 14.054 15.31 14.478 15.206 14.598C15.102 14.718 14.998 14.734 14.81 14.642C14.622 14.55 14.022 14.354 13.306 13.718C12.75 13.222 12.378 12.61 12.274 12.422C12.17 12.234 12.262 12.138 12.354 12.046C12.438 11.962 12.542 11.83 12.634 11.726C12.726 11.622 12.758 11.542 12.822 11.422C12.886 11.302 12.854 11.198 12.81 11.106C12.766 11.014 12.378 10.09 12.226 9.714C12.074 9.338 11.922 9.37 11.81 9.354C11.698 9.338 11.578 9.338 11.458 9.338C11.338 9.338 11.134 9.382 10.966 9.57C10.798 9.758 10.31 10.21 10.31 11.134C10.31 12.058 11.006 12.95 11.098 13.07C11.19 13.19 12.378 15.022 14.206 15.838C14.646 16.026 14.998 16.138 15.274 16.226C15.714 16.366 16.118 16.346 16.438 16.302C16.794 16.254 17.524 15.854 17.676 15.422C17.828 14.99 17.828 14.622 17.784 14.558C17.74 14.494 17.62 14.45 17.472 14.382ZM12.002 21.838C10.282 21.838 8.594 21.318 7.15 20.346L6.8 20.13L3.486 21.038L4.41 17.806L4.174 17.438C3.126 15.958 2.57 14.21 2.57 12.414C2.57 7.342 6.654 3.25 12.002 3.25C14.586 3.25 17.026 4.21 18.902 5.994C20.778 7.778 21.794 10.226 21.794 12.726C21.794 17.798 17.71 21.838 12.002 21.838ZM20.49 3.634C18.278 1.414 15.294 0.158 12.002 0.158C5.546 0.158 0.322 5.382 0.322 11.838C0.322 13.854 0.85 15.838 1.854 17.598L0.194 23.674L6.382 22.042C8.078 22.966 9.986 23.454 11.934 23.454H11.938C18.39 23.454 23.682 18.23 23.682 11.774C23.682 8.546 22.458 5.614 20.49 3.634Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="copyright">© 2024 Luís Madeira</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="6" placeholder=""></textarea>
+                </div>
+                <button type="submit" class="btn-submit">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // Form submission
+        const contactForm = document.querySelector('.contact-form form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* About Hero Section */
+.about-hero {
+    padding: 80px 108px 60px;
+}
+
+.about-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 91px;
+    letter-spacing: -0.91px;
+    margin-bottom: 60px;
+}
+
+.about-intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+}
+
+.about-intro-content h2 {
+    font-size: 45px;
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+.about-description p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.about-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
+}
+
+/* Capabilities Section */
+.capabilities-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.capabilities-section h2 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    letter-spacing: -0.76px;
+    margin-bottom: 48px;
+}
+
+.capabilities-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+}
+
+.capabilities-content p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--color-text);
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+}
+
+.experience-section h2 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    letter-spacing: -0.76px;
+    line-height: 1;
+}
+
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.experience-header h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.company {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+.timeline {
+    font-size: 18px;
+    color: var(--color-text);
+    white-space: nowrap;
+}
+
+.experience-description {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-text);
+}
+
+/* Contact Section */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.contact-left h2 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    letter-spacing: -0.76px;
+    margin-bottom: 32px;
+}
+
+.contact-details {
+    margin-bottom: 32px;
+}
+
+.contact-details p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.contact-details a {
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-accent);
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--color-accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 120px;
+}
+
+.social-links a {
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-accent);
+}
+
+.copyright {
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+/* Contact Form */
+.contact-form {
+    padding-top: 0;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 16px;
+    font-size: 16px;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 48px;
+    border: none;
+    border-radius: 27px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .about-hero {
+        padding: 60px 32px 40px;
+    }
+
+    .about-intro-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .capabilities-section {
+        padding: 60px 32px;
+    }
+
+    .capabilities-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .experience-section {
+        padding: 60px 32px;
+    }
+
+    .experience-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 60px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .about-hero {
+        padding: 40px 16px 32px;
+    }
+
+    .about-hero h1 {
+        font-size: 57px;
+    }
+
+    .about-intro-content h2 {
+        font-size: 32px;
+    }
+
+    .about-actions {
+        flex-wrap: wrap;
+    }
+
+    .capabilities-section {
+        padding: 40px 16px;
+    }
+
+    .capabilities-section h2 {
+        font-size: 48px;
+    }
+
+    .experience-section {
+        padding: 40px 16px;
+    }
+
+    .experience-section h2 {
+        font-size: 48px;
+    }
+
+    .experience-timeline {
+        gap: 60px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-header h3 {
+        font-size: 20px;
+    }
+
+    .contact-section {
+        padding: 40px 16px;
+    }
+
+    .contact-left h2 {
+        font-size: 48px;
+    }
+
+    .contact-details p {
+        font-size: 16px;
+    }
+
+    .social-links {
+        margin-bottom: 60px;
+    }
+}
+</style>
