@@ -242,17 +242,39 @@ export function getLocaleFromPath(pathname: string): string {
 }
 
 /**
+ * Path mappings between English and Portuguese pages
+ */
+const pathMappings: Record<string, { en: string; pt: string }> = {
+  home: { en: '/', pt: '/pt/' },
+  about: { en: '/about', pt: '/pt/sobre' },
+  projects: { en: '/projects', pt: '/pt/projetos' },
+  services: { en: '/services', pt: '/pt/servicos' },
+};
+
+/**
  * Get the alternate path for the other language
  * @param pathname - Current URL pathname
  * @param currentLocale - Current locale
  * @returns Path in the other language
  */
 export function getAlternatePath(pathname: string, currentLocale: string): string {
+  // Normalize pathname (remove trailing slash except for root)
+  const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
+
+  // Find matching mapping
+  for (const mapping of Object.values(pathMappings)) {
+    if (currentLocale === 'en' && mapping.en === normalizedPath) {
+      return mapping.pt;
+    }
+    if (currentLocale === 'pt' && mapping.pt === normalizedPath) {
+      return mapping.en;
+    }
+  }
+
+  // Fallback: if no mapping found, use simple prefix logic
   if (currentLocale === 'en') {
-    // Switch to Portuguese
-    return `/pt${pathname}`;
+    return `/pt${normalizedPath}`;
   } else {
-    // Switch to English
-    return pathname.replace('/pt', '') || '/';
+    return normalizedPath.replace('/pt', '') || '/';
   }
 }
