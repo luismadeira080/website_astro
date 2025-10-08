@@ -280,6 +280,78 @@ import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
         </div>
     </section>
 
+    <!-- Services by Industry Section -->
+    <section class="services-by-industry-section">
+        <h2>SERVIÇOS POR SETOR</h2>
+        <p class="section-subtitle">Websites e estratégias de SEO personalizadas para o seu setor</p>
+        <div class="industry-cards-grid">
+            <a href="/pt/websites-para-spas" class="industry-card">
+                <div class="industry-icon">💆</div>
+                <h3>Spas e Bem-Estar</h3>
+                <p>Websites com sistema de marcações online para spas, centros de massagem e wellness</p>
+                <span class="card-arrow">Ver detalhes →</span>
+            </a>
+            <a href="/pt/websites-para-clinicas-dentarias" class="industry-card">
+                <div class="industry-icon">🦷</div>
+                <h3>Clínicas Dentárias</h3>
+                <p>Websites profissionais para dentistas com informação sobre tratamentos e marcações</p>
+                <span class="card-arrow">Ver detalhes →</span>
+            </a>
+            <a href="/pt/websites-para-restaurantes" class="industry-card">
+                <div class="industry-icon">🍽️</div>
+                <h3>Restaurantes</h3>
+                <p>Websites com menu digital, sistema de reservas e integração com delivery</p>
+                <span class="card-arrow">Ver detalhes →</span>
+            </a>
+            <a href="/pt/websites-para-oficinas" class="industry-card">
+                <div class="industry-icon">🚗</div>
+                <h3>Oficinas e Auto</h3>
+                <p>Websites para oficinas, estética automóvel e serviços auto com galeria antes/depois</p>
+                <span class="card-arrow">Ver detalhes →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services by Location Section -->
+    <section class="services-by-location-section">
+        <h2>SERVIÇOS POR LOCALIZAÇÃO</h2>
+        <p class="section-subtitle">Especialização em SEO local e websites para negócios em Portugal</p>
+        <div class="location-links-grid">
+            <a href="/pt/criacao-websites-lisboa" class="location-link">
+                <span class="location-name">Lisboa</span>
+                <span class="location-description">Criação de websites em Lisboa</span>
+            </a>
+            <a href="/pt/criacao-websites-porto" class="location-link">
+                <span class="location-name">Porto</span>
+                <span class="location-description">Criação de websites no Porto</span>
+            </a>
+            <a href="/pt/criacao-websites-braga" class="location-link">
+                <span class="location-name">Braga</span>
+                <span class="location-description">Criação de websites em Braga</span>
+            </a>
+            <a href="/pt/criacao-websites-coimbra" class="location-link">
+                <span class="location-name">Coimbra</span>
+                <span class="location-description">Criação de websites em Coimbra</span>
+            </a>
+            <a href="/pt/criacao-websites-aveiro" class="location-link">
+                <span class="location-name">Aveiro</span>
+                <span class="location-description">Criação de websites em Aveiro</span>
+            </a>
+            <a href="/pt/criacao-websites-faro" class="location-link">
+                <span class="location-name">Faro / Algarve</span>
+                <span class="location-description">Criação de websites no Algarve</span>
+            </a>
+            <a href="/pt/criacao-websites-setubal" class="location-link">
+                <span class="location-name">Setúbal</span>
+                <span class="location-description">Criação de websites em Setúbal</span>
+            </a>
+            <a href="/pt/criacao-websites-leiria" class="location-link">
+                <span class="location-name">Leiria</span>
+                <span class="location-description">Criação de websites em Leiria</span>
+            </a>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <h2>PRONTO PARA FAZER CRESCER O SEU NEGÓCIO?</h2>
@@ -881,6 +953,137 @@ body {
     opacity: 0.85;
 }
 
+/* Services by Industry Section */
+.services-by-industry-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.services-by-industry-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.services-by-industry-section .section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 48px;
+}
+
+.industry-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.industry-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-decoration: none;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.industry-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.industry-icon {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.industry-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.industry-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.75;
+    margin: 0;
+    flex: 1;
+}
+
+.card-arrow {
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* Services by Location Section */
+.services-by-location-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.services-by-location-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.services-by-location-section .section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 48px;
+}
+
+.location-links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-link {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.location-link:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.location-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.location-description {
+    font-size: 13px;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
 /* CTA Section */
 .cta-section {
     padding: 80px 108px;
@@ -924,6 +1127,8 @@ body {
     .pricing-section,
     .case-studies-section,
     .faq-section,
+    .services-by-industry-section,
+    .services-by-location-section,
     .cta-section {
         padding: 60px 32px;
     }
@@ -934,6 +1139,8 @@ body {
     .pricing-section h2,
     .case-studies-section h2,
     .faq-section h2,
+    .services-by-industry-section h2,
+    .services-by-location-section h2,
     .cta-section h2 {
         font-size: 48px;
     }
@@ -944,6 +1151,14 @@ body {
     .case-studies-grid,
     .faq-grid {
         grid-template-columns: 1fr;
+    }
+
+    .industry-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .location-links-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .process-steps {
@@ -1014,6 +1229,8 @@ body {
     .pricing-section,
     .case-studies-section,
     .faq-section,
+    .services-by-industry-section,
+    .services-by-location-section,
     .cta-section {
         padding: 40px 16px;
     }
@@ -1024,6 +1241,8 @@ body {
     .pricing-section h2,
     .case-studies-section h2,
     .faq-section h2,
+    .services-by-industry-section h2,
+    .services-by-location-section h2,
     .cta-section h2 {
         font-size: 40px;
     }
@@ -1032,6 +1251,11 @@ body {
     .reason-card,
     .pricing-card {
         padding: 32px;
+    }
+
+    .industry-cards-grid,
+    .location-links-grid {
+        grid-template-columns: 1fr;
     }
 
     .process-steps {

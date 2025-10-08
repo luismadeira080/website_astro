@@ -400,6 +400,22 @@ import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
         </div>
     </section>
 
+    <!-- Cities Section -->
+    <section class="cities-section">
+        <h2>CIDADES QUE SERVIMOS</h2>
+        <p class="section-subtitle">Oferecemos serviços de criação de websites e SEO local em toda Portugal</p>
+        <div class="cities-grid">
+            <a href="/pt/criacao-websites-lisboa" class="city-link">Lisboa</a>
+            <a href="/pt/criacao-websites-porto" class="city-link">Porto</a>
+            <a href="/pt/criacao-websites-braga" class="city-link">Braga</a>
+            <a href="/pt/criacao-websites-coimbra" class="city-link">Coimbra</a>
+            <a href="/pt/criacao-websites-aveiro" class="city-link">Aveiro</a>
+            <a href="/pt/criacao-websites-faro" class="city-link">Faro</a>
+            <a href="/pt/criacao-websites-setubal" class="city-link">Setúbal</a>
+            <a href="/pt/criacao-websites-leiria" class="city-link">Leiria</a>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <h2>PRONTO PARA FAZER A SUA OFICINA CRESCER?</h2>
@@ -1269,6 +1285,52 @@ body {
     color: #c5db6f;
 }
 
+/* Cities Section */
+.cities-section {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.cities-section h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 16px;
+}
+
+.cities-section .section-subtitle {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.city-link {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 16px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.city-link:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .navigation {
@@ -1292,8 +1354,13 @@ body {
     .process-section,
     .faq-section,
     .testimonials-section,
+    .cities-section,
     .cta-section {
         padding: 60px 32px;
+    }
+
+    .cities-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     section h2 {
@@ -1387,12 +1454,21 @@ body {
     .process-section,
     .faq-section,
     .testimonials-section,
+    .cities-section,
     .cta-section {
         padding: 40px 16px;
     }
 
     section h2 {
         font-size: 40px;
+    }
+
+    .cities-section h2 {
+        font-size: 40px;
+    }
+
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .pain-point,

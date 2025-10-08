@@ -1,0 +1,156 @@
+---
+interface Props {
+    locale?: 'en' | 'pt';
+}
+
+const { locale = 'en' } = Astro.props;
+
+const isPortuguese = locale === 'pt';
+const baseUrl = isPortuguese ? '/pt' : '';
+---
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>{isPortuguese ? 'Sobre' : 'About'}</h4>
+            <p class="footer-description">
+                {isPortuguese
+                    ? 'Ajudo negócios locais em Portugal a crescer online através de websites profissionais e SEO local.'
+                    : 'Helping local businesses in Portugal grow online through professional websites and local SEO.'}
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h4>{isPortuguese ? 'Links Rápidos' : 'Quick Links'}</h4>
+            <ul class="footer-links">
+                <li><a href={`${baseUrl}/`}>{isPortuguese ? 'Início' : 'Home'}</a></li>
+                <li><a href={`${baseUrl === '' ? '/about' : '/pt/sobre'}`}>{isPortuguese ? 'Sobre' : 'About'}</a></li>
+                <li><a href={`${baseUrl === '' ? '/projects' : '/pt/projetos'}`}>{isPortuguese ? 'Projetos' : 'Projects'}</a></li>
+                <li><a href={`${baseUrl === '' ? '/services' : '/pt/servicos'}`}>{isPortuguese ? 'Serviços' : 'Services'}</a></li>
+                <li><a href={`${baseUrl}/#contact`}>{isPortuguese ? 'Contacto' : 'Contact'}</a></li>
+            </ul>
+        </div>
+
+        {isPortuguese && (
+            <>
+                <div class="footer-section">
+                    <h4>Serviços por Setor</h4>
+                    <ul class="footer-links">
+                        <li><a href="/pt/websites-para-spas">Spas</a></li>
+                        <li><a href="/pt/websites-para-clinicas-dentarias">Clínicas Dentárias</a></li>
+                        <li><a href="/pt/websites-para-restaurantes">Restaurantes</a></li>
+                        <li><a href="/pt/websites-para-oficinas">Oficinas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Localização</h4>
+                    <ul class="footer-links">
+                        <li><a href="/pt/criacao-websites-lisboa">Lisboa</a></li>
+                        <li><a href="/pt/criacao-websites-porto">Porto</a></li>
+                        <li><a href="/pt/criacao-websites-braga">Braga</a></li>
+                        <li><a href="/pt/criacao-websites-coimbra">Coimbra</a></li>
+                        <li><a href="/pt/criacao-websites-aveiro">Aveiro</a></li>
+                        <li><a href="/pt/criacao-websites-faro">Faro</a></li>
+                    </ul>
+                </div>
+            </>
+        )}
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} Luís Madeira. {isPortuguese ? 'Todos os direitos reservados.' : 'All rights reserved.'}</p>
+    </div>
+</footer>
+
+<style>
+.footer {
+    background-color: var(--color-dark);
+    border-top: 1px solid #333;
+    padding: 60px 108px 24px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.75;
+    max-width: 300px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.75;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 24px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    opacity: 0.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 48px 32px 24px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 16px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+}
+</style>
