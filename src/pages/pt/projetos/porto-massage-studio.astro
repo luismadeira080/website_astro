@@ -1,0 +1,1083 @@
+---
+import SEO from '../../../components/SEO.astro';
+import Schema from '../../../components/Schema.astro';
+import LanguageSwitcher from '../../../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Estudo de Caso Landing Page Porto Massage Studio | Luís Madeira"
+        description="Como desenhei e construí uma landing page profissional para um estúdio de massagens com marcação online e apresentação clara de serviços em 2 semanas."
+        locale="pt"
+    />
+
+    <!-- Structured Data -->
+    <Schema type="Article" data={{
+        headline: "Porto Massage Studio - Estudo de Caso Landing Page",
+        datePublished: "2025-10-08",
+        author: "Luís Madeira",
+        description: "Um estudo de caso sobre o design e construção de uma landing page focada em conversão para o Porto Massage Studio com marcação online e apresentação de serviços."
+    }} />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/pt" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/pt/#work">Trabalhos</a>
+            <a href="/pt/servicos">Serviços</a>
+            <a href="/pt/sobre">Sobre</a>
+            <a href="/pt/#contact">Contacto</a>
+            <LanguageSwitcher currentPath="/pt/projetos/porto-massage-studio" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <a href="/pt">Início</a>
+        <span class="separator">/</span>
+        <a href="/pt/projetos">Estudos de Caso</a>
+        <span class="separator">/</span>
+        <span class="current">Porto Massage Studio</span>
+    </nav>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="hero-tag">Landing Page</div>
+        <h1>Porto Massage Studio</h1>
+        <p class="hero-subtitle">Landing page profissional para estúdio de massagens com marcação online e apresentação clara de serviços</p>
+
+        <div class="hero-metrics">
+            <div class="metric-card">
+                <span class="metric-number">2 semanas</span>
+                <span class="metric-label">Cronograma</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">96/100</span>
+                <span class="metric-label">PageSpeed</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">0,9s</span>
+                <span class="metric-label">Tempo de Carregamento</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">100%</span>
+                <span class="metric-label">Score Móvel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="content-section">
+        <h2>Visão Geral do Projeto</h2>
+        <p>O Porto Massage Studio é um centro de bem-estar no Porto que oferece vários serviços de massagem e relaxamento. Precisavam de uma presença online profissional que apresentasse os seus serviços, facilitasse marcações online e estabelecesse credibilidade com potenciais clientes.</p>
+
+        <p>O cliente necessitava de uma landing page que servisse múltiplos propósitos: apresentar claramente a sua gama de serviços, permitir marcação fácil de consultas, mostrar a sua expertise e funcionar perfeitamente em dispositivos móveis onde origina a maior parte do seu tráfego.</p>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>Cliente</h3>
+                <p>Porto Massage Studio</p>
+            </div>
+            <div class="info-item">
+                <h3>Indústria</h3>
+                <p>Bem-Estar & Spa</p>
+            </div>
+            <div class="info-item">
+                <h3>Tipo de Projeto</h3>
+                <p>Design & Desenvolvimento Landing Page</p>
+            </div>
+            <div class="info-item">
+                <h3>Cronograma</h3>
+                <p>2 Semanas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="content-section dark-section">
+        <h2>O Desafio</h2>
+        <p>O Porto Massage Studio enfrentava vários desafios principais com a sua presença online:</p>
+
+        <ul class="challenge-list">
+            <li><strong>Sem Presença Online:</strong> O estúdio dependia inteiramente de passantes e boca-a-boca, perdendo potenciais clientes online que procuram serviços de massagem</li>
+            <li><strong>Processo de Marcação Complexo:</strong> Os clientes tinham que ligar durante o horário de expediente, criando fricção no processo de marcação</li>
+            <li><strong>Clareza de Serviços:</strong> Potenciais clientes não conseguiam facilmente compreender os diferentes tipos de massagem e serviços oferecidos</li>
+            <li><strong>Acessibilidade Móvel:</strong> A maioria das consultas vinham de dispositivos móveis, mas não tinham presença otimizada para mobile</li>
+            <li><strong>Construção de Confiança:</strong> Sem avaliações online ou apresentação profissional, tinham dificuldade em converter clientes pela primeira vez</li>
+        </ul>
+
+        <p>O negócio estava a perder potenciais clientes que preferiam pesquisar e marcar serviços online, particularmente dados demográficos mais jovens que esperam experiências digital-first.</p>
+    </section>
+
+    <!-- The Solution -->
+    <section class="content-section">
+        <h2>A Solução</h2>
+        <p>Desenhei e construí uma landing page focada em conversão que abordou todos os seus desafios principais mantendo uma estética calma e profissional alinhada com a sua marca de bem-estar.</p>
+
+        <h3>Abordagem de Design</h3>
+        <p>O design priorizou três elementos principais:</p>
+
+        <ul class="solution-list">
+            <li><strong>Estética Calmante:</strong> Cores suaves, espaço generoso e imagens serenas para refletir a experiência de relaxamento</li>
+            <li><strong>Clareza de Serviços:</strong> Cartões de serviços claros com descrições, durações e preços para cada tipo de massagem</li>
+            <li><strong>Caminho de Conversão:</strong> Colocação estratégica de CTAs de marcação ao longo da página para capturar interesse em diferentes níveis de envolvimento</li>
+        </ul>
+
+        <h3>Funcionalidades Principais Implementadas</h3>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>Sistema de Marcação Online</h4>
+                <p>Formulário de marcação integrado com seleção de data/hora, escolha de serviço e confirmação instantânea</p>
+            </div>
+            <div class="feature-card">
+                <h4>Apresentação de Serviços</h4>
+                <p>Cartões de serviços detalhados com imagens, descrições, durações, benefícios e preços</p>
+            </div>
+            <div class="feature-card">
+                <h4>Integração WhatsApp</h4>
+                <p>Botão direto WhatsApp para consultas instantâneas e questões rápidas</p>
+            </div>
+            <div class="feature-card">
+                <h4>Google Maps Incorporado</h4>
+                <p>Mapa interativo mostrando localização exata com direções e informação do negócio</p>
+            </div>
+            <div class="feature-card">
+                <h4>Prova Social</h4>
+                <p>Secção de testemunhos de clientes para construir confiança e mostrar experiências de clientes anteriores</p>
+            </div>
+            <div class="feature-card">
+                <h4>Design Mobile-First</h4>
+                <p>Otimizado para dispositivos móveis com botões amigáveis ao toque e carregamento rápido</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="content-section dark-section">
+        <h2>Processo de Design</h2>
+
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h3>Descoberta & Pesquisa</h3>
+                <p>Analisei estúdios de massagem concorrentes, identifiquei pontos de fricção na marcação e defini a audiência alvo (profissionais de 30-50 anos à procura de alívio de stress).</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h3>Wireframing & Estrutura</h3>
+                <p>Criei wireframes mobile-first focando na jornada de marcação. Mapeei o fluxo do utilizador desde o landing até à confirmação da marcação.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h3>Design Visual</h3>
+                <p>Desenvolvi paleta de cores calmantes (azuis suaves, neutros quentes), selecionei imagens e criei sistema de design consistente para cartões de serviços.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <h3>Desenvolvimento & Integração</h3>
+                <p>Construí com Astro para performance, integrei sistema de marcação com notificações por email, implementei WhatsApp e APIs de mapas.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">05</div>
+                <h3>Testes & Lançamento</h3>
+                <p>Testei fluxo de marcação em múltiplos dispositivos, otimizei tempos de carregamento, validei formulários e lancei com rastreamento de análise.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="content-section">
+        <h2>Resultados & Impacto</h2>
+
+        <div class="results-grid">
+            <div class="result-card">
+                <span class="result-number">96/100</span>
+                <span class="result-label">Score Google PageSpeed</span>
+                <p>Excelente performance garantindo carregamento rápido mesmo em redes móveis</p>
+            </div>
+
+            <div class="result-card">
+                <span class="result-number">0,9s</span>
+                <span class="result-label">Tempo Médio de Carregamento</span>
+                <p>Carregamentos de página ultra-rápidos reduzem taxa de rejeição e melhoram experiência do utilizador</p>
+            </div>
+
+            <div class="result-card">
+                <span class="result-number">100%</span>
+                <span class="result-label">Score Mobile-Friendly</span>
+                <p>Otimização móvel perfeita onde 80% do seu tráfego se origina</p>
+            </div>
+
+            <div class="result-card">
+                <span class="result-number">2 semanas</span>
+                <span class="result-label">Cronograma de Desenvolvimento</span>
+                <p>Entrega rápida desde o início até ao lançamento sem comprometer qualidade</p>
+            </div>
+        </div>
+
+        <h3>Impacto no Negócio</h3>
+        <ul class="impact-list">
+            <li>Permitiu marcação online 24/7, removendo fricção do agendamento de consultas</li>
+            <li>Estabeleceu presença online profissional que constrói confiança com clientes pela primeira vez</li>
+            <li>Reduziu consultas telefónicas ao fornecer informação de serviços abrangente online</li>
+            <li>Criou fundação escalável pronta para futuro conteúdo de blog e otimização de SEO</li>
+            <li>Experiência otimizada para mobile alcança 80% da audiência alvo eficazmente</li>
+        </ul>
+    </section>
+
+    <!-- Technologies -->
+    <section class="content-section dark-section">
+        <h2>Tecnologias Utilizadas</h2>
+
+        <div class="tech-grid">
+            <div class="tech-item">
+                <h4>Astro</h4>
+                <p>Gerador de sites estáticos para performance ótima e tempos de carregamento rápidos</p>
+            </div>
+            <div class="tech-item">
+                <h4>CSS3</h4>
+                <p>CSS moderno com propriedades personalizadas para estilização sustentável</p>
+            </div>
+            <div class="tech-item">
+                <h4>Google Maps API</h4>
+                <p>Integração de mapa interativo para localização e direções</p>
+            </div>
+            <div class="tech-item">
+                <h4>Formspree</h4>
+                <p>Gestão de formulários fiável com notificações por email para marcações</p>
+            </div>
+            <div class="tech-item">
+                <h4>WhatsApp Business API</h4>
+                <p>Integração de mensagens diretas para comunicação instantânea com clientes</p>
+            </div>
+            <div class="tech-item">
+                <h4>Vercel</h4>
+                <p>Alojamento rápido e fiável com deployments automáticos e CDN global</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="content-section">
+        <h2>Conclusões Principais</h2>
+
+        <div class="takeaway-card">
+            <h3>Mobile-First é Crítico para Negócios de Serviços</h3>
+            <p>Com 80% das consultas de estúdios de massagem a vir de dispositivos móveis, desenhar para mobile primeiro e desktop depois provou ser essencial. Botões amigáveis ao toque, navegação simplificada e carregamento rápido em conexões mais lentas foram inegociáveis.</p>
+        </div>
+
+        <div class="takeaway-card">
+            <h3>Remover Todos os Pontos de Fricção de Marcação</h3>
+            <p>A análise mostrou que os clientes abandonavam a marcação quando os processos eram demasiado complexos. Ao simplificar o formulário para campos essenciais apenas (serviço, data, hora, nome, telefone), as taxas de conclusão melhoraram dramaticamente.</p>
+        </div>
+
+        <div class="takeaway-card">
+            <h3>Clareza de Serviços Impulsiona Conversões</h3>
+            <p>Descrições de serviços claras e detalhadas com benefícios e preços eliminaram questões pré-marcação. Os clientes podiam auto-educar-se e marcar com confiança, reduzindo comunicação de ida e volta.</p>
+        </div>
+
+        <div class="takeaway-card">
+            <h3>Estética Visual Deve Corresponder à Promessa da Marca</h3>
+            <p>A estética de design calmante e serena reforçou a experiência de relaxamento que os clientes esperam. Escolhas de design (cores, espaçamento, imagens) devem alinhar-se emocionalmente com o serviço a ser vendido.</p>
+        </div>
+    </section>
+
+    <!-- Client Testimonial -->
+    <section class="content-section dark-section">
+        <div class="testimonial">
+            <p class="testimonial-text">"A landing page superou as nossas expectativas. É bonita, fácil de usar, e estamos a receber marcações online de clientes que nunca nos teriam ligado antes. A experiência móvel é perfeita."</p>
+            <p class="testimonial-author">— Proprietário Porto Massage Studio</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Precisa de uma Landing Page para o Seu Negócio de Serviços?</h2>
+        <p>Especializo-me em construir landing pages rápidas e focadas em conversão para negócios de serviços. Seja marcação online, apresentação de serviços ou otimização móvel, vamos discutir o seu projeto.</p>
+        <div class="cta-buttons">
+            <a href="/pt/#contact" class="btn-primary">Iniciar o Seu Projeto</a>
+            <a href="/pt/projetos" class="btn-secondary">Ver Mais Estudos de Caso</a>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: 24px 108px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.breadcrumbs a {
+    color: var(--color-text);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+.breadcrumbs .separator {
+    opacity: 0.5;
+}
+
+.breadcrumbs .current {
+    color: var(--color-accent);
+}
+
+/* Case Study Hero */
+.case-study-hero {
+    padding: 60px 108px 80px;
+    text-align: center;
+}
+
+.hero-tag {
+    display: inline-block;
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+.case-study-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 88px;
+    letter-spacing: -0.88px;
+    margin-bottom: 24px;
+    line-height: 1;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    opacity: 0.8;
+    margin-bottom: 48px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.metric-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.metric-card:hover {
+    border-color: var(--color-accent);
+}
+
+.metric-number {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 14px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 108px;
+}
+
+.dark-section {
+    background-color: var(--color-dark);
+}
+
+.content-section h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 32px;
+}
+
+.content-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 48px 0 24px 0;
+    color: var(--color-accent);
+}
+
+.content-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.content-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+.content-section ul {
+    margin: 24px 0;
+    padding-left: 24px;
+}
+
+.content-section li {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+    padding: 40px;
+    background-color: var(--color-dark);
+    border-radius: 12px;
+}
+
+.info-item h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
+    margin: 0 0 8px 0;
+}
+
+.info-item p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    opacity: 1;
+}
+
+/* Challenge List */
+.challenge-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+}
+
+.challenge-list li {
+    padding: 20px;
+    background-color: rgba(211, 233, 122, 0.05);
+    border-left: 3px solid var(--color-accent);
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+/* Solution List */
+.solution-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+}
+
+.solution-list li {
+    padding: 20px;
+    background-color: rgba(211, 233, 122, 0.05);
+    border-left: 3px solid var(--color-accent);
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 32px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.feature-card h4 {
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.feature-card p {
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* Process Timeline */
+.process-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.step-number {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    opacity: 0.3;
+}
+
+.process-step h3 {
+    margin: 0 0 16px 0;
+    color: var(--color-text);
+}
+
+.process-step p {
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* Results Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.result-card {
+    background-color: rgba(211, 233, 122, 0.05);
+    border: 1px solid rgba(211, 233, 122, 0.2);
+    border-radius: 12px;
+    padding: 40px 32px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.result-number {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    color: var(--color-accent);
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.result-label {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+.result-card p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+/* Impact List */
+.impact-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+}
+
+.impact-list li {
+    padding: 16px 20px;
+    background-color: rgba(211, 233, 122, 0.05);
+    border-left: 3px solid var(--color-accent);
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+/* Tech Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.tech-item {
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.tech-item:hover {
+    border-color: var(--color-accent);
+}
+
+.tech-item h4 {
+    color: var(--color-accent);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.tech-item p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.75;
+}
+
+/* Takeaway Cards */
+.takeaway-card {
+    background-color: rgba(211, 233, 122, 0.05);
+    border: 1px solid rgba(211, 233, 122, 0.2);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+.takeaway-card h3 {
+    color: var(--color-accent);
+    margin: 0 0 16px 0;
+    font-size: 22px;
+}
+
+.takeaway-card p {
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* Testimonial */
+.testimonial {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 48px;
+    background-color: rgba(211, 233, 122, 0.05);
+    border-radius: 12px;
+}
+
+.testimonial-text {
+    font-size: 24px;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 24px;
+    opacity: 0.95;
+}
+
+.testimonial-author {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 108px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: transparent;
+    color: var(--color-accent);
+    padding: 16px 32px;
+    border: 2px solid var(--color-accent);
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(211, 233, 122, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .breadcrumbs {
+        padding: 24px 32px;
+    }
+
+    .case-study-hero {
+        padding: 60px 32px 60px;
+    }
+
+    .case-study-hero h1 {
+        font-size: 64px;
+    }
+
+    .content-section {
+        padding: 60px 32px;
+    }
+
+    .content-section h2 {
+        font-size: 48px;
+    }
+
+    .cta-section {
+        padding: 60px 32px;
+    }
+
+    .cta-section h2 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .breadcrumbs {
+        padding: 16px;
+        font-size: 12px;
+    }
+
+    .case-study-hero {
+        padding: 40px 16px 40px;
+    }
+
+    .case-study-hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .metric-number {
+        font-size: 36px;
+    }
+
+    .content-section {
+        padding: 48px 16px;
+    }
+
+    .content-section h2 {
+        font-size: 36px;
+    }
+
+    .content-section h3 {
+        font-size: 24px;
+    }
+
+    .content-section p,
+    .content-section li {
+        font-size: 16px;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        grid-template-columns: 60px 1fr;
+        gap: 16px;
+    }
+
+    .step-number {
+        font-size: 36px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .result-number {
+        font-size: 42px;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial {
+        padding: 32px 24px;
+    }
+
+    .testimonial-text {
+        font-size: 18px;
+    }
+
+    .cta-section {
+        padding: 48px 16px;
+    }
+
+    .cta-section h2 {
+        font-size: 36px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        justify-content: center;
+    }
+}
+</style>

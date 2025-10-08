@@ -1,0 +1,914 @@
+---
+import SEO from '../../../components/SEO.astro';
+import Schema from '../../../components/Schema.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import LanguageSwitcher from '../../../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Estudo de Caso Porto Car Care - Crescimento de Visibilidade 3× | Luís Madeira"
+        description="Como ajudei a Porto Car Care a triplicar a sua visibilidade no Google e obter 40% mais chamadas através de SEO local e estratégia programática. Veja a metodologia detalhada e os resultados."
+        locale="pt"
+    />
+
+    <!-- Article Schema -->
+    <Schema type="Article" data={{
+        headline: "Porto Car Care - Estudo de Caso de SEO Local",
+        datePublished: "2025-10-08",
+        author: "Luís Madeira"
+    }} />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/pt" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/pt/#work">Trabalhos</a>
+            <a href="/pt/servicos">Serviços</a>
+            <a href="/pt/sobre">Sobre</a>
+            <a href="/pt/#contact">Contacto</a>
+            <LanguageSwitcher currentPath="/pt/projetos/porto-car-care" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <Breadcrumbs
+        items={[
+            { label: 'Início', url: '/pt' },
+            { label: 'Projetos', url: '/pt/projetos' },
+            { label: 'Porto Car Care', url: '/pt/projetos/porto-car-care' }
+        ]}
+    />
+
+    <!-- Hero Section -->
+    <section class="case-study-hero">
+        <div class="case-study-hero-content">
+            <div class="case-study-tag">SEO Local</div>
+            <h1>Porto Car Care</h1>
+            <p class="case-study-subtitle">Triplicar a visibilidade orgânica de uma oficina de estética automóvel através de estratégia programática de SEO</p>
+
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Cliente</span>
+                    <span class="meta-value">Porto Car Care</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Indústria</span>
+                    <span class="meta-value">Estética Automóvel</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Localização</span>
+                    <span class="meta-value">Porto, Portugal</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Duração</span>
+                    <span class="meta-value">4 meses</span>
+                </div>
+            </div>
+
+            <div class="results-banner">
+                <div class="result-card">
+                    <div class="result-value">+3×</div>
+                    <div class="result-label">Visibilidade no Google</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">+12</div>
+                    <div class="result-label">Ganho de Posição Média</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">+40%</div>
+                    <div class="result-label">Mais Chamadas Telefónicas</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study-hero-image">
+            <img src="/final fnal final.svg" alt="Pré-visualização do website Porto Car Care">
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="case-study-section">
+        <h2>Visão Geral</h2>
+        <p>A Porto Car Care é um serviço profissional de estética automóvel baseado no Porto, especializado em correção de pintura, revestimento cerâmico e estética interior. Apesar de oferecer serviços premium e ter excelentes avaliações de clientes, estavam com dificuldade em ser encontrados online por clientes locais que procuravam serviços de estética automóvel.</p>
+
+        <p>Vieram ter comigo com um objetivo claro: dominar os resultados de pesquisa local para palavras-chave de estética automóvel no Porto e áreas circundantes. Tinham um website básico que não estava a rankear, presença online mínima e dependiam quase inteiramente de referências boca-a-boca.</p>
+
+        <p>Durante quatro meses, implementei uma estratégia abrangente de SEO local que triplicou a sua visibilidade orgânica, moveu-os da página 3-4 para rankings consistentes na página 1, e aumentou o seu volume de chamadas telefónicas em 40%.</p>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="case-study-section gray-bg">
+        <h2>O Desafio</h2>
+
+        <div class="challenge-content">
+            <h3>A Situação</h3>
+            <p>A Porto Car Care enfrentava vários desafios críticos que estavam a limitar o seu crescimento:</p>
+
+            <ul class="challenge-list">
+                <li><strong>Praticamente Invisível na Pesquisa:</strong> Não apareciam na página 1 para nenhuma palavra-chave local relevante. A maioria das palavras-chave alvo nem sequer apareciam nos primeiros 50 resultados.</li>
+                <li><strong>Forte Concorrência Local:</strong> Competindo contra empresas estabelecidas de estética automóvel com anos de investimento em SEO e forte autoridade de domínio.</li>
+                <li><strong>Presença Online Limitada:</strong> Website básico de uma página sem conteúdo de blog, páginas de serviços mínimas e sem fundação estruturada de SEO local.</li>
+                <li><strong>Oportunidades Locais Perdidas:</strong> Não apareciam nos resultados do Google Maps para pesquisas de alta intenção como "estética automóvel perto de mim" ou "revestimento cerâmico Porto".</li>
+                <li><strong>Dependência de Referências:</strong> 90% dos novos negócios vinham de boca-a-boca, tornando o crescimento imprevisível e lento.</li>
+            </ul>
+
+            <h3>Objetivos</h3>
+            <ul class="goals-list">
+                <li>Rankear na página 1 para palavras-chave locais primárias dentro de 4 meses</li>
+                <li>Aumentar o tráfego orgânico em 200%+</li>
+                <li>Gerar 5-10 leads qualificados por semana através de pesquisa orgânica</li>
+                <li>Dominar os resultados do Google Maps para "estética automóvel Porto"</li>
+                <li>Construir visibilidade orgânica sustentável e de longo prazo</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="case-study-section">
+        <h2>A Solução</h2>
+
+        <h3>Descoberta & Estratégia</h3>
+        <p>Comecei com pesquisa abrangente de palavras-chave e análise competitiva. Identifiquei que, embora os concorrentes diretos estivessem a focar-se em palavras-chave óbvias como "estética automóvel Porto", havia uma oportunidade massiva em palavras-chave de cauda longa e específicas de serviços que mostravam maior intenção comercial.</p>
+
+        <p>A estratégia centrou-se em três pilares:</p>
+
+        <h3>Implementação</h3>
+
+        <div class="implementation-phase">
+            <h4>Fase 1: Fundação Técnica (Semana 1-2)</h4>
+            <p>Antes de criar conteúdo, reconstruí a fundação técnica:</p>
+            <ul>
+                <li><strong>Reestruturação do Site:</strong> Migrei de site de página única para estrutura abrangente baseada em serviços</li>
+                <li><strong>SEO Técnico:</strong> Implementei hierarquia adequada de títulos, schema markup, otimização móvel e melhorias de velocidade da página</li>
+                <li><strong>Configuração de SEO Local:</strong> Otimizei o Perfil de Empresa do Google, garanti consistência NAP, submeti a diretórios locais</li>
+                <li><strong>Análise:</strong> Configurei Google Analytics 4 e Search Console com rastreamento adequado de objetivos</li>
+            </ul>
+        </div>
+
+        <div class="implementation-phase">
+            <h4>Fase 2: Estratégia Programática de SEO (Semana 3-6)</h4>
+            <p>Foi aqui que a magia aconteceu. Em vez de criar manualmente páginas para cada combinação de serviço e localização, implementei uma abordagem programática:</p>
+            <ul>
+                <li><strong>Páginas de Serviços:</strong> Criei páginas dedicadas para cada serviço principal (correção de pintura, revestimento cerâmico, estética interior, instalação de PPF)</li>
+                <li><strong>Páginas de Localização:</strong> Gerei páginas focadas em cidades e bairros próximos (Matosinhos, Vila Nova de Gaia, Gondomar, Maia)</li>
+                <li><strong>Combinações Serviço + Localização:</strong> Criei programaticamente páginas como "Revestimento Cerâmico em Matosinhos" e "Correção de Pintura em Vila Nova de Gaia"</li>
+                <li><strong>Conteúdo Único:</strong> Cada página tinha conteúdo único e valioso com informação local, detalhes do serviço e CTAs claros</li>
+            </ul>
+            <p>Esta abordagem permitiu-nos focar em 50+ combinações de palavras-chave altamente específicas que os concorrentes não estavam a cobrir.</p>
+        </div>
+
+        <div class="implementation-phase">
+            <h4>Fase 3: Construção de Conteúdo & Autoridade (Semana 7-16)</h4>
+            <p>Com a fundação no lugar, concentrei-me em conteúdo e autoridade:</p>
+            <ul>
+                <li><strong>Conteúdo Educacional:</strong> Criei guias como "Como Manter o Revestimento Cerâmico" e "Correção de Pintura vs Polimento"</li>
+                <li><strong>Galerias Antes/Depois:</strong> Mostrei trabalhos com descrições otimizadas para palavras-chave</li>
+                <li><strong>Schema de FAQ:</strong> Adicionei secções de FAQ a todas as páginas de serviços com markup de dados estruturados</li>
+                <li><strong>Construção de Links:</strong> Obtive citações e links locais de fóruns automóveis e diretórios de empresas locais</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SEO Strategy Section -->
+    <section class="case-study-section gray-bg">
+        <h2>Análise Profunda da Estratégia de SEO</h2>
+
+        <h3>Pesquisa de Palavras-Chave</h3>
+        <p>Palavras-chave alvo incluíram:</p>
+        <ul class="keyword-list">
+            <li>"estética automóvel Porto" (primária)</li>
+            <li>"revestimento cerâmico Porto"</li>
+            <li>"correção de pintura Porto"</li>
+            <li>"estética automóvel perto de mim"</li>
+            <li>"instalação PPF Porto"</li>
+            <li>Mais 45+ combinações de cauda longa serviço + localização</li>
+        </ul>
+
+        <h3>Otimização On-Page</h3>
+        <ul>
+            <li>Otimizei title tags com palavras-chave locais e especificações de serviço</li>
+            <li>Meta descriptions convincentes com CTAs (aumentou CTR em 23%)</li>
+            <li>Estrutura adequada de títulos (H1 → H2 → H3) para relevância tópica</li>
+            <li>Estratégia de linking interno conectando serviços e localizações relacionados</li>
+            <li>Otimização de imagens com texto alt descritivo e ficheiros comprimidos</li>
+        </ul>
+
+        <h3>SEO Técnico</h3>
+        <ul>
+            <li>Otimização de velocidade do site (reduzi tempo de carregamento de 4,2s para 1,1s)</li>
+            <li>Design responsivo mobile-first</li>
+            <li>Schema markup: LocalBusiness, Service, FAQPage, Breadcrumbs</li>
+            <li>Sitemap XML com prioridades adequadas</li>
+            <li>Otimização de robots.txt</li>
+        </ul>
+
+        <h3>SEO Local</h3>
+        <ul>
+            <li>Otimização do Perfil de Empresa do Google com palavras-chave, fotos e publicações regulares</li>
+            <li>NAP consistente (Nome, Morada, Telefone) em todas as plataformas</li>
+            <li>Citações locais em 20+ diretórios de empresas portuguesas</li>
+            <li>Encorajei e respondi a avaliações de clientes</li>
+            <li>Criei conteúdo localizado para cada cidade alvo</li>
+        </ul>
+    </section>
+
+    <!-- Results Section -->
+    <section class="case-study-section">
+        <h2>Resultados</h2>
+
+        <h3>Métricas Principais</h3>
+
+        <div class="results-grid">
+            <div class="result-item">
+                <div class="result-category">Visibilidade</div>
+                <ul>
+                    <li><strong>+294% de aumento</strong> na visibilidade geral no Google Search</li>
+                    <li><strong>0 → 47 palavras-chave</strong> a rankear no top 10</li>
+                    <li><strong>Rankings na página 1</strong> para 8 das 10 palavras-chave alvo primárias</li>
+                </ul>
+            </div>
+
+            <div class="result-item">
+                <div class="result-category">Tráfego</div>
+                <ul>
+                    <li><strong>+312% de aumento</strong> no tráfego orgânico</li>
+                    <li><strong>4.200+ visitantes mensais</strong> (subiu de 950)</li>
+                    <li><strong>73% de tráfego local</strong> da área metropolitana do Porto</li>
+                </ul>
+            </div>
+
+            <div class="result-item">
+                <div class="result-category">Impacto no Negócio</div>
+                <ul>
+                    <li><strong>+40% de aumento</strong> em chamadas telefónicas</li>
+                    <li><strong>25-30 leads qualificados</strong> por mês (subiu de 8-12)</li>
+                    <li><strong>€12.000+ receita mensal estimada</strong> de leads orgânicos</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Melhorias de Ranking</h3>
+        <ul class="ranking-list">
+            <li>"estética automóvel Porto": Posição 47 → Posição 3</li>
+            <li>"revestimento cerâmico Porto": Não rankeava → Posição 2</li>
+            <li>"correção de pintura Porto": Não rankeava → Posição 5</li>
+            <li>"estética automóvel Matosinhos": Não rankeava → Posição 1</li>
+            <li>"PPF Porto": Posição 35 → Posição 6</li>
+        </ul>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="case-study-section gray-bg">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="tech-list">
+            <li><strong>Astro:</strong> Gerador de sites estáticos para máxima performance</li>
+            <li><strong>Tailwind CSS:</strong> Para design responsivo e mobile-first</li>
+            <li><strong>Google Search Console:</strong> Monitorização de performance e rastreamento de palavras-chave</li>
+            <li><strong>Google Analytics 4:</strong> Rastreamento de comportamento do utilizador e conversões</li>
+            <li><strong>Ahrefs:</strong> Pesquisa de palavras-chave e análise competitiva</li>
+            <li><strong>Schema.org:</strong> Implementação de dados estruturados</li>
+            <li><strong>Cloudflare:</strong> CDN para melhor performance global</li>
+        </ul>
+    </section>
+
+    <!-- Lessons Learned Section -->
+    <section class="case-study-section">
+        <h2>Lições Aprendidas</h2>
+        <p>Este projeto reforçou vários princípios-chave que agora aplico a todos os projetos de SEO local:</p>
+
+        <ol class="lessons-list">
+            <li><strong>SEO programático funciona brilhantemente para serviços locais:</strong> Ao focar sistematicamente em combinações de serviço + localização, pode dominar resultados de pesquisa que os concorrentes ignoram.</li>
+            <li><strong>Fundação técnica é inegociável:</strong> Nenhuma quantidade de conteúdo salvará um website lento e mal estruturado.</li>
+            <li><strong>Palavras-chave de cauda longa convertem melhor:</strong> "Revestimento cerâmico em Matosinhos" teve 10x melhor taxa de conversão do que "estética automóvel" genérico.</li>
+            <li><strong>Perfil de Empresa do Google é crítico:</strong> 40% dos leads vieram diretamente de listagens do Google Maps, não de cliques no website.</li>
+            <li><strong>Citações locais importam:</strong> NAP consistente em diretórios ajudou significativamente os rankings nos primeiros 2 meses.</li>
+        </ol>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>PRONTO PARA RESULTADOS SEMELHANTES?</h2>
+        <p>Se é uma empresa de serviços local à procura de dominar os resultados de pesquisa na sua área, posso ajudar. Vamos discutir uma estratégia adaptada à sua indústria e mercado.</p>
+        <a href="/pt/#contact" class="btn-primary">INICIAR O SEU PROJETO</a>
+    </section>
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <h2>Projetos Relacionados</h2>
+        <div class="related-projects-grid">
+            <a href="/pt/projetos/brunno-rodrigues" class="related-project-card">
+                <img src="/brunno-rodrigues.svg" alt="Website Brunno Rodrigues">
+                <h3>Brunno Rodrigues</h3>
+                <p>Landing page para terapeuta de massagens</p>
+            </a>
+            <a href="/pt/projetos/porto-massage-studio" class="related-project-card">
+                <img src="/porto-massage-studio.svg" alt="Website Porto Massage Studio">
+                <h3>Porto Massage Studio</h3>
+                <p>Estúdio de massagens com marcação online</p>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.case-study-hero {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 60px;
+    padding: 80px 108px;
+    align-items: center;
+}
+
+.case-study-tag {
+    display: inline-block;
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    margin-bottom: 24px;
+}
+
+.case-study-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    letter-spacing: -0.76px;
+    margin-bottom: 16px;
+}
+
+.case-study-subtitle {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.case-study-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+    padding: 32px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meta-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.meta-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.results-banner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.result-card {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.result-value {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.result-label {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.case-study-hero-image {
+    width: 100%;
+    height: 500px;
+    background-color: var(--color-dark);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.case-study-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Case Study Sections */
+.case-study-section {
+    padding: 80px 108px;
+}
+
+.case-study-section.gray-bg {
+    background-color: var(--color-dark);
+}
+
+.case-study-section h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 32px;
+}
+
+.case-study-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+
+.case-study-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.case-study-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.case-study-section ul,
+.case-study-section ol {
+    margin: 20px 0 20px 24px;
+}
+
+.case-study-section li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.challenge-list,
+.goals-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.challenge-list li,
+.goals-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.challenge-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.goals-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.implementation-phase {
+    background-color: rgba(211, 233, 122, 0.05);
+    border-left: 3px solid var(--color-accent);
+    padding: 32px;
+    margin: 32px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 40px 0;
+}
+
+.result-item {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.result-category {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.tech-list,
+.keyword-list,
+.ranking-list,
+.lessons-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.tech-list li,
+.keyword-list li,
+.ranking-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.tech-list li::before,
+.keyword-list li::before,
+.ranking-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 108px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+/* Related Projects */
+.related-projects {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.related-projects h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 40px;
+}
+
+.related-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.related-project-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.related-project-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.related-project-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background-color: #0d0d0d;
+}
+
+.related-project-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 24px 24px 12px;
+}
+
+.related-project-card p {
+    font-size: 15px;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin: 0 24px 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .case-study-hero {
+        grid-template-columns: 1fr;
+        padding: 60px 32px;
+    }
+
+    .case-study-hero-image {
+        height: 400px;
+    }
+
+    .case-study-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .results-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-section {
+        padding: 60px 32px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .related-projects {
+        padding: 60px 32px;
+    }
+
+    .related-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        padding: 60px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .case-study-hero {
+        padding: 40px 16px;
+    }
+
+    .case-study-hero h1 {
+        font-size: 48px;
+    }
+
+    .case-study-subtitle {
+        font-size: 16px;
+    }
+
+    .case-study-meta {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .result-value {
+        font-size: 40px;
+    }
+
+    .case-study-hero-image {
+        height: 300px;
+    }
+
+    .case-study-section {
+        padding: 40px 16px;
+    }
+
+    .case-study-section h2 {
+        font-size: 40px;
+    }
+
+    .case-study-section h3 {
+        font-size: 24px;
+    }
+
+    .implementation-phase {
+        padding: 24px;
+    }
+
+    .related-projects {
+        padding: 40px 16px;
+    }
+
+    .related-projects h2 {
+        font-size: 40px;
+    }
+
+    .cta-section {
+        padding: 40px 16px;
+    }
+
+    .cta-section h2 {
+        font-size: 48px;
+    }
+}
+</style>
