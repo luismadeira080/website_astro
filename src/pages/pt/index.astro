@@ -31,6 +31,7 @@ import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
         <div class="logo">luís madeira</div>
         <div class="nav-links">
             <a href="#work">Trabalhos</a>
+            <a href="/pt/servicos">Serviços</a>
             <a href="#about">Sobre</a>
             <a href="#contact">Contacto</a>
             <LanguageSwitcher currentPath="/" />
@@ -84,14 +85,20 @@ import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
             <div class="service-card">
                 <h3>Landing Pages que Convertem</h3>
                 <p>Entrega rápida de landing pages modernas e limpas. Ideal para promoções, anúncios ou negócios que precisam de uma presença online simples que converte visitantes em leads.</p>
-                <a href="#contact" class="service-cta">Pedir landing page</a>
+                <div class="service-card-actions">
+                    <a href="/pt/servicos" class="service-link">Ver Detalhes →</a>
+                    <a href="#contact" class="service-cta">Pedir landing page</a>
+                </div>
             </div>
 
             <!-- Service 2 -->
             <div class="service-card">
                 <h3>Websites Otimizados para SEO</h3>
                 <p>Websites completos desenhados e construídos para aparecer melhor no Google. Inclui design, conteúdo e configuração SEO para que negócios locais tenham mais tráfego, mais chamadas e mais clientes.</p>
-                <a href="#contact" class="service-cta">Começar projeto de website</a>
+                <div class="service-card-actions">
+                    <a href="/pt/servicos" class="service-link">Ver Detalhes →</a>
+                    <a href="#contact" class="service-cta">Começar projeto de website</a>
+                </div>
             </div>
         </div>
     </section>
@@ -615,6 +622,26 @@ body {
     line-height: 1.7;
     color: var(--color-text);
     flex-grow: 1;
+}
+
+.service-card-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease;
+}
+
+.service-link:hover {
+    opacity: 0.7;
 }
 
 .service-cta {
