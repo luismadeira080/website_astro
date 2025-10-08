@@ -1,0 +1,914 @@
+---
+import SEO from '../../components/SEO.astro';
+import Schema from '../../components/Schema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Porto Car Care Case Study - 3× Visibility Growth | Luís Madeira"
+        description="How I helped Porto Car Care triple their Google visibility and get 40% more calls through local SEO and programmatic strategy. See the detailed methodology and results."
+        locale="en"
+    />
+
+    <!-- Article Schema -->
+    <Schema type="Article" data={{
+        headline: "Porto Car Care - Local SEO Case Study",
+        datePublished: "2025-10-08",
+        author: "Luís Madeira"
+    }} />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/#work">Work</a>
+            <a href="/services">Services</a>
+            <a href="/about">About</a>
+            <a href="/#contact">Contact</a>
+            <LanguageSwitcher currentPath="/projects/porto-car-care" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <Breadcrumbs
+        items={[
+            { label: 'Home', url: '/' },
+            { label: 'Projects', url: '/projects' },
+            { label: 'Porto Car Care', url: '/projects/porto-car-care' }
+        ]}
+    />
+
+    <!-- Hero Section -->
+    <section class="case-study-hero">
+        <div class="case-study-hero-content">
+            <div class="case-study-tag">Local SEO</div>
+            <h1>Porto Car Care</h1>
+            <p class="case-study-subtitle">Tripling organic visibility for an auto detailing shop through programmatic SEO strategy</p>
+
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Client</span>
+                    <span class="meta-value">Porto Car Care</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Industry</span>
+                    <span class="meta-value">Auto Detailing</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Porto, Portugal</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span class="meta-value">4 months</span>
+                </div>
+            </div>
+
+            <div class="results-banner">
+                <div class="result-card">
+                    <div class="result-value">+3×</div>
+                    <div class="result-label">Visibility on Google</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">+12</div>
+                    <div class="result-label">Average Position Gain</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">+40%</div>
+                    <div class="result-label">More Phone Calls</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study-hero-image">
+            <img src="/final fnal final.svg" alt="Porto Car Care website preview">
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="case-study-section">
+        <h2>Overview</h2>
+        <p>Porto Car Care is a professional auto detailing service based in Porto, specializing in paint correction, ceramic coating, and interior detailing. Despite offering premium services and having excellent customer reviews, they were struggling to be found online by local customers searching for auto detailing services.</p>
+
+        <p>They came to me with a clear goal: dominate local search results for auto detailing keywords in Porto and surrounding areas. They had a basic website that wasn't ranking, minimal online presence, and were relying almost entirely on word-of-mouth referrals.</p>
+
+        <p>Over four months, I implemented a comprehensive local SEO strategy that tripled their organic visibility, moved them from page 3-4 to consistent page 1 rankings, and increased their phone call volume by 40%.</p>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="case-study-section gray-bg">
+        <h2>The Challenge</h2>
+
+        <div class="challenge-content">
+            <h3>The Situation</h3>
+            <p>Porto Car Care faced several critical challenges that were limiting their growth:</p>
+
+            <ul class="challenge-list">
+                <li><strong>Virtually Invisible in Search:</strong> Not ranking on page 1 for any relevant local keywords. Most target keywords weren't even appearing in the top 50 results.</li>
+                <li><strong>Strong Local Competition:</strong> Competing against established auto detailing businesses with years of SEO investment and strong domain authority.</li>
+                <li><strong>Limited Online Presence:</strong> Basic one-page website with no blog content, minimal service pages, and no structured local SEO foundation.</li>
+                <li><strong>Missed Local Opportunities:</strong> Not appearing in Google Maps results for high-intent searches like "auto detailing near me" or "ceramic coating Porto".</li>
+                <li><strong>Dependence on Referrals:</strong> 90% of new business coming from word-of-mouth, making growth unpredictable and slow.</li>
+            </ul>
+
+            <h3>Goals</h3>
+            <ul class="goals-list">
+                <li>Rank on page 1 for primary local keywords within 4 months</li>
+                <li>Increase organic traffic by 200%+</li>
+                <li>Generate 5-10 qualified leads per week through organic search</li>
+                <li>Dominate Google Maps results for "auto detailing Porto"</li>
+                <li>Build sustainable, long-term organic visibility</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="case-study-section">
+        <h2>The Solution</h2>
+
+        <h3>Discovery & Strategy</h3>
+        <p>I started with comprehensive keyword research and competitive analysis. I identified that while direct competitors were targeting obvious keywords like "auto detailing Porto," there was massive opportunity in long-tail, service-specific keywords that showed higher commercial intent.</p>
+
+        <p>The strategy centered on three pillars:</p>
+
+        <h3>Implementation</h3>
+
+        <div class="implementation-phase">
+            <h4>Phase 1: Technical Foundation (Week 1-2)</h4>
+            <p>Before creating content, I rebuilt the technical foundation:</p>
+            <ul>
+                <li><strong>Site Restructure:</strong> Migrated from single-page site to comprehensive service-based structure</li>
+                <li><strong>Technical SEO:</strong> Implemented proper heading hierarchy, schema markup, mobile optimization, and page speed improvements</li>
+                <li><strong>Local SEO Setup:</strong> Optimized Google Business Profile, ensured NAP consistency, submitted to local directories</li>
+                <li><strong>Analytics:</strong> Set up Google Analytics 4 and Search Console with proper goal tracking</li>
+            </ul>
+        </div>
+
+        <div class="implementation-phase">
+            <h4>Phase 2: Programmatic SEO Strategy (Week 3-6)</h4>
+            <p>This is where the magic happened. Instead of manually creating pages for every service and location combination, I implemented a programmatic approach:</p>
+            <ul>
+                <li><strong>Service Pages:</strong> Created dedicated pages for each core service (paint correction, ceramic coating, interior detailing, PPF installation)</li>
+                <li><strong>Location Pages:</strong> Generated pages targeting nearby cities and neighborhoods (Matosinhos, Vila Nova de Gaia, Gondomar, Maia)</li>
+                <li><strong>Service + Location Combinations:</strong> Programmatically created pages like "Ceramic Coating in Matosinhos" and "Paint Correction in Vila Nova de Gaia"</li>
+                <li><strong>Unique Content:</strong> Each page had unique, valuable content with local information, service details, and clear CTAs</li>
+            </ul>
+            <p>This approach allowed us to target 50+ highly specific keyword combinations that competitors weren't covering.</p>
+        </div>
+
+        <div class="implementation-phase">
+            <h4>Phase 3: Content & Authority Building (Week 7-16)</h4>
+            <p>With the foundation in place, I focused on content and authority:</p>
+            <ul>
+                <li><strong>Educational Content:</strong> Created guides like "How to Maintain Ceramic Coating" and "Paint Correction vs Polishing"</li>
+                <li><strong>Before/After Galleries:</strong> Showcased work with keyword-optimized descriptions</li>
+                <li><strong>FAQ Schema:</strong> Added FAQ sections to all service pages with structured data markup</li>
+                <li><strong>Link Building:</strong> Secured local citations and links from automotive forums and local business directories</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SEO Strategy Section -->
+    <section class="case-study-section gray-bg">
+        <h2>SEO Strategy Deep Dive</h2>
+
+        <h3>Keyword Research</h3>
+        <p>Target keywords included:</p>
+        <ul class="keyword-list">
+            <li>"auto detailing Porto" (primary)</li>
+            <li>"ceramic coating Porto"</li>
+            <li>"paint correction Porto"</li>
+            <li>"car detailing near me"</li>
+            <li>"PPF installation Porto"</li>
+            <li>Plus 45+ long-tail service + location combinations</li>
+        </ul>
+
+        <h3>On-Page Optimization</h3>
+        <ul>
+            <li>Optimized title tags with local keywords and service specifics</li>
+            <li>Compelling meta descriptions with CTAs (increased CTR by 23%)</li>
+            <li>Proper heading structure (H1 → H2 → H3) for topical relevance</li>
+            <li>Internal linking strategy connecting related services and locations</li>
+            <li>Image optimization with descriptive alt text and compressed files</li>
+        </ul>
+
+        <h3>Technical SEO</h3>
+        <ul>
+            <li>Site speed optimization (reduced load time from 4.2s to 1.1s)</li>
+            <li>Mobile-first responsive design</li>
+            <li>Schema markup: LocalBusiness, Service, FAQPage, Breadcrumbs</li>
+            <li>XML sitemap with proper priorities</li>
+            <li>Robots.txt optimization</li>
+        </ul>
+
+        <h3>Local SEO</h3>
+        <ul>
+            <li>Google Business Profile optimization with keywords, photos, and regular posts</li>
+            <li>Consistent NAP (Name, Address, Phone) across all platforms</li>
+            <li>Local citations on 20+ Portuguese business directories</li>
+            <li>Encouraged and responded to customer reviews</li>
+            <li>Created localized content for each target city</li>
+        </ul>
+    </section>
+
+    <!-- Results Section -->
+    <section class="case-study-section">
+        <h2>Results</h2>
+
+        <h3>Key Metrics</h3>
+
+        <div class="results-grid">
+            <div class="result-item">
+                <div class="result-category">Visibility</div>
+                <ul>
+                    <li><strong>+294% increase</strong> in overall Google Search visibility</li>
+                    <li><strong>0 → 47 keywords</strong> ranking in top 10</li>
+                    <li><strong>Page 1 rankings</strong> for 8 out of 10 primary target keywords</li>
+                </ul>
+            </div>
+
+            <div class="result-item">
+                <div class="result-category">Traffic</div>
+                <ul>
+                    <li><strong>+312% increase</strong> in organic traffic</li>
+                    <li><strong>4,200+ monthly visitors</strong> (up from 950)</li>
+                    <li><strong>73% local traffic</strong> from Porto metropolitan area</li>
+                </ul>
+            </div>
+
+            <div class="result-item">
+                <div class="result-category">Business Impact</div>
+                <ul>
+                    <li><strong>+40% increase</strong> in phone calls</li>
+                    <li><strong>25-30 qualified leads</strong> per month (up from 8-12)</li>
+                    <li><strong>€12,000+ estimated monthly revenue</strong> from organic leads</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Ranking Improvements</h3>
+        <ul class="ranking-list">
+            <li>"auto detailing Porto": Position 47 → Position 3</li>
+            <li>"ceramic coating Porto": Not ranking → Position 2</li>
+            <li>"paint correction Porto": Not ranking → Position 5</li>
+            <li>"car detailing Matosinhos": Not ranking → Position 1</li>
+            <li>"PPF Porto": Position 35 → Position 6</li>
+        </ul>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="case-study-section gray-bg">
+        <h2>Technologies Used</h2>
+        <ul class="tech-list">
+            <li><strong>Astro:</strong> Static site generator for maximum performance</li>
+            <li><strong>Tailwind CSS:</strong> For responsive, mobile-first design</li>
+            <li><strong>Google Search Console:</strong> Performance monitoring and keyword tracking</li>
+            <li><strong>Google Analytics 4:</strong> User behavior and conversion tracking</li>
+            <li><strong>Ahrefs:</strong> Keyword research and competitor analysis</li>
+            <li><strong>Schema.org:</strong> Structured data implementation</li>
+            <li><strong>Cloudflare:</strong> CDN for improved global performance</li>
+        </ul>
+    </section>
+
+    <!-- Lessons Learned Section -->
+    <section class="case-study-section">
+        <h2>Lessons Learned</h2>
+        <p>This project reinforced several key principles that I now apply to all local SEO projects:</p>
+
+        <ol class="lessons-list">
+            <li><strong>Programmatic SEO works brilliantly for local services:</strong> By systematically targeting service + location combinations, you can dominate search results that competitors ignore.</li>
+            <li><strong>Technical foundation is non-negotiable:</strong> No amount of content will save a slow, poorly structured website.</li>
+            <li><strong>Long-tail keywords convert better:</strong> "Ceramic coating in Matosinhos" had 10x better conversion rate than generic "car detailing."</li>
+            <li><strong>Google Business Profile is critical:</strong> 40% of leads came directly from Google Maps listings, not website clicks.</li>
+            <li><strong>Local citations matter:</strong> Consistent NAP across directories helped rankings significantly in the first 2 months.</li>
+        </ol>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>READY FOR SIMILAR RESULTS?</h2>
+        <p>If you're a local service business looking to dominate search results in your area, I can help. Let's discuss a strategy tailored to your industry and market.</p>
+        <a href="/#contact" class="btn-primary">START YOUR PROJECT</a>
+    </section>
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <h2>Related Projects</h2>
+        <div class="related-projects-grid">
+            <a href="/projects/brunno-rodrigues" class="related-project-card">
+                <img src="/brunno-rodrigues.svg" alt="Brunno Rodrigues website">
+                <h3>Brunno Rodrigues</h3>
+                <p>Landing page for massage therapist</p>
+            </a>
+            <a href="/projects/porto-massage-studio" class="related-project-card">
+                <img src="/porto-massage-studio.svg" alt="Porto Massage Studio website">
+                <h3>Porto Massage Studio</h3>
+                <p>Massage studio with online booking</p>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.case-study-hero {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 60px;
+    padding: 80px 108px;
+    align-items: center;
+}
+
+.case-study-tag {
+    display: inline-block;
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    margin-bottom: 24px;
+}
+
+.case-study-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    letter-spacing: -0.76px;
+    margin-bottom: 16px;
+}
+
+.case-study-subtitle {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.case-study-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+    padding: 32px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meta-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.meta-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.results-banner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.result-card {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.result-value {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.result-label {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.case-study-hero-image {
+    width: 100%;
+    height: 500px;
+    background-color: var(--color-dark);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.case-study-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Case Study Sections */
+.case-study-section {
+    padding: 80px 108px;
+}
+
+.case-study-section.gray-bg {
+    background-color: var(--color-dark);
+}
+
+.case-study-section h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 32px;
+}
+
+.case-study-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+
+.case-study-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.case-study-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.case-study-section ul,
+.case-study-section ol {
+    margin: 20px 0 20px 24px;
+}
+
+.case-study-section li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.challenge-list,
+.goals-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.challenge-list li,
+.goals-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.challenge-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.goals-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.implementation-phase {
+    background-color: rgba(211, 233, 122, 0.05);
+    border-left: 3px solid var(--color-accent);
+    padding: 32px;
+    margin: 32px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 40px 0;
+}
+
+.result-item {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.result-category {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.tech-list,
+.keyword-list,
+.ranking-list,
+.lessons-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.tech-list li,
+.keyword-list li,
+.ranking-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.tech-list li::before,
+.keyword-list li::before,
+.ranking-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 108px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+/* Related Projects */
+.related-projects {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
+}
+
+.related-projects h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 40px;
+}
+
+.related-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.related-project-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.related-project-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.related-project-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background-color: #0d0d0d;
+}
+
+.related-project-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 24px 24px 12px;
+}
+
+.related-project-card p {
+    font-size: 15px;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin: 0 24px 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .case-study-hero {
+        grid-template-columns: 1fr;
+        padding: 60px 32px;
+    }
+
+    .case-study-hero-image {
+        height: 400px;
+    }
+
+    .case-study-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .results-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-section {
+        padding: 60px 32px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .related-projects {
+        padding: 60px 32px;
+    }
+
+    .related-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        padding: 60px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .case-study-hero {
+        padding: 40px 16px;
+    }
+
+    .case-study-hero h1 {
+        font-size: 48px;
+    }
+
+    .case-study-subtitle {
+        font-size: 16px;
+    }
+
+    .case-study-meta {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .result-value {
+        font-size: 40px;
+    }
+
+    .case-study-hero-image {
+        height: 300px;
+    }
+
+    .case-study-section {
+        padding: 40px 16px;
+    }
+
+    .case-study-section h2 {
+        font-size: 40px;
+    }
+
+    .case-study-section h3 {
+        font-size: 24px;
+    }
+
+    .implementation-phase {
+        padding: 24px;
+    }
+
+    .related-projects {
+        padding: 40px 16px;
+    }
+
+    .related-projects h2 {
+        font-size: 40px;
+    }
+
+    .cta-section {
+        padding: 40px 16px;
+    }
+
+    .cta-section h2 {
+        font-size: 48px;
+    }
+}
+</style>
