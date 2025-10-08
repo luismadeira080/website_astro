@@ -86,12 +86,20 @@
 
 ---
 
-### Task 2.2: Create Individual Case Study Pages (English) ⏳
-**Status:** Not Started
+### Task 2.2: Create Individual Case Study Pages (English) ✅
+**Status:** Completed
 **Files:**
-- [ ] `src/pages/projects/porto-car-care.astro`
-- [ ] `src/pages/projects/brunno-rodrigues.astro`
-- [ ] `src/pages/projects/porto-massage-studio.astro`
+- [x] `src/pages/projects/porto-car-care.astro`
+- [x] `src/pages/projects/brunno-rodrigues.astro`
+- [x] `src/pages/projects/porto-massage-studio.astro`
+**Commits:** 2605a0f, 478457f, 86ae243
+**Completed:** October 8, 2025
+**Features:**
+- Porto Car Care: SEO-focused case study (3× visibility, +12 positions, +40% calls)
+- Brunno Rodrigues: Landing page case study (2-week timeline, 98/100 PageSpeed)
+- Porto Massage Studio: Wellness landing page (96/100 PageSpeed, online booking)
+- All with comprehensive content (800+ words), Article schema, breadcrumbs
+- Navigation links added to projects page
 
 ---
 
@@ -133,12 +141,21 @@
 
 ---
 
-### Task 2.7: Create Portuguese Case Study Pages ⏳
-**Status:** Not Started
+### Task 2.7: Create Portuguese Case Study Pages ✅
+**Status:** Completed
 **Files:**
-- [ ] `src/pages/pt/projetos/porto-car-care.astro`
-- [ ] `src/pages/pt/projetos/brunno-rodrigues.astro`
-- [ ] `src/pages/pt/projetos/porto-massage-studio.astro`
+- [x] `src/pages/pt/projetos/porto-car-care.astro`
+- [x] `src/pages/pt/projetos/brunno-rodrigues.astro`
+- [x] `src/pages/pt/projetos/porto-massage-studio.astro`
+**Commit:** e9d31f8
+**Completed:** October 8, 2025
+**Features:**
+- Full Portuguese translations of all 3 case studies
+- Updated lang="pt" and locale="pt" for all pages
+- Portuguese navigation (Trabalhos, Serviços, Sobre, Contacto)
+- Portuguese breadcrumbs (Início → Projetos → Project Name)
+- All content professionally translated maintaining SEO quality
+- Navigation links added to /pt/projetos page
 
 ---
 
@@ -237,7 +254,7 @@
 - [ ] Test and validate (next step)
 
 ### Short-term (Month 2)
-- [ ] All content created (services, case studies)
+- [x] All content created (services, case studies)
 - [ ] Programmatic pages live (12 pages)
 - [ ] Core Web Vitals pass
 - [ ] Analytics tracking
@@ -289,10 +306,10 @@
 
 ---
 
-**Last Updated:** October 8, 2025
-**Current Phase:** Phase 2 - Content Creation 🚀 **IN PROGRESS**
-**Next Tasks:** Individual case study pages (Tasks 2.2, 2.7)
-**Progress:** Phase 1 ✅ | Phase 2: 5/7 tasks completed
+**Last Updated:** October 8, 2025 (20:52)
+**Current Phase:** Phase 2 - Content Creation ✅ **COMPLETE**
+**Next Tasks:** Phase 3 - Programmatic SEO (City and Industry pages)
+**Progress:** Phase 1 ✅ | Phase 2 ✅ (7/7 tasks completed)
 
 **🎉 Phase 1 Milestone Achieved:**
 - ✅ Multilingual infrastructure (EN at /, PT at /pt/)
@@ -301,16 +318,16 @@
 - ✅ Sitemap and robots.txt
 - ✅ All changes pushed to GitHub (commits: b04a972, cd8efd6)
 
-**🚀 Phase 2 Progress:**
+**🎉 Phase 2 Complete:**
+- ✅ Task 2.1: English services page (commit: 239e067)
+- ✅ Task 2.2: English case study pages (commits: 2605a0f, 478457f, 86ae243)
 - ✅ Task 2.3: Portuguese home page (commit: 096a059)
 - ✅ Task 2.4: Portuguese about page (commit: 0831184)
 - ✅ Task 2.5: Portuguese projects page (commit: 0831184)
-- ✅ Task 2.1: English services page (commit: 239e067)
 - ✅ Task 2.6: Portuguese services page (commit: 239e067)
-- ⏳ Task 2.2: English case study pages (pending)
-- ⏳ Task 2.7: Portuguese case study pages (pending)
+- ✅ Task 2.7: Portuguese case study pages (commit: e9d31f8)
 
 **📊 Pages Created:**
-- Total pages: 10 (5 EN + 5 PT)
-- English: /, /about, /projects, /services + case studies (pending)
-- Portuguese: /pt/, /pt/sobre, /pt/projetos, /pt/servicos + case studies (pending)
+- Total pages: 16 (8 EN + 8 PT)
+- English: /, /about, /projects, /services, /projects/porto-car-care, /projects/brunno-rodrigues, /projects/porto-massage-studio
+- Portuguese: /pt/, /pt/sobre, /pt/projetos, /pt/servicos, /pt/projetos/porto-car-care, /pt/projetos/brunno-rodrigues, /pt/projetos/porto-massage-studio
