@@ -1,4 +1,7 @@
 ---
+import SEO from '../components/SEO.astro';
+import Schema from '../components/Schema.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 ---
 
 <!DOCTYPE html>
@@ -6,11 +9,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Luís Madeira</title>
     <link rel="icon" href="data:,">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Case Studies - Real SEO Results | Luís Madeira"
+        description="See real results from local SEO and web development projects. Case studies with metrics, strategy, and implementation details from Portuguese businesses."
+        locale="en"
+    />
+
+    <!-- Structured Data -->
+    <Schema type="Organization" />
 </head>
 <body>
     <!-- Navigation -->
@@ -20,6 +32,7 @@
             <a href="/#work">Work</a>
             <a href="/about">About</a>
             <a href="/#contact">Contact</a>
+            <LanguageSwitcher currentPath="/projects" />
         </div>
         <div class="mobile-menu-toggle">
             <span></span>
@@ -38,7 +51,7 @@
         <!-- Project Card 1 -->
         <div class="project-card">
             <div class="project-card-image">
-                <img src="/final fnal final.svg" alt="Porto Car Care">
+                <img src="/final fnal final.svg" alt="Porto Car Care - Auto detailing website with local SEO optimization">
             </div>
             <div class="project-card-content">
                 <div class="project-card-tag">Local SEO</div>
@@ -65,7 +78,7 @@
         <!-- Project Card 2 -->
         <div class="project-card">
             <div class="project-card-image">
-                <img src="/brunno-rodrigues.svg" alt="Brunno Rodrigues">
+                <img src="/brunno-rodrigues.svg" alt="Brunno Rodrigues - Personal training and physiotherapy website">
             </div>
             <div class="project-card-content">
                 <div class="project-card-tag">Landing Page</div>
@@ -92,7 +105,7 @@
         <!-- Project Card 3 -->
         <div class="project-card">
             <div class="project-card-image">
-                <img src="/porto-massage-studio.svg" alt="Porto Massage Studio">
+                <img src="/porto-massage-studio.svg" alt="Porto Massage Studio - Spa and wellness center website">
             </div>
             <div class="project-card-content">
                 <div class="project-card-tag">Landing Page</div>
