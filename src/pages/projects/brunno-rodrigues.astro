@@ -80,6 +80,14 @@ import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
                     <span class="meta-label">Timeline</span>
                     <span class="meta-value">2 weeks</span>
                 </div>
+                <div class="meta-item">
+                    <span class="meta-label">Website</span>
+                    <span class="meta-value"><a href="https://brunnoterapias.com" target="_blank" rel="noopener noreferrer" class="website-link">brunnoterapias.com</a></span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Google Reviews</span>
+                    <span class="meta-value">⭐ 4.9 (36 reviews)</span>
+                </div>
             </div>
 
             <div class="results-banner">
@@ -478,7 +486,7 @@ body {
 
 .case-study-meta {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-bottom: 40px;
     padding: 32px 0;
@@ -504,6 +512,16 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: var(--color-text);
+}
+
+.website-link {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.website-link:hover {
+    color: var(--color-accent);
 }
 
 .results-banner {
