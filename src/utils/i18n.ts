@@ -249,6 +249,10 @@ const pathMappings: Record<string, { en: string; pt: string }> = {
   about: { en: '/about', pt: '/pt/sobre' },
   projects: { en: '/projects', pt: '/pt/projetos' },
   services: { en: '/services', pt: '/pt/servicos' },
+  // Case Studies
+  portoCarCare: { en: '/projects/porto-car-care', pt: '/pt/projetos/porto-car-care' },
+  brunnoRodrigues: { en: '/projects/brunno-rodrigues', pt: '/pt/projetos/brunno-rodrigues' },
+  portoMassageStudio: { en: '/projects/porto-massage-studio', pt: '/pt/projetos/porto-massage-studio' },
 };
 
 /**
