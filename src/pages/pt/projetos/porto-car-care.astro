@@ -1,7 +1,6 @@
 ---
 import SEO from '../../../components/SEO.astro';
 import Schema from '../../../components/Schema.astro';
-import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import LanguageSwitcher from '../../../components/LanguageSwitcher.astro';
 import Footer from '../../../components/Footer.astro';
 ---
@@ -50,13 +49,13 @@ import Footer from '../../../components/Footer.astro';
     </nav>
 
     <!-- Breadcrumbs -->
-    <Breadcrumbs
-        items={[
-            { label: 'Início', url: '/pt' },
-            { label: 'Projetos', url: '/pt/projetos' },
-            { label: 'Porto Car Care', url: '/pt/projetos/porto-car-care' }
-        ]}
-    />
+    <nav class="breadcrumbs">
+        <a href="/pt">Início</a>
+        <span class="separator">/</span>
+        <a href="/pt/projetos">Estudos de Caso</a>
+        <span class="separator">/</span>
+        <span class="current">Porto Car Care</span>
+    </nav>
 
     <!-- Hero Section -->
     <section class="case-study-hero">
@@ -393,6 +392,35 @@ body {
     height: 2px;
     background-color: var(--color-text);
     transition: all 0.3s ease;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: 24px 108px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.breadcrumbs a {
+    color: var(--color-text);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+.breadcrumbs .separator {
+    opacity: 0.5;
+}
+
+.breadcrumbs .current {
+    color: var(--color-accent);
 }
 
 /* Hero Section */
@@ -741,6 +769,10 @@ body {
         padding: 24px 32px;
     }
 
+    .breadcrumbs {
+        padding: 24px 32px;
+    }
+
     .case-study-hero {
         grid-template-columns: 1fr;
         padding: 60px 32px;
@@ -782,6 +814,11 @@ body {
 @media (max-width: 768px) {
     .navigation {
         padding: 20px 16px;
+    }
+
+    .breadcrumbs {
+        padding: 16px;
+        font-size: 12px;
     }
 
     .logo {
