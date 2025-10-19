@@ -5,7 +5,7 @@
  * Critical for Google indexing
  */
 
-const SITE_URL = 'https://estudiolm.com';
+const SITE_URL = 'https://www.estudiolm.com';
 
 function generateSitemapXML(pages) {
   return `<?xml version="1.0" encoding="UTF-8"?>

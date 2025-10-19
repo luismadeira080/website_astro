@@ -4,7 +4,7 @@
  * Points to sitemap for efficient indexing
  */
 
-const SITE_URL = 'https://estudiolm.com';
+const SITE_URL = 'https://www.estudiolm.com';
 
 export async function GET() {
   const robotsTxt = `# robots.txt for ${SITE_URL}
