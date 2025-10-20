@@ -4,6 +4,10 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.estudiolm.com',
+  trailingSlash: 'never',  // Consistent URL format without trailing slashes
+  build: {
+    format: 'file'  // Generates /page.html instead of /page/index.html
+  },
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'pt'],
