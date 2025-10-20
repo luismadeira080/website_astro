@@ -2,7 +2,6 @@
 import SEO from '../../../components/SEO.astro';
 import Schema from '../../../components/Schema.astro';
 import LanguageSwitcher from '../../../components/LanguageSwitcher.astro';
-import Footer from '../../../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -24,12 +23,11 @@ import Footer from '../../../components/Footer.astro';
         locale="pt"
     />
 
-    <!-- Structured Data -->
+    <!-- Article Schema -->
     <Schema type="Article" data={{
         headline: "Porto Massage Studio - Estudo de Caso Landing Page",
         datePublished: "2025-10-08",
-        author: "Luís Madeira",
-        description: "Um estudo de caso sobre o design e construção de uma landing page focada em conversão para o Porto Massage Studio com apresentação clara de serviços."
+        author: "Luís Madeira"
     }} />
 </head>
 <body>
@@ -58,254 +56,265 @@ import Footer from '../../../components/Footer.astro';
         <span class="current">Porto Massage Studio</span>
     </nav>
 
-    <!-- Case Study Hero -->
+    <!-- Hero Section -->
     <section class="case-study-hero">
-        <div class="hero-tag">Landing Page</div>
-        <h1>Porto Massage Studio</h1>
-        <p class="hero-subtitle">Landing page profissional para estúdio de massagens com apresentação clara de serviços</p>
+        <div class="case-study-hero-content">
+            <div class="case-study-tag">Landing Page</div>
+            <h1>Porto Massage Studio</h1>
+            <p class="case-study-subtitle">Landing page profissional para estúdio de massagens com apresentação clara de serviços e design mobile-first</p>
 
-        <div class="hero-metrics">
-            <div class="metric-card">
-                <span class="metric-number">2 semanas</span>
-                <span class="metric-label">Cronograma</span>
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Cliente</span>
+                    <span class="meta-value">Porto Massage Studio</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Indústria</span>
+                    <span class="meta-value">Bem-Estar & Spa</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Localização</span>
+                    <span class="meta-value">Porto, Portugal</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Cronograma</span>
+                    <span class="meta-value">2 semanas</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Website</span>
+                    <span class="meta-value"><a href="https://portomassagestudio.com" target="_blank" rel="noopener noreferrer" class="website-link">portomassagestudio.com</a></span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Avaliações Google</span>
+                    <span class="meta-value">⭐ 5,0 (78 avaliações)</span>
+                </div>
             </div>
-            <div class="metric-card">
-                <span class="metric-number">96/100</span>
-                <span class="metric-label">PageSpeed</span>
+
+            <div class="results-banner">
+                <div class="result-card">
+                    <div class="result-value">2 semanas</div>
+                    <div class="result-label">Tempo de Entrega</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">100%</div>
+                    <div class="result-label">Otimização Móvel</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-value">SEO</div>
+                    <div class="result-label">Pronto</div>
+                </div>
             </div>
-            <div class="metric-card">
-                <span class="metric-number">0,9s</span>
-                <span class="metric-label">Tempo de Carregamento</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-number">100%</span>
-                <span class="metric-label">Score Móvel</span>
-            </div>
+        </div>
+
+        <div class="case-study-hero-image">
+            <img src="/porto-massage-studio.svg" alt="Pré-visualização da landing page Porto Massage Studio">
         </div>
     </section>
 
-    <!-- Project Overview -->
-    <section class="content-section">
-        <h2>Visão Geral do Projeto</h2>
+    <!-- Overview Section -->
+    <section class="case-study-section">
+        <h2>Visão Geral</h2>
         <p>O Porto Massage Studio é um centro de bem-estar no Porto que oferece vários serviços de massagem e relaxamento. Precisavam de uma presença online profissional que apresentasse os seus serviços, facilitasse contactos de clientes e estabelecesse credibilidade com potenciais clientes.</p>
 
-        <p>O cliente necessitava de uma landing page que servisse múltiplos propósitos: apresentar claramente a sua gama de serviços, permitir contacto fácil, mostrar a sua expertise e funcionar perfeitamente em dispositivos móveis onde origina a maior parte do seu tráfego.</p>
+        <p>O desafio era criar uma landing page que servisse múltiplos propósitos: apresentar claramente a sua gama de serviços, permitir contacto fácil, mostrar a sua expertise e funcionar perfeitamente em dispositivos móveis onde origina a maior parte do seu tráfego.</p>
 
-        <div class="info-grid">
-            <div class="info-item">
-                <h3>Cliente</h3>
-                <p>Porto Massage Studio</p>
-            </div>
-            <div class="info-item">
-                <h3>Indústria</h3>
-                <p>Bem-Estar & Spa</p>
-            </div>
-            <div class="info-item">
-                <h3>Tipo de Projeto</h3>
-                <p>Design & Desenvolvimento Landing Page</p>
-            </div>
-            <div class="info-item">
-                <h3>Cronograma</h3>
-                <p>2 Semanas</p>
-            </div>
-            <div class="info-item">
-                <h3>Website</h3>
-                <p><a href="https://portomassagestudio.com" target="_blank" rel="noopener noreferrer" class="website-link">portomassagestudio.com</a></p>
-            </div>
-            <div class="info-item">
-                <h3>Avaliações Google</h3>
-                <p>⭐ 5,0 (78 avaliações)</p>
-            </div>
-        </div>
+        <p>O resultado é uma landing page limpa e focada em conversão que destaca a sua oferta de serviços, constrói confiança com prova social e torna a marcação de uma sessão tão simples quanto um clique.</p>
     </section>
 
-    <!-- The Challenge -->
-    <section class="content-section dark-section">
+    <!-- Challenge Section -->
+    <section class="case-study-section gray-bg">
         <h2>O Desafio</h2>
-        <p>O Porto Massage Studio enfrentava vários desafios principais com a sua presença online:</p>
 
-        <ul class="challenge-list">
-            <li><strong>Sem Presença Online:</strong> O estúdio dependia inteiramente de passantes e boca-a-boca, perdendo potenciais clientes online que procuram informações sobre serviços de massagem</li>
-            <li><strong>Opções de Contacto Limitadas:</strong> Os clientes tinham que ligar durante o horário de expediente para informações sobre serviços, criando fricção no processo inicial de contacto</li>
-            <li><strong>Clareza de Serviços:</strong> Potenciais clientes não conseguiam facilmente compreender os diferentes tipos de massagem e serviços oferecidos</li>
-            <li><strong>Acessibilidade Móvel:</strong> A maioria das consultas vinham de dispositivos móveis, mas não tinham presença otimizada para mobile</li>
-            <li><strong>Construção de Confiança:</strong> Sem avaliações online ou apresentação profissional, tinham dificuldade em converter clientes pela primeira vez</li>
-        </ul>
+        <div class="challenge-content">
+            <h3>A Situação</h3>
+            <p>O Porto Massage Studio enfrentava vários desafios principais com a sua presença online:</p>
 
-        <p>O negócio estava a perder potenciais clientes que preferiam pesquisar e marcar serviços online, particularmente dados demográficos mais jovens que esperam experiências digital-first.</p>
-    </section>
+            <ul class="challenge-list">
+                <li><strong>Sem Presença Online:</strong> O estúdio dependia inteiramente de passantes e boca-a-boca, perdendo potenciais clientes online que queriam aprender sobre os seus serviços.</li>
+                <li><strong>Opções de Contacto Limitadas:</strong> Os clientes tinham que ligar durante o horário de expediente para informações sobre serviços, criando fricção no processo inicial de contacto.</li>
+                <li><strong>Clareza de Serviços:</strong> Potenciais clientes não conseguiam facilmente compreender os diferentes tipos de massagem e serviços oferecidos sem visitar pessoalmente.</li>
+                <li><strong>Acessibilidade Móvel:</strong> A maioria das consultas vinham de dispositivos móveis, mas não tinham presença otimizada para mobile.</li>
+                <li><strong>Construção de Confiança:</strong> Sem avaliações online ou apresentação profissional, tinham dificuldade em converter clientes pela primeira vez.</li>
+            </ul>
 
-    <!-- The Solution -->
-    <section class="content-section">
-        <h2>A Solução</h2>
-        <p>Desenhei e construí uma landing page focada em conversão que abordou todos os seus desafios principais mantendo uma estética calma e profissional alinhada com a sua marca de bem-estar.</p>
-
-        <h3>Abordagem de Design</h3>
-        <p>O design priorizou três elementos principais:</p>
-
-        <ul class="solution-list">
-            <li><strong>Estética Calmante:</strong> Cores suaves, espaço generoso e imagens serenas para refletir a experiência de relaxamento</li>
-            <li><strong>Clareza de Serviços:</strong> Cartões de serviços claros com descrições, durações e preços para cada tipo de massagem</li>
-            <li><strong>Caminho de Conversão:</strong> Colocação estratégica de CTAs de contacto ao longo da página para capturar interesse em diferentes níveis de envolvimento</li>
-        </ul>
-
-        <h3>Funcionalidades Principais Implementadas</h3>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <h4>Apresentação de Serviços</h4>
-                <p>Cartões de serviços detalhados com imagens, descrições, durações, benefícios e preços</p>
-            </div>
-            <div class="feature-card">
-                <h4>Integração WhatsApp</h4>
-                <p>Botão direto WhatsApp para consultas instantâneas e questões rápidas</p>
-            </div>
-            <div class="feature-card">
-                <h4>Formulários de Contacto</h4>
-                <p>Formulários de contacto fáceis de usar para consultas de clientes com notificações por email</p>
-            </div>
-            <div class="feature-card">
-                <h4>Google Maps Incorporado</h4>
-                <p>Mapa interativo mostrando localização exata com direções e informação do negócio</p>
-            </div>
-            <div class="feature-card">
-                <h4>Prova Social</h4>
-                <p>Secção de testemunhos de clientes para construir confiança e mostrar experiências de clientes anteriores</p>
-            </div>
-            <div class="feature-card">
-                <h4>Design Mobile-First</h4>
-                <p>Otimizado para dispositivos móveis com botões amigáveis ao toque e carregamento rápido</p>
-            </div>
+            <h3>Objetivos</h3>
+            <ul class="goals-list">
+                <li>Criar uma landing page profissional em 2 semanas</li>
+                <li>Apresentar serviços com descrições e preços claros</li>
+                <li>Permitir múltiplas opções de contacto (WhatsApp, telefone, formulário)</li>
+                <li>Otimizar para utilizadores móveis (audiência principal)</li>
+                <li>Construir confiança com prova social e testemunhos</li>
+                <li>Incluir SEO básico para descoberta local</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Implementation -->
-    <section class="content-section dark-section">
-        <h2>Implementação</h2>
-        <p>Durante as duas semanas de desenvolvimento, implementei:</p>
+    <!-- Solution Section -->
+    <section class="case-study-section">
+        <h2>A Solução</h2>
+
+        <h3>Descoberta & Estratégia</h3>
+        <p>Comecei por pesquisar a audiência-alvo e concorrentes do Porto Massage Studio. A maioria dos centros de bem-estar no Porto tinham websites desatualizados ou dependiam apenas das redes sociais. Esta era uma oportunidade para se destacar com uma landing page moderna e profissional.</p>
+
+        <p>A estratégia focou-se em três princípios chave:</p>
         <ul>
-            <li><strong>Design e Estrutura:</strong> Landing page com estética calmante (azuis suaves, neutros quentes) e design mobile-first otimizado para a experiência do utilizador</li>
+            <li><strong>Estética calmante:</strong> Cores suaves, espaço generoso e imagens serenas para refletir a experiência de relaxamento</li>
+            <li><strong>Clareza de serviços:</strong> Cartões de serviços claros com descrições, durações e preços para cada tipo de massagem</li>
+            <li><strong>Otimização de conversão:</strong> Colocação estratégica de CTAs de contacto ao longo da página</li>
+        </ul>
+
+        <h3>Implementação</h3>
+        <p>Durante o período de desenvolvimento de duas semanas, implementei:</p>
+        <ul>
+            <li><strong>Design & Estrutura:</strong> Landing page limpa com estética calmante (azuis suaves, neutros quentes) e design mobile-first</li>
             <li><strong>SEO Técnico:</strong> Meta tags otimizadas, schema markup LocalBusiness e velocidade de página rápida (0,9s)</li>
             <li><strong>Conteúdo:</strong> Cartões de serviços detalhados com descrições, durações, benefícios e preços para cada tipo de massagem</li>
             <li><strong>Funcionalidades:</strong> Formulários de contacto com notificações por email, botão WhatsApp direto e Google Maps incorporado</li>
-            <li><strong>Prova Social:</strong> Secção de testemunhos de clientes para construir confiança</li>
+            <li><strong>Prova Social:</strong> Secção de testemunhos de clientes para construir confiança e mostrar experiências de clientes anteriores</li>
             <li><strong>Otimização Móvel:</strong> Botões amigáveis ao toque, carregamento rápido em redes móveis e imagens otimizadas</li>
-            <li><strong>Testes e Lançamento:</strong> Testes minuciosos do fluxo de contacto em múltiplos dispositivos e browsers, com rastreamento de análise</li>
+            <li><strong>Testes & Lançamento:</strong> Testes minuciosos em vários dispositivos e browsers, com rastreamento de análise</li>
         </ul>
     </section>
 
-    <!-- Results -->
-    <section class="content-section">
-        <h2>Resultados & Impacto</h2>
+    <!-- Key Features Section -->
+    <section class="case-study-section gray-bg">
+        <h2>Funcionalidades Principais</h2>
 
+        <h3>Apresentação de Serviços</h3>
+        <p>Cada serviço de massagem tem a sua própria secção com:</p>
+        <ul>
+            <li>Nome e descrição do serviço</li>
+            <li>Duração e preços</li>
+            <li>Benefícios e o que esperar</li>
+            <li>CTA de marcação direta</li>
+        </ul>
+
+        <h3>Múltiplas Opções de Contacto</h3>
+        <p>Tornar a marcação fácil com:</p>
+        <ul>
+            <li><strong>Botão WhatsApp:</strong> Um clique para iniciar conversa</li>
+            <li><strong>Click-to-Call:</strong> Chamada telefónica direta em mobile</li>
+            <li><strong>Formulário de Contacto:</strong> Formulário simples para quem prefere email</li>
+            <li><strong>Mapa de Localização:</strong> Google Maps incorporado para navegação fácil</li>
+        </ul>
+
+        <h3>Prova Social & Confiança</h3>
+        <p>Construir credibilidade com:</p>
+        <ul>
+            <li>Secção de testemunhos de clientes a mostrar experiências</li>
+            <li>Integração de Avaliações Google (classificação 5,0, 78 avaliações)</li>
+            <li>Fotografia profissional dos espaços de tratamento</li>
+            <li>Anos de experiência destacados</li>
+        </ul>
+
+        <h3>Otimização Móvel</h3>
+        <p>Experiência móvel perfeita com:</p>
+        <ul>
+            <li>Botões e navegação amigáveis ao toque</li>
+            <li>Carregamento rápido em redes móveis (0,9s)</li>
+            <li>Tipografia legível sem zoom</li>
+            <li>Imagens otimizadas que carregam rapidamente</li>
+        </ul>
+
+        <h3>Base de SEO Técnico</h3>
+        <p>Configurado para descoberta local:</p>
+        <ul>
+            <li>Título e meta descrições otimizadas</li>
+            <li>Schema markup LocalBusiness</li>
+            <li>Score PageSpeed de 96/100</li>
+            <li>Mobile-friendly (fator de classificação #1 do Google)</li>
+        </ul>
+    </section>
+
+    <!-- Results Section -->
+    <section class="case-study-section">
+        <h2>Resultados</h2>
+
+        <h3>Entrega do Projeto</h3>
         <div class="results-grid">
-            <div class="result-card">
-                <span class="result-number">96/100</span>
-                <span class="result-label">Score Google PageSpeed</span>
-                <p>Excelente performance garantindo carregamento rápido mesmo em redes móveis</p>
+            <div class="result-item">
+                <div class="result-category">Cronograma</div>
+                <ul>
+                    <li><strong>Entregue a tempo</strong> - exatamente 2 semanas desde o início até ao lançamento</li>
+                    <li><strong>3 rondas de revisão</strong> incluídas no cronograma</li>
+                    <li><strong>Correções no mesmo dia</strong> para ajustes pós-lançamento</li>
+                </ul>
             </div>
 
-            <div class="result-card">
-                <span class="result-number">0,9s</span>
-                <span class="result-label">Tempo Médio de Carregamento</span>
-                <p>Carregamentos de página ultra-rápidos reduzem taxa de rejeição e melhoram experiência do utilizador</p>
+            <div class="result-item">
+                <div class="result-category">Performance Técnica</div>
+                <ul>
+                    <li><strong>96/100 PageSpeed</strong> score em mobile</li>
+                    <li><strong>0,9s tempo de carregamento</strong> em conexão 4G</li>
+                    <li><strong>100% mobile-friendly</strong> segundo teste do Google</li>
+                </ul>
             </div>
 
-            <div class="result-card">
-                <span class="result-number">100%</span>
-                <span class="result-label">Score Mobile-Friendly</span>
-                <p>Otimização móvel perfeita onde 80% do seu tráfego se origina</p>
-            </div>
-
-            <div class="result-card">
-                <span class="result-number">2 semanas</span>
-                <span class="result-label">Cronograma de Desenvolvimento</span>
-                <p>Entrega rápida desde o início até ao lançamento sem comprometer qualidade</p>
+            <div class="result-item">
+                <div class="result-category">Impacto no Cliente</div>
+                <ul>
+                    <li><strong>Credibilidade profissional</strong> - perceção de marca melhorada</li>
+                    <li><strong>Contactos 24/7</strong> - contacto de cliente a qualquer hora</li>
+                    <li><strong>Chamadas reduzidas</strong> - informação de serviços abrangente online</li>
+                </ul>
             </div>
         </div>
 
-        <h3>Impacto no Negócio</h3>
-        <ul class="impact-list">
-            <li>Permitiu contactos de clientes 24/7 através de formulários, facilitando o contacto a qualquer hora</li>
-            <li>Estabeleceu presença online profissional que constrói confiança com clientes pela primeira vez</li>
-            <li>Reduziu consultas telefónicas ao fornecer informação de serviços abrangente online</li>
-            <li>Criou fundação escalável pronta para futuro conteúdo de blog e otimização de SEO</li>
-            <li>Experiência otimizada para mobile alcança 80% da audiência alvo eficazmente</li>
+        <h3>O Que o Cliente Disse</h3>
+        <blockquote class="testimonial">
+            <p>"A landing page superou as nossas expectativas. É bonita, fácil de usar, e estamos a receber contactos de clientes que nunca nos teriam ligado antes. A experiência móvel é perfeita."</p>
+            <cite>— Joaquim Marco, Porto Massage Studio</cite>
+        </blockquote>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="case-study-section gray-bg">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="tech-list">
+            <li><strong>Astro:</strong> Gerador de sites estáticos para máxima performance</li>
+            <li><strong>CSS3:</strong> CSS moderno para design responsivo</li>
+            <li><strong>Google Maps API:</strong> Integração de localização</li>
+            <li><strong>Schema.org:</strong> Dados estruturados LocalBusiness</li>
+            <li><strong>Formspree:</strong> Gestão de formulários de contacto</li>
+            <li><strong>Vercel:</strong> Alojamento rápido e fiável com CDN global</li>
         </ul>
     </section>
 
-    <!-- Technologies -->
-    <section class="content-section dark-section">
-        <h2>Tecnologias Utilizadas</h2>
+    <!-- Lessons Learned Section -->
+    <section class="case-study-section">
+        <h2>Lições Aprendidas</h2>
+        <p>Este projeto reforçou vários princípios chave para projetos de landing pages:</p>
 
-        <div class="tech-grid">
-            <div class="tech-item">
-                <h4>Astro</h4>
-                <p>Gerador de sites estáticos para performance ótima e tempos de carregamento rápidos</p>
-            </div>
-            <div class="tech-item">
-                <h4>CSS3</h4>
-                <p>CSS moderno com propriedades personalizadas para estilização sustentável</p>
-            </div>
-            <div class="tech-item">
-                <h4>Google Maps API</h4>
-                <p>Integração de mapa interativo para localização e direções</p>
-            </div>
-            <div class="tech-item">
-                <h4>Formspree</h4>
-                <p>Gestão de formulários fiável com notificações por email para contactos de clientes</p>
-            </div>
-            <div class="tech-item">
-                <h4>WhatsApp Business API</h4>
-                <p>Integração de mensagens diretas para comunicação instantânea com clientes</p>
-            </div>
-            <div class="tech-item">
-                <h4>Vercel</h4>
-                <p>Alojamento rápido e fiável com deployments automáticos e CDN global</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lessons Learned -->
-    <section class="content-section">
-        <h2>Conclusões Principais</h2>
-
-        <div class="takeaway-card">
-            <h3>Mobile-First é Crítico para Negócios de Serviços</h3>
-            <p>Com 80% das consultas de estúdios de massagem a vir de dispositivos móveis, desenhar para mobile primeiro e desktop depois provou ser essencial. Botões amigáveis ao toque, navegação simplificada e carregamento rápido em conexões mais lentas foram inegociáveis.</p>
-        </div>
-
-        <div class="takeaway-card">
-            <h3>Simplificar Formulários de Contacto para Conversões Mais Altas</h3>
-            <p>A análise mostrou que os clientes abandonavam formulários de contacto quando eram demasiado complexos. Ao simplificar os formulários para campos essenciais apenas (nome, email, telefone, mensagem), as taxas de conclusão melhoraram dramaticamente. Mantenha simples e sem fricção.</p>
-        </div>
-
-        <div class="takeaway-card">
-            <h3>Clareza de Serviços Impulsiona Conversões</h3>
-            <p>Descrições de serviços claras e detalhadas com benefícios e preços eliminaram questões pré-marcação. Os clientes podiam auto-educar-se e marcar com confiança, reduzindo comunicação de ida e volta.</p>
-        </div>
-
-        <div class="takeaway-card">
-            <h3>Estética Visual Deve Corresponder à Promessa da Marca</h3>
-            <p>A estética de design calmante e serena reforçou a experiência de relaxamento que os clientes esperam. Escolhas de design (cores, espaçamento, imagens) devem alinhar-se emocionalmente com o serviço a ser vendido.</p>
-        </div>
-    </section>
-
-    <!-- Client Testimonial -->
-    <section class="content-section dark-section">
-        <div class="testimonial">
-            <p class="testimonial-text">"A landing page superou as nossas expectativas. É bonita, fácil de usar, e estamos a receber contactos de clientes que nunca nos teriam ligado antes. A experiência móvel é perfeita."</p>
-            <p class="testimonial-author">— Joaquim Marco, Porto Massage Studio</p>
-        </div>
+        <ol class="lessons-list">
+            <li><strong>Mobile-first é crítico para negócios de serviços:</strong> Com 80% das consultas de dispositivos móveis, desenhar mobile-first garantiu a melhor experiência para a maioria.</li>
+            <li><strong>Clareza de serviços impulsiona conversões:</strong> Descrições de serviços claras e detalhadas com benefícios e preços eliminaram questões pré-marcação e reduziram comunicação de ida e volta.</li>
+            <li><strong>Múltiplas opções de contacto importam:</strong> Pessoas diferentes preferem métodos de contacto diferentes. Oferecer WhatsApp, telefone e email maximiza a conversão.</li>
+            <li><strong>Estética visual deve corresponder à promessa da marca:</strong> A estética de design calmante reforçou a experiência de relaxamento que os clientes esperam.</li>
+            <li><strong>Prova social constrói confiança:</strong> Testemunhos e integração de Avaliações Google ajudaram a converter visitantes pela primeira vez em clientes.</li>
+        </ol>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Precisa de uma Landing Page para o Seu Negócio de Serviços?</h2>
-        <p>Especializo-me em construir landing pages rápidas e focadas em conversão para negócios de serviços. Seja apresentação de serviços, formulários de contacto ou otimização móvel, vamos discutir o seu projeto.</p>
-        <div class="cta-buttons">
-            <a href="/pt/#contact" class="btn-primary">Iniciar o Seu Projeto</a>
-            <a href="/pt/projetos" class="btn-secondary">Ver Mais Estudos de Caso</a>
+        <h2>PRECISA DE UMA LANDING PAGE?</h2>
+        <p>Se é um negócio de serviços à procura de uma landing page profissional e focada em conversão entregue rapidamente, posso ajudar.</p>
+        <a href="/pt/#contact" class="btn-primary">OBTENHA A SUA LANDING PAGE</a>
+    </section>
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <h2>Projetos Relacionados</h2>
+        <div class="related-projects-grid">
+            <a href="/pt/projetos/brunno-rodrigues" class="related-project-card">
+                <img src="/brunno-rodrigues.svg" alt="Website Brunno Rodrigues">
+                <h3>Brunno Rodrigues</h3>
+                <p>Landing page para terapeuta de massagem</p>
+            </a>
+            <a href="/pt/projetos/porto-car-care" class="related-project-card">
+                <img src="/final fnal final.svg" alt="Website Porto Car Care">
+                <h3>Porto Car Care</h3>
+                <p>Estudo de caso SEO local com crescimento de visibilidade 3×</p>
+            </a>
         </div>
     </section>
 
@@ -329,7 +338,6 @@ import Footer from '../../../components/Footer.astro';
             });
         }
     </script>
-    <Footer locale="pt" />
 </body>
 </html>
 
@@ -382,7 +390,6 @@ body {
 .nav-links {
     display: flex;
     gap: 32px;
-    align-items: center;
 }
 
 .nav-links a {
@@ -441,13 +448,16 @@ body {
     color: var(--color-accent);
 }
 
-/* Case Study Hero */
+/* Hero Section */
 .case-study-hero {
-    padding: 60px 108px 80px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 60px;
+    padding: 80px 108px;
+    align-items: center;
 }
 
-.hero-tag {
+.case-study-tag {
     display: inline-block;
     background-color: rgba(211, 233, 122, 0.1);
     color: var(--color-accent);
@@ -457,135 +467,52 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    width: fit-content;
     margin-bottom: 24px;
 }
 
 .case-study-hero h1 {
     font-family: var(--font-heading);
-    font-size: 88px;
-    letter-spacing: -0.88px;
-    margin-bottom: 24px;
-    line-height: 1;
+    font-size: 76px;
+    letter-spacing: -0.76px;
+    margin-bottom: 16px;
 }
 
-.hero-subtitle {
-    font-size: 22px;
-    opacity: 0.8;
-    margin-bottom: 48px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+.case-study-subtitle {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
 }
 
-.hero-metrics {
+.case-study-meta {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    max-width: 900px;
-    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 32px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
 }
 
-.metric-card {
-    background-color: var(--color-dark);
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 32px 24px;
+.meta-item {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    transition: border-color 0.3s ease;
 }
 
-.metric-card:hover {
-    border-color: var(--color-accent);
-}
-
-.metric-number {
-    font-family: var(--font-heading);
-    font-size: 48px;
-    color: var(--color-accent);
-    line-height: 1;
-}
-
-.metric-label {
-    font-size: 14px;
-    opacity: 0.7;
+.meta-label {
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-}
-
-/* Content Sections */
-.content-section {
-    padding: 80px 108px;
-}
-
-.dark-section {
-    background-color: var(--color-dark);
-}
-
-.content-section h2 {
-    font-family: var(--font-heading);
-    font-size: 56px;
-    letter-spacing: -0.56px;
-    margin-bottom: 32px;
-}
-
-.content-section h3 {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 48px 0 24px 0;
-    color: var(--color-accent);
-}
-
-.content-section h4 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.content-section p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 24px;
-    opacity: 0.9;
-}
-
-.content-section ul {
-    margin: 24px 0;
-    padding-left: 24px;
-}
-
-.content-section li {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 16px;
-    opacity: 0.9;
-}
-
-/* Info Grid */
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 32px;
-    margin-top: 48px;
-    padding: 40px;
-    background-color: var(--color-dark);
-    border-radius: 12px;
-}
-
-.info-item h3 {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    color: var(--color-text);
     opacity: 0.6;
-    margin: 0 0 8px 0;
 }
 
-.info-item p {
-    font-size: 18px;
+.meta-value {
+    font-size: 16px;
     font-weight: 600;
-    margin: 0;
-    opacity: 1;
+    color: var(--color-text);
 }
 
 .website-link {
@@ -598,236 +525,197 @@ body {
     color: var(--color-accent);
 }
 
-/* Challenge List */
-.challenge-list {
-    list-style: none;
-    padding: 0;
-    margin: 32px 0;
-}
-
-.challenge-list li {
-    padding: 20px;
-    background-color: rgba(211, 233, 122, 0.05);
-    border-left: 3px solid var(--color-accent);
-    margin-bottom: 16px;
-    border-radius: 4px;
-}
-
-/* Solution List */
-.solution-list {
-    list-style: none;
-    padding: 0;
-    margin: 32px 0;
-}
-
-.solution-list li {
-    padding: 20px;
-    background-color: rgba(211, 233, 122, 0.05);
-    border-left: 3px solid var(--color-accent);
-    margin-bottom: 16px;
-    border-radius: 4px;
-}
-
-/* Features Grid */
-.features-grid {
+.results-banner {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    margin-top: 32px;
-}
-
-.feature-card {
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 32px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--color-accent);
-}
-
-.feature-card h4 {
-    color: var(--color-accent);
-    margin-bottom: 16px;
-}
-
-.feature-card p {
-    font-size: 16px;
-    margin: 0;
-    opacity: 0.85;
-}
-
-/* Process Timeline */
-.process-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    margin-top: 48px;
-}
-
-.process-step {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 32px;
-    align-items: start;
-}
-
-.step-number {
-    font-family: var(--font-heading);
-    font-size: 48px;
-    color: var(--color-accent);
-    opacity: 0.3;
-}
-
-.process-step h3 {
-    margin: 0 0 16px 0;
-    color: var(--color-text);
-}
-
-.process-step p {
-    margin: 0;
-    opacity: 0.85;
-}
-
-/* Results Grid */
-.results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 32px;
-    margin-top: 48px;
 }
 
 .result-card {
-    background-color: rgba(211, 233, 122, 0.05);
-    border: 1px solid rgba(211, 233, 122, 0.2);
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-accent);
     border-radius: 12px;
-    padding: 40px 32px;
+    padding: 24px;
     text-align: center;
-    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.result-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--color-accent);
-}
-
-.result-number {
+.result-value {
     font-family: var(--font-heading);
-    font-size: 56px;
+    font-size: 48px;
     color: var(--color-accent);
     line-height: 1;
-    display: block;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .result-label {
-    font-size: 16px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.case-study-hero-image {
+    width: 100%;
+    height: 500px;
+    background-color: var(--color-dark);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.case-study-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Case Study Sections */
+.case-study-section {
+    padding: 80px 108px;
+}
+
+.case-study-section.gray-bg {
+    background-color: var(--color-dark);
+}
+
+.case-study-section h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 32px;
+}
+
+.case-study-section h3 {
+    font-size: 28px;
     font-weight: 600;
-    display: block;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+
+.case-study-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 32px;
     margin-bottom: 16px;
+}
+
+.case-study-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
     opacity: 0.9;
 }
 
-.result-card p {
-    font-size: 14px;
-    margin: 0;
-    opacity: 0.7;
-    line-height: 1.6;
+.case-study-section ul,
+.case-study-section ol {
+    margin: 20px 0 20px 24px;
 }
 
-/* Impact List */
-.impact-list {
+.case-study-section li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.challenge-list,
+.goals-list {
     list-style: none;
-    padding: 0;
-    margin: 32px 0;
+    margin-left: 0;
 }
 
-.impact-list li {
-    padding: 16px 20px;
+.challenge-list li,
+.goals-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.challenge-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.goals-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.implementation-phase {
     background-color: rgba(211, 233, 122, 0.05);
     border-left: 3px solid var(--color-accent);
-    margin-bottom: 12px;
-    border-radius: 4px;
+    padding: 32px;
+    margin: 32px 0;
+    border-radius: 0 8px 8px 0;
 }
 
-/* Tech Grid */
-.tech-grid {
+.results-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 40px 0;
 }
 
-.tech-item {
-    padding: 24px;
-    background-color: rgba(255, 255, 255, 0.02);
+.result-item {
+    background-color: var(--color-dark);
     border: 1px solid #333;
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
-}
-
-.tech-item:hover {
-    border-color: var(--color-accent);
-}
-
-.tech-item h4 {
-    color: var(--color-accent);
-    margin-bottom: 12px;
-    font-size: 18px;
-}
-
-.tech-item p {
-    font-size: 14px;
-    margin: 0;
-    opacity: 0.75;
-}
-
-/* Takeaway Cards */
-.takeaway-card {
-    background-color: rgba(211, 233, 122, 0.05);
-    border: 1px solid rgba(211, 233, 122, 0.2);
     border-radius: 12px;
     padding: 32px;
-    margin-bottom: 24px;
 }
 
-.takeaway-card h3 {
-    color: var(--color-accent);
-    margin: 0 0 16px 0;
-    font-size: 22px;
-}
-
-.takeaway-card p {
-    margin: 0;
-    opacity: 0.85;
-}
-
-/* Testimonial */
-.testimonial {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 48px;
-    background-color: rgba(211, 233, 122, 0.05);
-    border-radius: 12px;
-}
-
-.testimonial-text {
-    font-size: 24px;
-    line-height: 1.6;
-    font-style: italic;
-    margin-bottom: 24px;
-    opacity: 0.95;
-}
-
-.testimonial-author {
-    font-size: 16px;
+.result-category {
+    font-size: 14px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     color: var(--color-accent);
-    margin: 0;
+    margin-bottom: 16px;
+}
+
+.testimonial {
+    background-color: var(--color-dark);
+    border-left: 4px solid var(--color-accent);
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.testimonial p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial cite {
+    font-size: 15px;
+    font-style: normal;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.tech-list,
+.lessons-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.tech-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.tech-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
 }
 
 /* CTA Section */
@@ -846,17 +734,10 @@ body {
 
 .cta-section p {
     font-size: 18px;
-    margin-bottom: 40px;
-    max-width: 700px;
+    margin-bottom: 32px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .btn-primary {
@@ -879,25 +760,58 @@ body {
     transform: translateY(-2px);
 }
 
-.btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background-color: transparent;
-    color: var(--color-accent);
-    padding: 16px 32px;
-    border: 2px solid var(--color-accent);
-    border-radius: 27px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+/* Related Projects */
+.related-projects {
+    padding: 80px 108px;
+    border-top: 1px solid #333;
 }
 
-.btn-secondary:hover {
-    background-color: rgba(211, 233, 122, 0.1);
-    transform: translateY(-2px);
+.related-projects h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 40px;
+}
+
+.related-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.related-project-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.related-project-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.related-project-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background-color: #0d0d0d;
+}
+
+.related-project-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 24px 24px 12px;
+}
+
+.related-project-card p {
+    font-size: 15px;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin: 0 24px 24px;
 }
 
 /* Responsive Design */
@@ -911,33 +825,51 @@ body {
     }
 
     .case-study-hero {
-        padding: 60px 32px 60px;
-    }
-
-    .case-study-hero h1 {
-        font-size: 64px;
-    }
-
-    .content-section {
+        grid-template-columns: 1fr;
         padding: 60px 32px;
     }
 
-    .content-section h2 {
-        font-size: 48px;
+    .case-study-hero-image {
+        height: 400px;
+    }
+
+    .case-study-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .results-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-section {
+        padding: 60px 32px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .related-projects {
+        padding: 60px 32px;
+    }
+
+    .related-projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .cta-section {
         padding: 60px 32px;
-    }
-
-    .cta-section h2 {
-        font-size: 52px;
     }
 }
 
 @media (max-width: 768px) {
     .navigation {
         padding: 20px 16px;
+    }
+
+    .breadcrumbs {
+        padding: 16px;
+        font-size: 12px;
     }
 
     .logo {
@@ -979,105 +911,65 @@ body {
         transform: rotate(-45deg) translate(8px, -8px);
     }
 
-    .breadcrumbs {
-        padding: 16px;
-        font-size: 12px;
-    }
-
     .case-study-hero {
-        padding: 40px 16px 40px;
+        padding: 40px 16px;
     }
 
     .case-study-hero h1 {
         font-size: 48px;
     }
 
-    .hero-subtitle {
-        font-size: 18px;
-    }
-
-    .hero-metrics {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-
-    .metric-number {
-        font-size: 36px;
-    }
-
-    .content-section {
-        padding: 48px 16px;
-    }
-
-    .content-section h2 {
-        font-size: 36px;
-    }
-
-    .content-section h3 {
-        font-size: 24px;
-    }
-
-    .content-section p,
-    .content-section li {
+    .case-study-subtitle {
         font-size: 16px;
     }
 
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        padding: 24px;
-    }
-
-    .features-grid {
+    .case-study-meta {
         grid-template-columns: 1fr;
-    }
-
-    .process-step {
-        grid-template-columns: 60px 1fr;
         gap: 16px;
     }
 
-    .step-number {
-        font-size: 36px;
+    .result-value {
+        font-size: 40px;
     }
 
-    .results-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .case-study-hero-image {
+        height: 300px;
     }
 
-    .result-number {
-        font-size: 42px;
+    .case-study-section {
+        padding: 40px 16px;
     }
 
-    .tech-grid {
-        grid-template-columns: 1fr;
+    .case-study-section h2 {
+        font-size: 40px;
+    }
+
+    .case-study-section h3 {
+        font-size: 24px;
+    }
+
+    .implementation-phase {
+        padding: 24px;
     }
 
     .testimonial {
-        padding: 32px 24px;
+        padding: 24px;
     }
 
-    .testimonial-text {
-        font-size: 18px;
+    .related-projects {
+        padding: 40px 16px;
+    }
+
+    .related-projects h2 {
+        font-size: 40px;
     }
 
     .cta-section {
-        padding: 48px 16px;
+        padding: 40px 16px;
     }
 
     .cta-section h2 {
-        font-size: 36px;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        justify-content: center;
+        font-size: 48px;
     }
 }
 </style>
