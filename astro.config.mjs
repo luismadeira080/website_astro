@@ -6,7 +6,7 @@ export default defineConfig({
   site: 'https://www.estudiolm.com',
   trailingSlash: 'never',  // Consistent URL format without trailing slashes
   build: {
-    format: 'file'  // Generates /page.html instead of /page/index.html
+    format: 'directory'  // Generates /page/index.html for proper routing
   },
   i18n: {
     defaultLocale: 'en',
