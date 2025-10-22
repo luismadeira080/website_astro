@@ -108,18 +108,4 @@ const ogLocaleAlternate = locale === 'pt' ? 'en_US' : 'pt_PT';
   gtag('js', new Date());
 
   gtag('config', 'AW-17188917195');
-
-  // Google Ads conversion tracking for phone clicks
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17188917195/p5K-CISCxP8aEMufqIRA',
-      'event_callback': callback
-    });
-    return false;
-  }
 </script>

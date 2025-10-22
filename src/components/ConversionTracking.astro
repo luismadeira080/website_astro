@@ -1,0 +1,116 @@
+---
+/**
+ * Unified Conversion Tracking Component
+ * Tracks ALL CTA clicks as a single Google Ads conversion
+ * 
+ * Automatically tracks:
+ * - Phone call buttons (tel: links)
+ * - WhatsApp buttons
+ * - Contact form submissions
+ * - All CTA buttons (.btn-primary, .service-cta, .btn-submit)
+ * - Any link with href="#contact"
+ * 
+ * Usage: Add <ConversionTracking /> before closing </body> tag
+ */
+---
+
+<script is:inline>
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    // Universal conversion tracking function
+    function trackConversion(action, label) {
+      if (typeof gtag === 'function') {
+        // Track to Google Ads
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17188917195/p5K-CISCxP8aEMufqIRA',
+          'event_label': label,
+          'event_category': 'CTA Click',
+          'value': 1.0,
+          'currency': 'EUR'
+        });
+        
+        // Also track to Google Analytics for cross-reference
+        gtag('event', 'cta_click', {
+          'event_category': 'Engagement',
+          'event_label': label,
+          'action': action
+        });
+        
+        console.log('✅ Conversion tracked:', action, label);
+      } else {
+        console.warn('⚠️ gtag not available');
+      }
+    }
+
+    // 1. Track phone call buttons
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    phoneLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        trackConversion('phone_click', 'Phone Call CTA');
+      });
+    });
+
+    // 2. Track WhatsApp buttons
+    const whatsappLinks = document.querySelectorAll('a[href^="https://wa.me"]');
+    whatsappLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        trackConversion('whatsapp_click', 'WhatsApp CTA');
+      });
+    });
+
+    // 3. Track primary CTA buttons (CONTACT ME, etc.)
+    const primaryButtons = document.querySelectorAll('.btn-primary, a[href="#contact"]');
+    primaryButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        const buttonText = this.textContent.trim();
+        trackConversion('primary_cta', buttonText);
+      });
+    });
+
+    // 4. Track service CTA buttons (Get a landing page, Start project, etc.)
+    const serviceButtons = document.querySelectorAll('.service-cta');
+    serviceButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        const buttonText = this.textContent.trim();
+        trackConversion('service_cta', buttonText);
+      });
+    });
+
+    // 5. Track contact form submissions
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        trackConversion('form_submit', 'Contact Form Submission');
+      });
+    }
+
+    // 6. Track email links
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        trackConversion('email_click', 'Email CTA');
+      });
+    });
+
+    // 7. Track project CTA links (BOOK A SIMILAR SEO BOOST, etc.)
+    const projectLinks = document.querySelectorAll('.project-link-underline');
+    projectLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const linkText = this.querySelector('span')?.textContent.trim() || 'Project CTA';
+        trackConversion('project_cta', linkText);
+      });
+    });
+
+    // Debug: Log all trackable elements found
+    console.log('📊 CTA Tracking initialized:');
+    console.log('  - Phone links:', phoneLinks.length);
+    console.log('  - WhatsApp links:', whatsappLinks.length);
+    console.log('  - Primary CTAs:', primaryButtons.length);
+    console.log('  - Service CTAs:', serviceButtons.length);
+    console.log('  - Email links:', emailLinks.length);
+    console.log('  - Project CTAs:', projectLinks.length);
+    console.log('  - Contact form:', contactForm ? '✓' : '✗');
+  });
+</script>
+
