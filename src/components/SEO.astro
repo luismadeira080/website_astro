@@ -90,7 +90,17 @@ const ogLocaleAlternate = locale === 'pt' ? 'en_US' : 'pt_PT';
 <meta name="author" content="Luís Madeira" />
 <meta name="language" content={locale === 'pt' ? 'Portuguese' : 'English'} />
 
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VXXSM6P3P0"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VXXSM6P3P0');
+</script>
+
+<!-- Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17188917195"></script>
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
