@@ -29,14 +29,22 @@ const copy = {
     title: 'Vamos Falar?',
     subtitle: 'Escolha como prefere ser contactado:',
     whatsapp: 'Enviar mensagem WhatsApp',
+    whatsappSub: 'Resposta rápida',
     call: 'Ligar Agora',
+    callSub: '+351 924 466 899',
+    form: 'Preencher Formulário',
+    formSub: 'Envie uma mensagem detalhada',
     close: 'Fechar'
   },
   en: {
     title: "Let's Talk?",
     subtitle: 'Choose how you prefer to be contacted:',
     whatsapp: 'Send WhatsApp Message',
+    whatsappSub: 'Quick response',
     call: 'Call Now',
+    callSub: '+351 924 466 899',
+    form: 'Fill Out Form',
+    formSub: 'Send a detailed message',
     close: 'Close'
   }
 };
@@ -69,7 +77,7 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
         </div>
         <div class="btn-text">
           <span class="btn-label">{copy[locale].whatsapp}</span>
-          <span class="btn-sublabel">Resposta rápida</span>
+          <span class="btn-sublabel">{copy[locale].whatsappSub}</span>
         </div>
       </a>
 
@@ -81,9 +89,21 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
         </div>
         <div class="btn-text">
           <span class="btn-label">{copy[locale].call}</span>
-          <span class="btn-sublabel">+351 924 466 899</span>
+          <span class="btn-sublabel">{copy[locale].callSub}</span>
         </div>
       </a>
+
+      <button class="modal-btn form-btn" data-action="form">
+        <div class="btn-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="btn-text">
+          <span class="btn-label">{copy[locale].form}</span>
+          <span class="btn-sublabel">{copy[locale].formSub}</span>
+        </div>
+      </button>
     </div>
   </div>
 </div>
@@ -173,10 +193,35 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
           });
         }
 
-        // Close modal after short delay to ensure tracking
-        setTimeout(() => {
+        // Handle form action - scroll to contact form
+        if (action === 'form') {
+          e.preventDefault();
           closeModal();
-        }, 300);
+
+          // Scroll to contact section
+          setTimeout(() => {
+            const contactSection = document.getElementById('contact') || document.getElementById('contact-form');
+            if (contactSection) {
+              contactSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+
+              // Focus on first input for better UX
+              setTimeout(() => {
+                const firstInput = contactSection.querySelector('input, textarea');
+                if (firstInput) {
+                  firstInput.focus();
+                }
+              }, 500);
+            }
+          }, 100);
+        } else {
+          // Close modal after short delay to ensure tracking for WhatsApp/Call
+          setTimeout(() => {
+            closeModal();
+          }, 300);
+        }
       });
     });
 
@@ -345,6 +390,20 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(211, 233, 122, 0.4);
   border-color: rgba(0, 0, 0, 0.1);
+}
+
+.form-btn {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  color: var(--color-text, #c7c7c7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #333;
+}
+
+.form-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border-color: var(--color-accent, #d3e97a);
+  color: var(--color-accent, #d3e97a);
 }
 
 .btn-icon {
