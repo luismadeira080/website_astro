@@ -184,9 +184,13 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
         // Track conversion
         if (typeof window.gtag !== 'undefined') {
           window.gtag('event', 'conversion', {
+            send_to: 'AW-17188917195/p5K-CISCxP8aEMufqIRA',
+            event_label: `modal_${action}`,
+            event_category: 'Modal Action',
             action: action,
             context: context,
-            send_to: 'AW-16792293728/vM0ICOW8xa0ZELy27-U-'
+            value: 1.0,
+            currency: 'EUR'
           });
         }
 
