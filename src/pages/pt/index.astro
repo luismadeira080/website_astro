@@ -4,6 +4,7 @@ import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
 import ConversionTracking from '../../components/ConversionTracking.astro';
+import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -54,22 +55,25 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
                 <p class="hero-subtitle">Crio websites rápidos e profissionais com SEO local forte. O objetivo: mais visibilidade, mais chamadas, mais clientes.</p>
             </div>
             <div class="hero-actions">
-                <a href="#contact" class="btn-primary">CONTACTE-ME</a>
-                <a href="https://www.linkedin.com/in/lumadeira" class="social-icon" target="_blank" aria-label="LinkedIn">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
+                <button class="btn-primary btn-cta-hero" data-contact-trigger data-contact-context="general">
+                    <span>COMEÇAR PROJETO</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z" fill="currentColor"/>
                     </svg>
-                </a>
-                <a href="https://wa.me/351924466899" class="social-icon" target="_blank" aria-label="WhatsApp">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </button>
+                <button class="btn-whatsapp-hero" data-contact-trigger data-contact-context="general">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
                     </svg>
-                </a>
-                <a href="tel:+351924466899" class="social-icon" aria-label="Call me">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
-                    </svg>
-                </a>
+                    <span>FALAR NO WHATSAPP</span>
+                </button>
+                <div class="hero-social-links">
+                    <a href="https://www.linkedin.com/in/lumadeira" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="hero-image">
@@ -91,7 +95,7 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
                 <p>Entrega rápida de landing pages modernas e limpas. Ideal para promoções, anúncios ou negócios que precisam de uma presença online simples que converte visitantes em leads.</p>
                 <div class="service-card-actions">
                     <a href="/pt/servicos" class="service-link">Ver Detalhes →</a>
-                    <a href="#contact" class="service-cta">Pedir landing page</a>
+                    <button class="service-cta" data-contact-trigger data-contact-context="landing">Pedir landing page</button>
                 </div>
             </div>
 
@@ -101,7 +105,7 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
                 <p>Websites completos desenhados e construídos para aparecer melhor no Google. Inclui design, conteúdo e configuração SEO para que negócios locais tenham mais tráfego, mais chamadas e mais clientes.</p>
                 <div class="service-card-actions">
                     <a href="/pt/servicos" class="service-link">Ver Detalhes →</a>
-                    <a href="#contact" class="service-cta">Começar projeto de website</a>
+                    <button class="service-cta" data-contact-trigger data-contact-context="seo">Começar projeto de website</button>
                 </div>
             </div>
         </div>
@@ -176,12 +180,12 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
                 </div>
 
                 <div class="project-links-wrapper">
-                    <a href="#contact" class="project-link-underline">
+                    <button class="project-link-underline" data-contact-trigger data-contact-context="project">
                         <span>MARCAR UM IMPULSO SEO SEMELHANTE</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z" fill="currentColor"/>
                         </svg>
-                    </a>
+                    </button>
                     <a href="/pt/projetos" class="project-link-underline">
                         <span>VER MAIS PROJETOS</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -429,6 +433,9 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
     <!-- Unified Conversion Tracking -->
     <ConversionTracking />
     <Footer locale="pt" />
+
+    <!-- Contact Modal -->
+    <ContactModal locale="pt" context="general" />
 </body>
 </html>
 
@@ -537,46 +544,97 @@ body {
 
 .hero-actions {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-cta-hero {
     display: inline-flex;
     align-items: center;
     gap: 12px;
     background-color: var(--color-accent);
     color: var(--color-bg);
-    padding: 16px 32px;
-    border-radius: 27px;
+    padding: 18px 40px;
+    border-radius: 50px;
+    border: none;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 15px;
     letter-spacing: 0.5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(211, 233, 122, 0.3);
+    font-family: var(--font-primary);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-cta-hero:hover {
     background-color: #c5db6f;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(211, 233, 122, 0.4);
 }
 
-.social-icon {
+.btn-whatsapp-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    font-family: var(--font-primary);
+    animation: pulse-whatsapp 2s ease-in-out infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.5);
+    }
+}
+
+.btn-whatsapp-hero:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+    animation: none;
+}
+
+.hero-social-links {
+    display: flex;
+    gap: 12px;
+    padding-top: 8px;
+}
+
+.social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 54px;
-    height: 54px;
-    border: 1px solid var(--color-text);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
     border-radius: 50%;
     color: var(--color-text);
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.social-icon:hover {
-    background-color: var(--color-accent);
+.social-link:hover {
     border-color: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-accent);
+    background-color: rgba(211, 233, 122, 0.05);
 }
 
 .hero-image {
@@ -664,12 +722,15 @@ body {
     color: var(--color-bg);
     padding: 16px 32px;
     border-radius: 27px;
+    border: none;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 0.5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     width: fit-content;
+    cursor: pointer;
+    font-family: var(--font-primary);
 }
 
 .service-cta:hover {
@@ -865,6 +926,11 @@ body {
     text-decoration: none;
     color: var(--color-accent);
     transition: opacity 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: var(--font-primary);
 }
 
 .project-link-underline:hover {
