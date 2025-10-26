@@ -3,6 +3,7 @@ import SEO from '../../components/SEO.astro';
 import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
+import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -48,7 +49,7 @@ import Footer from '../../components/Footer.astro';
     <section class="industry-hero">
         <h1>WEBSITES PROFISSIONAIS PARA SPAS E CENTROS DE BEM-ESTAR</h1>
         <p>Sites elegantes que atraem clientes e facilitam marcações online para o seu negócio de bem-estar</p>
-        <a href="/pt/#contact" class="btn-primary">PEDIR ORÇAMENTO GRÁTIS</a>
+        <button class="btn-primary" data-contact-trigger data-contact-context="seo">PEDIR ORÇAMENTO GRÁTIS</button>
     </section>
 
     <!-- Why Spas Need Professional Websites -->
@@ -278,7 +279,7 @@ import Footer from '../../components/Footer.astro';
             </div>
 
             <p class="pricing-note">Cada spa é único. Contacte-me para um orçamento personalizado baseado no número de tratamentos, necessidades de fotografia e funcionalidades específicas.</p>
-            <a href="/pt/#contact" class="btn-primary">PEDIR ORÇAMENTO PERSONALIZADO</a>
+            <button class="btn-primary" data-contact-trigger data-contact-context="seo">PEDIR ORÇAMENTO PERSONALIZADO</button>
         </div>
     </section>
 
@@ -375,7 +376,7 @@ import Footer from '../../components/Footer.astro';
         <h2>PRONTO PARA ATRAIR MAIS CLIENTES PARA O SEU SPA?</h2>
         <p>Vamos criar um website elegante que aumenta as marcações e faz o seu spa crescer.</p>
         <div class="cta-actions">
-            <a href="/pt/#contact" class="btn-primary">COMEÇAR O MEU PROJETO</a>
+            <button class="btn-primary" data-contact-trigger data-contact-context="seo">COMEÇAR O MEU PROJETO</button>
             <div class="contact-options">
                 <p>Ou contacte diretamente:</p>
                 <a href="https://wa.me/351924466899" class="contact-link">WhatsApp: +351 924 466 899</a>
@@ -405,6 +406,7 @@ import Footer from '../../components/Footer.astro';
         }
     </script>
     <Footer locale="pt" />
+    <ContactModal locale="pt" context="seo" />
 </body>
 </html>
 
@@ -514,6 +516,9 @@ body {
 }
 
 .btn-primary {
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -1002,6 +1007,9 @@ body {
 }
 
 .pricing-content .btn-primary {
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
     display: block;
     width: fit-content;
     margin: 0 auto;

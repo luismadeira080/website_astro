@@ -3,6 +3,7 @@ import SEO from '../../components/SEO.astro';
 import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
+import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -48,7 +49,7 @@ import Footer from '../../components/Footer.astro';
     <section class="city-hero">
         <h1>CRIAÇÃO DE WEBSITES PROFISSIONAIS NO PORTO</h1>
         <p>Especialista em websites otimizados para negócios locais na Invicta</p>
-        <a href="/pt/#contact" class="btn-primary">PEDIR ORÇAMENTO GRÁTIS</a>
+        <button class="btn-primary" data-contact-trigger data-contact-context="seo">PEDIR ORÇAMENTO GRÁTIS</button>
     </section>
 
     <!-- Introduction Section -->
@@ -249,7 +250,7 @@ import Footer from '../../components/Footer.astro';
     <section class="cta-section">
         <h2>PRONTO PARA FAZER CRESCER O SEU NEGÓCIO NO PORTO?</h2>
         <p>Vamos criar um website que atrai clientes locais e posiciona o seu negócio no topo do Google.</p>
-        <a href="/pt/#contact" class="btn-primary">COMEÇAR O MEU PROJETO</a>
+        <button class="btn-primary" data-contact-trigger data-contact-context="seo">COMEÇAR O MEU PROJETO</button>
     </section>
 
     <script>
@@ -273,6 +274,7 @@ import Footer from '../../components/Footer.astro';
         }
     </script>
     <Footer locale="pt" />
+    <ContactModal locale="pt" context="seo" />
 </body>
 </html>
 
@@ -382,6 +384,9 @@ body {
 }
 
 .btn-primary {
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
     display: inline-flex;
     align-items: center;
     gap: 12px;

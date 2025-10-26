@@ -3,6 +3,7 @@ import SEO from '../../components/SEO.astro';
 import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
+import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -77,7 +78,7 @@ import Footer from '../../components/Footer.astro';
                 </div>
                 <div class="project-card-actions">
                     <a href="/pt/projetos/porto-car-care" class="project-link">Ler Caso de Estudo Completo →</a>
-                    <a href="/pt/#contact" class="card-cta">Pedir Projeto Semelhante</a>
+                    <button class="card-cta" data-contact-trigger data-contact-context="project">Pedir Projeto Semelhante</button>
                 </div>
             </div>
         </div>
@@ -107,7 +108,7 @@ import Footer from '../../components/Footer.astro';
                 </div>
                 <div class="project-card-actions">
                     <a href="/pt/projetos/brunno-rodrigues" class="project-link">Ler Caso de Estudo Completo →</a>
-                    <a href="/pt/#contact" class="card-cta">Criar Sua Landing Page</a>
+                    <button class="card-cta" data-contact-trigger data-contact-context="landing">Criar Sua Landing Page</button>
                 </div>
             </div>
         </div>
@@ -137,7 +138,7 @@ import Footer from '../../components/Footer.astro';
                 </div>
                 <div class="project-card-actions">
                     <a href="/pt/projetos/porto-massage-studio" class="project-link">Ler Caso de Estudo Completo →</a>
-                    <a href="/pt/#contact" class="card-cta">Criar Sua Landing Page</a>
+                    <button class="card-cta" data-contact-trigger data-contact-context="landing">Criar Sua Landing Page</button>
                 </div>
             </div>
         </div>
@@ -147,7 +148,7 @@ import Footer from '../../components/Footer.astro';
     <section class="cta-section">
         <h2>Pronto para fazer crescer o seu negócio?</h2>
         <p>Vamos discutir como o SEO local e um website focado em conversões pode ajudá-lo a conseguir mais clientes.</p>
-        <a href="/pt/#contact" class="btn-primary">Entre em contacto</a>
+        <button class="btn-primary" data-contact-trigger data-contact-context="general">Entre em contacto</button>
     </section>
 
     <script>
@@ -170,6 +171,7 @@ import Footer from '../../components/Footer.astro';
             });
         }
     </script>
+    <ContactModal locale="pt" context="general" />
     <Footer locale="pt" />
 </body>
 </html>
@@ -412,6 +414,9 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
     width: fit-content;
     text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
 }
 
 .card-cta:hover {
@@ -432,6 +437,9 @@ body {
     font-size: 14px;
     letter-spacing: 0.5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
 }
 
 .btn-primary:hover {

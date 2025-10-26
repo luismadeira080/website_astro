@@ -4,6 +4,7 @@ import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
 import ConversionTracking from '../../components/ConversionTracking.astro';
+import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -49,7 +50,7 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
     <section class="services-hero">
         <h1>DESENVOLVIMENTO WEB E SERVIÇOS DE SEO</h1>
         <p>Websites e landing pages rápidos e modernos, construídos para aparecer no Google e converter visitantes em clientes</p>
-        <a href="/pt/#contact" class="btn-primary">COMEÇAR</a>
+        <button class="btn-primary" data-contact-trigger data-contact-context="landing">COMEÇAR</button>
     </section>
 
     <!-- Overview Section -->
@@ -92,7 +93,7 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
                 </div>
             </div>
 
-            <a href="/pt/#contact" class="service-cta">Pedir uma Landing Page</a>
+            <button class="service-cta" data-contact-trigger data-contact-context="service">Pedir uma Landing Page</button>
         </div>
 
         <!-- Service 2: SEO-Optimized Websites -->
@@ -126,7 +127,7 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
                 </div>
             </div>
 
-            <a href="/pt/#contact" class="service-cta">Começar o Seu Website</a>
+            <button class="service-cta" data-contact-trigger data-contact-context="service">Começar o Seu Website</button>
         </div>
     </section>
 
@@ -360,7 +361,7 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
     <section class="cta-section">
         <h2>PRONTO PARA FAZER CRESCER O SEU NEGÓCIO?</h2>
         <p>Vamos discutir como um website profissional e SEO local pode ajudá-lo a conseguir mais clientes.</p>
-        <a href="/pt/#contact" class="btn-primary">COMEÇAR O SEU PROJETO</a>
+        <button class="btn-primary" data-contact-trigger data-contact-context="general">COMEÇAR O SEU PROJETO</button>
     </section>
 
     <script>
@@ -386,6 +387,7 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
 
     <!-- Unified Conversion Tracking -->
     <ConversionTracking />
+    <ContactModal locale="pt" context="general" />
     <Footer locale="pt" />
 </body>
 </html>
@@ -506,6 +508,9 @@ body {
     font-size: 14px;
     letter-spacing: 0.5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
 }
 
 .btn-primary:hover {
@@ -670,6 +675,9 @@ body {
     width: fit-content;
     text-transform: uppercase;
     margin-top: auto;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
 }
 
 .service-cta:hover {
