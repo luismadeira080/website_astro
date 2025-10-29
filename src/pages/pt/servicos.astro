@@ -93,7 +93,10 @@ import ContactModal from '../../components/ContactModal.astro';
                 </div>
             </div>
 
-            <button class="service-cta" data-contact-trigger data-contact-context="service">Pedir uma Landing Page</button>
+            <div class="service-actions">
+                <a href="/pt/landing-page" class="service-link">Ver Mais Detalhes →</a>
+                <button class="service-cta" data-contact-trigger data-contact-context="service">Pedir uma Landing Page</button>
+            </div>
         </div>
 
         <!-- Service 2: SEO-Optimized Websites -->
@@ -127,7 +130,10 @@ import ContactModal from '../../components/ContactModal.astro';
                 </div>
             </div>
 
-            <button class="service-cta" data-contact-trigger data-contact-context="service">Começar o Seu Website</button>
+            <div class="service-actions">
+                <a href="/pt/website-seo" class="service-link">Ver Mais Detalhes →</a>
+                <button class="service-cta" data-contact-trigger data-contact-context="service">Começar o Seu Website</button>
+            </div>
         </div>
     </section>
 
@@ -196,11 +202,13 @@ import ContactModal from '../../components/ContactModal.astro';
                     <h4>Landing Page</h4>
                     <p class="price">A partir de €350</p>
                     <p class="price-description">Site até três páginas com formulário de contacto, otimização mobile, e configuração básica de SEO. Perfeito para testar um novo serviço ou executar campanhas publicitárias.</p>
+                    <a href="/pt/landing-page" class="pricing-link">Ver Detalhes Completos →</a>
                 </div>
                 <div class="pricing-card featured-pricing">
                     <h4>Website Otimizado para SEO</h4>
                     <p class="price">A partir de €1.200</p>
                     <p class="price-description">Website multi-página com design personalizado, conteúdo SEO, otimização técnica, e suporte contínuo. Construído para ranquear e gerar leads consistentes.</p>
+                    <a href="/pt/website-seo" class="pricing-link">Ver Detalhes Completos →</a>
                 </div>
             </div>
             <p class="pricing-note">Todos os projetos incluem uma chamada de descoberta para fornecer um orçamento preciso baseado nas suas necessidades específicas. Sem taxas escondidas.</p>
@@ -661,6 +669,25 @@ body {
     color: var(--color-text);
 }
 
+.service-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+}
+
+.service-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.service-link:hover {
+    opacity: 0.7;
+}
+
 .service-cta {
     display: inline-block;
     background-color: var(--color-accent);
@@ -674,7 +701,6 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
     width: fit-content;
     text-transform: uppercase;
-    margin-top: auto;
     border: none;
     cursor: pointer;
     font-family: var(--font-primary);
@@ -831,6 +857,20 @@ body {
     font-size: 15px;
     line-height: 1.6;
     opacity: 0.8;
+}
+
+.pricing-link {
+    display: inline-block;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.pricing-link:hover {
+    opacity: 0.7;
 }
 
 .pricing-note {
