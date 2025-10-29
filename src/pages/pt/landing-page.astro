@@ -25,32 +25,19 @@ import ContactModal from '../../components/ContactModal.astro';
 <body>
 	<!-- Navigation -->
 	<nav class="navigation">
-		<a href="/pt" class="logo">
-			<span class="logo-text">Estúdio LM</span>
-		</a>
+		<a href="/pt" class="logo">luís madeira</a>
 		<div class="nav-links">
-			<a href="/pt">Início</a>
+			<a href="/pt/#work">Trabalhos</a>
 			<a href="/pt/servicos">Serviços</a>
-			<a href="/pt/trabalho">Trabalho</a>
-			<button class="nav-link-button" data-contact-trigger data-contact-context="landing">Contacto</button>
-			<LanguageSwitcher currentLocale="pt" currentPath="/pt/landing-page" />
+			<a href="/pt/sobre">Sobre</a>
+			<a href="/pt/#contact">Contacto</a>
+			<LanguageSwitcher currentPath="/pt/landing-page" />
 		</div>
-		<button class="menu-toggle" aria-label="Abrir menu">
+		<div class="mobile-menu-toggle">
 			<span></span>
 			<span></span>
-			<span></span>
-		</button>
+		</div>
 	</nav>
-
-	<!-- Mobile Menu -->
-	<div class="mobile-menu">
-		<div class="mobile-menu-content">
-			<a href="/pt" class="menu-link">Início</a>
-			<a href="/pt/servicos" class="menu-link">Serviços</a>
-			<a href="/pt/trabalho" class="menu-link">Trabalho</a>
-			<button class="menu-link" data-contact-trigger data-contact-context="landing">Contacto</button>
-		</div>
-	</div>
 
 	<!-- Hero Section -->
 	<section class="hero">
@@ -329,78 +316,43 @@ import ContactModal from '../../components/ContactModal.astro';
 		}
 
 		.logo {
-			text-decoration: none;
-			color: var(--color-text);
-		}
-
-		.logo-text {
 			font-family: var(--font-heading);
-			font-size: 24px;
-			letter-spacing: 1px;
-		}
-
-		.nav-right {
-			display: flex;
-			align-items: center;
-			gap: 24px;
-		}
-
-		.menu-toggle {
-			display: none;
-			flex-direction: column;
-			gap: 6px;
-			background: none;
-			border: none;
-			cursor: pointer;
-			padding: 8px;
-		}
-
-		.menu-toggle span {
-			width: 24px;
-			height: 2px;
-			background-color: var(--color-accent);
-			transition: 0.3s ease;
-		}
-
-		.mobile-menu {
-			display: none;
-			position: fixed;
-			top: 73px;
-			left: 0;
-			width: 100%;
-			height: calc(100vh - 73px);
-			background-color: var(--color-bg);
-			z-index: 999;
-			transform: translateX(-100%);
-			transition: transform 0.3s ease;
-		}
-
-		.mobile-menu.active {
-			transform: translateX(0);
-		}
-
-		.mobile-menu-content {
-			display: flex;
-			flex-direction: column;
-			padding: 40px 32px;
-			gap: 24px;
-		}
-
-		.menu-link {
-			font-size: 24px;
+			font-size: 32px;
+			letter-spacing: -0.32px;
 			color: var(--color-text);
 			text-decoration: none;
-			font-family: var(--font-heading);
-			letter-spacing: 0.5px;
-			background: none;
-			border: none;
-			text-align: left;
-			cursor: pointer;
+		}
+
+		.nav-links {
+			display: flex;
+			gap: 32px;
+		}
+
+		.nav-links a {
+			color: var(--color-text);
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: -0.48px;
 			transition: color 0.3s ease;
 		}
 
-		.menu-link:hover {
+		.nav-links a:hover {
 			color: var(--color-accent);
+		}
+
+		.mobile-menu-toggle {
+			display: none;
+			flex-direction: column;
+			gap: 8px;
+			cursor: pointer;
+		}
+
+		.mobile-menu-toggle span {
+			width: 32px;
+			height: 2px;
+			background-color: var(--color-text);
+			transition: all 0.3s ease;
 		}
 
 		/* Hero Section */
@@ -843,16 +795,47 @@ import ContactModal from '../../components/ContactModal.astro';
 		}
 
 		@media (max-width: 768px) {
-			.menu-toggle {
+			.navigation {
+				padding: 20px 16px;
+			}
+
+			.logo {
+				font-size: 28px;
+			}
+
+			.nav-links {
+				position: fixed;
+				top: 76px;
+				right: -100%;
+				width: 100%;
+				height: calc(100vh - 76px);
+				background-color: var(--color-bg);
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-start;
+				padding: 40px 0;
+				transition: right 0.3s ease;
+				border-top: 1px solid #333;
+			}
+
+			.nav-links.active {
+				right: 0;
+			}
+
+			.nav-links a {
+				font-size: 24px;
+			}
+
+			.mobile-menu-toggle {
 				display: flex;
 			}
 
-			.mobile-menu {
-				display: block;
+			.mobile-menu-toggle.active span:first-child {
+				transform: rotate(45deg) translate(8px, 8px);
 			}
 
-			.navigation {
-				padding: 20px 16px;
+			.mobile-menu-toggle.active span:last-child {
+				transform: rotate(-45deg) translate(8px, -8px);
 			}
 
 			.hero {
@@ -909,22 +892,22 @@ import ContactModal from '../../components/ContactModal.astro';
 	</style>
 
 	<script>
-		// Mobile menu toggle
-		const menuToggle = document.querySelector('.menu-toggle');
-		const mobileMenu = document.querySelector('.mobile-menu');
+		// Mobile Menu Toggle
+		const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+		const navLinks = document.querySelector('.nav-links');
 
-		if (menuToggle && mobileMenu) {
-			menuToggle.addEventListener('click', () => {
-				mobileMenu.classList.toggle('active');
-				menuToggle.classList.toggle('active');
+		if (mobileMenuToggle) {
+			mobileMenuToggle.addEventListener('click', () => {
+				mobileMenuToggle.classList.toggle('active');
+				navLinks.classList.toggle('active');
 			});
 
-			// Close menu when clicking a link
-			const menuLinks = document.querySelectorAll('.menu-link');
-			menuLinks.forEach(link => {
+			// Close menu when clicking on a link
+			const links = navLinks.querySelectorAll('a');
+			links.forEach(link => {
 				link.addEventListener('click', () => {
-					mobileMenu.classList.remove('active');
-					menuToggle.classList.remove('active');
+					mobileMenuToggle.classList.remove('active');
+					navLinks.classList.remove('active');
 				});
 			});
 		}
