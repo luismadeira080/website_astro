@@ -28,14 +28,18 @@ import ContactModal from '../../components/ContactModal.astro';
 		<a href="/pt" class="logo">
 			<span class="logo-text">Estúdio LM</span>
 		</a>
-		<div class="nav-right">
+		<div class="nav-links">
+			<a href="/pt">Início</a>
+			<a href="/pt/servicos">Serviços</a>
+			<a href="/pt/trabalho">Trabalho</a>
+			<button class="nav-link-button" data-contact-trigger data-contact-context="landing">Contacto</button>
 			<LanguageSwitcher currentLocale="pt" currentPath="/pt/landing-page" />
-			<button class="menu-toggle" aria-label="Abrir menu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
 		</div>
+		<button class="menu-toggle" aria-label="Abrir menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 	</nav>
 
 	<!-- Mobile Menu -->
