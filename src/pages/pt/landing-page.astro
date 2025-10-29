@@ -16,8 +16,8 @@ import ContactModal from '../../components/ContactModal.astro';
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<SEO
-		title="Landing Page Profissional desde €350 | Estúdio LM"
-		description="Landing page profissional com entrega em 7 dias. Design responsivo, formulário de contacto, SEO básico e analytics incluídos. Sem custos mensais."
+		title="Landing Page Profissional desde €250 | Estúdio LM"
+		description="Landing page profissional com entrega em 7 dias e acompanhamento contínuo incluído. Design responsivo, formulário de contacto, SEO básico e analytics. Sem custos mensais."
 		locale="pt"
 	/>
 	<Schema type="Service" />
@@ -43,11 +43,17 @@ import ContactModal from '../../components/ContactModal.astro';
 	<section class="hero">
 		<div class="hero-container">
 			<div class="hero-content">
-				<h1>Landing Page Profissional Desde €350</h1>
-				<p class="hero-subtitle">Entrega em 7 Dias | Design Responsivo | SEO Básico</p>
+				<h1>Landing Page Profissional Desde €250</h1>
+				<p class="hero-subtitle">Entrega em 7 Dias | Acompanhamento Contínuo Incluído | Design Responsivo</p>
 
 				<div class="hero-split">
 					<div class="trust-bullets">
+						<div class="bullet">
+							<svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>Acompanhamento contínuo sem custos adicionais</span>
+						</div>
 						<div class="bullet">
 							<svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -76,8 +82,8 @@ import ContactModal from '../../components/ContactModal.astro';
 
 					<div class="hero-form">
 						<form id="landing-page-form" action="https://formspree.io/f/manpdppz" method="POST">
-							<input type="hidden" name="service" value="Landing Page - €350">
-							<input type="hidden" name="_subject" value="Novo pedido: Landing Page €350">
+							<input type="hidden" name="service" value="Landing Page - €250">
+							<input type="hidden" name="_subject" value="Novo pedido: Landing Page €250">
 
 							<div class="form-group">
 								<label for="name">Nome</label>
@@ -169,15 +175,29 @@ import ContactModal from '../../components/ContactModal.astro';
 	<!-- Social Proof Section -->
 	<section class="section proof-section">
 		<div class="section-container">
-			<h2>Resultados Reais</h2>
+			<h2>Caso de Estudo Real</h2>
 			<div class="case-study-card">
 				<div class="case-image-placeholder">
-					<img src="/placeholder-case.jpg" alt="Caso de estudo" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)'">
+					<img src="/brunno-rodrigues.svg" alt="Landing page Brunno Rodrigues Terapias" loading="lazy">
 				</div>
 				<div class="case-content">
-					<h3>Elite Detailing Lisboa</h3>
-					<div class="metric">+85% Conversões em 30 Dias</div>
-					<blockquote>"A nova landing page triplicou os pedidos de orçamento. Simples, rápida e eficaz."</blockquote>
+					<h3>Brunno Rodrigues - Terapeuta de Massagens</h3>
+					<div class="case-metrics">
+						<div class="metric-item">
+							<strong>2 semanas</strong>
+							<span>Tempo de entrega</span>
+						</div>
+						<div class="metric-item">
+							<strong>⭐ 4,9</strong>
+							<span>Avaliação Google</span>
+						</div>
+						<div class="metric-item">
+							<strong>Acompanhamento</strong>
+							<span>Contínuo incluído</span>
+						</div>
+					</div>
+					<blockquote>"O Luís entregou exatamente o que eu precisava no prazo prometido. O website tem aspeto profissional e muitos clientes mencionam que acharam fácil marcar. Ter um website adequado em vez de apenas Instagram definitivamente ajudou-me a atrair clientes mais sérios."</blockquote>
+					<a href="/pt/projetos/brunno-rodrigues" class="case-link">Ver caso de estudo completo →</a>
 				</div>
 			</div>
 		</div>
@@ -187,9 +207,9 @@ import ContactModal from '../../components/ContactModal.astro';
 	<section class="section pricing-section">
 		<div class="section-container">
 			<div class="pricing-box">
-				<div class="price">€350</div>
+				<div class="price">€250</div>
 				<div class="price-subtitle">Pagamento Único</div>
-				<div class="no-monthly">Sem custos mensais. É seu para sempre.</div>
+				<div class="no-monthly">Sem custos mensais. Acompanhamento contínuo incluído.</div>
 				<button class="btn-primary cta-primary" data-contact-trigger data-contact-context="landing" data-service="landing-page" aria-label="Começar agora">
 					COMEÇAR AGORA
 				</button>
@@ -216,13 +236,13 @@ import ContactModal from '../../components/ContactModal.astro';
 
 				<div class="faq-item">
 					<button class="faq-question" aria-expanded="false">
-						<span>Posso alterar depois?</span>
+						<span>O que inclui o acompanhamento contínuo?</span>
 						<svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 					</button>
 					<div class="faq-answer">
-						<p>Sim. Incluímos 1 mês de alterações gratuitas após entrega. Depois disso, oferecemos planos de manutenção desde €50/mês.</p>
+						<p>Inclui atualizações de segurança, correções de bugs, pequenos ajustes de conteúdo e suporte técnico por email. Mantemos a sua landing page sempre atualizada e funcional sem custos adicionais.</p>
 					</div>
 				</div>
 
@@ -245,7 +265,7 @@ import ContactModal from '../../components/ContactModal.astro';
 	<section class="section footer-cta">
 		<div class="section-container">
 			<h2>Pronto Para Começar?</h2>
-			<p class="footer-cta-text">Landing page profissional em 7 dias. Apenas €350.</p>
+			<p class="footer-cta-text">Landing page profissional em 7 dias com acompanhamento contínuo. Apenas €250.</p>
 			<button class="btn-primary cta-primary" data-contact-trigger data-contact-context="landing" data-service="landing-page" aria-label="Pedir orçamento agora">
 				PEDIR ORÇAMENTO
 			</button>
@@ -598,14 +618,32 @@ import ContactModal from '../../components/ContactModal.astro';
 			font-family: var(--font-heading);
 			font-size: 32px;
 			color: var(--color-accent);
-			margin-bottom: 16px;
+			margin-bottom: 24px;
 		}
 
-		.metric {
-			font-size: 24px;
+		.case-metrics {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px;
+			margin-bottom: 24px;
+		}
+
+		.metric-item {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+		}
+
+		.metric-item strong {
+			font-size: 20px;
 			font-weight: 600;
 			color: var(--color-accent);
-			margin-bottom: 16px;
+		}
+
+		.metric-item span {
+			font-size: 13px;
+			color: var(--color-text);
+			opacity: 0.7;
 		}
 
 		blockquote {
@@ -614,6 +652,20 @@ import ContactModal from '../../components/ContactModal.astro';
 			color: var(--color-text);
 			opacity: 0.9;
 			line-height: 1.6;
+			margin-bottom: 16px;
+		}
+
+		.case-link {
+			display: inline-block;
+			color: var(--color-accent);
+			text-decoration: none;
+			font-size: 14px;
+			font-weight: 600;
+			transition: opacity 0.3s ease;
+		}
+
+		.case-link:hover {
+			opacity: 0.8;
 		}
 
 		/* Pricing Section */
@@ -872,7 +924,13 @@ import ContactModal from '../../components/ContactModal.astro';
 			}
 
 			.case-study-card {
+				grid-template-columns: 1fr;
 				padding: 32px 24px;
+			}
+
+			.case-metrics {
+				grid-template-columns: 1fr;
+				gap: 16px;
 			}
 
 			.pricing-box {
@@ -964,7 +1022,7 @@ import ContactModal from '../../components/ContactModal.astro';
 							gtag('event', 'conversion', {
 								'send_to': 'AW-17188917195/p5K-CISCxP8aEMufqIRA',
 								'event_category': 'form_submit',
-								'event_label': 'Landing Page - €350'
+								'event_label': 'Landing Page - €250'
 							});
 						}
 					} else {
