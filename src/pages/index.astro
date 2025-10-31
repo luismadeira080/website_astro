@@ -405,6 +405,14 @@ import ContactModal from '../components/ContactModal.astro';
                             // Reset form
                             contactForm.reset();
 
+                            // Scroll to the bottom of the page smoothly
+                            setTimeout(function() {
+                                window.scrollTo({
+                                    top: document.documentElement.scrollHeight,
+                                    behavior: 'smooth'
+                                });
+                            }, 500);
+
                             // Show form again after 5 seconds
                             setTimeout(function() {
                                 contactForm.style.display = 'block';
