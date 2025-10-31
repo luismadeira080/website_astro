@@ -194,15 +194,17 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
           });
         }
 
-        // Handle form action - scroll to contact form
+        // Handle form action - scroll to contact form or redirect to home page
         if (action === 'form') {
           e.preventDefault();
           closeModal();
 
-          // Scroll to contact section
-          setTimeout(() => {
-            const contactSection = document.getElementById('contact') || document.getElementById('contact-form');
-            if (contactSection) {
+          // Check if contact section exists on current page
+          const contactSection = document.getElementById('contact') || document.getElementById('contact-form');
+
+          if (contactSection) {
+            // Scroll to contact section on current page
+            setTimeout(() => {
               contactSection.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -215,8 +217,13 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
                   firstInput.focus();
                 }
               }, 500);
-            }
-          }, 100);
+            }, 100);
+          } else {
+            // Redirect to home page with contact section hash
+            const locale = modal.getAttribute('data-locale') || 'pt';
+            const homePath = locale === 'pt' ? '/pt/#contact' : '/#contact';
+            window.location.href = homePath;
+          }
         } else {
           // Close modal after short delay to ensure tracking for WhatsApp/Call
           setTimeout(() => {
