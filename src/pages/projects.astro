@@ -77,7 +77,7 @@ import ContactModal from '../components/ContactModal.astro';
                 </div>
                 <div class="project-card-actions">
                     <a href="/projects/porto-car-care" class="project-link">Read Full Case Study →</a>
-                    <a href="/#contact" class="card-cta">Book a Similar Project</a>
+                    <button class="card-cta" data-contact-trigger data-contact-context="project">Book a Similar Project</button>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@ import ContactModal from '../components/ContactModal.astro';
                 </div>
                 <div class="project-card-actions">
                     <a href="/projects/brunno-rodrigues" class="project-link">Read Full Case Study →</a>
-                    <a href="/#contact" class="card-cta">Build Your Landing Page</a>
+                    <button class="card-cta" data-contact-trigger data-contact-context="landing">Build Your Landing Page</button>
                 </div>
             </div>
         </div>
@@ -137,7 +137,7 @@ import ContactModal from '../components/ContactModal.astro';
                 </div>
                 <div class="project-card-actions">
                     <a href="/projects/porto-massage-studio" class="project-link">Read Full Case Study →</a>
-                    <a href="/#contact" class="card-cta">Build Your Landing Page</a>
+                    <button class="card-cta" data-contact-trigger data-contact-context="landing">Build Your Landing Page</button>
                 </div>
             </div>
         </div>
@@ -412,6 +412,9 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
     width: fit-content;
     text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
 }
 
 .card-cta:hover {

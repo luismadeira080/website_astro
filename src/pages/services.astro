@@ -92,7 +92,7 @@ import ContactModal from '../components/ContactModal.astro';
                 </div>
             </div>
 
-            <a href="/#contact" class="service-cta">Get a Landing Page</a>
+            <button class="service-cta" data-contact-trigger data-contact-context="landing">Get a Landing Page</button>
         </div>
 
         <!-- Service 2: SEO-Optimized Websites -->
@@ -126,7 +126,7 @@ import ContactModal from '../components/ContactModal.astro';
                 </div>
             </div>
 
-            <a href="/#contact" class="service-cta">Start Your Website</a>
+            <button class="service-cta" data-contact-trigger data-contact-context="seo">Start Your Website</button>
         </div>
     </section>
 
@@ -598,6 +598,9 @@ body {
     width: fit-content;
     text-transform: uppercase;
     margin-top: auto;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
 }
 
 .service-cta:hover {
