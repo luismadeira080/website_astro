@@ -3,8 +3,6 @@ import SEO from '../../components/SEO.astro';
 import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
-import ConversionTracking from '../../components/ConversionTracking.astro';
-import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -21,8 +19,8 @@ import ContactModal from '../../components/ContactModal.astro';
 
     <!-- SEO Meta Tags -->
     <SEO
-        title="Luís Madeira - Criação de Websites e SEO Local em Portugal"
-        description="Crio websites profissionais e otimizados para SEO que geram clientes. Landing pages, websites empresariais e SEO local para negócios em Portugal."
+        title="Luís Madeira - Consultor de Implementação para Negócios Portugueses"
+        description="Ajudo negócios portugueses a trabalhar de forma mais inteligente através de automação de processos e websites modernos."
         locale="pt"
     />
 
@@ -36,7 +34,18 @@ import ContactModal from '../../components/ContactModal.astro';
         <div class="logo">luís madeira</div>
         <div class="nav-links">
             <a href="#work">Trabalhos</a>
-            <a href="/pt/servicos">Serviços</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle">
+                    Serviços
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <a href="/pt/consultoria">Consultoria</a>
+                    <a href="/pt/servicos">Websites</a>
+                </div>
+            </div>
             <a href="#about">Sobre</a>
             <a href="#contact">Contacto</a>
             <LanguageSwitcher currentPath="/pt/" />
@@ -51,58 +60,45 @@ import ContactModal from '../../components/ContactModal.astro';
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>WEBSITES QUE APARECEM<br>NO GOOGLE E TRAZEM CLIENTES</h1>
-                <p class="hero-subtitle">Crio websites rápidos e profissionais com SEO local forte. O objetivo: mais visibilidade, mais chamadas, mais clientes.</p>
+                <h1>LUÍS MADEIRA</h1>
+                <p class="hero-subtitle">Ajudo negócios portugueses a trabalhar de forma mais inteligente através de automação de processos e websites modernos.</p>
             </div>
             <div class="hero-actions">
-                <a href="#contact" class="btn-primary">CONTACTE-ME</a>
                 <a href="https://www.linkedin.com/in/lumadeira" class="social-icon" target="_blank" aria-label="LinkedIn">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
                     </svg>
                 </a>
-                <a href="https://wa.me/351924466899" class="social-icon" target="_blank" aria-label="WhatsApp">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
-                    </svg>
-                </a>
-                <a href="tel:+351924466899" class="social-icon" aria-label="Call me">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
-                    </svg>
-                </a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="/profile.jpeg" alt="Luís Madeira - Web Developer and SEO Specialist">
+            <img src="/profile.jpeg" alt="Luís Madeira - Consultor de Implementação">
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- What I Do Section -->
     <section class="services-section">
         <div class="section-header">
-            <h2>O QUE OFEREÇO</h2>
-            <p>Dois serviços focados para ajudar o seu negócio a crescer online</p>
+            <h2>O QUE FAÇO</h2>
+            <p>Ajudo negócios portugueses de duas formas</p>
         </div>
 
         <div class="services-grid">
-            <!-- Service 1 -->
+            <!-- Service 1: Consultoria -->
             <div class="service-card">
-                <h3>Landing Pages que Convertem</h3>
-                <p>Entrega rápida de landing pages modernas e limpas. Ideal para promoções, anúncios ou negócios que precisam de uma presença online simples que converte visitantes em leads.</p>
+                <h3>Consultoria de Implementação</h3>
+                <p>Encontro onde está a perder tempo no seu negócio e elimino isso. Automatizo processos manuais, organizo fluxos de trabalho e implemento sistemas que lhe dão mais tempo para crescer.</p>
                 <div class="service-card-actions">
-                    <a href="/pt/servicos" class="service-link">Ver Detalhes →</a>
-                    <button class="service-cta" data-contact-trigger data-contact-context="landing">Pedir landing page</button>
+                    <a href="/pt/consultoria" class="service-link-soft">Saber mais →</a>
                 </div>
             </div>
 
-            <!-- Service 2 -->
+            <!-- Service 2: Websites -->
             <div class="service-card">
-                <h3>Websites Otimizados para SEO</h3>
-                <p>Websites completos desenhados e construídos para aparecer melhor no Google. Inclui design, conteúdo e configuração SEO para que negócios locais tenham mais tráfego, mais chamadas e mais clientes.</p>
+                <h3>Websites Profissionais</h3>
+                <p>Crio websites modernos que aparecem no Google e convertem visitantes em clientes. Design limpo, rápido e otimizado para negócios locais que querem crescer online.</p>
                 <div class="service-card-actions">
-                    <a href="/pt/servicos" class="service-link">Ver Detalhes →</a>
-                    <button class="service-cta" data-contact-trigger data-contact-context="seo">Começar projeto de website</button>
+                    <a href="/pt/servicos" class="service-link-soft">Saber mais →</a>
                 </div>
             </div>
         </div>
@@ -199,73 +195,31 @@ import ContactModal from '../../components/ContactModal.astro';
         <h2>SOBRE MIM</h2>
         <div class="about-content">
             <div class="about-intro">
-                <h3>Crio websites e landing pages que convertem. Especializado em SEO local para pequenos negócios.</h3>
+                <h3>Consultor de implementação que executa. Transformo processos manuais em sistemas automáticos.</h3>
             </div>
             <div class="about-description">
-                <p>Atualmente a fazer o Mestrado em Gestão na IE Business School em Madrid, natural do Porto. Com 2 anos de experiência em Venture Capital e uma paixão por tecnologia, ajudo negócios locais (dentistas, spas, estética automóvel, AVAC e outros) a aparecerem melhor no Google e a conseguirem mais clientes. Uso ferramentas modernas como Claude Code, Cursor, Figma, Astro, React e Tailwind para criar websites limpos e rápidos que realmente geram tráfego e conversões. O meu foco: resultados mensuráveis através de SEO técnico, experiência de utilizador otimizada e estratégias baseadas em dados.</p>
+                <p>Natural do Porto, atualmente a fazer o Mestrado em Gestão na IE Business School em Madrid. Com 2 anos de experiência em Venture Capital e uma paixão por tecnologia, ajudo PMEs portuguesas a trabalhar de forma mais inteligente. Identifico onde está a perder tempo, elimino processos manuais e implemento soluções que lhe dão mais espaço para crescer. Seja através de automação de processos ou websites que convertem, o meu foco é sempre o mesmo: resultados práticos e mensuráveis.</p>
                 <a href="/pt/sobre" class="text-link">MAIS SOBRE MIM</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="contact-info">
-            <div class="contact-left">
-                <h2>VAMOS CONECTAR</h2>
-                <div class="contact-details">
-                    <p>Diga olá: <a href="mailto:luismadeira@ruimadeira.pt">luismadeira@ruimadeira.pt</a></p>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/lumadeira" target="_blank" aria-label="LinkedIn">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/351924466899" target="_blank" aria-label="WhatsApp">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="tel:+351924466899" aria-label="Call me">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                </div>
-                <p class="copyright">© 2024 Luís Madeira</p>
+    <section id="contact" class="contact-section-simple">
+        <div class="contact-container">
+            <h2>CONTACTO</h2>
+            <p class="contact-intro">Se faz sentido, vamos conversar.</p>
+            <div class="contact-methods">
+                <a href="mailto:luismadeira@ruimadeira.pt" class="contact-method">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">luismadeira@ruimadeira.pt</span>
+                </a>
+                <a href="https://www.linkedin.com/in/lumadeira" target="_blank" class="contact-method">
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">linkedin.com/in/lumadeira</span>
+                </a>
             </div>
-        </div>
-        <div class="contact-form">
-            <form id="contact-form" action="https://formspree.io/f/manpdppz" method="POST">
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" placeholder="João Silva" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Telefone</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+351 912 345 678" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Assunto</label>
-                    <input type="text" id="subject" name="subject" placeholder="Pedido de orçamento" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Conte-me sobre o seu projeto..." required></textarea>
-                </div>
-                <input type="hidden" name="_subject" value="New contact form submission from website">
-                <button type="submit" class="btn-submit" id="submit-btn">ENVIAR</button>
-            </form>
-            <div id="form-success" class="form-success" style="display: none;">
-                <div class="success-icon">✓</div>
-                <h3>Mensagem Enviada!</h3>
-                <p>Obrigado por entrar em contacto. Responderei em breve.</p>
-            </div>
+            <p class="copyright">© {new Date().getFullYear()} Luís Madeira</p>
         </div>
     </section>
 
@@ -339,108 +293,30 @@ import ContactModal from '../../components/ContactModal.astro';
                 }
             });
         });
+
+        // Dropdown navigation
+        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
+        const navDropdown = document.querySelector('.nav-dropdown');
+
+        if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navDropdown.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', () => {
+                navDropdown.classList.remove('active');
+            });
+
+            navDropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        }
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-    <script is:inline>
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contact-form');
-            const submitBtn = document.getElementById('submit-btn');
-            const formSuccess = document.getElementById('form-success');
-
-            if (contactForm) {
-                contactForm.addEventListener('submit', async function(e) {
-                    e.preventDefault();
-
-                    // Disable button and show loading state
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = 'ENVIANDO...';
-
-                    // Get form data
-                    const formData = new FormData(contactForm);
-
-                    try {
-                        // Submit to Formspree
-                        const response = await fetch(contactForm.action, {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        });
-
-                        if (response.ok) {
-                            // Success! Trigger confetti
-                            confetti({
-                                particleCount: 150,
-                                spread: 100,
-                                origin: { y: 0.6 },
-                                colors: ['#d3e97a', '#c7c7c7', '#ffffff', '#1a1a1a']
-                            });
-
-                            // Additional burst for extra celebration
-                            setTimeout(function() {
-                                confetti({
-                                    particleCount: 100,
-                                    angle: 60,
-                                    spread: 55,
-                                    origin: { x: 0 },
-                                    colors: ['#d3e97a', '#c7c7c7', '#ffffff']
-                                });
-                            }, 200);
-
-                            setTimeout(function() {
-                                confetti({
-                                    particleCount: 100,
-                                    angle: 120,
-                                    spread: 55,
-                                    origin: { x: 1 },
-                                    colors: ['#d3e97a', '#c7c7c7', '#ffffff']
-                                });
-                            }, 400);
-
-                            // Hide form and show success message
-                            contactForm.style.display = 'none';
-                            formSuccess.style.display = 'block';
-
-                            // Reset form
-                            contactForm.reset();
-
-                            // Scroll to the bottom of the page smoothly
-                            setTimeout(function() {
-                                window.scrollTo({
-                                    top: document.documentElement.scrollHeight,
-                                    behavior: 'smooth'
-                                });
-                            }, 500);
-
-                            // Show form again after 5 seconds
-                            setTimeout(function() {
-                                contactForm.style.display = 'block';
-                                formSuccess.style.display = 'none';
-                                submitBtn.disabled = false;
-                                submitBtn.textContent = 'ENVIAR';
-                            }, 5000);
-                        } else {
-                            throw new Error('Form submission failed');
-                        }
-                    } catch (error) {
-                        // Error handling
-                        alert('Oops! Houve um problema ao enviar o formulário. Por favor, tente novamente ou envie um email diretamente para luismadeira@ruimadeira.pt');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'ENVIAR';
-                    }
-                });
-            }
-        });
-    </script>
-
-    <!-- Unified Conversion Tracking -->
-    <ConversionTracking />
     <Footer locale="pt" />
-
-    <!-- Contact Modal -->
-    <ContactModal locale="pt" context="general" />
 </body>
 </html>
 
