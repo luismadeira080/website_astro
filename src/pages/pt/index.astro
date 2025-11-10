@@ -383,6 +383,75 @@ body {
     color: var(--color-accent);
 }
 
+/* Dropdown Navigation */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    cursor: pointer;
+    padding: 0;
+    font-family: var(--font-primary);
+    transition: color 0.3s ease;
+}
+
+.nav-dropdown-toggle:hover {
+    color: var(--color-accent);
+}
+
+.nav-dropdown-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown.active .nav-dropdown-toggle svg {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-dropdown.active .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-dropdown-menu a:hover {
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -546,6 +615,21 @@ body {
 
 .service-link:hover {
     opacity: 0.7;
+}
+
+.service-link-soft {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.service-link-soft:hover {
+    opacity: 1;
+    color: var(--color-accent);
 }
 
 .service-cta {
@@ -1066,6 +1150,70 @@ body {
 .copyright {
     font-size: 16px;
     color: var(--color-text);
+    opacity: 0.6;
+}
+
+/* Simple Contact Section */
+.contact-section-simple {
+    padding: 120px 108px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section-simple h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+}
+
+.contact-intro {
+    font-size: 20px;
+    margin-bottom: 48px;
+    opacity: 0.9;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.contact-method {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 32px;
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-method:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.contact-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.contact-value {
+    font-size: 18px;
+    color: var(--color-text);
+    font-weight: 500;
 }
 
 /* Contact Form */
@@ -1278,6 +1426,32 @@ body {
         font-size: 24px;
     }
 
+    .nav-dropdown-toggle {
+        font-size: 24px;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        margin-top: 16px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .nav-dropdown.active .nav-dropdown-menu {
+        display: block;
+    }
+
+    .nav-dropdown-menu:not(.active) {
+        display: none;
+    }
+
+    .nav-dropdown-menu a {
+        font-size: 20px;
+        padding: 12px 0;
+    }
+
     .mobile-menu-toggle {
         display: flex;
     }
@@ -1422,6 +1596,31 @@ body {
     .social-links {
         margin-bottom: 60px;
     }
+
+    .contact-section-simple {
+        padding: 60px 16px;
+    }
+
+    .contact-section-simple h2 {
+        font-size: 48px;
+    }
+
+    .contact-intro {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .contact-methods {
+        margin-bottom: 60px;
+    }
+
+    .contact-method {
+        padding: 24px;
+    }
+
+    .contact-value {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1457,6 +1656,14 @@ body {
 
     .contact-left h2 {
         font-size: 40px;
+    }
+
+    .contact-section-simple h2 {
+        font-size: 40px;
+    }
+
+    .contact-intro {
+        font-size: 16px;
     }
 }
 </style>
