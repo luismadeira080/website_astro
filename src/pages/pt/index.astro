@@ -113,26 +113,26 @@ import Footer from '../../components/Footer.astro';
 
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <p class="testimonial-text">Trabalhar com o Luís e a sua equipa foi uma experiência verdadeiramente positiva. Desde o início, o projeto foi gerido com um alto nível de profissionalismo...</p>
-                <a href="#" class="testimonial-link">Ver depoimento completo</a>
+                <div class="testimonial-tag">Websites</div>
+                <p class="testimonial-text">"O Luís entregou exatamente o que eu precisava no prazo prometido. O website tem aspeto profissional e muitos clientes mencionam que acharam fácil marcar. Ter um website adequado em vez de apenas Instagram definitivamente ajudou-me a atrair clientes mais sérios."</p>
                 <div class="testimonial-author">
-                    <p class="author-name">Erich Rohn</p>
-                    <p class="author-title">Managing Director, Rohn Moden</p>
+                    <p class="author-name">Brunno Rodrigues</p>
+                    <p class="author-title">Terapeuta de Massagens</p>
                 </div>
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text">As equipas do Luís trazem clareza à complexidade, transformando <strong>ideias em sistemas de IA que realmente proporcionam valor.</strong></p>
-                <a href="#" class="testimonial-link">Ver depoimento completo</a>
+                <div class="testimonial-tag">Websites</div>
+                <p class="testimonial-text">"A landing page superou as nossas expectativas. É bonita, fácil de usar, e estamos a receber contactos de clientes que nunca nos teriam ligado antes. A experiência móvel é perfeita."</p>
                 <div class="testimonial-author">
-                    <p class="author-name">Nick Sonnenberg</p>
-                    <p class="author-title">Founder & CEO, Leverage, WSJ Bestselling Author</p>
+                    <p class="author-name">Joaquim Marco</p>
+                    <p class="author-title">Porto Massage Studio</p>
                 </div>
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text">O Luís constrói mais do que workflows, <strong>ele constrói confiança.</strong></p>
-                <a href="#" class="testimonial-link">Ver depoimento completo</a>
+                <div class="testimonial-tag">AI Solutions</div>
+                <p class="testimonial-text">"O Luís constrói mais do que workflows, ele constrói confiança. A abordagem estratégica dele transformou completamente como operamos."</p>
                 <div class="testimonial-author">
                     <p class="author-name">Jim Hankins</p>
                     <p class="author-title">CEO, Cloud Bedrock, LLC</p>
@@ -600,53 +600,58 @@ body {
 }
 
 .testimonial-card {
-    background-color: #f5f5f5;
+    background-color: var(--color-dark);
+    border: 1px solid #333;
     border-radius: 12px;
     padding: 32px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+    border-color: var(--color-accent);
+}
+
+.testimonial-tag {
+    display: inline-block;
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    align-self: flex-start;
 }
 
 .testimonial-text {
     font-size: 16px;
-    line-height: 1.6;
-    color: #1a1a1a;
+    line-height: 1.7;
+    color: var(--color-text);
     opacity: 0.9;
-}
-
-.testimonial-text strong {
-    color: #0066cc;
-    font-weight: 600;
-}
-
-.testimonial-link {
-    color: #0066cc;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: opacity 0.2s ease;
-}
-
-.testimonial-link:hover {
-    opacity: 0.7;
+    font-style: italic;
 }
 
 .testimonial-author {
     margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #333;
 }
 
 .author-name {
     font-size: 15px;
     font-weight: 600;
-    color: #1a1a1a;
+    color: var(--color-text);
     margin-bottom: 4px;
 }
 
 .author-title {
     font-size: 13px;
-    color: #666;
-    opacity: 0.85;
+    color: var(--color-text);
+    opacity: 0.6;
 }
 
 /* Featured Projects - keeping for projects page */
