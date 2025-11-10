@@ -247,6 +247,75 @@ import ContactModal from '../../components/ContactModal.astro';
 		</div>
 	</section>
 
+	<!-- Case Study Section -->
+	<section class="section case-study-section">
+		<div class="section-container">
+			<h2>Caso de Estudo</h2>
+			<p class="section-subtitle">Resultados reais de um projeto recente de SEO local</p>
+
+			<div class="case-study-content">
+				<div class="case-study-image">
+					<img src="/final fnal final.svg" alt="Porto Car Care - Website de estética automóvel com otimização de SEO local">
+				</div>
+
+				<div class="case-study-details">
+					<h3>Porto Car Care — Aumento de SEO Local</h3>
+					<p class="case-study-description">Loja de estética automóvel no Porto a competir com sites desatualizados. Implementei estratégia programática de SEO que triplicou a visibilidade.</p>
+
+					<div class="case-metrics">
+						<div class="case-metric">
+							<div class="metric-value">+3×</div>
+							<div class="metric-label">Visibilidade no Google</div>
+						</div>
+						<div class="case-metric">
+							<div class="metric-value">1ª Página</div>
+							<div class="metric-label">Para Todos os Serviços</div>
+						</div>
+						<div class="case-metric">
+							<div class="metric-value">+40%</div>
+							<div class="metric-label">Mais Chamadas Telefónicas</div>
+						</div>
+					</div>
+
+					<div class="case-expandable">
+						<button class="case-expand-btn">
+							<span>O que Fiz</span>
+							<svg class="expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<div class="case-expand-content">
+							<ul>
+								<li>Realizei pesquisa de palavras-chave locais para pesquisas "perto de mim" de alta intenção e consultas específicas de serviços no mercado do Porto</li>
+								<li>Criei 8 páginas de serviço programáticas com conteúdo único, marcação Schema.org e meta tags otimizadas</li>
+								<li>Implementei SEO técnico incluindo sitemap XML, robots.txt, ligações internas e navegação breadcrumb</li>
+								<li>Configurei rastreamento GA4 em todos os CTAs de telefone e Google Search Console para monitorização de desempenho</li>
+								<li>Otimizei elementos on-page (HTML semântico, meta tags geográficas, design mobile-first, Core Web Vitals)</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="case-expandable">
+						<button class="case-expand-btn">
+							<span>Resultados</span>
+							<svg class="expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<div class="case-expand-content">
+							<ul>
+								<li>+3× visibilidade orgânica (impressões) em 2 semanas</li>
+								<li>+12 posições médias ganhas no ranking</li>
+								<li>+25 novas palavras-chave não-branded a rankear</li>
+								<li>+40% mais chamadas através do Perfil de Empresa Google</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Process Timeline Section -->
 	<section class="section process-section">
 		<div class="section-container">
@@ -1154,6 +1223,166 @@ import ContactModal from '../../components/ContactModal.astro';
 				transform: rotate(90deg);
 			}
 		}
+
+		/* Case Study Section */
+		.case-study-section {
+			background-color: #f8f8f8;
+		}
+
+		.case-study-section h2 {
+			margin-bottom: 12px;
+		}
+
+		.section-subtitle {
+			font-size: 16px;
+			color: #666;
+			margin-bottom: 48px;
+		}
+
+		.case-study-content {
+			display: grid;
+			grid-template-columns: 400px 1fr;
+			gap: 48px;
+			align-items: start;
+		}
+
+		.case-study-image {
+			width: 100%;
+			background-color: var(--color-dark);
+			border-radius: 12px;
+			overflow: hidden;
+		}
+
+		.case-study-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		.case-study-details h3 {
+			font-size: 28px;
+			color: #1a1a1a;
+			margin-bottom: 16px;
+		}
+
+		.case-study-description {
+			font-size: 16px;
+			line-height: 1.6;
+			color: #666;
+			margin-bottom: 32px;
+		}
+
+		.case-metrics {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px;
+			margin-bottom: 32px;
+		}
+
+		.case-metric {
+			background-color: white;
+			border: 1px solid #e0e0e0;
+			border-radius: 8px;
+			padding: 24px;
+			text-align: center;
+		}
+
+		.case-metric .metric-value {
+			font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+			font-size: 36px;
+			color: #d3e97a;
+			line-height: 1;
+			margin-bottom: 8px;
+		}
+
+		.case-metric .metric-label {
+			font-size: 13px;
+			color: #666;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		.case-expandable {
+			border: 1px solid #e0e0e0;
+			border-radius: 8px;
+			margin-bottom: 16px;
+			overflow: hidden;
+		}
+
+		.case-expand-btn {
+			width: 100%;
+			background: white;
+			border: none;
+			padding: 20px 24px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			font-family: inherit;
+			font-size: 16px;
+			font-weight: 600;
+			color: #1a1a1a;
+			transition: background-color 0.2s ease;
+		}
+
+		.case-expand-btn:hover {
+			background-color: #f8f8f8;
+		}
+
+		.expand-icon {
+			transition: transform 0.3s ease;
+			stroke: #666;
+		}
+
+		.case-expandable.open .expand-icon {
+			transform: rotate(180deg);
+		}
+
+		.case-expand-content {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease, padding 0.3s ease;
+			background-color: #fafafa;
+		}
+
+		.case-expandable.open .case-expand-content {
+			max-height: 500px;
+			padding: 20px 24px;
+		}
+
+		.case-expand-content ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.case-expand-content li {
+			font-size: 15px;
+			line-height: 1.7;
+			color: #666;
+			padding: 8px 0;
+			padding-left: 24px;
+			position: relative;
+		}
+
+		.case-expand-content li::before {
+			content: '→';
+			position: absolute;
+			left: 0;
+			color: #d3e97a;
+			font-weight: 600;
+		}
+
+		@media (max-width: 768px) {
+			.case-study-content {
+				grid-template-columns: 1fr;
+				gap: 32px;
+			}
+
+			.case-metrics {
+				grid-template-columns: 1fr;
+			}
+		}
 	</style>
 
 	<script>
@@ -1242,6 +1471,25 @@ import ContactModal from '../../components/ContactModal.astro';
 				}
 			});
 		}
+
+		// Case Study Expandable Accordions
+		const caseExpandBtns = document.querySelectorAll('.case-expand-btn');
+		caseExpandBtns.forEach(btn => {
+			btn.addEventListener('click', () => {
+				const expandable = btn.parentElement;
+				const isOpen = expandable.classList.contains('open');
+
+				// Close all other expandables
+				document.querySelectorAll('.case-expandable').forEach(item => {
+					item.classList.remove('open');
+				});
+
+				// Toggle current expandable
+				if (!isOpen) {
+					expandable.classList.add('open');
+				}
+			});
+		});
 	</script>
 </body>
 </html>
