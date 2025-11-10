@@ -3,7 +3,6 @@ import SEO from '../../components/SEO.astro';
 import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
-import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -20,8 +19,8 @@ import ContactModal from '../../components/ContactModal.astro';
 
     <!-- SEO Meta Tags -->
     <SEO
-        title="Sobre Mim - Luís Madeira | Criação de Websites e SEO"
-        description="Estudante de mestrado na IE Business School com 2 anos de experiência em VC. Especializado em SEO local e desenvolvimento web para negócios portugueses."
+        title="Sobre Mim - Luís Madeira"
+        description="Consultor de implementação que executa. Ajudo PMEs portuguesas a trabalhar de forma mais inteligente através de automação e websites."
         locale="pt"
     />
 
@@ -34,7 +33,18 @@ import ContactModal from '../../components/ContactModal.astro';
         <a href="/pt" class="logo">luís madeira</a>
         <div class="nav-links">
             <a href="/pt/#work">Trabalhos</a>
-            <a href="/pt/servicos">Serviços</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle">
+                    Serviços
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <a href="/pt/consultoria">Consultoria</a>
+                    <a href="/pt/servicos">Websites</a>
+                </div>
+            </div>
             <a href="/pt/sobre">Sobre</a>
             <a href="/pt/#contact">Contacto</a>
             <LanguageSwitcher currentPath="/pt/sobre" />
@@ -45,137 +55,78 @@ import ContactModal from '../../components/ContactModal.astro';
         </div>
     </nav>
 
-    <!-- About Hero Section -->
+    <!-- Hero Section -->
     <section class="about-hero">
-        <h1>SOBRE MIM</h1>
-        <div class="about-intro-content">
-            <h2>Crio websites e landing pages que realmente convertem e geram tráfego. Especializado em SEO local para pequenos negócios.</h2>
-            <div class="about-description">
-                <p>Atualmente a fazer o Mestrado em Gestão na IE Business School em Madrid, natural do Porto. Com 2 anos de experiência em Venture Capital e uma paixão por tecnologia, ajudo negócios locais (dentistas, spas, estética automóvel, AVAC e outros) a aparecerem melhor no Google e a conseguirem mais clientes. Uso ferramentas modernas como Claude Code, Cursor, Figma, Astro, React e Tailwind para criar websites limpos e rápidos que realmente geram tráfego e conversões. O meu foco: resultados mensuráveis através de SEO técnico, experiência de utilizador otimizada e estratégias baseadas em dados.</p>
-                <div class="about-actions">
-                    <button class="btn-primary" data-contact-trigger data-contact-context="general">CONTACTE-ME</button>
-                    <a href="https://www.linkedin.com/in/lumadeira" class="social-icon" target="_blank" aria-label="LinkedIn">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/351924466899" class="social-icon" target="_blank" aria-label="WhatsApp">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="tel:+351924466899" onclick="return gtag_report_conversion('tel:+351924466899');" class="social-icon" aria-label="Call me">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                </div>
+        <div class="about-hero-content">
+            <div class="hero-text-section">
+                <h1>SOBRE MIM</h1>
+                <h2>Consultor de implementação que executa. Transformo processos manuais em sistemas automáticos.</h2>
+            </div>
+            <div class="hero-image-section">
+                <img src="/profile.jpeg" alt="Luís Madeira">
             </div>
         </div>
     </section>
 
-    <!-- My Capabilities Section -->
-    <section class="capabilities-section">
-        <h2>AS MINHAS CAPACIDADES</h2>
-        <div class="capabilities-content">
-            <p>Estou constantemente a expandir o meu conjunto de competências para entregar melhores resultados aos clientes. Desde SEO técnico a frameworks modernos de desenvolvimento web, mantenho-me à frente das tendências da indústria para fornecer soluções de ponta que impulsionam o crescimento real do negócio.</p>
-            <div class="skills-grid">
-                <span class="skill-tag">LOCAL SEO</span>
-                <span class="skill-tag">TECHNICAL SEO</span>
-                <span class="skill-tag">ASTRO</span>
-                <span class="skill-tag">REACT</span>
-                <span class="skill-tag">TAILWIND CSS</span>
-                <span class="skill-tag">FIGMA</span>
-                <span class="skill-tag">CLAUDE CODE</span>
-                <span class="skill-tag">CURSOR</span>
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-block">
+                <h3>Quem Sou</h3>
+                <p>Natural do Porto, atualmente a fazer o Mestrado em Gestão na IE Business School em Madrid. Com 2 anos de experiência em Venture Capital e uma paixão por tecnologia, trabalho com PMEs portuguesas para as ajudar a crescer de forma mais inteligente.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>O Que Faço</h3>
+                <p>Ajudo negócios a eliminar desperdício de tempo. Identifico onde está a perder horas em processos manuais e implemento soluções que automatizam isso. Não apenas recomendo — executo.</p>
+                <p>Também crio websites modernos que aparecem no Google e convertem visitantes em clientes. Seja qual for o projeto, o foco é sempre o mesmo: resultados práticos e mensuráveis.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Abordagem</h3>
+                <p>Não acredito em projetos intermináveis ou contratos de longa duração. Prefiro sprints focados onde identificamos problemas específicos, implementamos soluções e validamos resultados.</p>
+                <p>Se funciona, ótimo. Se precisar de mais, fazemos outro sprint. Simples e direto.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Ferramentas</h3>
+                <p>Uso tecnologia moderna para construir soluções: automações de processos, websites rápidos, sistemas que conectam ferramentas diferentes. Mas isso são apenas detalhes técnicos — o que importa são os resultados.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Porque Fiz Esta Mudança</h3>
+                <p>Comecei focado em websites e SEO. É um bom serviço, mas percebi que muitos negócios têm problemas maiores: processos manuais caóticos, tempo desperdiçado em tarefas repetitivas, falta de sistemas claros.</p>
+                <p>Então expandi. Agora ajudo não só com presença online, mas também com operações internas. Automação, organização de processos, implementação de sistemas — o que for preciso para libertar tempo e permitir crescimento.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Valores</h3>
+                <ul class="values-list">
+                    <li><strong>Execução acima de tudo:</strong> Não sou apenas consultor. Implemento.</li>
+                    <li><strong>Resultados mensuráveis:</strong> Se não dá para medir, não interessa.</li>
+                    <li><strong>Sem enrolação:</strong> Comunicação direta, sem jargão técnico desnecessário.</li>
+                    <li><strong>Foco no essencial:</strong> Resolver o problema, não criar complexidade.</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Background</h3>
+                <p><strong>Educação:</strong> A fazer Mestrado em Gestão na IE Business School (Madrid). Formação em negócios e tecnologia.</p>
+                <p><strong>Experiência:</strong> 2 anos em Venture Capital, onde aprendi a avaliar negócios e identificar o que realmente importa para crescimento.</p>
+                <p><strong>Localização:</strong> Madrid (estudos) e Porto (origem). Trabalho remotamente com negócios em todo Portugal.</p>
             </div>
         </div>
     </section>
 
-    <!-- My Experience Section -->
-    <section class="experience-section">
-        <div class="experience-container">
-            <h2>A MINHA EXPERIÊNCIA</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3>Mestrado em Gestão</h3>
-                            <p class="company">IE Business School, Madrid</p>
-                        </div>
-                        <span class="timeline">2025 — Presente</span>
-                    </div>
-                    <p class="experience-description">A fazer formação avançada em negócios enquanto desenvolvo competências em marketing digital, empreendedorismo e decisões baseadas em dados. A aplicar conhecimento académico em projetos reais de SEO e desenvolvimento web.</p>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3>Desenvolvedor Web Freelance & Especialista SEO</h3>
-                            <p class="company">Conta Própria</p>
-                        </div>
-                        <span class="timeline">2025 — Presente</span>
-                    </div>
-                    <p class="experience-description">A criar websites focados em conversão e implementar estratégias de SEO local para pequenos negócios. Especializado em dentistas, spas, estética automóvel e empresas de AVAC. Uso ferramentas modernas como Claude Code, Cursor, Astro, React e Tailwind para entregar websites rápidos e otimizados que aparecem no Google e geram resultados reais.</p>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3>Analista de Venture Capital</h3>
-                            <p class="company">Lisboa, Portugal</p>
-                        </div>
-                        <span class="timeline">2023 — 2025</span>
-                    </div>
-                    <p class="experience-description">2 anos de experiência a analisar startups tecnológicas, tendências de mercado e oportunidades de investimento. Desenvolvi fortes competências analíticas e compreensão do que faz os negócios terem sucesso online—conhecimento que agora aplico para ajudar pequenos negócios a crescer através de SEO e desenvolvimento web.</p>
-                </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Vamos Conversar?</h2>
+            <p>Se faz sentido, marcamos uma call de 30 minutos para entender o seu negócio.</p>
+            <div class="cta-links">
+                <a href="mailto:luismadeira@ruimadeira.pt" class="cta-button">Enviar Email</a>
+                <a href="https://www.linkedin.com/in/lumadeira" target="_blank" class="cta-button-secondary">LinkedIn</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="contact-info">
-            <div class="contact-left">
-                <h2>VAMOS CONECTAR</h2>
-                <div class="contact-details">
-                    <p>Diga olá em <a href="mailto:luismadeira@ruimadeira.pt">luismadeira@ruimadeira.pt</a></p>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/lumadeira" target="_blank" aria-label="LinkedIn">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/351924466899" target="_blank">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.472 14.382C17.284 14.29 16.362 13.838 16.194 13.774C16.026 13.71 15.906 13.678 15.786 13.866C15.666 14.054 15.31 14.478 15.206 14.598C15.102 14.718 14.998 14.734 14.81 14.642C14.622 14.55 14.022 14.354 13.306 13.718C12.75 13.222 12.378 12.61 12.274 12.422C12.17 12.234 12.262 12.138 12.354 12.046C12.438 11.962 12.542 11.83 12.634 11.726C12.726 11.622 12.758 11.542 12.822 11.422C12.886 11.302 12.854 11.198 12.81 11.106C12.766 11.014 12.378 10.09 12.226 9.714C12.074 9.338 11.922 9.37 11.81 9.354C11.698 9.338 11.578 9.338 11.458 9.338C11.338 9.338 11.134 9.382 10.966 9.57C10.798 9.758 10.31 10.21 10.31 11.134C10.31 12.058 11.006 12.95 11.098 13.07C11.19 13.19 12.378 15.022 14.206 15.838C14.646 16.026 14.998 16.138 15.274 16.226C15.714 16.366 16.118 16.346 16.438 16.302C16.794 16.254 17.524 15.854 17.676 15.422C17.828 14.99 17.828 14.622 17.784 14.558C17.74 14.494 17.62 14.45 17.472 14.382ZM12.002 21.838C10.282 21.838 8.594 21.318 7.15 20.346L6.8 20.13L3.486 21.038L4.41 17.806L4.174 17.438C3.126 15.958 2.57 14.21 2.57 12.414C2.57 7.342 6.654 3.25 12.002 3.25C14.586 3.25 17.026 4.21 18.902 5.994C20.778 7.778 21.794 10.226 21.794 12.726C21.794 17.798 17.71 21.838 12.002 21.838ZM20.49 3.634C18.278 1.414 15.294 0.158 12.002 0.158C5.546 0.158 0.322 5.382 0.322 11.838C0.322 13.854 0.85 15.838 1.854 17.598L0.194 23.674L6.382 22.042C8.078 22.966 9.986 23.454 11.934 23.454H11.938C18.39 23.454 23.682 18.23 23.682 11.774C23.682 8.546 22.458 5.614 20.49 3.634Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                </div>
-                <p class="copyright">© 2024 Luís Madeira</p>
-            </div>
-        </div>
-        <div class="contact-form">
-            <form>
-                <div class="form-group">
-                    <label>Nome</label>
-                    <input type="text" placeholder="João Silva">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label>Assunto</label>
-                    <input type="text" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label>Mensagem</label>
-                    <textarea rows="6" placeholder=""></textarea>
-                </div>
-                <button type="submit" class="btn-submit">ENVIAR</button>
-            </form>
         </div>
     </section>
 
@@ -190,6 +141,7 @@ import ContactModal from '../../components/ContactModal.astro';
                 navLinks.classList.toggle('active');
             });
 
+            // Close menu when clicking on a link
             const links = navLinks.querySelectorAll('a');
             links.forEach(link => {
                 link.addEventListener('click', () => {
@@ -199,17 +151,28 @@ import ContactModal from '../../components/ContactModal.astro';
             });
         }
 
-        // Form submission
-        const contactForm = document.querySelector('.contact-form form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Obrigado pela sua mensagem! Entrarei em contacto em breve.');
-                contactForm.reset();
+        // Dropdown navigation
+        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
+        const navDropdown = document.querySelector('.nav-dropdown');
+
+        if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navDropdown.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', () => {
+                navDropdown.classList.remove('active');
+            });
+
+            navDropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
             });
         }
     </script>
-    <ContactModal locale="pt" context="general" />
+
     <Footer locale="pt" />
 </body>
 </html>
@@ -249,6 +212,7 @@ body {
     top: 0;
     background-color: var(--color-bg);
     z-index: 1000;
+    transition: transform 0.3s ease;
 }
 
 .logo {
@@ -262,6 +226,7 @@ body {
 .nav-links {
     display: flex;
     gap: 32px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -274,6 +239,75 @@ body {
 }
 
 .nav-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Dropdown Navigation */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    cursor: pointer;
+    padding: 0;
+    font-family: var(--font-primary);
+    transition: color 0.3s ease;
+}
+
+.nav-dropdown-toggle:hover {
+    color: var(--color-accent);
+}
+
+.nav-dropdown-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown.active .nav-dropdown-toggle svg {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-dropdown.active .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-dropdown-menu a:hover {
+    background-color: rgba(211, 233, 122, 0.1);
     color: var(--color-accent);
 }
 
@@ -291,305 +325,171 @@ body {
     transition: all 0.3s ease;
 }
 
-/* About Hero Section */
+/* About Hero */
 .about-hero {
-    padding: 80px 108px 60px;
-}
-
-.about-hero h1 {
-    font-family: var(--font-heading);
-    font-size: 91px;
-    letter-spacing: -0.91px;
-    margin-bottom: 60px;
-}
-
-.about-intro-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
-}
-
-.about-intro-content h2 {
-    font-size: 45px;
-    line-height: 1.2;
-    color: var(--color-text);
-}
-
-.about-description p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 32px;
-}
-
-.about-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    padding: 16px 32px;
-    border-radius: 27px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-family: var(--font-primary);
-}
-
-.btn-primary:hover {
-    background-color: #c5db6f;
-    transform: translateY(-2px);
-}
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 54px;
-    height: 54px;
-    border: 1px solid var(--color-text);
-    border-radius: 50%;
-    color: var(--color-text);
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    background-color: var(--color-accent);
-    border-color: var(--color-accent);
-    color: var(--color-bg);
-}
-
-/* Capabilities Section */
-.capabilities-section {
     padding: 80px 108px;
-    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
 }
 
-.capabilities-section h2 {
-    font-family: var(--font-heading);
-    font-size: 76px;
-    letter-spacing: -0.76px;
-    margin-bottom: 48px;
-}
-
-.capabilities-content {
+.about-hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
-}
-
-.capabilities-content p {
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.skill-tag {
-    display: inline-block;
-    padding: 12px 24px;
-    border: 1px solid var(--color-text);
-    border-radius: 40px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
-
-.skill-tag:hover {
-    background-color: var(--color-accent);
-    border-color: var(--color-accent);
-    color: var(--color-bg);
-}
-
-/* Experience Section */
-.experience-section {
-    padding: 80px 108px;
-    border-top: 1px solid #333;
-}
-
-.experience-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
-}
-
-.experience-section h2 {
-    font-family: var(--font-heading);
-    font-size: 76px;
-    letter-spacing: -0.76px;
-    line-height: 1;
-}
-
-.experience-timeline {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1.5fr 1fr;
     gap: 80px;
+    align-items: center;
 }
 
-.experience-item {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-.experience-header h3 {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    line-height: 1.3;
-}
-
-.company {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-accent);
-}
-
-.timeline {
-    font-size: 18px;
-    color: var(--color-text);
-    white-space: nowrap;
-}
-
-.experience-description {
-    font-size: 18px;
-    line-height: 1.5;
-    color: var(--color-text);
-}
-
-/* Contact Section */
-.contact-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    padding: 80px 108px;
-    border-top: 1px solid #333;
-}
-
-.contact-left h2 {
+.hero-text-section h1 {
     font-family: var(--font-heading);
     font-size: 76px;
+    line-height: 1.1;
     letter-spacing: -0.76px;
     margin-bottom: 32px;
 }
 
-.contact-details {
-    margin-bottom: 32px;
+.hero-text-section h2 {
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 500;
+    opacity: 0.95;
 }
 
-.contact-details p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 8px;
+.hero-image-section {
+    width: 100%;
+    height: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--color-dark);
 }
 
-.contact-details a {
+.hero-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Section */
+.content-section {
+    padding: 80px 108px;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-block {
+    margin-bottom: 64px;
+}
+
+.content-block:last-child {
+    margin-bottom: 0;
+}
+
+.content-block h3 {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    margin-bottom: 20px;
     color: var(--color-text);
-    text-decoration: none;
-    border-bottom: 1px solid var(--color-accent);
-    transition: color 0.3s ease;
 }
 
-.contact-details a:hover {
+.content-block p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    opacity: 0.95;
+}
+
+.content-block p:last-child {
+    margin-bottom: 0;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.values-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
     color: var(--color-accent);
+    font-weight: 600;
+    font-size: 20px;
 }
 
-.social-links {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 120px;
+/* CTA Section */
+.cta-section {
+    padding: 120px 108px;
+    border-top: 1px solid #333;
+    text-align: center;
 }
 
-.social-links a {
-    color: var(--color-text);
-    transition: color 0.3s ease;
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.social-links a:hover {
-    color: var(--color-accent);
-}
-
-.copyright {
-    font-size: 16px;
-    color: var(--color-text);
-}
-
-/* Contact Form */
-.contact-form {
-    padding-top: 0;
-}
-
-.form-group {
+.cta-content h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
     margin-bottom: 24px;
 }
 
-.form-group label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 12px;
-    color: var(--color-text);
+.cta-content p {
+    font-size: 20px;
+    margin-bottom: 48px;
+    opacity: 0.9;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #333;
-    padding: 16px;
-    font-size: 16px;
-    color: var(--color-text);
-    font-family: var(--font-primary);
-    transition: border-color 0.3s ease;
+.cta-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-bottom-color: var(--color-accent);
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.btn-submit {
+.cta-button {
+    display: inline-block;
     background-color: var(--color-accent);
     color: var(--color-bg);
-    padding: 16px 48px;
-    border: none;
-    border-radius: 27px;
-    font-size: 14px;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 16px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.btn-submit:hover {
+.cta-button:hover {
     background-color: #c5db6f;
     transform: translateY(-2px);
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    color: var(--color-accent);
+    padding: 16px 40px;
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button-secondary:hover {
+    background-color: rgba(211, 233, 122, 0.1);
 }
 
 /* Responsive Design */
@@ -599,35 +499,25 @@ body {
     }
 
     .about-hero {
-        padding: 60px 32px 40px;
-    }
-
-    .about-intro-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .capabilities-section {
         padding: 60px 32px;
     }
 
-    .capabilities-content {
+    .about-hero-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 48px;
     }
 
-    .experience-section {
+    .hero-image-section {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .content-section {
         padding: 60px 32px;
     }
 
-    .experience-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .contact-section {
-        grid-template-columns: 1fr;
-        padding: 60px 32px;
+    .cta-section {
+        padding: 80px 32px;
     }
 }
 
@@ -663,6 +553,32 @@ body {
         font-size: 24px;
     }
 
+    .nav-dropdown-toggle {
+        font-size: 24px;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        margin-top: 16px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .nav-dropdown.active .nav-dropdown-menu {
+        display: block;
+    }
+
+    .nav-dropdown-menu:not(.active) {
+        display: none;
+    }
+
+    .nav-dropdown-menu a {
+        font-size: 20px;
+        padding: 12px 0;
+    }
+
     .mobile-menu-toggle {
         display: flex;
     }
@@ -676,64 +592,49 @@ body {
     }
 
     .about-hero {
-        padding: 40px 16px 32px;
+        padding: 60px 16px;
     }
 
-    .about-hero h1 {
-        font-size: 57px;
-    }
-
-    .about-intro-content h2 {
-        font-size: 32px;
-    }
-
-    .about-actions {
-        flex-wrap: wrap;
-    }
-
-    .capabilities-section {
-        padding: 40px 16px;
-    }
-
-    .capabilities-section h2 {
+    .hero-text-section h1 {
         font-size: 48px;
     }
 
-    .experience-section {
+    .hero-text-section h2 {
+        font-size: 22px;
+    }
+
+    .hero-image-section {
+        height: 400px;
+    }
+
+    .content-section {
         padding: 40px 16px;
     }
 
-    .experience-section h2 {
+    .content-block h3 {
+        font-size: 28px;
+    }
+
+    .cta-section {
+        padding: 60px 16px;
+    }
+
+    .cta-content h2 {
         font-size: 48px;
     }
 
-    .experience-timeline {
-        gap: 60px;
+    .cta-content p {
+        font-size: 18px;
     }
 
-    .experience-header {
+    .cta-links {
         flex-direction: column;
-        align-items: flex-start;
     }
 
-    .experience-header h3 {
-        font-size: 20px;
-    }
-
-    .contact-section {
-        padding: 40px 16px;
-    }
-
-    .contact-left h2 {
-        font-size: 48px;
-    }
-
-    .contact-details p {
-        font-size: 16px;
-    }
-
-    .social-links {
-        margin-bottom: 60px;
+    .cta-button,
+    .cta-button-secondary {
+        width: 100%;
+        max-width: 300px;
     }
 }
 </style>
