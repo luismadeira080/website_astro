@@ -97,15 +97,42 @@ import Footer from '../../components/Footer.astro';
                         <li>Schema markup implementado</li>
                     </ul>
                     <div class="option-timing">
-                        <strong>Prazo:</strong> 3-4 semanas
+                        <strong>Prazo:</strong> 2-3 semanas
                     </div>
                     <a href="/pt/website-seo" class="option-cta">Saber Mais</a>
                 </div>
             </div>
 
+            <!-- Case Study Highlight -->
+            <div class="case-study-highlight">
+                <div class="case-study-content">
+                    <div class="case-study-label">Caso de Estudo</div>
+                    <h2>Porto Car Care</h2>
+                    <p class="case-study-description">Oficina automóvel no Porto que alcançou resultados excepcionais com SEO local em apenas 3 meses.</p>
+                    <div class="case-study-results">
+                        <div class="result-item">
+                            <div class="result-number">#1</div>
+                            <div class="result-label">Posição no Google</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">ChatGPT</div>
+                            <div class="result-label">Aparece no ChatGPT</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">3x</div>
+                            <div class="result-label">Mais Chamadas</div>
+                        </div>
+                    </div>
+                    <a href="/pt/projetos/porto-car-care" class="case-study-cta">Ver Caso de Estudo Completo</a>
+                </div>
+                <div class="case-study-image">
+                    <img src="/projects/porto-car-care.png" alt="Porto Car Care Website">
+                </div>
+            </div>
+
             <div class="work-examples">
-                <h2>Exemplos de Trabalho</h2>
-                <p>Veja projetos anteriores na <a href="/pt/projetos" class="inline-link">página de projetos</a>. Incluem websites para spas, clínicas dentárias, oficinas e outros negócios locais em Portugal.</p>
+                <h2>Outros Projetos</h2>
+                <p>Veja mais projetos na <a href="/pt/projetos" class="inline-link">página de projetos</a>. Incluem websites para spas, clínicas dentárias e outros negócios locais em Portugal.</p>
             </div>
         </div>
     </section>
@@ -1011,6 +1038,106 @@ body {
     }
 }
 
+/* Case Study Highlight */
+.case-study-highlight {
+    margin-top: 80px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+    border: 2px solid var(--color-accent);
+    border-radius: 24px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 60px;
+    align-items: center;
+}
+
+.case-study-content {
+    position: relative;
+}
+
+.case-study-label {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+.case-study-highlight h2 {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.case-study-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.case-study-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-number {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.result-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
+
+.case-study-cta {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.case-study-cta:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+.case-study-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.case-study-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* CTA Section */
 .contact-section-simple {
     padding: 0;
@@ -1090,8 +1217,26 @@ body {
     user-select: none;
 }
 
-/* Responsive CTA */
+/* Responsive Case Study & CTA */
 @media (max-width: 1024px) {
+    .case-study-highlight {
+        grid-template-columns: 1fr;
+        padding: 48px;
+        margin-top: 60px;
+    }
+
+    .case-study-image {
+        order: -1;
+    }
+
+    .case-study-highlight h2 {
+        font-size: 48px;
+    }
+
+    .result-number {
+        font-size: 40px;
+    }
+
     .contact-section-simple {
         margin: 60px 32px;
     }
@@ -1107,6 +1252,41 @@ body {
 }
 
 @media (max-width: 768px) {
+    .case-study-highlight {
+        padding: 32px 24px;
+        margin-top: 48px;
+        border-radius: 16px;
+    }
+
+    .case-study-highlight h2 {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+
+    .case-study-description {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .case-study-results {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .result-number {
+        font-size: 36px;
+    }
+
+    .result-label {
+        font-size: 13px;
+    }
+
+    .case-study-cta {
+        width: 100%;
+        justify-content: center;
+    }
+
     .contact-section-simple {
         margin: 40px 16px;
     }
