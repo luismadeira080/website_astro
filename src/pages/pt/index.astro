@@ -3,6 +3,7 @@ import SEO from '../../components/SEO.astro';
 import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
+import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -158,21 +159,16 @@ import Footer from '../../components/Footer.astro';
     <!-- Contact Section -->
     <section id="contact" class="contact-section-simple">
         <div class="contact-container">
-            <h2>CONTACTO</h2>
-            <p class="contact-intro">Se faz sentido, vamos conversar.</p>
-            <div class="contact-methods">
-                <a href="mailto:luismadeira@ruimadeira.pt" class="contact-method">
-                    <span class="contact-label">Email</span>
-                    <span class="contact-value">luismadeira@ruimadeira.pt</span>
-                </a>
-                <a href="https://www.linkedin.com/in/lumadeira" target="_blank" class="contact-method">
-                    <span class="contact-label">LinkedIn</span>
-                    <span class="contact-value">linkedin.com/in/lumadeira</span>
-                </a>
+            <div class="cta-content">
+                <h2>Desbloqueie o potencial escondido do seu negócio</h2>
+                <p class="cta-subtext">Desbloqueie potencial inexplorado com soluções de IA seguras, responsáveis e poderosas.</p>
+                <button class="cta-button" data-contact-trigger>Começar</button>
             </div>
-            <p class="copyright">© {new Date().getFullYear()} Luís Madeira</p>
+            <div class="cta-background-text">LM</div>
         </div>
     </section>
+
+    <ContactModal />
 
     <script>
         // Mobile Menu Toggle
@@ -927,51 +923,78 @@ body {
 
 /* Simple Contact Section */
 .contact-section-simple {
-    padding: 120px 108px;
-    border-top: 1px solid #333;
-    text-align: center;
+    padding: 0;
+    margin: 80px 108px;
+    position: relative;
+    overflow: hidden;
 }
 
 .contact-container {
-    max-width: 600px;
-    margin: 0 auto;
+    background: linear-gradient(135deg, #2c5f9e 0%, #4a7bb8 100%);
+    border-radius: 32px;
+    padding: 120px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
 }
 
 .contact-section-simple h2 {
     font-family: var(--font-heading);
-    font-size: 64px;
-    letter-spacing: -0.64px;
-    margin-bottom: 24px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 32px;
+    color: #ffffff;
 }
 
-.contact-intro {
-    font-size: 20px;
+.cta-subtext {
+    font-size: 18px;
+    line-height: 1.6;
     margin-bottom: 48px;
-    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
 }
 
-.contact-methods {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-bottom: 80px;
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #2c5f9e;
+    padding: 18px 48px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: var(--font-primary);
 }
 
-.contact-method {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 32px;
-    background-color: var(--color-dark);
-    border: 1px solid #333;
-    border-radius: 16px;
-    text-decoration: none;
-    transition: border-color 0.3s ease, transform 0.2s ease;
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-.contact-method:hover {
-    border-color: var(--color-accent);
-    transform: translateY(-4px);
+.cta-background-text {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 400px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.08);
+    line-height: 1;
+    font-family: var(--font-heading);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .contact-label {
@@ -1339,24 +1362,33 @@ body {
     }
 
     .contact-section-simple {
-        padding: 60px 16px;
+        margin: 40px 16px;
+    }
+
+    .contact-container {
+        padding: 60px 32px;
+        border-radius: 24px;
     }
 
     .contact-section-simple h2 {
-        font-size: 48px;
+        font-size: 40px;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
     }
 
-    .contact-intro {
-        font-size: 18px;
-        margin-bottom: 40px;
+    .cta-subtext {
+        font-size: 16px;
+        margin-bottom: 32px;
     }
 
-    .contact-methods {
-        margin-bottom: 60px;
+    .cta-button {
+        padding: 16px 40px;
+        font-size: 15px;
     }
 
-    .contact-method {
-        padding: 24px;
+    .cta-background-text {
+        font-size: 200px;
+        right: -20px;
     }
 
     .contact-value {
@@ -1400,11 +1432,15 @@ body {
     }
 
     .contact-section-simple h2 {
-        font-size: 40px;
+        font-size: 32px;
     }
 
-    .contact-intro {
-        font-size: 16px;
+    .cta-subtext {
+        font-size: 15px;
+    }
+
+    .cta-background-text {
+        font-size: 150px;
     }
 }
 </style>
