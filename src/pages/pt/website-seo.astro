@@ -1226,16 +1226,17 @@ import ContactModal from '../../components/ContactModal.astro';
 
 		/* Case Study Section */
 		.case-study-section {
-			background-color: #f8f8f8;
+			background-color: #0d0d0d;
 		}
 
 		.case-study-section h2 {
 			margin-bottom: 12px;
+			color: #c7c7c7;
 		}
 
 		.section-subtitle {
 			font-size: 16px;
-			color: #666;
+			color: #888;
 			margin-bottom: 48px;
 		}
 
@@ -1248,7 +1249,7 @@ import ContactModal from '../../components/ContactModal.astro';
 
 		.case-study-image {
 			width: 100%;
-			background-color: var(--color-dark);
+			background-color: #1a1a1a;
 			border-radius: 12px;
 			overflow: hidden;
 		}
@@ -1261,14 +1262,14 @@ import ContactModal from '../../components/ContactModal.astro';
 
 		.case-study-details h3 {
 			font-size: 28px;
-			color: #1a1a1a;
+			color: #c7c7c7;
 			margin-bottom: 16px;
 		}
 
 		.case-study-description {
 			font-size: 16px;
 			line-height: 1.6;
-			color: #666;
+			color: #888;
 			margin-bottom: 32px;
 		}
 
@@ -1280,11 +1281,16 @@ import ContactModal from '../../components/ContactModal.astro';
 		}
 
 		.case-metric {
-			background-color: white;
-			border: 1px solid #e0e0e0;
+			background-color: #1a1a1a;
+			border: 1px solid #333;
 			border-radius: 8px;
 			padding: 24px;
 			text-align: center;
+			transition: border-color 0.3s ease;
+		}
+
+		.case-metric:hover {
+			border-color: #d3e97a;
 		}
 
 		.case-metric .metric-value {
@@ -1297,21 +1303,26 @@ import ContactModal from '../../components/ContactModal.astro';
 
 		.case-metric .metric-label {
 			font-size: 13px;
-			color: #666;
+			color: #888;
 			text-transform: uppercase;
 			letter-spacing: 0.5px;
 		}
 
 		.case-expandable {
-			border: 1px solid #e0e0e0;
+			border: 1px solid #333;
 			border-radius: 8px;
 			margin-bottom: 16px;
 			overflow: hidden;
+			transition: border-color 0.3s ease;
+		}
+
+		.case-expandable:hover {
+			border-color: #484848;
 		}
 
 		.case-expand-btn {
 			width: 100%;
-			background: white;
+			background: transparent;
 			border: none;
 			padding: 20px 24px;
 			display: flex;
@@ -1321,17 +1332,17 @@ import ContactModal from '../../components/ContactModal.astro';
 			font-family: inherit;
 			font-size: 16px;
 			font-weight: 600;
-			color: #1a1a1a;
+			color: #c7c7c7;
 			transition: background-color 0.2s ease;
 		}
 
 		.case-expand-btn:hover {
-			background-color: #f8f8f8;
+			background-color: rgba(211, 233, 122, 0.05);
 		}
 
 		.expand-icon {
 			transition: transform 0.3s ease;
-			stroke: #666;
+			stroke: #c7c7c7;
 		}
 
 		.case-expandable.open .expand-icon {
@@ -1342,12 +1353,12 @@ import ContactModal from '../../components/ContactModal.astro';
 			max-height: 0;
 			overflow: hidden;
 			transition: max-height 0.3s ease, padding 0.3s ease;
-			background-color: #fafafa;
+			background-color: transparent;
 		}
 
 		.case-expandable.open .case-expand-content {
 			max-height: 500px;
-			padding: 20px 24px;
+			padding: 0 24px 24px 24px;
 		}
 
 		.case-expand-content ul {
@@ -1359,7 +1370,7 @@ import ContactModal from '../../components/ContactModal.astro';
 		.case-expand-content li {
 			font-size: 15px;
 			line-height: 1.7;
-			color: #666;
+			color: #888;
 			padding: 8px 0;
 			padding-left: 24px;
 			position: relative;
