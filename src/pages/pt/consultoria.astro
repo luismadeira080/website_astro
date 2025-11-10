@@ -1,0 +1,687 @@
+---
+import SEO from '../../components/SEO.astro';
+import Schema from '../../components/Schema.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <SEO
+        title="Consultoria de Implementação - Luís Madeira"
+        description="Encontro onde está a perder tempo no seu negócio e elimino isso. Automatizo processos manuais e implemento sistemas que funcionam."
+        locale="pt"
+    />
+
+    <!-- Structured Data -->
+    <Schema type="Organization" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="logo">luís madeira</div>
+        <div class="nav-links">
+            <a href="/pt/#work">Trabalhos</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle">
+                    Serviços
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <a href="/pt/consultoria">Consultoria</a>
+                    <a href="/pt/servicos">Websites</a>
+                </div>
+            </div>
+            <a href="/pt/sobre">Sobre</a>
+            <a href="/pt/#contact">Contacto</a>
+            <LanguageSwitcher currentPath="/pt/consultoria" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>CONSULTORIA DE IMPLEMENTAÇÃO</h1>
+            <p class="page-hero-subtitle">Encontro onde está a perder tempo no seu negócio e elimino isso.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="content-wrapper">
+            <div class="content-main">
+                <h2>O Problema</h2>
+                <p>O seu negócio está a crescer, mas você está preso a fazer as mesmas tarefas manuais todos os dias. Tarefas repetitivas que consomem horas e impedem-no de focar no que realmente importa: crescer o negócio.</p>
+
+                <p>Talvez esteja a copiar dados manualmente entre sistemas. Ou a enviar os mesmos emails repetidamente. Ou a tentar coordenar equipas através de mensagens dispersas e folhas de cálculo desorganizadas.</p>
+
+                <h2>Como Ajudo</h2>
+                <p>Identifico exatamente onde está a perder tempo e implemento soluções que eliminam esse desperdício. Não apenas recomendo o que fazer — faço-o por si.</p>
+
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Análise</h3>
+                            <p>Mapeio os seus processos atuais e identifico os pontos onde está a perder tempo e dinheiro.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Implementação</h3>
+                            <p>Construo e configuro as automações e sistemas necessários. Não apenas recomendações — implementação real.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Suporte</h3>
+                            <p>Garanto que tudo funciona perfeitamente e formo a sua equipa para usar os novos sistemas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>O Que Posso Fazer</h2>
+                <ul class="capabilities-list">
+                    <li>Automatizar tarefas repetitivas que consomem horas todos os dias</li>
+                    <li>Organizar processos caóticos em sistemas claros e funcionais</li>
+                    <li>Conectar ferramentas diferentes para trabalharem juntas automaticamente</li>
+                    <li>Implementar fluxos de trabalho que reduzem erros humanos</li>
+                    <li>Criar dashboards e relatórios que dão visibilidade real do negócio</li>
+                    <li>Eliminar trabalho manual entre sistemas (CRM, email, folhas de cálculo, etc.)</li>
+                </ul>
+
+                <h2>Para Quem É Isto</h2>
+                <p>Este serviço é ideal para PMEs portuguesas que:</p>
+                <ul>
+                    <li>Têm processos manuais que consomem demasiado tempo</li>
+                    <li>Querem crescer sem ter que contratar mais pessoas imediatamente</li>
+                    <li>Sentem que estão "sempre a apagar fogos" em vez de crescer</li>
+                    <li>Usam várias ferramentas que não comunicam entre si</li>
+                    <li>Querem resultados práticos, não apenas conselhos teóricos</li>
+                </ul>
+
+                <h2>Como Funciona</h2>
+                <p>Não trabalho em projetos de longa duração sem fim à vista. Prefiro sprints focados de 2-4 semanas onde identificamos, implementamos e validamos melhorias concretas.</p>
+
+                <p>Depois disso, pode continuar com um novo sprint ou deixar tudo a funcionar. Sem compromissos de longo prazo. Sem mensalidades eternas.</p>
+            </div>
+
+            <div class="content-sidebar">
+                <div class="sidebar-card">
+                    <h3>Resultados Típicos</h3>
+                    <ul>
+                        <li>3-5 horas por semana recuperadas</li>
+                        <li>Menos erros humanos</li>
+                        <li>Processos mais rápidos</li>
+                        <li>Maior visibilidade do negócio</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Investimento</h3>
+                    <p>Sprints de 2-4 semanas</p>
+                    <p>Preço fixo por sprint, definido após análise inicial</p>
+                </div>
+
+                <div class="sidebar-card cta-card">
+                    <h3>Vamos Conversar</h3>
+                    <p>Se faz sentido, marcamos uma call de 30 minutos para entender o seu negócio.</p>
+                    <a href="mailto:luismadeira@ruimadeira.pt" class="sidebar-cta">Enviar Email</a>
+                    <a href="https://www.linkedin.com/in/lumadeira" target="_blank" class="sidebar-cta-secondary">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // Dropdown navigation
+        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
+        const navDropdown = document.querySelector('.nav-dropdown');
+
+        if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navDropdown.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', () => {
+                navDropdown.classList.remove('active');
+            });
+
+            navDropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        }
+    </script>
+
+    <Footer locale="pt" />
+</body>
+</html>
+
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #0d0d0d;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --color-dark: #1a1a1a;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Dropdown Navigation */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    cursor: pointer;
+    padding: 0;
+    font-family: var(--font-primary);
+    transition: color 0.3s ease;
+}
+
+.nav-dropdown-toggle:hover {
+    color: var(--color-accent);
+}
+
+.nav-dropdown-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown.active .nav-dropdown-toggle svg {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-dropdown.active .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-dropdown-menu a:hover {
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Page Hero */
+.page-hero {
+    padding: 120px 108px 80px;
+    border-bottom: 1px solid #333;
+}
+
+.page-hero-content {
+    max-width: 900px;
+}
+
+.page-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    line-height: 1.1;
+    letter-spacing: -0.76px;
+    color: var(--color-text);
+    margin-bottom: 24px;
+}
+
+.page-hero-subtitle {
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--color-text);
+    opacity: 0.9;
+}
+
+/* Content Section */
+.content-section {
+    padding: 80px 108px;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+}
+
+.content-main h2 {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    letter-spacing: -0.36px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    color: var(--color-text);
+}
+
+.content-main h2:first-child {
+    margin-top: 0;
+}
+
+.content-main p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.content-main ul {
+    margin: 24px 0 24px 24px;
+}
+
+.content-main li {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    opacity: 0.95;
+}
+
+/* Process Steps */
+.process-steps {
+    margin: 48px 0;
+}
+
+.step {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+    padding: 32px;
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    font-family: var(--font-heading);
+    font-size: 28px;
+    border-radius: 50%;
+}
+
+.step-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.step-content p {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Capabilities List */
+.capabilities-list {
+    list-style: none;
+    margin: 32px 0;
+    padding: 0;
+}
+
+.capabilities-list li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.capabilities-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* Sidebar */
+.content-sidebar {
+    position: sticky;
+    top: 96px;
+    align-self: start;
+}
+
+.sidebar-card {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+.sidebar-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.sidebar-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.sidebar-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-card li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.sidebar-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.cta-card {
+    background-color: rgba(211, 233, 122, 0.05);
+    border-color: var(--color-accent);
+}
+
+.sidebar-cta {
+    display: block;
+    text-align: center;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 20px;
+}
+
+.sidebar-cta:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+}
+
+.sidebar-cta-secondary {
+    display: block;
+    text-align: center;
+    color: var(--color-accent);
+    padding: 12px 28px;
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+    margin-top: 12px;
+}
+
+.sidebar-cta-secondary:hover {
+    background-color: rgba(211, 233, 122, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navigation {
+        padding: 24px 32px;
+    }
+
+    .page-hero {
+        padding: 80px 32px 60px;
+    }
+
+    .content-section {
+        padding: 60px 32px;
+    }
+
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .content-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background-color: var(--color-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .nav-dropdown-toggle {
+        font-size: 24px;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        margin-top: 16px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .nav-dropdown.active .nav-dropdown-menu {
+        display: block;
+    }
+
+    .nav-dropdown-menu:not(.active) {
+        display: none;
+    }
+
+    .nav-dropdown-menu a {
+        font-size: 20px;
+        padding: 12px 0;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .page-hero {
+        padding: 60px 16px 40px;
+    }
+
+    .page-hero h1 {
+        font-size: 48px;
+    }
+
+    .page-hero-subtitle {
+        font-size: 18px;
+    }
+
+    .content-section {
+        padding: 40px 16px;
+    }
+
+    .step {
+        flex-direction: column;
+        padding: 24px;
+    }
+}
+</style>
