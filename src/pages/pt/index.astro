@@ -61,13 +61,19 @@ import Footer from '../../components/Footer.astro';
         <div class="hero-content">
             <div class="hero-text">
                 <h1>LUÍS MADEIRA</h1>
-                <p class="hero-role">Chief AI Officer para o seu negócio</p>
-                <p class="hero-subtitle">Trabalho como parceiro estratégico de IA. Identifico oportunidades, crio roadmaps práticos e implemento soluções que geram valor real.</p>
-                <a href="/pt/ai-contact" class="hero-cta">Vamos Conversar</a>
+                <p class="hero-subtitle">Chief AI Officer para o seu negócio. Trabalho como parceiro estratégico de IA — identifico oportunidades, crio roadmaps práticos e implemento soluções que geram valor real.</p>
             </div>
-            <div class="hero-media">
-                <img src="/profile.jpeg" alt="Luís Madeira">
+            <div class="hero-actions">
+                <a href="/pt/ai-contact" class="btn-primary">Vamos Conversar</a>
+                <a href="https://www.linkedin.com/in/lumadeira" class="social-icon" target="_blank" aria-label="LinkedIn">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
+                    </svg>
+                </a>
             </div>
+        </div>
+        <div class="hero-image">
+            <img src="/profile.jpeg" alt="Luís Madeira">
         </div>
     </section>
 
@@ -388,82 +394,90 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 80px 108px;
-    min-height: 60vh;
-}
-
-.hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1fr 600px;
+    gap: 60px;
+    padding: 80px 108px;
+    min-height: calc(100vh - 96px);
     align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .hero-text h1 {
     font-family: var(--font-heading);
     font-size: 88px;
-    font-weight: 400;
-    line-height: 1;
+    line-height: 1.1;
     letter-spacing: -0.88px;
     color: var(--color-text);
-    margin-bottom: 16px;
-}
-
-.hero-role {
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--color-accent);
     margin-bottom: 24px;
-    line-height: 1.3;
 }
 
 .hero-subtitle {
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.5;
     color: var(--color-text);
-    opacity: 0.85;
-    margin-bottom: 32px;
-    max-width: 550px;
+    margin-bottom: 40px;
 }
 
-.hero-cta {
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-primary {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 12px;
     background-color: var(--color-accent);
     color: var(--color-bg);
-    padding: 16px 48px;
-    border-radius: 12px;
+    padding: 16px 32px;
+    border-radius: 27px;
     border: none;
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 0.3px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.hero-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(211, 233, 122, 0.4);
+.btn-primary:hover {
     background-color: #c5db6f;
+    transform: translateY(-2px);
 }
 
-.hero-media {
-    width: 100%;
-    height: 550px;
-    background-color: #1a1a1a;
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    color: var(--color-text);
+    transition: all 0.3s ease;
+    background: transparent;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
+}
+
+.hero-image {
+    width: 600px;
+    height: 700px;
+    background-color: var(--color-text);
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid #333;
 }
 
-.hero-media img {
+.hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
@@ -1295,12 +1309,9 @@ body {
     }
 
     .hero {
+        grid-template-columns: 1fr;
         padding: 40px 16px;
         min-height: auto;
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
         gap: 40px;
     }
 
@@ -1312,7 +1323,12 @@ body {
         font-size: 16px;
     }
 
-    .hero-media {
+    .hero-actions {
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        width: 100%;
         height: 400px;
     }
 
