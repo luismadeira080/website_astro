@@ -135,35 +135,41 @@ import Footer from '../../components/Footer.astro';
         <h2>OUR PROCESS</h2>
         <div class="process-steps">
             <div class="process-step">
-                <div class="step-number">1</div>
+                <div class="step-visual">
+                    <div class="step-number">1</div>
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=80" alt="Discovery Process">
+                    </div>
+                </div>
                 <div class="step-content">
                     <h3>Discovery</h3>
                     <p>Analiso profundamente o seu negócio, identifico oportunidades reais de IA e crio roadmaps práticos com fases claras e resultados mensuráveis.</p>
                 </div>
-                <div class="step-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=80" alt="Discovery Process">
-                </div>
             </div>
 
-            <div class="process-step reverse">
-                <div class="step-number">2</div>
+            <div class="process-step">
+                <div class="step-visual">
+                    <div class="step-number">2</div>
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&auto=format&fit=crop&q=80" alt="Development Process">
+                    </div>
+                </div>
                 <div class="step-content">
                     <h3>Development</h3>
                     <p>Desenvolvo agentes AI personalizados, automações com n8n e integrações que funcionam com as ferramentas que já usa. Tudo é construído especificamente para o seu negócio.</p>
                 </div>
-                <div class="step-image">
-                    <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&auto=format&fit=crop&q=80" alt="Development Process">
-                </div>
             </div>
 
             <div class="process-step">
-                <div class="step-number">3</div>
+                <div class="step-visual">
+                    <div class="step-number">3</div>
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80" alt="Monitoring Process">
+                    </div>
+                </div>
                 <div class="step-content">
                     <h3>Deployment & Monitoring</h3>
                     <p>Monitorizo resultados, otimizo continuamente e ajusto estratégia para garantir que as soluções geram valor real e continuam a melhorar ao longo do tempo.</p>
-                </div>
-                <div class="step-image">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80" alt="Monitoring Process">
                 </div>
             </div>
         </div>
@@ -702,87 +708,96 @@ body {
 
 /* Our Process Section */
 .our-process-section {
-    padding: 100px 108px;
+    padding: 120px 108px;
     border-top: 1px solid #333;
     background-color: var(--color-bg);
 }
 
 .our-process-section h2 {
     font-family: var(--font-heading);
-    font-size: 64px;
-    letter-spacing: -0.64px;
+    font-size: 76px;
+    letter-spacing: -0.76px;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     color: var(--color-text);
 }
 
 .process-steps {
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    max-width: 1200px;
+    gap: 120px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .process-step {
     display: grid;
-    grid-template-columns: 80px 1fr 500px;
-    gap: 48px;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     align-items: center;
 }
 
-.process-step.reverse {
-    grid-template-columns: 80px 1fr 500px;
-}
-
-.process-step.reverse .step-image {
-    order: -1;
-    grid-column: 3;
-}
-
-.process-step.reverse .step-content {
-    order: 0;
-    grid-column: 2;
-}
-
-.process-step.reverse .step-number {
-    order: -2;
-    grid-column: 1;
+.step-visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .step-number {
     font-family: var(--font-heading);
-    font-size: 72px;
+    font-size: 120px;
     color: var(--color-accent);
     line-height: 1;
-    text-align: center;
-}
-
-.step-content h3 {
-    font-family: var(--font-heading);
-    font-size: 40px;
-    letter-spacing: -0.4px;
-    color: var(--color-text);
-    margin-bottom: 16px;
-}
-
-.step-content p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--color-text);
-    opacity: 0.85;
+    opacity: 0.3;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    z-index: 0;
 }
 
 .step-image {
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border: 1px solid #333;
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 16 / 10;
+    background-color: var(--color-dark);
 }
 
 .step-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover .step-image img {
+    transform: scale(1.05);
+}
+
+.step-content {
+    padding: 40px 0;
+}
+
+.step-content h3 {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    letter-spacing: -0.48px;
+    color: var(--color-text);
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.step-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.85;
+    max-width: 520px;
 }
 
 /* Testimonials Section */
@@ -1368,29 +1383,40 @@ body {
     }
 
     .our-process-section {
-        padding: 60px 32px;
+        padding: 80px 32px;
     }
 
     .our-process-section h2 {
-        font-size: 48px;
+        font-size: 56px;
+        margin-bottom: 80px;
     }
 
-    .process-step,
-    .process-step.reverse {
+    .process-steps {
+        gap: 80px;
+    }
+
+    .process-step {
         grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .process-step.reverse .step-image,
-    .process-step.reverse .step-content,
-    .process-step.reverse .step-number {
-        order: 0;
-        grid-column: auto;
+        gap: 40px;
     }
 
     .step-number {
-        font-size: 56px;
-        text-align: left;
+        font-size: 80px;
+        top: -30px;
+        left: -10px;
+    }
+
+    .step-content {
+        padding: 20px 0;
+    }
+
+    .step-content h3 {
+        font-size: 40px;
+    }
+
+    .step-content p {
+        font-size: 17px;
+        max-width: 100%;
     }
 
     .services-section {
@@ -1568,28 +1594,45 @@ body {
     }
 
     .our-process-section {
-        padding: 40px 16px;
+        padding: 60px 16px;
     }
 
     .our-process-section h2 {
-        font-size: 40px;
-        margin-bottom: 48px;
+        font-size: 48px;
+        margin-bottom: 60px;
     }
 
     .process-steps {
         gap: 60px;
     }
 
+    .process-step {
+        gap: 32px;
+    }
+
     .step-number {
-        font-size: 48px;
+        font-size: 64px;
+        top: -20px;
+        left: 0;
+    }
+
+    .step-content {
+        padding: 0;
     }
 
     .step-content h3 {
-        font-size: 32px;
+        font-size: 36px;
+        margin-bottom: 16px;
     }
 
     .step-content p {
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .step-image {
+        border-radius: 16px;
+        aspect-ratio: 16 / 11;
     }
 
     .what-i-do-section {
