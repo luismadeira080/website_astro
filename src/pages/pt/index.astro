@@ -3,7 +3,6 @@ import SEO from '../../components/SEO.astro';
 import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
-import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -119,7 +118,7 @@ import ContactModal from '../../components/ContactModal.astro';
                 </div>
 
                 <div class="service-card-actions">
-                    <a href="/pt/consultoria" class="service-cta">Explorar AI Solutions</a>
+                    <a href="/pt/ai-contact" class="service-cta">Começar Conversa</a>
                 </div>
             </div>
 
@@ -191,13 +190,11 @@ import ContactModal from '../../components/ContactModal.astro';
             <div class="cta-content">
                 <h2>Desbloqueie o potencial escondido do seu negócio</h2>
                 <p class="cta-subtext">Desbloqueie potencial inexplorado com soluções de IA seguras, responsáveis e poderosas.</p>
-                <button class="cta-button" data-contact-trigger>Começar</button>
+                <a href="/pt/ai-contact" class="cta-button">Começar</a>
             </div>
             <div class="cta-background-text">LM</div>
         </div>
     </section>
-
-    <ContactModal locale="pt" />
 
     <script>
         // Mobile Menu Toggle

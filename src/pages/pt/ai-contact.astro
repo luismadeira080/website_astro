@@ -1,0 +1,498 @@
+---
+import SEO from '../../components/SEO.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <SEO
+        title="Contacto - AI Solutions | Luís Madeira"
+        description="Entre em contacto para discutir como as soluções AI podem transformar o seu negócio."
+        locale="pt"
+    />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/pt" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/pt#work">Trabalhos</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle">
+                    Serviços
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <a href="/pt/consultoria">AI Solutions</a>
+                    <a href="/pt/servicos">Websites</a>
+                </div>
+            </div>
+            <a href="/pt#about">Sobre</a>
+            <a href="/pt#contact">Contacto</a>
+            <LanguageSwitcher currentPath="/pt/ai-contact" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <h1>Vamos conhecer-nos</h1>
+
+            <form class="contact-form" name="ai-solutions-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="ai-solutions-contact" />
+                <p class="hidden">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Primeiro Nome *</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="José" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Último Nome *</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Silva" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="role">O Seu Papel na Organização *</label>
+                    <input type="text" id="role" name="role" placeholder="e.g., CEO, Project Manager, etc." required />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Nome da Empresa *</label>
+                        <input type="text" id="company" name="company" placeholder="Nome da sua empresa" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website (Opcional)</label>
+                        <input type="url" id="website" name="website" placeholder="https://suaempresa.com" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Número de Telefone (Opcional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+351 000 000 000" />
+                    </div>
+                    <div class="form-group">
+                        <label for="companySize">Dimensão da Empresa *</label>
+                        <select id="companySize" name="companySize" required>
+                            <option value="">Selecionar dimensão da empresa</option>
+                            <option value="1-10">1-10 colaboradores</option>
+                            <option value="11-50">11-50 colaboradores</option>
+                            <option value="51-200">51-200 colaboradores</option>
+                            <option value="201-500">201-500 colaboradores</option>
+                            <option value="500+">500+ colaboradores</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="revenue">Receita Anual (Opcional)</label>
+                        <select id="revenue" name="revenue">
+                            <option value="">Selecionar receita anual</option>
+                            <option value="<100k">Menos de €100k</option>
+                            <option value="100k-500k">€100k - €500k</option>
+                            <option value="500k-1m">€500k - €1M</option>
+                            <option value="1m-5m">€1M - €5M</option>
+                            <option value="5m+">€5M+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Orçamento do Projeto *</label>
+                        <select id="budget" name="budget" required>
+                            <option value="">Selecionar orçamento do projeto</option>
+                            <option value="<5k">Menos de €5k</option>
+                            <option value="5k-10k">€5k - €10k</option>
+                            <option value="10k-25k">€10k - €25k</option>
+                            <option value="25k-50k">€25k - €50k</option>
+                            <option value="50k+">€50k+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Como Posso Ajudar? *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Descreva o seu projeto e como podemos ajudar..." required></textarea>
+                </div>
+
+                <p class="form-note">Opt into email list for exclusive offerings and bonus AI content.</p>
+
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navLinks?.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+        }
+
+        // Dropdown toggle
+        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
+
+        if (dropdownToggle) {
+            dropdownToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdownMenu?.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.nav-dropdown')) {
+                    dropdownMenu?.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+:root {
+    --color-bg: #0d0d0d;
+    --color-dark: #1a1a1a;
+    --color-text: #c7c7c7;
+    --color-accent: #d3e97a;
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 108px;
+    border-bottom: 1px solid #333;
+    background-color: var(--color-bg);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    transition: color 0.3s ease;
+}
+
+.nav-dropdown-toggle:hover {
+    color: var(--color-accent);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 0;
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 12px 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.nav-dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.nav-dropdown-menu a:hover {
+    background-color: rgba(211, 233, 122, 0.1);
+    color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.mobile-menu-toggle span {
+    width: 28px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+/* Form Section */
+.form-section {
+    padding: 80px 108px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-container h1 {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    letter-spacing: -0.96px;
+    margin-bottom: 48px;
+    color: var(--color-text);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text);
+    opacity: 0.9;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 14px 16px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    font-size: 15px;
+    font-family: var(--font-primary);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-text);
+    opacity: 0.4;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-note {
+    font-size: 13px;
+    color: var(--color-text);
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.submit-btn {
+    padding: 16px 48px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--font-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    background-color: #c5db6f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(211, 233, 122, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navigation {
+        padding: 20px 16px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 73px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--color-bg);
+        border-bottom: 1px solid #333;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        padding: 20px 16px;
+        width: 100%;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .nav-dropdown-menu a {
+        padding-left: 32px;
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+
+    .form-section {
+        padding: 40px 16px;
+    }
+
+    .form-container h1 {
+        font-size: 36px;
+        margin-bottom: 32px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+</style>
