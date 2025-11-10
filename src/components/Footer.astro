@@ -30,32 +30,6 @@ const baseUrl = isPortuguese ? '/pt' : '';
                 <li><a href={`${baseUrl}/#contact`}>{isPortuguese ? 'Contacto' : 'Contact'}</a></li>
             </ul>
         </div>
-
-        {isPortuguese && (
-            <>
-                <div class="footer-section">
-                    <h4>Serviços por Setor</h4>
-                    <ul class="footer-links">
-                        <li><a href="/pt/websites-para-spas">Spas</a></li>
-                        <li><a href="/pt/websites-para-clinicas-dentarias">Clínicas Dentárias</a></li>
-                        <li><a href="/pt/websites-para-restaurantes">Restaurantes</a></li>
-                        <li><a href="/pt/websites-para-oficinas">Oficinas</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Localização</h4>
-                    <ul class="footer-links">
-                        <li><a href="/pt/criacao-websites-lisboa">Lisboa</a></li>
-                        <li><a href="/pt/criacao-websites-porto">Porto</a></li>
-                        <li><a href="/pt/criacao-websites-braga">Braga</a></li>
-                        <li><a href="/pt/criacao-websites-coimbra">Coimbra</a></li>
-                        <li><a href="/pt/criacao-websites-aveiro">Aveiro</a></li>
-                        <li><a href="/pt/criacao-websites-faro">Faro</a></li>
-                    </ul>
-                </div>
-            </>
-        )}
     </div>
 
     <div class="footer-bottom">
@@ -72,7 +46,7 @@ const baseUrl = isPortuguese ? '/pt' : '';
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 48px;
     margin-bottom: 48px;
 }
