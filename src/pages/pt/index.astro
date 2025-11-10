@@ -20,8 +20,8 @@ import ContactModal from '../../components/ContactModal.astro';
 
     <!-- SEO Meta Tags -->
     <SEO
-        title="Luís Madeira - Consultor de Implementação para Negócios Portugueses"
-        description="Ajudo negócios portugueses a trabalhar de forma mais inteligente através de automação de processos e websites modernos."
+        title="Luís Madeira - Parceiro Estratégico em IA para Negócios Portugueses"
+        description="Chief AI Officer externo que identifica oportunidades e implementa soluções AI que geram valor real. Roadmaps práticos com resultados mensuráveis para negócios portugueses."
         locale="pt"
     />
 
@@ -62,7 +62,7 @@ import ContactModal from '../../components/ContactModal.astro';
         <div class="hero-content">
             <div class="hero-text">
                 <h1>LUÍS MADEIRA</h1>
-                <p class="hero-subtitle">Ajudo negócios portugueses a trabalhar de forma mais inteligente através de automação de processos e websites modernos.</p>
+                <p class="hero-subtitle">Parceiro estratégico em IA para negócios portugueses. Identifico oportunidades e implemento soluções AI que geram valor real e resultados mensuráveis.</p>
             </div>
             <div class="hero-actions">
                 <a href="https://www.linkedin.com/in/lumadeira" class="social-icon" target="_blank" aria-label="LinkedIn">
@@ -73,33 +73,62 @@ import ContactModal from '../../components/ContactModal.astro';
             </div>
         </div>
         <div class="hero-image">
-            <img src="/profile.jpeg" alt="Luís Madeira - Consultor de Implementação">
+            <img src="/profile.jpeg" alt="Luís Madeira - Parceiro Estratégico em IA">
         </div>
     </section>
 
     <!-- What I Do Section -->
     <section class="services-section">
         <div class="section-header">
-            <h2>O QUE FAÇO</h2>
-            <p>Ajudo negócios portugueses de duas formas</p>
+            <h2>COMO POSSO AJUDAR</h2>
+            <p>Trabalho como seu Chief AI Officer externo</p>
         </div>
 
-        <div class="services-grid">
-            <!-- Service 1: AI Solutions -->
-            <div class="service-card">
-                <h3>AI Solutions</h3>
-                <p>Atuo como seu parceiro estratégico de IA, identificando oportunidades e implementando soluções AI que geram valor real. Ajudo a navegar a transformação digital com roadmaps práticos e resultados mensuráveis.</p>
+        <div class="services-grid-primary">
+            <!-- Primary Service: AI Solutions -->
+            <div class="service-card-primary">
+                <div class="service-badge">Foco Principal</div>
+                <h3>Parceiro Estratégico em IA</h3>
+                <p class="service-intro">Não apenas recomendo — identifico, planeio e implemento soluções AI que geram valor real para o seu negócio.</p>
+
+                <div class="service-benefits">
+                    <div class="benefit-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Análise profunda do negócio e identificação de oportunidades AI</span>
+                    </div>
+                    <div class="benefit-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Roadmaps práticos com fases claras e resultados mensuráveis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Implementação hands-on de agentes, assistentes e automações</span>
+                    </div>
+                    <div class="benefit-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Acompanhamento contínuo e otimização das soluções</span>
+                    </div>
+                </div>
+
                 <div class="service-card-actions">
-                    <a href="/pt/consultoria" class="service-link-soft">Saber mais →</a>
+                    <a href="/pt/consultoria" class="service-cta">Explorar AI Solutions</a>
                 </div>
             </div>
 
-            <!-- Service 2: Websites -->
-            <div class="service-card">
+            <!-- Secondary Service: Websites -->
+            <div class="service-card-secondary">
                 <h3>Websites Profissionais</h3>
-                <p>Crio websites modernos que aparecem no Google e convertem visitantes em clientes. Design limpo, rápido e otimizado para negócios locais que querem crescer online.</p>
+                <p>Websites modernos otimizados para SEO que geram clientes de forma consistente. Ideal para negócios locais.</p>
                 <div class="service-card-actions">
-                    <a href="/pt/servicos" class="service-link-soft">Saber mais →</a>
+                    <a href="/pt/servicos" class="service-link-soft">Ver serviços de websites →</a>
                 </div>
             </div>
         </div>
@@ -488,39 +517,105 @@ body {
     border-top: 1px solid #333;
 }
 
-.services-grid {
+.services-grid-primary {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 48px;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
 }
 
-.service-card {
-    background-color: var(--color-dark);
-    border: 1px solid #333;
-    border-radius: 16px;
-    padding: 48px;
+/* Primary Service Card - AI Solutions */
+.service-card-primary {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 2px solid var(--color-accent);
+    border-radius: 24px;
+    padding: 56px;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    position: relative;
+}
+
+.service-badge {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.service-card-primary h3 {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    letter-spacing: -0.96px;
+    color: var(--color-text);
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.service-intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-text);
+    opacity: 0.9;
+    margin-bottom: 16px;
+}
+
+.service-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.benefit-item svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: var(--color-accent);
+}
+
+/* Secondary Service Card - Websites */
+.service-card-secondary {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     transition: border-color 0.3s ease;
 }
 
-.service-card:hover {
-    border-color: var(--color-accent);
+.service-card-secondary:hover {
+    border-color: #555;
 }
 
-.service-card h3 {
+.service-card-secondary h3 {
     font-family: var(--font-heading);
-    font-size: 36px;
-    letter-spacing: -0.36px;
+    font-size: 28px;
+    letter-spacing: -0.28px;
     color: var(--color-text);
     line-height: 1.1;
 }
 
-.service-card p {
-    font-size: 16px;
+.service-card-secondary p {
+    font-size: 15px;
     line-height: 1.7;
     color: var(--color-text);
+    opacity: 0.85;
     flex-grow: 1;
 }
 
@@ -1156,9 +1251,33 @@ body {
         padding: 60px 32px;
     }
 
-    .services-grid {
+    .services-grid-primary {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+
+    .service-card-primary {
+        padding: 40px 32px;
+    }
+
+    .service-card-primary h3 {
+        font-size: 36px;
+    }
+
+    .service-intro {
+        font-size: 16px;
+    }
+
+    .benefit-item {
+        font-size: 14px;
+    }
+
+    .service-card-secondary {
+        padding: 32px;
+    }
+
+    .service-card-secondary h3 {
+        font-size: 24px;
     }
 
     .featured-projects {
