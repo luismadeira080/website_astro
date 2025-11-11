@@ -4,7 +4,6 @@ import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
 import ConversionTracking from '../../components/ConversionTracking.astro';
-import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -80,40 +79,13 @@ import ContactModal from '../../components/ContactModal.astro';
 						</div>
 					</div>
 
-					<div class="hero-form">
-						<form id="landing-page-form" action="https://formspree.io/f/manpdppz" method="POST">
-							<input type="hidden" name="service" value="Landing Page - €250">
-							<input type="hidden" name="_subject" value="Novo pedido: Landing Page €250">
-
-							<div class="form-group">
-								<label for="name">Nome</label>
-								<input type="text" id="name" name="name" placeholder="O seu nome" required>
-							</div>
-
-							<div class="form-group">
-								<label for="email">Email</label>
-								<input type="email" id="email" name="email" placeholder="email@exemplo.pt" required>
-							</div>
-
-							<div class="form-group">
-								<label for="phone">Telefone</label>
-								<input type="tel" id="phone" name="phone" placeholder="+351 912 345 678" required>
-							</div>
-
-							<div class="form-group">
-								<label for="website">Sítio / Projeto</label>
-								<input type="text" id="website" name="website" placeholder="Descreva o que pretende" required>
-							</div>
-
-							<button type="submit" class="btn-submit cta-primary" data-service="landing-page" aria-label="Fale comigo">
-								FALE COMIGO
-							</button>
-						</form>
-						<div id="form-success" class="form-success" style="display: none;">
-							<div class="success-icon">✓</div>
-							<h3>Pedido Enviado!</h3>
-							<p>Entraremos em contacto em breve.</p>
-						</div>
+					<div class="hero-cta-box">
+						<h3>Pronto Para Começar?</h3>
+						<p>Preencha o formulário de contacto e receba uma proposta personalizada em 24 horas.</p>
+						<a href="/pt/landing-page-contacto" class="btn-submit cta-primary" aria-label="Fale comigo">
+							FALE COMIGO
+						</a>
+						<p class="cta-note">Sem compromisso. Resposta em 24 horas.</p>
 					</div>
 				</div>
 			</div>
@@ -266,9 +238,9 @@ import ContactModal from '../../components/ContactModal.astro';
 		<div class="section-container">
 			<h2>Pronto Para Começar?</h2>
 			<p class="footer-cta-text">Landing page profissional em 7 dias com acompanhamento contínuo. A partir de €250.</p>
-			<button class="btn-primary cta-primary" data-contact-trigger data-contact-context="landing" data-service="landing-page" aria-label="Fale comigo">
+			<a href="/pt/landing-page-contacto" class="btn-primary cta-primary" aria-label="Fale comigo">
 				FALE COMIGO
-			</button>
+			</a>
 			<div class="contact-info">
 				<a href="tel:+351912345678" class="contact-link" aria-label="Ligar agora">
 					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -295,7 +267,6 @@ import ContactModal from '../../components/ContactModal.astro';
 
 	<Footer locale="pt" />
 	<ConversionTracking />
-	<ContactModal locale="pt" context="landing" />
 
 	<style>
 		:root {
@@ -437,50 +408,33 @@ import ContactModal from '../../components/ContactModal.astro';
 			line-height: 1.6;
 		}
 
-		/* Form Styling */
-		.hero-form {
+		/* CTA Box Styling */
+		.hero-cta-box {
 			background-color: var(--color-dark);
 			border: 1px solid var(--color-border);
 			border-radius: 16px;
 			padding: 40px;
+			text-align: center;
 		}
 
-		.form-group {
-			margin-bottom: 24px;
-		}
-
-		.form-group label {
-			display: block;
-			font-size: 13px;
-			text-transform: uppercase;
-			letter-spacing: 0.5px;
-			margin-bottom: 8px;
+		.hero-cta-box h3 {
+			font-family: var(--font-heading);
+			font-size: 32px;
 			color: var(--color-accent);
+			margin-bottom: 16px;
+			letter-spacing: -0.32px;
 		}
 
-		.form-group input {
-			width: 100%;
-			background-color: transparent;
-			border: none;
-			border-bottom: 1px solid var(--color-border);
-			padding: 16px 0;
+		.hero-cta-box p {
 			font-size: 16px;
 			color: var(--color-text);
-			font-family: var(--font-primary);
-			transition: border-color 0.3s ease;
-		}
-
-		.form-group input:focus {
-			outline: none;
-			border-bottom-color: var(--color-accent);
-		}
-
-		.form-group input::placeholder {
-			color: var(--color-text);
-			opacity: 0.5;
+			opacity: 0.9;
+			margin-bottom: 24px;
+			line-height: 1.6;
 		}
 
 		.btn-submit {
+			display: inline-block;
 			width: 100%;
 			background-color: var(--color-accent);
 			color: var(--color-bg);
@@ -493,6 +447,8 @@ import ContactModal from '../../components/ContactModal.astro';
 			cursor: pointer;
 			transition: transform 0.3s ease, background-color 0.3s ease;
 			margin-top: 8px;
+			text-decoration: none;
+			text-align: center;
 		}
 
 		.btn-submit:hover {
@@ -500,36 +456,11 @@ import ContactModal from '../../components/ContactModal.astro';
 			transform: translateY(-2px);
 		}
 
-		.form-success {
-			text-align: center;
-			padding: 40px 20px;
-		}
-
-		.success-icon {
-			width: 64px;
-			height: 64px;
-			background-color: var(--color-accent);
-			color: var(--color-bg);
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 32px;
-			font-weight: bold;
-			margin: 0 auto 24px;
-		}
-
-		.form-success h3 {
-			font-family: var(--font-heading);
-			font-size: 32px;
-			color: var(--color-accent);
-			margin-bottom: 8px;
-		}
-
-		.form-success p {
-			font-size: 16px;
-			color: var(--color-text);
-			opacity: 0.8;
+		.cta-note {
+			font-size: 13px;
+			opacity: 0.7;
+			margin-top: 16px;
+			margin-bottom: 0;
 		}
 
 		/* Sections */
@@ -705,6 +636,7 @@ import ContactModal from '../../components/ContactModal.astro';
 		}
 
 		.btn-primary {
+			display: inline-block;
 			background-color: var(--color-accent);
 			color: var(--color-bg);
 			padding: 16px 48px;
@@ -715,6 +647,7 @@ import ContactModal from '../../components/ContactModal.astro';
 			letter-spacing: 0.5px;
 			cursor: pointer;
 			transition: transform 0.3s ease, background-color 0.3s ease;
+			text-decoration: none;
 		}
 
 		.btn-primary:hover {
@@ -991,50 +924,6 @@ import ContactModal from '../../components/ContactModal.astro';
 			});
 		});
 
-		// Form submission handling
-		const form = document.getElementById('landing-page-form');
-		const formSuccess = document.getElementById('form-success');
-
-		if (form) {
-			form.addEventListener('submit', async (e) => {
-				e.preventDefault();
-
-				const submitBtn = form.querySelector('.btn-submit');
-				const originalText = submitBtn.textContent;
-				submitBtn.textContent = 'A ENVIAR...';
-				submitBtn.disabled = true;
-
-				try {
-					const response = await fetch(form.action, {
-						method: 'POST',
-						body: new FormData(form),
-						headers: {
-							'Accept': 'application/json'
-						}
-					});
-
-					if (response.ok) {
-						form.style.display = 'none';
-						formSuccess.style.display = 'block';
-
-						// Track conversion
-						if (typeof gtag !== 'undefined') {
-							gtag('event', 'conversion', {
-								'send_to': 'AW-17188917195/p5K-CISCxP8aEMufqIRA',
-								'event_category': 'form_submit',
-								'event_label': 'Landing Page - €250'
-							});
-						}
-					} else {
-						throw new Error('Form submission failed');
-					}
-				} catch (error) {
-					alert('Erro ao enviar formulário. Por favor, tente novamente.');
-					submitBtn.textContent = originalText;
-					submitBtn.disabled = false;
-				}
-			});
-		}
 	</script>
 </body>
 </html>
