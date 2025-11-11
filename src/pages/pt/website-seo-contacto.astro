@@ -1,0 +1,571 @@
+---
+import SEO from '../../components/SEO.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+---
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <SEO
+        title="Pedido de Website SEO | Luís Madeira"
+        description="Preencha o formulário para receber uma proposta personalizada para o seu website com SEO profissional."
+        locale="pt"
+    />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="/pt" class="logo">luís madeira</a>
+        <div class="nav-links">
+            <a href="/pt/#work">Trabalhos</a>
+            <a href="/pt/servicos">Serviços</a>
+            <a href="/pt/sobre">Sobre</a>
+            <a href="/pt/#contact">Contacto</a>
+            <LanguageSwitcher currentPath="/pt/website-seo-contacto" />
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <div class="form-header">
+                <a href="/pt/website-seo" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Voltar
+                </a>
+                <h1>Pedido de Website SEO</h1>
+                <p class="form-subtitle">Preencha o formulário abaixo e entraremos em contacto em breve com uma proposta personalizada.</p>
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/f/manpdppz" method="POST">
+                <input type="hidden" name="service" value="Website SEO - €850">
+                <input type="hidden" name="_subject" value="Novo pedido: Website SEO €850">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Nome *</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="O seu nome" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Apelido *</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="O seu apelido" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="email@exemplo.pt" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+351 912 345 678" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Nome da Empresa/Projeto *</label>
+                    <input type="text" id="company" name="company" placeholder="Nome da sua empresa ou projeto" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website Atual (se tiver)</label>
+                    <input type="url" id="website" name="website" placeholder="https://seusite.com" />
+                </div>
+
+                <div class="form-group">
+                    <label for="industry">Setor de Atividade *</label>
+                    <select id="industry" name="industry" required>
+                        <option value="">Selecione o seu setor</option>
+                        <option value="clinic">Clínica / Saúde</option>
+                        <option value="spa">Spa / Bem-estar</option>
+                        <option value="auto">Serviços Automóveis</option>
+                        <option value="freelancer">Freelancer / Consultor</option>
+                        <option value="restaurant">Restauração</option>
+                        <option value="retail">Comércio / Retail</option>
+                        <option value="services">Serviços Profissionais</option>
+                        <option value="other">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Descreva o Seu Projeto *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Conte-nos sobre o seu negócio, objetivos e o que pretende alcançar com o website..." required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter" value="yes" />
+                        <span>Quero receber dicas de SEO e marketing digital</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Pedido</button>
+
+                <p class="form-note">Ao submeter este formulário, concorda com a nossa política de privacidade. Responderemos em até 24 horas.</p>
+            </form>
+
+            <div id="form-success" class="success-message" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h2>Pedido Enviado!</h2>
+                <p>Obrigado pelo seu interesse. Entraremos em contacto em breve.</p>
+                <a href="/pt" class="btn-home">Voltar à Homepage</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Form submission handling
+        const form = document.querySelector('.contact-form');
+        const formSuccess = document.getElementById('form-success');
+        const formContainer = document.querySelector('.form-container');
+
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const submitBtn = form.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'A ENVIAR...';
+                submitBtn.disabled = true;
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        form.style.display = 'none';
+                        document.querySelector('.form-header').style.display = 'none';
+                        formSuccess.style.display = 'block';
+
+                        // Track conversion
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-17188917195/p5K-CISCxP8aEMufqIRA',
+                                'event_category': 'form_submit',
+                                'event_label': 'Website SEO - €850'
+                            });
+                        }
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    alert('Erro ao enviar formulário. Por favor, tente novamente.');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+    </script>
+
+    <style>
+        :root {
+            --color-bg: #0d0d0d;
+            --color-text: #c7c7c7;
+            --color-accent: #d3e97a;
+            --color-dark: #1a1a1a;
+            --color-border: #333;
+            --font-primary: 'Inter', sans-serif;
+            --font-heading: 'Bebas Neue', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 108px;
+            position: sticky;
+            top: 0;
+            background-color: var(--color-bg);
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            letter-spacing: -0.32px;
+            color: var(--color-text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: -0.48px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            width: 32px;
+            height: 2px;
+            background-color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+
+        /* Form Section */
+        .form-section {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 108px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .form-header {
+            margin-bottom: 48px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-text);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--color-accent);
+        }
+
+        .form-header h1 {
+            font-family: var(--font-heading);
+            font-size: 56px;
+            letter-spacing: -0.56px;
+            color: var(--color-accent);
+            margin-bottom: 16px;
+        }
+
+        .form-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            background-color: var(--color-dark);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 48px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--color-accent);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background-color: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 14px 16px;
+            font-size: 16px;
+            color: var(--color-text);
+            font-family: var(--font-primary);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--color-text);
+            opacity: 0.5;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            margin-top: 8px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            color: var(--color-text);
+            font-size: 14px;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--color-accent);
+            color: var(--color-bg);
+            padding: 16px 32px;
+            border: none;
+            border-radius: 27px;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            margin-top: 8px;
+        }
+
+        .submit-btn:hover {
+            background-color: #c5db6f;
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-note {
+            font-size: 13px;
+            color: var(--color-text);
+            opacity: 0.7;
+            margin-top: 16px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* Success Message */
+        .success-message {
+            text-align: center;
+            padding: 80px 40px;
+            background-color: var(--color-dark);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-accent);
+            color: var(--color-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0 auto 32px;
+        }
+
+        .success-message h2 {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            color: var(--color-accent);
+            margin-bottom: 16px;
+        }
+
+        .success-message p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-bg);
+            padding: 14px 32px;
+            border-radius: 27px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn-home:hover {
+            background-color: #c5db6f;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .navigation {
+                padding: 24px 32px;
+            }
+
+            .form-section {
+                padding: 60px 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                padding: 20px 16px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 76px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 76px);
+                background-color: var(--color-bg);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 40px 0;
+                transition: right 0.3s ease;
+                border-top: 1px solid var(--color-border);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 24px;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .mobile-menu-toggle.active span:first-child {
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+
+            .mobile-menu-toggle.active span:last-child {
+                transform: rotate(-45deg) translate(8px, -8px);
+            }
+
+            .form-section {
+                padding: 40px 16px;
+            }
+
+            .form-header h1 {
+                font-size: 40px;
+            }
+
+            .form-subtitle {
+                font-size: 16px;
+            }
+
+            .contact-form {
+                padding: 32px 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .success-message {
+                padding: 60px 24px;
+            }
+
+            .success-message h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</body>
+</html>

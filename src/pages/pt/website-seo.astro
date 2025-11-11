@@ -4,7 +4,6 @@ import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
 import ConversionTracking from '../../components/ConversionTracking.astro';
-import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -104,39 +103,31 @@ import ContactModal from '../../components/ContactModal.astro';
 						</div>
 					</div>
 
-					<div class="hero-form">
-						<form id="website-seo-form" action="https://formspree.io/f/manpdppz" method="POST">
-							<input type="hidden" name="service" value="Website SEO - €850">
-							<input type="hidden" name="_subject" value="Novo pedido: Website SEO €850">
-
-							<div class="form-group">
-								<label for="name">Nome</label>
-								<input type="text" id="name" name="name" placeholder="O seu nome" required>
+					<div class="hero-cta-box">
+						<h3>Pronto Para Começar?</h3>
+						<p>Preencha um formulário rápido e receba uma proposta personalizada em 24 horas.</p>
+						<a href="/pt/website-seo-contacto" class="btn-cta">
+							PEDIR PROPOSTA
+						</a>
+						<div class="cta-features">
+							<div class="cta-feature">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Resposta em 24h</span>
 							</div>
-
-							<div class="form-group">
-								<label for="email">Email</label>
-								<input type="email" id="email" name="email" placeholder="email@exemplo.pt" required>
+							<div class="cta-feature">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Sem compromisso</span>
 							</div>
-
-							<div class="form-group">
-								<label for="phone">Telefone</label>
-								<input type="tel" id="phone" name="phone" placeholder="+351 912 345 678" required>
+							<div class="cta-feature">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Proposta personalizada</span>
 							</div>
-
-							<div class="form-group">
-								<label for="website">Sítio / Projeto</label>
-								<input type="text" id="website" name="website" placeholder="Descreva o que pretende" required>
-							</div>
-
-							<button type="submit" class="btn-submit cta-primary" data-service="website-seo" aria-label="Fale comigo">
-								FALE COMIGO
-							</button>
-						</form>
-						<div id="form-success" class="form-success" style="display: none;">
-							<div class="success-icon">✓</div>
-							<h3>Pedido Enviado!</h3>
-							<p>Entraremos em contacto em breve.</p>
 						</div>
 					</div>
 				</div>
@@ -324,9 +315,9 @@ import ContactModal from '../../components/ContactModal.astro';
 				<div class="price">A partir de €850</div>
 				<div class="price-subtitle">Investimento inicial</div>
 				<div class="price-included">90 dias de otimização SEO incluídos + Suporte técnico contínuo</div>
-				<button class="btn-primary cta-primary" data-contact-trigger data-contact-context="seo" data-service="website-seo" aria-label="Fale comigo">
-					FALE COMIGO
-				</button>
+				<a href="/pt/website-seo-contacto" class="btn-primary" aria-label="Pedir proposta">
+					PEDIR PROPOSTA
+				</a>
 			</div>
 		</div>
 	</section>
@@ -404,9 +395,9 @@ import ContactModal from '../../components/ContactModal.astro';
 		<div class="section-container">
 			<h2>Pronto Para Crescer?</h2>
 			<p class="footer-cta-text">Website SEO completo. Apareça no Google. Mais visibilidade, mais clientes.</p>
-			<button class="btn-primary cta-primary" data-contact-trigger data-contact-context="seo" data-service="website-seo" aria-label="Fale comigo">
-				FALE COMIGO
-			</button>
+			<a href="/pt/website-seo-contacto" class="btn-primary" aria-label="Pedir proposta">
+				PEDIR PROPOSTA
+			</a>
 			<div class="contact-info">
 				<a href="tel:+351912345678" class="contact-link" aria-label="Ligar agora">
 					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -433,7 +424,6 @@ import ContactModal from '../../components/ContactModal.astro';
 
 	<Footer locale="pt" />
 	<ConversionTracking />
-	<ContactModal locale="pt" context="seo" />
 
 	<style>
 		:root {
@@ -655,99 +645,73 @@ import ContactModal from '../../components/ContactModal.astro';
 			flex-shrink: 0;
 		}
 
-		/* Form Styling */
-		.hero-form {
+		/* Hero CTA Box */
+		.hero-cta-box {
 			background-color: var(--color-dark);
-			border: 1px solid var(--color-border);
+			border: 2px solid var(--color-accent);
 			border-radius: 16px;
-			padding: 40px;
+			padding: 48px;
+			text-align: center;
 		}
 
-		.form-group {
-			margin-bottom: 24px;
+		.hero-cta-box h3 {
+			font-family: var(--font-heading);
+			font-size: 32px;
+			color: var(--color-text);
+			margin-bottom: 16px;
 		}
 
-		.form-group label {
-			display: block;
-			font-size: 13px;
-			text-transform: uppercase;
-			letter-spacing: 0.5px;
-			margin-bottom: 8px;
-			color: var(--color-accent);
-		}
-
-		.form-group input {
-			width: 100%;
-			background-color: transparent;
-			border: none;
-			border-bottom: 1px solid var(--color-border);
-			padding: 16px 0;
+		.hero-cta-box p {
 			font-size: 16px;
 			color: var(--color-text);
-			font-family: var(--font-primary);
-			transition: border-color 0.3s ease;
+			opacity: 0.9;
+			margin-bottom: 32px;
+			line-height: 1.6;
 		}
 
-		.form-group input:focus {
-			outline: none;
-			border-bottom-color: var(--color-accent);
-		}
-
-		.form-group input::placeholder {
-			color: var(--color-text);
-			opacity: 0.5;
-		}
-
-		.btn-submit {
+		.btn-cta {
+			display: inline-block;
 			width: 100%;
 			background-color: var(--color-accent);
 			color: var(--color-bg);
-			padding: 16px 32px;
+			padding: 18px 32px;
 			border: none;
 			border-radius: 27px;
 			font-weight: 600;
-			font-size: 14px;
+			font-size: 16px;
 			letter-spacing: 0.5px;
+			text-decoration: none;
 			cursor: pointer;
 			transition: transform 0.3s ease, background-color 0.3s ease;
-			margin-top: 8px;
+			margin-bottom: 32px;
 		}
 
-		.btn-submit:hover {
+		.btn-cta:hover {
 			background-color: #c5db6f;
 			transform: translateY(-2px);
 		}
 
-		.form-success {
-			text-align: center;
-			padding: 40px 20px;
+		.cta-features {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
 		}
 
-		.success-icon {
-			width: 64px;
-			height: 64px;
-			background-color: var(--color-accent);
-			color: var(--color-bg);
-			border-radius: 50%;
+		.cta-feature {
 			display: flex;
 			align-items: center;
+			gap: 12px;
 			justify-content: center;
-			font-size: 32px;
-			font-weight: bold;
-			margin: 0 auto 24px;
-		}
-
-		.form-success h3 {
-			font-family: var(--font-heading);
-			font-size: 32px;
-			color: var(--color-accent);
-			margin-bottom: 8px;
-		}
-
-		.form-success p {
-			font-size: 16px;
+			font-size: 14px;
 			color: var(--color-text);
-			opacity: 0.8;
+			opacity: 0.9;
+		}
+
+		.cta-feature svg {
+			width: 20px;
+			height: 20px;
+			color: var(--color-accent);
+			flex-shrink: 0;
 		}
 
 		/* Sections */
@@ -927,6 +891,7 @@ import ContactModal from '../../components/ContactModal.astro';
 		}
 
 		.btn-primary {
+			display: inline-block;
 			background-color: var(--color-accent);
 			color: var(--color-bg);
 			padding: 16px 48px;
@@ -935,6 +900,7 @@ import ContactModal from '../../components/ContactModal.astro';
 			font-weight: 600;
 			font-size: 14px;
 			letter-spacing: 0.5px;
+			text-decoration: none;
 			cursor: pointer;
 			transition: transform 0.3s ease, background-color 0.3s ease;
 		}
@@ -1398,51 +1364,6 @@ import ContactModal from '../../components/ContactModal.astro';
 				answer.style.maxHeight = isExpanded ? '0' : answer.scrollHeight + 'px';
 			});
 		});
-
-		// Form submission handling
-		const form = document.getElementById('website-seo-form');
-		const formSuccess = document.getElementById('form-success');
-
-		if (form) {
-			form.addEventListener('submit', async (e) => {
-				e.preventDefault();
-
-				const submitBtn = form.querySelector('.btn-submit');
-				const originalText = submitBtn.textContent;
-				submitBtn.textContent = 'A ENVIAR...';
-				submitBtn.disabled = true;
-
-				try {
-					const response = await fetch(form.action, {
-						method: 'POST',
-						body: new FormData(form),
-						headers: {
-							'Accept': 'application/json'
-						}
-					});
-
-					if (response.ok) {
-						form.style.display = 'none';
-						formSuccess.style.display = 'block';
-
-						// Track conversion
-						if (typeof gtag !== 'undefined') {
-							gtag('event', 'conversion', {
-								'send_to': 'AW-17188917195/p5K-CISCxP8aEMufqIRA',
-								'event_category': 'form_submit',
-								'event_label': 'Website SEO - €850'
-							});
-						}
-					} else {
-						throw new Error('Form submission failed');
-					}
-				} catch (error) {
-					alert('Erro ao enviar formulário. Por favor, tente novamente.');
-					submitBtn.textContent = originalText;
-					submitBtn.disabled = false;
-				}
-			});
-		}
 
 		// Case Study Expandable Accordions
 		const caseExpandBtns = document.querySelectorAll('.case-expand-btn');
