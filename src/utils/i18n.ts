@@ -247,6 +247,7 @@ export function getLocaleFromPath(pathname: string): string {
 const pathMappings: Record<string, { en: string; pt: string }> = {
   home: { en: '/', pt: '/pt/' },
   about: { en: '/about', pt: '/pt/sobre' },
+  consulting: { en: '/consulting', pt: '/pt/consultoria' },
   projects: { en: '/projects', pt: '/pt/projetos' },
   services: { en: '/services', pt: '/pt/servicos' },
   // Case Studies
