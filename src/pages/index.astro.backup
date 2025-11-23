@@ -1,12 +1,12 @@
 ---
-import SEO from '../components/SEO.astro';
-import Schema from '../components/Schema.astro';
-import LanguageSwitcher from '../components/LanguageSwitcher.astro';
-import Footer from '../components/Footer.astro';
+import SEO from '../../components/SEO.astro';
+import Schema from '../../components/Schema.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import Footer from '../../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +19,9 @@ import Footer from '../components/Footer.astro';
 
     <!-- SEO Meta Tags -->
     <SEO
-        title="Luís Madeira - AI Workflow Consultant for SMEs | Training & Implementation"
-        description="AI consultant who augments teams with existing tools. I implement practical solutions, train teams, and generate fast ROI for Portuguese SMEs."
-        locale="en"
+        title="Luís Madeira - Consultor de IA para PMEs | Formação e Implementação"
+        description="Consultor de IA que aumenta equipas com ferramentas existentes. Implemento soluções práticas, formo equipas e gero ROI rápido para PMEs portuguesas."
+        locale="pt"
     />
 
     <!-- Structured Data -->
@@ -31,24 +31,24 @@ import Footer from '../components/Footer.astro';
 <body>
     <!-- Navigation -->
     <nav class="navigation">
-        <a href="/" class="logo">luís madeira</a>
+        <a href="/pt" class="logo">luís madeira</a>
         <div class="nav-links">
-            <a href="#work">Work</a>
+            <a href="#work">Trabalhos</a>
             <div class="nav-dropdown">
                 <button class="nav-dropdown-toggle">
-                    Services
+                    Serviços
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
                 <div class="nav-dropdown-menu">
-                    <a href="/consulting">AI Solutions</a>
-                    <a href="/services">Websites</a>
+                    <a href="/pt/consultoria">AI Solutions</a>
+                    <a href="/pt/servicos">Websites</a>
                 </div>
             </div>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <LanguageSwitcher currentPath="/" />
+            <a href="#about">Sobre</a>
+            <a href="#contact">Contacto</a>
+            <LanguageSwitcher currentPath="/pt/" />
         </div>
         <div class="mobile-menu-toggle">
             <span></span>
@@ -61,10 +61,10 @@ import Footer from '../components/Footer.astro';
         <div class="hero-content">
             <div class="hero-text">
                 <h1>LUÍS MADEIRA</h1>
-                <p class="hero-subtitle">AI consultant who augments team capacity. I help SMEs adopt AI practically, with existing tools and training that generates fast ROI.</p>
+                <p class="hero-subtitle">Consultor de IA que aumenta a capacidade das equipas. Ajudo PMEs a adoptar IA de forma prática, com ferramentas existentes e formação que gera ROI rapidamente.</p>
             </div>
             <div class="hero-actions">
-                <a href="/ai-contact" class="btn-primary">Let's Talk</a>
+                <a href="/pt/ai-contact" class="btn-primary">Vamos Conversar</a>
                 <a href="https://www.linkedin.com/in/lumadeira" class="social-icon" target="_blank" aria-label="LinkedIn">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
@@ -80,8 +80,8 @@ import Footer from '../components/Footer.astro';
     <!-- What I Deliver Section -->
     <section class="what-i-deliver-section">
         <div class="section-header">
-            <h2>What I Deliver</h2>
-            <p>Custom AI solutions that transform the way your business operates.</p>
+            <h2>O Que Entrego</h2>
+            <p>Soluções AI personalizadas que transformam a forma como o seu negócio opera.</p>
         </div>
 
         <div class="deliverables-grid">
@@ -93,13 +93,13 @@ import Footer from '../components/Footer.astro';
                         <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3>AI Consulting & Implementation</h3>
-                <p>I identify AI opportunities in your business, create practical roadmaps, and implement solutions with existing tools for fast ROI.</p>
+                <h3>Consultoria & Implementação AI</h3>
+                <p>Identifico oportunidades de IA no seu negócio, crio roadmaps práticos e implemento soluções com ferramentas existentes para ROI rápido.</p>
                 <ul class="deliverable-features">
-                    <li>Process analysis and opportunity identification</li>
-                    <li>Implementation of existing AI tools (Claude, ChatGPT, etc.)</li>
-                    <li>Team training for AI autonomy</li>
-                    <li>Workflow automation with AI</li>
+                    <li>Análise de processos e identificação de oportunidades</li>
+                    <li>Implementação de ferramentas AI existentes (Claude, ChatGPT, etc.)</li>
+                    <li>Formação de equipas para autonomia com IA</li>
+                    <li>Automação de fluxos de trabalho com IA</li>
                 </ul>
             </div>
 
@@ -114,19 +114,19 @@ import Footer from '../components/Footer.astro';
                         <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3>Team Training & Enablement</h3>
-                <p>I teach your team to use AI effectively. Practical workshops, process documentation, and ongoing support to ensure autonomy.</p>
+                <h3>Formação & Capacitação de Equipas</h3>
+                <p>Ensino a sua equipa a usar IA de forma eficaz. Workshops práticos, documentação de processos e acompanhamento para garantir autonomia.</p>
                 <ul class="deliverable-features">
-                    <li>Prompt engineering and AI tools workshops</li>
-                    <li>Creation of knowledge bases and internal documentation</li>
-                    <li>Practical support for sustainable adoption</li>
-                    <li>Knowledge transfer for independence</li>
+                    <li>Workshops de prompt engineering e ferramentas AI</li>
+                    <li>Criação de knowledge bases e documentação interna</li>
+                    <li>Acompanhamento prático para adopção sustentável</li>
+                    <li>Transfer de conhecimento para independência</li>
                 </ul>
             </div>
         </div>
 
         <div class="secondary-service">
-            <p>I also create <a href="/services" class="inline-link">professional SEO-optimized websites</a> for local businesses.</p>
+            <p>Também crio <a href="/pt/servicos" class="inline-link">websites profissionais otimizados para SEO</a> para negócios locais.</p>
         </div>
     </section>
 
@@ -143,7 +143,7 @@ import Footer from '../components/Footer.astro';
                 </div>
                 <div class="step-content">
                     <h3>Discovery</h3>
-                    <p>I deeply analyze your business, identify real AI opportunities, and create practical roadmaps with clear phases and measurable results.</p>
+                    <p>Analiso profundamente o seu negócio, identifico oportunidades reais de IA e crio roadmaps práticos com fases claras e resultados mensuráveis.</p>
                 </div>
             </div>
 
@@ -156,7 +156,7 @@ import Footer from '../components/Footer.astro';
                 </div>
                 <div class="step-content">
                     <h3>Implementation & Training</h3>
-                    <p>I implement existing AI tools (Claude, ChatGPT, etc.) into your processes and train your team to use them effectively. Focus on practical solutions that the team can maintain.</p>
+                    <p>Implemento ferramentas AI existentes (Claude, ChatGPT, etc.) nos seus processos e formo a sua equipa para as usar de forma eficaz. Foco em soluções práticas que a equipa consegue manter.</p>
                 </div>
             </div>
 
@@ -169,7 +169,7 @@ import Footer from '../components/Footer.astro';
                 </div>
                 <div class="step-content">
                     <h3>Deployment & Monitoring</h3>
-                    <p>I monitor results, continuously optimize, and adjust the strategy to ensure solutions generate real value and continue to improve over time.</p>
+                    <p>Monitorizo resultados, otimizo continuamente e ajusto estratégia para garantir que as soluções geram valor real e continuam a melhorar ao longo do tempo.</p>
                 </div>
             </div>
         </div>
@@ -178,23 +178,23 @@ import Footer from '../components/Footer.astro';
     <!-- Testimonials Section -->
     <section id="work" class="testimonials-section">
         <div class="section-header">
-            <h2>REAL BUSINESSES, REAL RESULTS</h2>
-            <p>What clients I've worked with say</p>
+            <h2>NEGÓCIOS REAIS, RESULTADOS REAIS</h2>
+            <p>O que dizem os clientes com quem trabalhei</p>
         </div>
 
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-tag">Websites</div>
-                <p class="testimonial-text">"Luís delivered exactly what I needed on the promised deadline. The website looks professional and many clients mention they found it easy to book. Having a proper website instead of just Instagram definitely helped me attract more serious clients."</p>
+                <p class="testimonial-text">"O Luís entregou exatamente o que eu precisava no prazo prometido. O website tem aspeto profissional e muitos clientes mencionam que acharam fácil marcar. Ter um website adequado em vez de apenas Instagram definitivamente ajudou-me a atrair clientes mais sérios."</p>
                 <div class="testimonial-author">
                     <p class="author-name">Brunno Rodrigues</p>
-                    <p class="author-title">Massage Therapist</p>
+                    <p class="author-title">Terapeuta de Massagens</p>
                 </div>
             </div>
 
             <div class="testimonial-card">
                 <div class="testimonial-tag">Websites</div>
-                <p class="testimonial-text">"The landing page exceeded our expectations. It's beautiful, easy to use, and we're getting contacts from clients who would never have called us before. The mobile experience is perfect."</p>
+                <p class="testimonial-text">"A landing page superou as nossas expectativas. É bonita, fácil de usar, e estamos a receber contactos de clientes que nunca nos teriam ligado antes. A experiência móvel é perfeita."</p>
                 <div class="testimonial-author">
                     <p class="author-name">Joaquim Marco</p>
                     <p class="author-title">Porto Massage Studio</p>
@@ -203,7 +203,7 @@ import Footer from '../components/Footer.astro';
 
             <div class="testimonial-card">
                 <div class="testimonial-tag">AI Solutions</div>
-                <p class="testimonial-text">"Luís builds more than workflows, he builds trust. His strategic approach completely transformed how we operate."</p>
+                <p class="testimonial-text">"O Luís constrói mais do que workflows, ele constrói confiança. A abordagem estratégica dele transformou completamente como operamos."</p>
                 <div class="testimonial-author">
                     <p class="author-name">Jim Hankins</p>
                     <p class="author-title">CEO, Cloud Bedrock, LLC</p>
@@ -214,14 +214,14 @@ import Footer from '../components/Footer.astro';
 
     <!-- About Me Section -->
     <section id="about" class="about-section">
-        <h2>ABOUT ME</h2>
+        <h2>SOBRE MIM</h2>
         <div class="about-content">
             <div class="about-intro">
-                <h3>I transform manual processes into automated systems that generate real results.</h3>
+                <h3>Transformo processos manuais em sistemas automáticos que geram resultados reais.</h3>
             </div>
             <div class="about-description">
-                <p>From Porto, doing a Master's in Management at IE Business School. I help Portuguese SMEs work smarter through AI automation and optimized websites.</p>
-                <a href="/about" class="text-link">MORE ABOUT ME</a>
+                <p>Natural do Porto, a fazer Mestrado em Gestão na IE Business School. Ajudo PMEs portuguesas a trabalhar de forma mais inteligente através de automação AI e websites otimizados.</p>
+                <a href="/pt/sobre" class="text-link">MAIS SOBRE MIM</a>
             </div>
         </div>
     </section>
@@ -230,9 +230,9 @@ import Footer from '../components/Footer.astro';
     <section id="contact" class="contact-section-simple">
         <div class="contact-container">
             <div class="cta-content">
-                <h2>Unlock your business's hidden potential</h2>
-                <p class="cta-subtext">Unlock untapped potential with secure, responsible, and powerful AI solutions.</p>
-                <a href="/ai-contact" class="cta-button">Get Started</a>
+                <h2>Desbloqueie o potencial escondido do seu negócio</h2>
+                <p class="cta-subtext">Desbloqueie potencial inexplorado com soluções de IA seguras, responsáveis e poderosas.</p>
+                <a href="/pt/ai-contact" class="cta-button">Começar</a>
             </div>
             <div class="cta-background-text">LM</div>
         </div>
@@ -311,7 +311,7 @@ import Footer from '../components/Footer.astro';
         }
     </script>
 
-    <Footer locale="en" />
+    <Footer locale="pt" />
 </body>
 </html>
 
@@ -1194,7 +1194,6 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     font-family: var(--font-primary);
-    text-decoration: none;
 }
 
 .cta-button:hover {
