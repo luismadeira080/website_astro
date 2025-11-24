@@ -1,688 +1,826 @@
 ---
-import SEO from '../../components/SEO.astro';
-import Schema from '../../components/Schema.astro';
-import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
-import Footer from '../../components/Footer.astro';
+import SEO from "../../components/SEO.astro";
+import Schema from "../../components/Schema.astro";
+import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
+import Footer from "../../components/Footer.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- SEO Meta Tags -->
-    <SEO
-        title="Consultoria de IA - Luís Madeira | Implementação e Formação"
-        description="Consultor de IA focado em resultados rápidos. Implemento ferramentas existentes, formo equipas e crio processos que a sua equipa consegue manter autonomamente."
-        locale="pt"
-    />
+        <!-- SEO Meta Tags -->
+        <SEO
+            title="Consultoria de IA - Luís Madeira | Implementação e Formação"
+            description="Consultor de IA focado em resultados rápidos. Implemento ferramentas existentes, formo equipas e crio processos que a sua equipa consegue manter autonomamente."
+            locale="pt"
+        />
 
-    <!-- Structured Data -->
-    <Schema type="Organization" />
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navigation">
-        <a href="/pt" class="logo">luís madeira</a>
-        <div class="nav-links">
-            <a href="/pt/#work">Trabalhos</a>
-            <div class="nav-dropdown">
-                <button class="nav-dropdown-toggle">
-                    Serviços
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <div class="nav-dropdown-menu">
-                    <a href="/pt/consultoria">AI Solutions</a>
-                    <a href="/pt/servicos">Websites</a>
-                </div>
-            </div>
-            <a href="/pt/sobre">Sobre</a>
-            <a href="/pt/#contact">Contacto</a>
-            <LanguageSwitcher currentPath="/pt/consultoria" />
-        </div>
-        <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <h1>CONSULTORIA DE IA</h1>
-            <p class="page-hero-subtitle">Aumento a capacidade da sua equipa com IA. Implemento ferramentas existentes, formo equipas e garanto ROI rápido com soluções práticas.</p>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <section class="content-section">
-        <div class="content-wrapper">
-            <div class="content-main">
-                <h2>O Desafio</h2>
-                <p>PMEs sabem que precisam de IA mas enfrentam barreiras: falta de conhecimento interno, medo de investir sem garantia de retorno, e equipas sobrecarregadas que não têm tempo para experimentar.</p>
-
-                <p>Não precisa de contratar especialistas caros ou construir soluções do zero. Precisa de alguém que lhe mostre como usar ferramentas AI que já existem, forme a sua equipa para as usar bem, e garanta que consegue resultados rápidos.</p>
-
-                <h2>Como Trabalho Consigo</h2>
-                <p>Sou um consultor de IA focado em <strong>aumentar a capacidade das equipas</strong>, não em substituí-las. Não vendo tecnologia custom — ensino-lhe a usar ferramentas que já existem (Claude, ChatGPT, Perplexity, etc.) de forma estratégica. Trabalho lado a lado com a sua equipa até ficarem autónomos.</p>
-
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Explorar & Experimentar</h3>
-                            <p>Identificamos 1-2 casos de uso nos seus fluxos de trabalho. Testamos ferramentas AI, medimos ganhos de produtividade e validamos o potencial.</p>
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Construir Competência</h3>
-                            <p>Formo a equipa principal em ferramentas AI e melhores práticas. Documentamos workflows bem-sucedidos e identificamos casos de uso de alto impacto.</p>
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Escalar & Refinar</h3>
-                            <p>Avaliamos oportunidades para IA "agêntica" mais avançada. Refinamos processos organizacionais e garantimos autonomia total da equipa.</p>
-                        </div>
+        <!-- Structured Data -->
+        <Schema type="Organization" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navigation">
+            <a href="/pt" class="logo">luís madeira</a>
+            <div class="nav-links">
+                <a href="/pt/#work">Trabalhos</a>
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle">
+                        Serviços
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M7 10L12 15L17 10"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="/pt/consultoria">AI Solutions</a>
+                        <a href="/pt/servicos">Websites</a>
                     </div>
                 </div>
-
-                <h2>Como Ajudo</h2>
-                <ul class="capabilities-list">
-                    <li>Implementação de ferramentas AI existentes nos seus processos (Claude, ChatGPT, Perplexity, etc.)</li>
-                    <li>Workshops práticos de prompt engineering e uso de IA</li>
-                    <li>Criação de knowledge bases e documentação de processos</li>
-                    <li>Automação de workflows com ferramentas no-code/low-code</li>
-                    <li>Acompanhamento prático até a equipa estar autónoma</li>
-                    <li>Roadmap faseado para adopção sustentável de IA</li>
-                </ul>
-
-                <h2>Para Quem É Isto</h2>
-                <p>Trabalho com PMEs que:</p>
-                <ul>
-                    <li>Querem adoptar IA mas não têm conhecimento interno</li>
-                    <li>Preferem usar ferramentas existentes em vez de construir do zero</li>
-                    <li>Valorizam formação de equipas e autonomia a longo prazo</li>
-                    <li>Querem ROI rápido e resultados mensuráveis</li>
-                    <li>Procuram aumentar capacidade sem contratar mais pessoas</li>
-                </ul>
-
-                <h2>Abordagem</h2>
-                <p>Trabalho em sprints focados de 2-4 semanas. Começamos pequeno, testamos rápido, medimos resultados. Se funciona, escalamos. Se não funciona, ajustamos.</p>
-
-                <p>Não acredito em projectos longos ou dependência de consultores. O objectivo é tornar a sua equipa autónoma com IA o mais rápido possível.</p>
+                <a href="/pt/sobre">Sobre</a>
+                <a href="/pt/#contact">Contacto</a>
+                <LanguageSwitcher currentPath="/pt/consultoria" />
             </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
 
-            <div class="content-sidebar">
-                <div class="sidebar-card">
-                    <h3>Resultados Esperados</h3>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1>CONSULTORIA DE IA</h1>
+                <p class="page-hero-subtitle">
+                    Aumento a capacidade da sua equipa com IA. Implemento
+                    ferramentas existentes, formo equipas e garanto ROI rápido
+                    com soluções práticas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content-section">
+            <div class="content-wrapper">
+                <div class="content-main">
+                    <h2>O Desafio</h2>
+                    <p>
+                        PMEs sabem que precisam de IA mas enfrentam 5 barreiras
+                        comuns:
+                    </p>
                     <ul>
-                        <li>Equipas autónomas com IA em 4-8 semanas</li>
-                        <li>ROI mensurável desde o 1º sprint</li>
-                        <li>Processos 3-5x mais rápidos</li>
-                        <li>Conhecimento transferido, não dependência</li>
+                        <li>
+                            <strong>Lacuna de Competências:</strong> Equipas sem
+                            experiência interna em IA.
+                        </li>
+                        <li>
+                            <strong>Qualidade dos Resultados:</strong> Medo de resultados
+                            não fiáveis ou genéricos.
+                        </li>
+                        <li>
+                            <strong>ROI Incerto:</strong> Dificuldade em justificar
+                            investimento sem retorno claro.
+                        </li>
+                        <li>
+                            <strong>Segurança de Dados:</strong> Preocupações com
+                            privacidade e conformidade.
+                        </li>
+                        <li>
+                            <strong>Integração:</strong> Dificuldade em encaixar
+                            IA em fluxos de trabalho complexos.
+                        </li>
                     </ul>
+
+                    <p>
+                        Não precisa de contratar especialistas caros ou
+                        construir soluções do zero. Precisa de alguém que lhe
+                        mostre como usar ferramentas AI que já existem, forme a
+                        sua equipa para as usar bem, e garanta que consegue
+                        resultados rápidos.
+                    </p>
+
+                    <h2>Como Trabalho Consigo</h2>
+                    <p>
+                        Sou um consultor de IA focado em <strong
+                            >aumentar a capacidade das equipas</strong
+                        >, não em substituí-las. Não vendo tecnologia custom —
+                        ensino-lhe a usar ferramentas que já existem (Claude,
+                        ChatGPT, Perplexity, etc.) de forma estratégica.
+                        Trabalho lado a lado com a sua equipa até ficarem
+                        autónomos.
+                    </p>
+
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Explorar & Experimentar</h3>
+                                <p>
+                                    Identificamos 1-2 casos de uso nos seus
+                                    fluxos de trabalho. Testamos ferramentas AI,
+                                    medimos ganhos de produtividade e validamos
+                                    o potencial.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Construir Competência</h3>
+                                <p>
+                                    Formo a equipa principal em ferramentas AI e
+                                    melhores práticas. Documentamos workflows
+                                    bem-sucedidos e identificamos casos de uso
+                                    de alto impacto.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Escalar & Refinar</h3>
+                                <p>
+                                    Avaliamos oportunidades para IA "agêntica"
+                                    mais avançada. Refinamos processos
+                                    organizacionais e garantimos autonomia total
+                                    da equipa.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Como Ajudo</h2>
+                    <ul class="capabilities-list">
+                        <li>
+                            Implementação de ferramentas AI existentes nos seus
+                            processos (Claude, ChatGPT, Perplexity, etc.)
+                        </li>
+                        <li>
+                            Workshops práticos de prompt engineering e uso de IA
+                        </li>
+                        <li>
+                            Criação de knowledge bases e documentação de
+                            processos
+                        </li>
+                        <li>
+                            Automação de workflows com ferramentas
+                            no-code/low-code
+                        </li>
+                        <li>
+                            Acompanhamento prático até a equipa estar autónoma
+                        </li>
+                        <li>Roadmap faseado para adopção sustentável de IA</li>
+                    </ul>
+
+                    <h2>Para Quem É Isto</h2>
+                    <p>Trabalho com PMEs que:</p>
+                    <ul>
+                        <li>
+                            Querem adoptar IA mas não têm conhecimento interno
+                        </li>
+                        <li>
+                            Preferem usar ferramentas existentes em vez de
+                            construir do zero
+                        </li>
+                        <li>
+                            Valorizam formação de equipas e autonomia a longo
+                            prazo
+                        </li>
+                        <li>Querem ROI rápido e resultados mensuráveis</li>
+                        <li>
+                            Procuram aumentar capacidade sem contratar mais
+                            pessoas
+                        </li>
+                    </ul>
+
+                    <h2>Abordagem</h2>
+                    <p>
+                        Trabalho em sprints focados de 2-4 semanas. Começamos
+                        pequeno, testamos rápido, medimos resultados. Se
+                        funciona, escalamos. Se não funciona, ajustamos.
+                    </p>
+
+                    <p>
+                        Não acredito em projectos longos ou dependência de
+                        consultores. O objectivo é tornar a sua equipa autónoma
+                        com IA o mais rápido possível.
+                    </p>
                 </div>
 
-                <div class="sidebar-card">
-                    <h3>Formato</h3>
-                    <p>Sprints de 2-4 semanas focados</p>
-                    <p>Combinação de implementação + formação</p>
-                    <p>Acompanhamento prático até autonomia</p>
-                </div>
+                <div class="content-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Resultados Esperados</h3>
+                        <ul>
+                            <li>Equipas autónomas com IA em 4-8 semanas</li>
+                            <li>ROI mensurável desde o 1º sprint</li>
+                            <li>Processos 3-5x mais rápidos</li>
+                            <li>Conhecimento transferido, não dependência</li>
+                        </ul>
+                    </div>
 
-                <div class="sidebar-card cta-card">
-                    <h3>Vamos Conversar</h3>
-                    <p>Se faz sentido explorar como a IA pode transformar o seu negócio, vamos conversar.</p>
-                    <a href="mailto:luismadeira@ruimadeira.pt" class="sidebar-cta">Enviar Email</a>
-                    <a href="https://www.linkedin.com/in/lumadeira" target="_blank" class="sidebar-cta-secondary">LinkedIn</a>
+                    <div class="sidebar-card">
+                        <h3>Formato</h3>
+                        <p>Sprints de 2-4 semanas focados</p>
+                        <p>Combinação de implementação + formação</p>
+                        <p>Acompanhamento prático até autonomia</p>
+                    </div>
+
+                    <div class="sidebar-card cta-card">
+                        <h3>Vamos Conversar</h3>
+                        <p>
+                            Se faz sentido explorar como a IA pode transformar o
+                            seu negócio, vamos conversar.
+                        </p>
+                        <a
+                            href="mailto:luismadeira@ruimadeira.pt"
+                            class="sidebar-cta">Enviar Email</a
+                        >
+                        <a
+                            href="https://www.linkedin.com/in/lumadeira"
+                            target="_blank"
+                            class="sidebar-cta-secondary">LinkedIn</a
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
+        <script>
+            // Mobile Menu Toggle
+            const mobileMenuToggle = document.querySelector(
+                ".mobile-menu-toggle",
+            );
+            const navLinks = document.querySelector(".nav-links");
 
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenuToggle.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-
-            // Close menu when clicking on a link
-            const links = navLinks.querySelectorAll('a');
-            links.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenuToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener("click", () => {
+                    mobileMenuToggle.classList.toggle("active");
+                    navLinks.classList.toggle("active");
                 });
-            });
-        }
 
-        // Dropdown navigation
-        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
-        const navDropdown = document.querySelector('.nav-dropdown');
+                // Close menu when clicking on a link
+                const links = navLinks.querySelectorAll("a");
+                links.forEach((link) => {
+                    link.addEventListener("click", () => {
+                        mobileMenuToggle.classList.remove("active");
+                        navLinks.classList.remove("active");
+                    });
+                });
+            }
 
-        if (dropdownToggle && dropdownMenu) {
-            dropdownToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                navDropdown.classList.toggle('active');
-            });
+            // Dropdown navigation
+            const dropdownToggle = document.querySelector(
+                ".nav-dropdown-toggle",
+            );
+            const dropdownMenu = document.querySelector(".nav-dropdown-menu");
+            const navDropdown = document.querySelector(".nav-dropdown");
 
-            // Close dropdown when clicking outside
-            document.addEventListener('click', () => {
-                navDropdown.classList.remove('active');
-            });
+            if (dropdownToggle && dropdownMenu) {
+                dropdownToggle.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    navDropdown.classList.toggle("active");
+                });
 
-            navDropdown.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-        }
-    </script>
+                // Close dropdown when clicking outside
+                document.addEventListener("click", () => {
+                    navDropdown.classList.remove("active");
+                });
 
-    <Footer locale="pt" />
-</body>
+                navDropdown.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                });
+            }
+        </script>
+
+        <Footer locale="pt" />
+    </body>
 </html>
 
 <style>
-/* Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    /* Reset & Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-:root {
-    --color-bg: #0d0d0d;
-    --color-text: #c7c7c7;
-    --color-accent: #d3e97a;
-    --color-dark: #1a1a1a;
-    --font-primary: 'Inter', sans-serif;
-    --font-heading: 'Bebas Neue', sans-serif;
-}
+    :root {
+        --color-bg: #0d0d0d;
+        --color-text: #c7c7c7;
+        --color-accent: #d3e97a;
+        --color-dark: #1a1a1a;
+        --font-primary: "Inter", sans-serif;
+        --font-heading: "Bebas Neue", sans-serif;
+    }
 
-body {
-    font-family: var(--font-primary);
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+    body {
+        font-family: var(--font-primary);
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
 
-/* Navigation */
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 60px;
-    position: sticky;
-    top: 0;
-    background-color: var(--color-bg);
-    z-index: 1000;
-    transition: transform 0.3s ease;
-}
-
-.logo {
-    font-family: var(--font-heading);
-    font-size: 32px;
-    letter-spacing: -0.32px;
-    color: var(--color-text);
-}
-
-.nav-links {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-}
-
-.nav-links a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -0.48px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--color-accent);
-}
-
-/* Dropdown Navigation */
-.nav-dropdown {
-    position: relative;
-}
-
-.nav-dropdown-toggle {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: none;
-    border: none;
-    color: var(--color-text);
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -0.48px;
-    cursor: pointer;
-    padding: 0;
-    font-family: var(--font-primary);
-    transition: color 0.3s ease;
-}
-
-.nav-dropdown-toggle:hover {
-    color: var(--color-accent);
-}
-
-.nav-dropdown-toggle svg {
-    transition: transform 0.3s ease;
-}
-
-.nav-dropdown.active .nav-dropdown-toggle svg {
-    transform: rotate(180deg);
-}
-
-.nav-dropdown-menu {
-    position: absolute;
-    top: calc(100% + 16px);
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-dark);
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 8px;
-    min-width: 160px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
-}
-
-.nav-dropdown.active .nav-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-}
-
-.nav-dropdown-menu a {
-    display: block;
-    padding: 12px 16px;
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 15px;
-    border-radius: 8px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.nav-dropdown-menu a:hover {
-    background-color: rgba(211, 233, 122, 0.1);
-    color: var(--color-accent);
-}
-
-.mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 8px;
-    cursor: pointer;
-}
-
-.mobile-menu-toggle span {
-    width: 32px;
-    height: 2px;
-    background-color: var(--color-text);
-    transition: all 0.3s ease;
-}
-
-/* Page Hero */
-.page-hero {
-    padding: 120px 108px 80px;
-    border-bottom: 1px solid #333;
-}
-
-.page-hero-content {
-    max-width: 900px;
-}
-
-.page-hero h1 {
-    font-family: var(--font-heading);
-    font-size: 76px;
-    line-height: 1.1;
-    letter-spacing: -0.76px;
-    color: var(--color-text);
-    margin-bottom: 24px;
-}
-
-.page-hero-subtitle {
-    font-size: 24px;
-    line-height: 1.4;
-    color: var(--color-text);
-    opacity: 0.9;
-}
-
-/* Content Section */
-.content-section {
-    padding: 80px 108px;
-}
-
-.content-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 80px;
-}
-
-.content-main h2 {
-    font-family: var(--font-heading);
-    font-size: 36px;
-    letter-spacing: -0.36px;
-    margin-top: 48px;
-    margin-bottom: 24px;
-    color: var(--color-text);
-}
-
-.content-main h2:first-child {
-    margin-top: 0;
-}
-
-.content-main p {
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    opacity: 0.95;
-}
-
-.content-main ul {
-    margin: 24px 0 24px 24px;
-}
-
-.content-main li {
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 12px;
-    opacity: 0.95;
-}
-
-/* Process Steps */
-.process-steps {
-    margin: 48px 0;
-}
-
-.step {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 40px;
-    padding: 32px;
-    background-color: var(--color-dark);
-    border: 1px solid #333;
-    border-radius: 16px;
-}
-
-.step-number {
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    font-family: var(--font-heading);
-    font-size: 28px;
-    border-radius: 50%;
-}
-
-.step-content h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-    color: var(--color-text);
-}
-
-.step-content p {
-    margin: 0;
-    font-size: 16px;
-    opacity: 0.9;
-}
-
-/* Capabilities List */
-.capabilities-list {
-    list-style: none;
-    margin: 32px 0;
-    padding: 0;
-}
-
-.capabilities-list li {
-    padding-left: 32px;
-    position: relative;
-    margin-bottom: 16px;
-}
-
-.capabilities-list li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--color-accent);
-    font-weight: 600;
-}
-
-/* Sidebar */
-.content-sidebar {
-    position: sticky;
-    top: 96px;
-    align-self: start;
-}
-
-.sidebar-card {
-    background-color: var(--color-dark);
-    border: 1px solid #333;
-    border-radius: 16px;
-    padding: 32px;
-    margin-bottom: 24px;
-}
-
-.sidebar-card h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: var(--color-text);
-}
-
-.sidebar-card p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-    opacity: 0.9;
-}
-
-.sidebar-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar-card li {
-    padding-left: 24px;
-    position: relative;
-    margin-bottom: 12px;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.sidebar-card li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--color-accent);
-    font-weight: 600;
-}
-
-.cta-card {
-    background-color: rgba(211, 233, 122, 0.05);
-    border-color: var(--color-accent);
-}
-
-.sidebar-cta {
-    display: block;
-    text-align: center;
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    margin-top: 20px;
-}
-
-.sidebar-cta:hover {
-    background-color: #c5db6f;
-    transform: translateY(-2px);
-}
-
-.sidebar-cta-secondary {
-    display: block;
-    text-align: center;
-    color: var(--color-accent);
-    padding: 12px 28px;
-    border: 1px solid var(--color-accent);
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    transition: background-color 0.2s ease;
-    margin-top: 12px;
-}
-
-.sidebar-cta-secondary:hover {
-    background-color: rgba(211, 233, 122, 0.1);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
+    /* Navigation */
     .navigation {
-        padding: 24px 32px;
-    }
-
-    .page-hero {
-        padding: 80px 32px 60px;
-    }
-
-    .content-section {
-        padding: 60px 32px;
-    }
-
-    .content-wrapper {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .content-sidebar {
-        position: static;
-    }
-}
-
-@media (max-width: 768px) {
-    .navigation {
-        padding: 20px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 60px;
+        position: sticky;
+        top: 0;
+        background-color: var(--color-bg);
+        z-index: 1000;
+        transition: transform 0.3s ease;
     }
 
     .logo {
-        font-size: 28px;
+        font-family: var(--font-heading);
+        font-size: 32px;
+        letter-spacing: -0.32px;
+        color: var(--color-text);
     }
 
     .nav-links {
-        position: fixed;
-        top: 76px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 76px);
-        background-color: var(--color-bg);
-        flex-direction: column;
+        display: flex;
+        gap: 32px;
         align-items: center;
-        justify-content: flex-start;
-        padding: 40px 0;
-        transition: right 0.3s ease;
-        border-top: 1px solid #333;
-    }
-
-    .nav-links.active {
-        right: 0;
     }
 
     .nav-links a {
-        font-size: 24px;
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.48px;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: var(--color-accent);
+    }
+
+    /* Dropdown Navigation */
+    .nav-dropdown {
+        position: relative;
     }
 
     .nav-dropdown-toggle {
-        font-size: 24px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: none;
+        border: none;
+        color: var(--color-text);
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.48px;
+        cursor: pointer;
+        padding: 0;
+        font-family: var(--font-primary);
+        transition: color 0.3s ease;
+    }
+
+    .nav-dropdown-toggle:hover {
+        color: var(--color-accent);
+    }
+
+    .nav-dropdown-toggle svg {
+        transition: transform 0.3s ease;
+    }
+
+    .nav-dropdown.active .nav-dropdown-toggle svg {
+        transform: rotate(180deg);
     }
 
     .nav-dropdown-menu {
-        position: static;
-        transform: none;
-        margin-top: 16px;
-        border: none;
-        background-color: transparent;
-        padding: 0;
+        position: absolute;
+        top: calc(100% + 16px);
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-dark);
+        border: 1px solid #333;
+        border-radius: 12px;
+        padding: 8px;
+        min-width: 160px;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+        z-index: 1000;
     }
 
     .nav-dropdown.active .nav-dropdown-menu {
-        display: block;
-    }
-
-    .nav-dropdown-menu:not(.active) {
-        display: none;
+        opacity: 1;
+        visibility: visible;
     }
 
     .nav-dropdown-menu a {
-        font-size: 20px;
-        padding: 12px 0;
+        display: block;
+        padding: 12px 16px;
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 15px;
+        border-radius: 8px;
+        transition:
+            background-color 0.2s ease,
+            color 0.2s ease;
+    }
+
+    .nav-dropdown-menu a:hover {
+        background-color: rgba(211, 233, 122, 0.1);
+        color: var(--color-accent);
     }
 
     .mobile-menu-toggle {
-        display: flex;
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        cursor: pointer;
     }
 
-    .mobile-menu-toggle.active span:first-child {
-        transform: rotate(45deg) translate(8px, 8px);
+    .mobile-menu-toggle span {
+        width: 32px;
+        height: 2px;
+        background-color: var(--color-text);
+        transition: all 0.3s ease;
     }
 
-    .mobile-menu-toggle.active span:last-child {
-        transform: rotate(-45deg) translate(8px, -8px);
-    }
-
+    /* Page Hero */
     .page-hero {
-        padding: 60px 16px 40px;
+        padding: 120px 108px 80px;
+        border-bottom: 1px solid #333;
+    }
+
+    .page-hero-content {
+        max-width: 900px;
     }
 
     .page-hero h1 {
-        font-size: 48px;
+        font-family: var(--font-heading);
+        font-size: 76px;
+        line-height: 1.1;
+        letter-spacing: -0.76px;
+        color: var(--color-text);
+        margin-bottom: 24px;
     }
 
     .page-hero-subtitle {
-        font-size: 18px;
+        font-size: 24px;
+        line-height: 1.4;
+        color: var(--color-text);
+        opacity: 0.9;
     }
 
+    /* Content Section */
     .content-section {
-        padding: 40px 16px;
+        padding: 80px 108px;
+    }
+
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 80px;
+    }
+
+    .content-main h2 {
+        font-family: var(--font-heading);
+        font-size: 36px;
+        letter-spacing: -0.36px;
+        margin-top: 48px;
+        margin-bottom: 24px;
+        color: var(--color-text);
+    }
+
+    .content-main h2:first-child {
+        margin-top: 0;
+    }
+
+    .content-main p {
+        font-size: 17px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        opacity: 0.95;
+    }
+
+    .content-main ul {
+        margin: 24px 0 24px 24px;
+    }
+
+    .content-main li {
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 12px;
+        opacity: 0.95;
+    }
+
+    /* Process Steps */
+    .process-steps {
+        margin: 48px 0;
     }
 
     .step {
-        flex-direction: column;
-        padding: 24px;
+        display: flex;
+        gap: 24px;
+        margin-bottom: 40px;
+        padding: 32px;
+        background-color: var(--color-dark);
+        border: 1px solid #333;
+        border-radius: 16px;
     }
-}
+
+    .step-number {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-accent);
+        color: var(--color-bg);
+        font-family: var(--font-heading);
+        font-size: 28px;
+        border-radius: 50%;
+    }
+
+    .step-content h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        color: var(--color-text);
+    }
+
+    .step-content p {
+        margin: 0;
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+    /* Capabilities List */
+    .capabilities-list {
+        list-style: none;
+        margin: 32px 0;
+        padding: 0;
+    }
+
+    .capabilities-list li {
+        padding-left: 32px;
+        position: relative;
+        margin-bottom: 16px;
+    }
+
+    .capabilities-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--color-accent);
+        font-weight: 600;
+    }
+
+    /* Sidebar */
+    .content-sidebar {
+        position: sticky;
+        top: 96px;
+        align-self: start;
+    }
+
+    .sidebar-card {
+        background-color: var(--color-dark);
+        border: 1px solid #333;
+        border-radius: 16px;
+        padding: 32px;
+        margin-bottom: 24px;
+    }
+
+    .sidebar-card h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: var(--color-text);
+    }
+
+    .sidebar-card p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        opacity: 0.9;
+    }
+
+    .sidebar-card ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar-card li {
+        padding-left: 24px;
+        position: relative;
+        margin-bottom: 12px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .sidebar-card li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--color-accent);
+        font-weight: 600;
+    }
+
+    .cta-card {
+        background-color: rgba(211, 233, 122, 0.05);
+        border-color: var(--color-accent);
+    }
+
+    .sidebar-cta {
+        display: block;
+        text-align: center;
+        background-color: var(--color-accent);
+        color: var(--color-bg);
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        transition:
+            transform 0.2s ease,
+            background-color 0.2s ease;
+        margin-top: 20px;
+    }
+
+    .sidebar-cta:hover {
+        background-color: #c5db6f;
+        transform: translateY(-2px);
+    }
+
+    .sidebar-cta-secondary {
+        display: block;
+        text-align: center;
+        color: var(--color-accent);
+        padding: 12px 28px;
+        border: 1px solid var(--color-accent);
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 15px;
+        transition: background-color 0.2s ease;
+        margin-top: 12px;
+    }
+
+    .sidebar-cta-secondary:hover {
+        background-color: rgba(211, 233, 122, 0.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .navigation {
+            padding: 24px 32px;
+        }
+
+        .page-hero {
+            padding: 80px 32px 60px;
+        }
+
+        .content-section {
+            padding: 60px 32px;
+        }
+
+        .content-wrapper {
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        .content-sidebar {
+            position: static;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .navigation {
+            padding: 20px 16px;
+        }
+
+        .logo {
+            font-size: 28px;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 76px;
+            right: -100%;
+            width: 100%;
+            height: calc(100vh - 76px);
+            background-color: var(--color-bg);
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 0;
+            transition: right 0.3s ease;
+            border-top: 1px solid #333;
+        }
+
+        .nav-links.active {
+            right: 0;
+        }
+
+        .nav-links a {
+            font-size: 24px;
+        }
+
+        .nav-dropdown-toggle {
+            font-size: 24px;
+        }
+
+        .nav-dropdown-menu {
+            position: static;
+            transform: none;
+            margin-top: 16px;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .nav-dropdown.active .nav-dropdown-menu {
+            display: block;
+        }
+
+        .nav-dropdown-menu:not(.active) {
+            display: none;
+        }
+
+        .nav-dropdown-menu a {
+            font-size: 20px;
+            padding: 12px 0;
+        }
+
+        .mobile-menu-toggle {
+            display: flex;
+        }
+
+        .mobile-menu-toggle.active span:first-child {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-menu-toggle.active span:last-child {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        .page-hero {
+            padding: 60px 16px 40px;
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+        }
+
+        .page-hero-subtitle {
+            font-size: 18px;
+        }
+
+        .content-section {
+            padding: 40px 16px;
+        }
+
+        .step {
+            flex-direction: column;
+            padding: 24px;
+        }
+    }
 </style>
