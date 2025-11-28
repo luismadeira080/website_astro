@@ -1,0 +1,450 @@
+---
+// Service Selection Modal for Portuguese Homepage
+---
+
+<div id="service-selection-modal" class="service-modal-overlay">
+    <div class="service-modal">
+        <button class="modal-close" aria-label="Fechar">
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </button>
+
+        <div class="modal-content">
+            <h2>O que procura hoje?</h2>
+            <p class="modal-description">
+                Ajudamo-lo a encontrar a solução ideal para o seu negócio
+            </p>
+
+            <div class="service-options">
+                <button
+                    class="service-option"
+                    data-redirect="/pt/landing-page"
+                >
+                    <div class="option-icon">
+                        <svg
+                            width="40"
+                            height="40"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M4 7V4H20V7"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M9 20H15"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M12 4V20"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div class="option-text">
+                        <h3>Landing Page</h3>
+                        <p>
+                            Página de conversão focada num único produto ou
+                            serviço
+                        </p>
+                    </div>
+                    <div class="option-arrow">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M5 12H19M19 12L12 5M19 12L12 19"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </button>
+
+                <button
+                    class="service-option"
+                    data-redirect="/pt/website-seo"
+                >
+                    <div class="option-icon">
+                        <svg
+                            width="40"
+                            height="40"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M12 22V12"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M3.27 6.96L12 12.01L20.73 6.96"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div class="option-text">
+                        <h3>Website + SEO</h3>
+                        <p>
+                            Website completo otimizado para aparecer no Google
+                        </p>
+                    </div>
+                    <div class="option-arrow">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M5 12H19M19 12L12 5M19 12L12 19"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+
+            <button class="continue-link">Continuar sem escolher</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .service-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+        padding: 16px;
+    }
+
+    .service-modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .service-modal {
+        background-color: #1a1a1a;
+        border: 2px solid #333;
+        border-radius: 24px;
+        padding: 48px;
+        max-width: 600px;
+        width: 100%;
+        position: relative;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+    }
+
+    .service-modal-overlay.active .service-modal {
+        transform: translateY(0);
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: #c7c7c7;
+        cursor: pointer;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .modal-close:hover {
+        background-color: rgba(211, 233, 122, 0.1);
+        color: #d3e97a;
+        transform: rotate(90deg);
+    }
+
+    .modal-content h2 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 48px;
+        letter-spacing: -0.48px;
+        color: #c7c7c7;
+        margin-bottom: 12px;
+        line-height: 1.1;
+    }
+
+    .modal-description {
+        font-size: 16px;
+        color: #c7c7c7;
+        opacity: 0.8;
+        margin-bottom: 40px;
+        line-height: 1.5;
+    }
+
+    .service-options {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .service-option {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #0d0d0d;
+        border: 2px solid #333;
+        border-radius: 16px;
+        padding: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: left;
+        width: 100%;
+    }
+
+    .service-option:hover {
+        border-color: #d3e97a;
+        background-color: rgba(211, 233, 122, 0.05);
+        transform: translateX(4px);
+    }
+
+    .option-icon {
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+        background-color: rgba(211, 233, 122, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d3e97a;
+        transition: all 0.3s ease;
+    }
+
+    .service-option:hover .option-icon {
+        background-color: #d3e97a;
+        color: #0d0d0d;
+    }
+
+    .option-text {
+        flex: 1;
+    }
+
+    .option-text h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 24px;
+        letter-spacing: -0.24px;
+        color: #c7c7c7;
+        margin-bottom: 4px;
+    }
+
+    .option-text p {
+        font-size: 14px;
+        color: #c7c7c7;
+        opacity: 0.7;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .option-arrow {
+        flex-shrink: 0;
+        color: #c7c7c7;
+        opacity: 0.5;
+        transition: all 0.3s ease;
+    }
+
+    .service-option:hover .option-arrow {
+        opacity: 1;
+        color: #d3e97a;
+        transform: translateX(4px);
+    }
+
+    .continue-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: none;
+        border: none;
+        color: #c7c7c7;
+        opacity: 0.6;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 12px;
+        transition: all 0.3s ease;
+        font-family: "Inter", sans-serif;
+    }
+
+    .continue-link:hover {
+        opacity: 1;
+        color: #d3e97a;
+    }
+
+    @media (max-width: 768px) {
+        .service-modal {
+            padding: 32px 24px;
+        }
+
+        .modal-content h2 {
+            font-size: 36px;
+        }
+
+        .modal-description {
+            font-size: 15px;
+            margin-bottom: 32px;
+        }
+
+        .service-option {
+            padding: 20px;
+            gap: 16px;
+        }
+
+        .option-icon {
+            width: 48px;
+            height: 48px;
+        }
+
+        .option-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .option-text h3 {
+            font-size: 20px;
+        }
+
+        .option-text p {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .service-modal {
+            padding: 24px 20px;
+        }
+
+        .modal-content h2 {
+            font-size: 28px;
+        }
+
+        .service-option {
+            flex-direction: row;
+            padding: 16px;
+        }
+
+        .option-icon {
+            width: 44px;
+            height: 44px;
+        }
+
+        .option-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+    }
+</style>
+
+<script>
+    function initServiceSelectionModal() {
+        const modal = document.getElementById("service-selection-modal");
+        const closeButton = modal?.querySelector(".modal-close");
+        const continueLink = modal?.querySelector(".continue-link");
+        const serviceOptions = modal?.querySelectorAll(".service-option");
+
+        if (!modal) return;
+
+        // Show modal on page load
+        setTimeout(() => {
+            modal.classList.add("active");
+        }, 500);
+
+        // Close modal function
+        function closeModal() {
+            modal.classList.remove("active");
+        }
+
+        // Close on X button
+        closeButton?.addEventListener("click", closeModal);
+
+        // Close on "Continue without choosing"
+        continueLink?.addEventListener("click", closeModal);
+
+        // Close on overlay click
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close on ESC key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modal.classList.contains("active")) {
+                closeModal();
+            }
+        });
+
+        // Handle service option clicks
+        serviceOptions.forEach((option) => {
+            option.addEventListener("click", () => {
+                const redirectUrl = option.getAttribute("data-redirect");
+                if (redirectUrl) {
+                    window.location.href = redirectUrl;
+                }
+            });
+        });
+    }
+
+    // Initialize on page load
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initServiceSelectionModal);
+    } else {
+        initServiceSelectionModal();
+    }
+</script>
