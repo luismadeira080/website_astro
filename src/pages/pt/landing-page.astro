@@ -4,6 +4,7 @@ import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
 import ConversionTracking from '../../components/ConversionTracking.astro';
+import ContactModal from '../../components/ContactModal.astro';
 ---
 
 <!DOCTYPE html>
@@ -249,9 +250,9 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
 		<div class="section-container">
 			<h2>Pronto Para Começar?</h2>
 			<p class="footer-cta-text">Landing page profissional em 7 dias com acompanhamento contínuo. A partir de €250.</p>
-			<a href="/pt/landing-page-contacto" class="btn-primary cta-primary" aria-label="Fale comigo">
+			<button class="btn-primary cta-primary" data-contact-trigger data-contact-context="landing" aria-label="Fale comigo">
 				FALE COMIGO
-			</a>
+			</button>
 			<div class="contact-info">
 				<a href="tel:+351924466899" class="contact-link" aria-label="Ligar agora">
 					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,6 +278,7 @@ import ConversionTracking from '../../components/ConversionTracking.astro';
 	</section>
 
 	<Footer locale="pt" />
+	<ContactModal locale="pt" context="landing" />
 	<ConversionTracking />
 
 	<style>
