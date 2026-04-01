@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Bilingual (EN/PT) portfolio and business website for Estúdio LM / Luís Madeira — an AI workflow consultant and web developer based in Porto, Portugal. Live at https://www.estudiolm.com. Deployed on Vercel.
+Bilingual (EN/PT) website for Luís Madeira — an AI workflow consultant based in Porto, Portugal. The business focuses on delivering AI projects, redesigning workflows, and saving SMEs time and money. Team training is offered as an add-on. Live at https://www.estudiolm.com. Deployed on Vercel.
+
+**Important:** Luís no longer offers website development or SEO services. Do not reference these as current offerings.
 
 ## Commands
 
@@ -18,15 +20,23 @@ No test framework or linter is configured.
 
 **Framework:** Astro 5.x (static output, no JS framework — vanilla JS only)
 
-**i18n:** English at root (`/`), Portuguese at `/pt/`. Configured in `astro.config.mjs` with `prefixDefaultLocale: false`. Translation strings live in `src/utils/i18n.ts` with helpers `t()`, `getLocaleFromPath()`, and `getAlternatePath()`. Path mappings between EN↔PT are hardcoded in that file — **update them when adding new pages**.
+**i18n:** English at root (`/`), Portuguese at `/pt/`. Configured in `astro.config.mjs` with `prefixDefaultLocale: false`. Path mappings between EN↔PT are in `src/utils/i18n.ts` — **update them when adding new pages**. Only `getLocaleFromPath()` and `getAlternatePath()` are used (by LanguageSwitcher).
 
-**Routing:** File-based. Every EN page under `src/pages/` has a PT mirror under `src/pages/pt/`. Project case studies live in `src/pages/projects/` (EN) and `src/pages/pt/projetos/` (PT).
+**Routing:** File-based. Every EN page under `src/pages/` has a PT mirror under `src/pages/pt/`.
+
+**Current pages (9 total):**
+- `/` and `/pt/` — Homepage (AI-focused hero, services, process)
+- `/consulting` and `/pt/consultoria` — Main services page (AI consulting)
+- `/projects` and `/pt/projetos` — Projects listing (empty, awaiting AI case studies)
+- `/about` and `/pt/sobre` — About page
+- `/pt/ai-contact` — AI contact form (PT only)
 
 **Components** (`src/components/`):
 - `SEO.astro` — Meta tags, Open Graph, Twitter Cards, hreflang
-- `Schema.astro` — JSON-LD structured data (Organization, LocalBusiness)
-- `Footer.astro`, `ContactModal.astro`, `ServiceSelectionModal.astro`
-- `LanguageSwitcher.astro`, `Breadcrumbs.astro`
+- `Schema.astro` — JSON-LD structured data (Organization, LocalBusiness, Service)
+- `Footer.astro` — Site footer with quick links
+- `ContactModal.astro` — WhatsApp/call/form contact modal
+- `LanguageSwitcher.astro` — EN↔PT toggle
 - `ConversionTracking.astro` — GTM/analytics events
 
 **SEO infrastructure:** `robots.txt.js` and `sitemap.xml.js` are dynamic Astro endpoints in `src/pages/`.
@@ -40,7 +50,7 @@ No test framework or linter is configured.
 ## Key Conventions
 
 - Navigation and common JS (mobile menu, scroll-hide nav, smooth scroll) are duplicated in each page file — changes must be applied to all pages manually.
+- Nav links: Services → `/consulting`, Projects, About, Contact. No dropdown.
 - Breakpoints: 1024px (tablet), 768px (mobile), 480px (small mobile).
-- Project images go in `/public/` as SVG (logos) or PNG/JPG (photos).
 - The `.md files/CLAUDE.md` file contains the full design system reference (colors, typography, spacing, component patterns). Consult it when making visual changes.
 - `vercel.json` handles naked domain → www redirect and HSTS headers.
