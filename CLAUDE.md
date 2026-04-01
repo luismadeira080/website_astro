@@ -52,5 +52,5 @@ No test framework or linter is configured.
 - Navigation and common JS (mobile menu, scroll-hide nav, smooth scroll) are duplicated in each page file — changes must be applied to all pages manually.
 - Nav links: Services → `/consulting`, Projects, About, Contact. No dropdown.
 - Breakpoints: 1024px (tablet), 768px (mobile), 480px (small mobile).
-- The `.md files/CLAUDE.md` file contains the full design system reference (colors, typography, spacing, component patterns). Consult it when making visual changes.
+- The `.md files/DESIGN-SYSTEM.md` file contains the full design system reference (colors, typography, spacing, component patterns). Consult it when making visual changes.
 - `vercel.json` handles naked domain → www redirect and HSTS headers.
