@@ -9,18 +9,18 @@ const { locale, context = 'general' } = Astro.props;
 // Pre-configured messages based on context
 const messages = {
   pt: {
-    general: 'Olá! Gostaria de saber mais sobre os seus serviços de criação de websites.',
-    landing: 'Olá! Estou interessado numa landing page para o meu negócio.',
-    seo: 'Olá! Gostaria de melhorar o SEO do meu negócio e aparecer no Google.',
+    general: 'Olá! Gostaria de saber mais sobre os seus serviços de consultoria AI.',
+    landing: 'Olá! Estou interessado em redesenhar workflows com IA no meu negócio.',
+    seo: 'Olá! Gostaria de explorar como a IA pode ajudar o meu negócio.',
     project: 'Olá! Vi o vosso trabalho e gostaria de discutir um projeto semelhante.',
-    service: 'Olá! Gostaria de falar sobre este serviço específico.',
+    service: 'Olá! Gostaria de falar sobre os seus serviços de consultoria AI.',
   },
   en: {
-    general: 'Hi! I would like to know more about your website development services.',
-    landing: 'Hi! I am interested in a landing page for my business.',
-    seo: 'Hi! I would like to improve my business SEO and appear on Google.',
+    general: 'Hi! I would like to know more about your AI consulting services.',
+    landing: 'Hi! I am interested in redesigning workflows with AI for my business.',
+    seo: 'Hi! I would like to explore how AI can help my business.',
     project: 'Hi! I saw your work and would like to discuss a similar project.',
-    service: 'Hi! I would like to talk about this specific service.',
+    service: 'Hi! I would like to talk about your AI consulting services.',
   }
 };
 
@@ -123,18 +123,18 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
         const locale = modal.getAttribute('data-locale') || 'pt';
         const messages = {
           pt: {
-            general: 'Olá! Gostaria de saber mais sobre os seus serviços de criação de websites.',
-            landing: 'Olá! Estou interessado numa landing page para o meu negócio.',
-            seo: 'Olá! Gostaria de melhorar o SEO do meu negócio e aparecer no Google.',
+            general: 'Olá! Gostaria de saber mais sobre os seus serviços de consultoria AI.',
+            landing: 'Olá! Estou interessado em redesenhar workflows com IA no meu negócio.',
+            seo: 'Olá! Gostaria de explorar como a IA pode ajudar o meu negócio.',
             project: 'Olá! Vi o vosso trabalho e gostaria de discutir um projeto semelhante.',
-            service: 'Olá! Gostaria de falar sobre este serviço específico.',
+            service: 'Olá! Gostaria de falar sobre os seus serviços de consultoria AI.',
           },
           en: {
-            general: 'Hi! I would like to know more about your website development services.',
-            landing: 'Hi! I am interested in a landing page for my business.',
-            seo: 'Hi! I would like to improve my business SEO and appear on Google.',
+            general: 'Hi! I would like to know more about your AI consulting services.',
+            landing: 'Hi! I am interested in redesigning workflows with AI for my business.',
+            seo: 'Hi! I would like to explore how AI can help my business.',
             project: 'Hi! I saw your work and would like to discuss a similar project.',
-            service: 'Hi! I would like to talk about this specific service.',
+            service: 'Hi! I would like to talk about your AI consulting services.',
           }
         };
         const message = messages[locale as 'pt' | 'en'][context as keyof typeof messages['pt']] || messages[locale as 'pt' | 'en']['general'];

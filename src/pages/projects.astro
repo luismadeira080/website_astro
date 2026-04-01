@@ -43,8 +43,8 @@ import ContactModal from '../components/ContactModal.astro';
     <nav class="navigation">
         <a href="/" class="logo">luís madeira</a>
         <div class="nav-links">
-            <a href="/#work">Work</a>
-            <a href="/services">Services</a>
+            <a href="/consulting">Services</a>
+            <a href="/projects">Projects</a>
             <a href="/about">About</a>
             <a href="/#contact">Contact</a>
             <LanguageSwitcher currentPath="/projects" />
@@ -57,100 +57,15 @@ import ContactModal from '../components/ContactModal.astro';
 
     <!-- Projects Hero -->
     <section class="projects-hero">
-        <h1>CASE STUDIES</h1>
-        <p>Real results from local SEO and web development projects</p>
+        <h1>PROJECTS</h1>
+        <p>AI workflow redesign and automation projects</p>
     </section>
 
     <!-- Projects Grid -->
     <section class="projects-grid-section">
-        <!-- Project Card 1 -->
-        <div class="project-card">
-            <div class="project-card-image">
-                <img src="/final fnal final.svg" alt="Porto Car Care - Auto detailing website with local SEO optimization">
-            </div>
-            <div class="project-card-content">
-                <div class="project-card-tag">Local SEO</div>
-                <h3>Porto Car Care</h3>
-                <p class="project-card-description">Tripled organic visibility for auto detailing shop through programmatic SEO strategy.</p>
-                <div class="project-card-metrics">
-                    <div class="metric-item">
-                        <span class="metric-number">+3×</span>
-                        <span class="metric-text">Visibility</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-number">Page 1</span>
-                        <span class="metric-text">All Services</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-number">+40%</span>
-                        <span class="metric-text">Calls</span>
-                    </div>
-                </div>
-                <div class="project-card-actions">
-                    <a href="/projects/porto-car-care" class="project-link">Read Full Case Study →</a>
-                    <button class="card-cta" data-contact-trigger data-contact-context="project">Book a Similar Project</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project Card 2 -->
-        <div class="project-card">
-            <div class="project-card-image">
-                <img src="/brunno-rodrigues.svg" alt="Brunno Rodrigues - Personal training and physiotherapy website">
-            </div>
-            <div class="project-card-content">
-                <div class="project-card-tag">Landing Page</div>
-                <h3>Brunno Rodrigues</h3>
-                <p class="project-card-description">Professional landing page for massage therapist with clear booking CTAs.</p>
-                <div class="project-card-metrics">
-                    <div class="metric-item">
-                        <span class="metric-number">2 weeks</span>
-                        <span class="metric-text">Timeline</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-number">Mobile</span>
-                        <span class="metric-text">Optimized</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-number">SEO</span>
-                        <span class="metric-text">Ready</span>
-                    </div>
-                </div>
-                <div class="project-card-actions">
-                    <a href="/projects/brunno-rodrigues" class="project-link">Read Full Case Study →</a>
-                    <button class="card-cta" data-contact-trigger data-contact-context="landing">Build Your Landing Page</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project Card 3 -->
-        <div class="project-card">
-            <div class="project-card-image">
-                <img src="/porto-massage-studio.svg" alt="Porto Massage Studio - Spa and wellness center website">
-            </div>
-            <div class="project-card-content">
-                <div class="project-card-tag">Landing Page</div>
-                <h3>Porto Massage Studio</h3>
-                <p class="project-card-description">Professional massage studio landing page with online booking and clear service presentation.</p>
-                <div class="project-card-metrics">
-                    <div class="metric-item">
-                        <span class="metric-number">2 weeks</span>
-                        <span class="metric-text">Timeline</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-number">Mobile</span>
-                        <span class="metric-text">Optimized</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-number">SEO</span>
-                        <span class="metric-text">Ready</span>
-                    </div>
-                </div>
-                <div class="project-card-actions">
-                    <a href="/projects/porto-massage-studio" class="project-link">Read Full Case Study →</a>
-                    <button class="card-cta" data-contact-trigger data-contact-context="landing">Build Your Landing Page</button>
-                </div>
-            </div>
+        <div class="empty-state">
+            <p>New AI project case studies coming soon.</p>
+            <a href="/consulting" class="btn-primary">Learn About My Services</a>
         </div>
     </section>
 

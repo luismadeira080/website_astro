@@ -15,8 +15,8 @@ const baseUrl = isPortuguese ? '/pt' : '';
             <h4>{isPortuguese ? 'Sobre' : 'About'}</h4>
             <p class="footer-description">
                 {isPortuguese
-                    ? 'Ajudo negócios locais em Portugal a crescer online através de websites profissionais e SEO local.'
-                    : 'Helping local businesses in Portugal grow online through professional websites and local SEO.'}
+                    ? 'Ajudo PMEs portuguesas a poupar tempo e dinheiro através de redesenho de workflows e automação com IA.'
+                    : 'Helping Portuguese SMEs save time and money through AI-powered workflow redesign and automation.'}
             </p>
         </div>
 
@@ -26,7 +26,7 @@ const baseUrl = isPortuguese ? '/pt' : '';
                 <li><a href={`${baseUrl}/`}>{isPortuguese ? 'Início' : 'Home'}</a></li>
                 <li><a href={`${baseUrl === '' ? '/about' : '/pt/sobre'}`}>{isPortuguese ? 'Sobre' : 'About'}</a></li>
                 <li><a href={`${baseUrl === '' ? '/projects' : '/pt/projetos'}`}>{isPortuguese ? 'Projetos' : 'Projects'}</a></li>
-                <li><a href={`${baseUrl === '' ? '/services' : '/pt/servicos'}`}>{isPortuguese ? 'Serviços' : 'Services'}</a></li>
+                <li><a href={`${baseUrl === '' ? '/consulting' : '/pt/consultoria'}`}>{isPortuguese ? 'Serviços' : 'Services'}</a></li>
                 <li><a href={`${baseUrl}/#contact`}>{isPortuguese ? 'Contacto' : 'Contact'}</a></li>
             </ul>
         </div>

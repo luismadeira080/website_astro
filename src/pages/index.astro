@@ -44,19 +44,8 @@ import Footer from '../components/Footer.astro';
     <nav class="navigation">
         <a href="/" class="logo">luís madeira</a>
         <div class="nav-links">
-            <a href="#work">Work</a>
-            <div class="nav-dropdown">
-                <button class="nav-dropdown-toggle">
-                    Services
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <div class="nav-dropdown-menu">
-                    <a href="/consulting">AI Solutions</a>
-                    <a href="/services">Websites</a>
-                </div>
-            </div>
+            <a href="/consulting">Services</a>
+            <a href="/projects">Projects</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
             <LanguageSwitcher currentPath="/" />
@@ -72,12 +61,12 @@ import Footer from '../components/Footer.astro';
         <div class="hero-content">
             <div class="hero-text">
                 <h1>LUÍS MADEIRA</h1>
-                <p class="hero-subtitle">I create professional SEO-optimized websites that rank in Google's top results. Websites that generate real leads for your business.</p>
+                <p class="hero-subtitle">I redesign workflows and deliver AI-powered projects that save your business time and money. Practical solutions with existing tools — real results in weeks, not months.</p>
                 <div class="hero-badge">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
                     </svg>
-                    <span>SEO + AEO Expert</span>
+                    <span>AI Workflow Consultant</span>
                 </div>
             </div>
             <div class="hero-actions">
@@ -98,7 +87,7 @@ import Footer from '../components/Footer.astro';
     <section class="what-i-deliver-section">
         <div class="section-header">
             <h2>What I Deliver</h2>
-            <p>Professional websites that generate real results for your business.</p>
+            <p>AI-powered solutions that generate real results for your business.</p>
         </div>
 
         <div class="deliverables-grid">
@@ -110,39 +99,36 @@ import Footer from '../components/Footer.astro';
                         <path d="M3.27 6.96L12 12.01L20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3>Websites + SEO</h3>
-                <p>Professional websites optimized to rank on Google and generate qualified leads. I transform your website into a 24/7 client acquisition machine.</p>
+                <h3>Workflow Redesign & AI Implementation</h3>
+                <p>I identify bottlenecks in your operations and redesign workflows using AI tools that already exist. Your team saves hours every week — with measurable ROI from week one.</p>
                 <ul class="deliverable-features">
-                    <li>Complete SEO optimization for Google rankings</li>
-                    <li>Professional design that converts visitors into clients</li>
-                    <li>Fast performance and perfect mobile experience</li>
-                    <li>Proven results (see Porto Car Care above)</li>
+                    <li>Audit current workflows and identify automation opportunities</li>
+                    <li>Implement AI tools (Claude, ChatGPT, Perplexity, etc.) into daily operations</li>
+                    <li>Build documented processes your team can maintain</li>
+                    <li>Measurable time and cost savings within 2-4 weeks</li>
                 </ul>
-                <a href="/services" class="service-cta">View Web Services</a>
+                <a href="/consulting" class="service-cta">Learn More</a>
             </div>
 
             <div class="deliverable-card deliverable-card-primary">
                 <div class="deliverable-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 7V4H20V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9 20H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3>Landing Pages</h3>
-                <p>High-conversion landing pages focused on a single goal. Pages that transform traffic into leads and sales with above-average conversion rates.</p>
+                <h3>Team Training</h3>
+                <p>Hands-on training so your team becomes autonomous with AI. I don't create dependency — I build competency. The faster your team works without me, the better I've done my job.</p>
                 <ul class="deliverable-features">
-                    <li>Conversion-focused design with clear call-to-actions</li>
-                    <li>Persuasive copy that communicates value immediately</li>
-                    <li>Optimized forms and CRM integration</li>
-                    <li>A/B testing and continuous optimization</li>
+                    <li>Practical workshops with tools your team will actually use</li>
+                    <li>Custom prompt libraries and best practices for your industry</li>
+                    <li>Documentation and playbooks for ongoing reference</li>
+                    <li>Goal: full team autonomy, not consultant dependency</li>
                 </ul>
-                <a href="/landing-page" class="service-cta">View Landing Pages</a>
+                <a href="/consulting" class="service-cta">Learn More</a>
             </div>
-        </div>
-
-        <div class="secondary-service">
-            <p>I also offer <a href="/consulting" class="inline-link">AI consulting and automation</a> for businesses looking to scale operations.</p>
         </div>
     </section>
 
@@ -150,140 +136,31 @@ import Footer from '../components/Footer.astro';
     <section class="our-process-section">
         <div class="process-header">
             <h2>HOW IT WORKS</h2>
-            <p>A simple and transparent process from start to launch.</p>
+            <p>A focused sprint-based approach. Start small, test quickly, measure results.</p>
         </div>
 
         <div class="process-grid">
             <div class="process-card">
                 <div class="card-number">01</div>
                 <div class="card-content">
-                    <h3>Discovery</h3>
-                    <p>We discuss your business, goals, and target audience. I identify the right keywords and define a custom SEO strategy for your market.</p>
+                    <h3>Explore & Experiment</h3>
+                    <p>I identify 1-2 high-impact use cases in your workflows. I test AI tools, measure productivity gains, and validate the potential before scaling.</p>
                 </div>
             </div>
 
             <div class="process-card">
                 <div class="card-number">02</div>
                 <div class="card-content">
-                    <h3>Design & Development</h3>
-                    <p>I create a professional, fast, and conversion-optimized website. Responsive design that works perfectly on all devices, focused on generating leads.</p>
+                    <h3>Build Competency</h3>
+                    <p>I train your core team on AI tools and best practices. I document successful workflows and identify the highest-impact opportunities to scale.</p>
                 </div>
             </div>
 
             <div class="process-card">
                 <div class="card-number">03</div>
                 <div class="card-content">
-                    <h3>Launch & Optimization</h3>
-                    <p>I launch your website with complete SEO implemented. Submit to search engines and monitor results to ensure it's ranking and generating qualified leads.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Study Section -->
-    <section class="case-study-section">
-        <div class="case-study-badge">CASE STUDY</div>
-        <div class="case-study-content">
-            <div class="case-study-text">
-                <h2>How Porto Car Care Dominated Online Search</h2>
-                <p class="case-study-intro">
-                    A car detailing center in Porto that went from invisible online to generating 20-30 new clients per month. Top 3 on Google for key terms — and now appears as the <strong>first recommendation in AI engines</strong> like ChatGPT and Perplexity.
-                </p>
-
-                <div class="case-study-metrics">
-                    <div class="metric">
-                        <div class="metric-number">Top 3</div>
-                        <div class="metric-label">Google Rankings</div>
-                        <p class="metric-desc">First results for main search terms</p>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-number">20-30</div>
-                        <div class="metric-label">Clients/Month</div>
-                        <p class="metric-desc">Qualified leads via organic search</p>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-number">#1 AEO</div>
-                        <div class="metric-label">AI Engine Optimization</div>
-                        <p class="metric-desc">Top recommendation in ChatGPT and Perplexity</p>
-                    </div>
-                </div>
-
-                <div class="case-study-quote">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 21C3 17.134 3 15.201 4.1 13.95C5.2 12.7 7.067 12.5 10.8 12.5H13.2C16.933 12.5 18.8 12.7 19.9 13.95C21 15.201 21 17.134 21 21M15.5 8C15.5 9.933 13.933 11.5 12 11.5C10.067 11.5 8.5 9.933 8.5 8C8.5 6.067 10.067 4.5 12 4.5C13.933 4.5 15.5 6.067 15.5 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <blockquote>
-                        "Luís positioned my business in Google's top results. I get 20-30 new clients per month."
-                    </blockquote>
-                    <cite>
-                        <strong>Pedro Pinto</strong><br>
-                        Owner, Porto Car Care
-                    </cite>
-                </div>
-
-                <a href="/projects/porto-car-care" class="case-study-link">
-                    View Full Case Study
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="case-study-visual">
-                <div class="chatgpt-mockup">
-                    <div class="mockup-header">
-                        <div class="mockup-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <span class="mockup-title">AI Search</span>
-                    </div>
-                    <div class="mockup-content">
-                        <div class="chat-message user">
-                            <p>What's the best place for car detailing in Porto?</p>
-                        </div>
-                        <div class="chat-message assistant">
-                            <div class="rank-badge">TOP RESULT</div>
-                            <p><strong>Porto Car Care</strong> is the top recommendation for professional car detailing services in Porto...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="work" class="testimonials-section">
-        <div class="section-header">
-            <h2>Real Businesses, Real Results</h2>
-            <p>What clients I've worked with say</p>
-        </div>
-
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-tag">SEO OPTIMIZATION</div>
-                <p class="testimonial-text">"Luís positioned my business in the top Google results. I get between 20-30 new clients per month."</p>
-                <div class="testimonial-author">
-                    <p class="author-name">Pedro Pinto</p>
-                    <p class="author-title">Owner, Porto Car Care</p>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-tag">Websites</div>
-                <p class="testimonial-text">"Luís delivered exactly what I needed on the promised deadline. The website looks professional and many clients mention they found it easy to book. Having a proper website instead of just Instagram definitely helped me attract more serious clients."</p>
-                <div class="testimonial-author">
-                    <p class="author-name">Brunno Rodrigues</p>
-                    <p class="author-title">Massage Therapist</p>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-tag">Landing Pages</div>
-                <p class="testimonial-text">"The landing page exceeded our expectations. It's beautiful, easy to use, and we're getting contacts from clients who would never have called us before. The mobile experience is perfect."</p>
-                <div class="testimonial-author">
-                    <p class="author-name">Joaquim Marco</p>
-                    <p class="author-title">Porto Massage Studio</p>
+                    <h3>Scale & Refine</h3>
+                    <p>I evaluate opportunities for more advanced AI automation. I refine processes and ensure your team has full autonomy to maintain and evolve the systems.</p>
                 </div>
             </div>
         </div>
@@ -297,7 +174,7 @@ import Footer from '../components/Footer.astro';
                 <h3>I transform manual processes into automated systems that generate real results.</h3>
             </div>
             <div class="about-description">
-                <p>From Porto, doing a Master's in Management at IE Business School. I help Portuguese SMEs work smarter through AI automation and optimized websites.</p>
+                <p>From Porto, doing a Master's in Management at IE Business School. I help Portuguese SMEs work smarter through AI-powered workflow redesign and automation.</p>
                 <a href="/about" class="text-link">MORE ABOUT ME</a>
             </div>
         </div>
@@ -366,26 +243,6 @@ import Footer from '../components/Footer.astro';
             lastScroll = currentScroll;
         });
 
-        // Dropdown navigation
-        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
-        const navDropdown = document.querySelector('.nav-dropdown');
-
-        if (dropdownToggle && dropdownMenu) {
-            dropdownToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                navDropdown.classList.toggle('active');
-            });
-
-            // Close dropdown when clicking outside
-            document.addEventListener('click', () => {
-                navDropdown.classList.remove('active');
-            });
-
-            navDropdown.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-        }
     </script>
 
     <Footer locale="en" />

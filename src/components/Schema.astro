@@ -36,7 +36,7 @@ const baseOrganization = {
   'founder': {
     '@type': 'Person',
     'name': 'Luís Madeira',
-    'jobTitle': 'Web Developer & SEO Specialist'
+    'jobTitle': 'AI Workflow Consultant'
   }
 };
 
@@ -48,9 +48,9 @@ const schemas = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${siteURL}#localbusiness`,
-    'name': 'Luís Madeira - Web Developer',
+    'name': 'Luís Madeira - AI Consultant',
     'image': `${siteURL}profile.jpeg`,
-    'description': 'Professional web development and local SEO services for businesses in Portugal',
+    'description': 'AI workflow consulting, implementation, and team training for SMEs in Portugal',
     'address': {
       '@type': 'PostalAddress',
       'addressCountry': 'PT',
@@ -76,8 +76,8 @@ const schemas = {
   Service: {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    'serviceType': data?.serviceType || 'Web Development',
-    'description': data?.description || 'Professional web development and SEO services',
+    'serviceType': data?.serviceType || 'AI Consulting',
+    'description': data?.description || 'AI workflow consulting, implementation, and team training',
     'provider': {
       '@id': `${siteURL}#organization`
     },
@@ -87,27 +87,27 @@ const schemas = {
     },
     'hasOfferCatalog': {
       '@type': 'OfferCatalog',
-      'name': 'Web Development Services',
+      'name': 'AI Consulting Services',
       'itemListElement': data?.services || [
         {
           '@type': 'Offer',
           'itemOffered': {
             '@type': 'Service',
-            'name': 'Landing Page Creation'
+            'name': 'AI Workflow Redesign & Implementation'
           }
         },
         {
           '@type': 'Offer',
           'itemOffered': {
             '@type': 'Service',
-            'name': 'SEO-Optimized Website Development'
+            'name': 'AI Team Training & Competency Building'
           }
         },
         {
           '@type': 'Offer',
           'itemOffered': {
             '@type': 'Service',
-            'name': 'Local SEO Services'
+            'name': 'Process Automation with AI Tools'
           }
         }
       ]
@@ -144,7 +144,7 @@ const schemas = {
     },
     'about': {
       '@type': 'Service',
-      'name': data?.serviceType || 'Web Development'
+      'name': data?.serviceType || 'AI Consulting'
     },
     'dateCreated': data?.dateCreated
   },

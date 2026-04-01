@@ -25,7 +25,6 @@ function generateSitemapXML(pages) {
 export async function GET() {
   const lastmod = new Date().toISOString();
 
-  // Define all pages with their properties
   const pages = [
     // English Pages
     {
@@ -50,6 +49,16 @@ export async function GET() {
       ]
     },
     {
+      url: '/consulting',
+      lastmod,
+      changefreq: 'monthly',
+      priority: '0.9',
+      alternates: [
+        { lang: 'en', url: '/consulting' },
+        { lang: 'pt', url: '/pt/consultoria' }
+      ]
+    },
+    {
       url: '/projects',
       lastmod,
       changefreq: 'weekly',
@@ -57,16 +66,6 @@ export async function GET() {
       alternates: [
         { lang: 'en', url: '/projects' },
         { lang: 'pt', url: '/pt/projetos' }
-      ]
-    },
-    {
-      url: '/services',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.9',
-      alternates: [
-        { lang: 'en', url: '/services' },
-        { lang: 'pt', url: '/pt/servicos' }
       ]
     },
 
@@ -92,6 +91,16 @@ export async function GET() {
       ]
     },
     {
+      url: '/pt/consultoria',
+      lastmod,
+      changefreq: 'monthly',
+      priority: '0.9',
+      alternates: [
+        { lang: 'en', url: '/consulting' },
+        { lang: 'pt', url: '/pt/consultoria' }
+      ]
+    },
+    {
       url: '/pt/projetos',
       lastmod,
       changefreq: 'weekly',
@@ -101,156 +110,6 @@ export async function GET() {
         { lang: 'pt', url: '/pt/projetos' }
       ]
     },
-    {
-      url: '/pt/servicos',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.9',
-      alternates: [
-        { lang: 'en', url: '/services' },
-        { lang: 'pt', url: '/pt/servicos' }
-      ]
-    },
-
-    // English Case Study Pages
-    {
-      url: '/projects/porto-car-care',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.7',
-      alternates: [
-        { lang: 'en', url: '/projects/porto-car-care' },
-        { lang: 'pt', url: '/pt/projetos/porto-car-care' }
-      ]
-    },
-    {
-      url: '/projects/brunno-rodrigues',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.7',
-      alternates: [
-        { lang: 'en', url: '/projects/brunno-rodrigues' },
-        { lang: 'pt', url: '/pt/projetos/brunno-rodrigues' }
-      ]
-    },
-    {
-      url: '/projects/porto-massage-studio',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.7',
-      alternates: [
-        { lang: 'en', url: '/projects/porto-massage-studio' },
-        { lang: 'pt', url: '/pt/projetos/porto-massage-studio' }
-      ]
-    },
-
-    // Portuguese Case Study Pages
-    {
-      url: '/pt/projetos/porto-car-care',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.7',
-      alternates: [
-        { lang: 'en', url: '/projects/porto-car-care' },
-        { lang: 'pt', url: '/pt/projetos/porto-car-care' }
-      ]
-    },
-    {
-      url: '/pt/projetos/brunno-rodrigues',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.7',
-      alternates: [
-        { lang: 'en', url: '/projects/brunno-rodrigues' },
-        { lang: 'pt', url: '/pt/projetos/brunno-rodrigues' }
-      ]
-    },
-    {
-      url: '/pt/projetos/porto-massage-studio',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.7',
-      alternates: [
-        { lang: 'en', url: '/projects/porto-massage-studio' },
-        { lang: 'pt', url: '/pt/projetos/porto-massage-studio' }
-      ]
-    },
-
-    // City-Specific Pages (Programmatic SEO - Phase 3)
-    {
-      url: '/pt/criacao-websites-lisboa',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.9'
-    },
-    {
-      url: '/pt/criacao-websites-porto',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.9'
-    },
-    {
-      url: '/pt/criacao-websites-braga',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.8'
-    },
-    {
-      url: '/pt/criacao-websites-coimbra',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.8'
-    },
-    {
-      url: '/pt/criacao-websites-aveiro',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.8'
-    },
-    {
-      url: '/pt/criacao-websites-faro',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.8'
-    },
-    {
-      url: '/pt/criacao-websites-setubal',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      url: '/pt/criacao-websites-leiria',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-
-    // Industry-Specific Pages (Programmatic SEO - Phase 3)
-    {
-      url: '/pt/websites-para-spas',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.8'
-    },
-    {
-      url: '/pt/websites-para-clinicas-dentarias',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.8'
-    },
-    {
-      url: '/pt/websites-para-restaurantes',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.8'
-    },
-    {
-      url: '/pt/websites-para-oficinas',
-      lastmod,
-      changefreq: 'monthly',
-      priority: '0.8'
-    }
   ];
 
   const sitemap = generateSitemapXML(pages);
