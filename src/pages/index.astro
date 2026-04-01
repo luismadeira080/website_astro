@@ -83,52 +83,62 @@ import Footer from '../components/Footer.astro';
         </div>
     </section>
 
-    <!-- What I Deliver Section -->
-    <section class="what-i-deliver-section">
+    <!-- Sectors Section -->
+    <section class="sectors-section">
         <div class="section-header">
-            <h2>What I Deliver</h2>
-            <p>AI-powered solutions that generate real results for your business.</p>
+            <h2>Sectors I Work In</h2>
+            <p>AI automation tailored to your industry.</p>
         </div>
 
-        <div class="deliverables-grid">
-            <div class="deliverable-card deliverable-card-primary">
-                <div class="deliverable-icon">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 22V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3.27 6.96L12 12.01L20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <div class="sectors-grid">
+            <a href="/projects#ecommerce" class="sector-card sector-card--featured">
+                <div class="sector-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
                     </svg>
                 </div>
-                <h3>Workflow Redesign & AI Implementation</h3>
-                <p>I identify bottlenecks in your operations and redesign workflows using AI tools that already exist. Your team saves hours every week — with measurable ROI from week one.</p>
-                <ul class="deliverable-features">
-                    <li>Audit current workflows and identify automation opportunities</li>
-                    <li>Implement AI tools (Claude, ChatGPT, Perplexity, etc.) into daily operations</li>
-                    <li>Build documented processes your team can maintain</li>
-                    <li>Measurable time and cost savings within 2-4 weeks</li>
-                </ul>
-                <a href="/consulting" class="service-cta">Learn More</a>
-            </div>
+                <h3>E-Commerce</h3>
+                <p>Inventory, margins, and profitability on autopilot</p>
+                <span class="sector-card-badge">3 projects delivered</span>
+            </a>
 
-            <div class="deliverable-card deliverable-card-primary">
-                <div class="deliverable-icon">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <a href="/projects#sales" class="sector-card">
+                <div class="sector-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
                 </div>
-                <h3>Team Training</h3>
-                <p>Hands-on training so your team becomes autonomous with AI. I don't create dependency — I build competency. The faster your team works without me, the better I've done my job.</p>
-                <ul class="deliverable-features">
-                    <li>Practical workshops with tools your team will actually use</li>
-                    <li>Custom prompt libraries and best practices for your industry</li>
-                    <li>Documentation and playbooks for ongoing reference</li>
-                    <li>Goal: full team autonomy, not consultant dependency</li>
-                </ul>
-                <a href="/consulting" class="service-cta">Learn More</a>
-            </div>
+                <h3>Sales & Leads</h3>
+                <p>Faster responses, cleaner data, full pipeline visibility</p>
+            </a>
+
+            <a href="/projects#operations" class="sector-card">
+                <div class="sector-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                </div>
+                <h3>Operations</h3>
+                <p>Reports and documents that handle themselves</p>
+            </a>
+
+            <a href="/projects#support" class="sector-card">
+                <div class="sector-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <h3>Customer Support</h3>
+                <p>Tickets routed, answers instant, reviews managed</p>
+            </a>
+        </div>
+
+        <div class="sectors-cta">
+            <a href="/projects" class="text-link">SEE ALL PROJECTS</a>
         </div>
     </section>
 
@@ -503,160 +513,77 @@ body {
     object-position: center;
 }
 
-/* What I Do Section */
-/* What I Deliver Section */
-.what-i-deliver-section {
+/* Sectors Section */
+.sectors-section {
     padding: 80px 108px;
     border-top: 1px solid #333;
 }
 
-.deliverables-grid {
+.sectors-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
     margin-bottom: 48px;
 }
 
-.deliverable-card {
+.sector-card {
     background-color: var(--color-dark);
     border: 1px solid #333;
     border-radius: 16px;
-    padding: 48px;
+    padding: 32px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     transition: border-color 0.3s ease, transform 0.2s ease;
+    position: relative;
 }
 
-.deliverable-card:hover {
+.sector-card:hover {
     border-color: var(--color-accent);
     transform: translateY(-4px);
 }
 
-.deliverable-icon {
-    margin-bottom: 24px;
-    color: var(--color-accent);
+.sector-card--featured {
+    border-color: rgba(211, 233, 122, 0.3);
+    background: linear-gradient(135deg, var(--color-dark) 0%, rgba(211, 233, 122, 0.05) 100%);
 }
 
-.deliverable-card h3 {
+.sector-card-icon {
+    color: var(--color-accent);
+    margin-bottom: 4px;
+}
+
+.sector-card h3 {
     font-family: var(--font-heading);
-    font-size: 36px;
-    letter-spacing: -0.36px;
+    font-size: 28px;
+    letter-spacing: -0.28px;
     color: var(--color-text);
-    margin-bottom: 16px;
     line-height: 1.1;
 }
 
-.deliverable-card > p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--color-text);
-    opacity: 0.85;
-    margin-bottom: 24px;
-}
-
-.deliverable-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.deliverable-features li {
-    padding-left: 28px;
-    position: relative;
-    margin-bottom: 12px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--color-text);
-    opacity: 0.8;
-}
-
-.deliverable-features li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--color-accent);
-    font-weight: 600;
-}
-
-.secondary-service {
-    text-align: center;
-    padding: 24px;
-    border-top: 1px solid #333;
-    margin-top: 24px;
-}
-
-.secondary-service p {
-    font-size: 15px;
+.sector-card p {
+    font-size: 14px;
+    line-height: 1.5;
     color: var(--color-text);
     opacity: 0.7;
 }
 
-.inline-link {
+.sector-card-badge {
+    display: inline-block;
+    background-color: rgba(211, 233, 122, 0.1);
     color: var(--color-accent);
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.3s ease;
-}
-
-.inline-link:hover {
-    opacity: 0.8;
-}
-
-.service-card-actions {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.service-link {
-    color: var(--color-accent);
-    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
     font-weight: 600;
-    font-size: 14px;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
-    transition: opacity 0.3s ease;
-}
-
-.service-link:hover {
-    opacity: 0.7;
-}
-
-.service-link-soft {
-    color: var(--color-text);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease, color 0.3s ease;
-}
-
-.service-link-soft:hover {
-    opacity: 1;
-    color: var(--color-accent);
-}
-
-.service-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    padding: 16px 32px;
-    border-radius: 27px;
-    border: none;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
     width: fit-content;
-    cursor: pointer;
-    font-family: var(--font-primary);
 }
 
-.service-cta:hover {
-    background-color: #c5db6f;
-    transform: translateY(-2px);
+.sectors-cta {
+    text-align: center;
 }
 
 /* Our Process Section */
@@ -1559,35 +1486,13 @@ body {
         margin: 0 auto;
     }
 
-    .what-i-deliver-section {
+    .sectors-section {
         padding: 60px 32px;
     }
 
-    .deliverables-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .deliverable-card {
-        padding: 40px 32px;
-    }
-
-    .case-study-section {
-        padding: 80px 32px;
-    }
-
-    .case-study-content {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .case-study-text h2 {
-        font-size: 40px;
-    }
-
-    .case-study-metrics {
-        grid-template-columns: 1fr;
-        gap: 24px;
+    .sectors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .our-process-section {
@@ -1784,21 +1689,21 @@ body {
         height: 400px;
     }
 
-    .what-i-deliver-section {
+    .sectors-section {
         padding: 40px 16px;
     }
 
-    .deliverables-grid {
+    .sectors-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 16px;
     }
 
-    .deliverable-card {
-        padding: 32px 24px;
+    .sector-card {
+        padding: 24px;
     }
 
-    .deliverable-card h3 {
-        font-size: 28px;
+    .sector-card h3 {
+        font-size: 24px;
     }
 
     .our-process-section {

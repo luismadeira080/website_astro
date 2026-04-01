@@ -27,8 +27,8 @@ import ContactModal from '../../components/ContactModal.astro';
 
     <!-- SEO Meta Tags -->
     <SEO
-        title="Casos de Estudo - Resultados Reais com IA | Luís Madeira"
-        description="Veja resultados reais de projetos de redesenho de workflows e automação com IA. Casos de estudo com métricas, estratégia e detalhes de implementação de negócios portugueses."
+        title="Projetos por Setor - Resultados Reais com IA | Luís Madeira"
+        description="Projetos de automação e IA organizados por setor: e-commerce, vendas, operações e suporte ao cliente. Resultados concretos e métricas reais de negócios portugueses."
         locale="pt"
     />
 
@@ -59,22 +59,213 @@ import ContactModal from '../../components/ContactModal.astro';
     <!-- Projects Hero -->
     <section class="projects-hero">
         <h1>PROJETOS</h1>
-        <p>Projetos de redesenho de workflows e automação com IA</p>
+        <p>Automação com IA aplicada a setores reais</p>
     </section>
 
-    <!-- Projects Grid -->
-    <section class="projects-grid-section">
-        <div class="empty-state">
-            <p>Novos casos de estudo de projetos AI em breve.</p>
-            <a href="/pt/consultoria" class="btn-primary">Conhecer os Meus Serviços</a>
+    <!-- Sectors -->
+    <section class="sectors">
+
+        <!-- E-Commerce (featured) -->
+        <div class="sector sector--featured">
+            <div class="sector-header">
+                <div class="sector-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="28" r="2"/><circle cx="24" cy="28" r="2"/>
+                        <path d="M2 4h4l3.2 16h15.6l3.2-12H9"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>E-Commerce</h2>
+                    <p class="sector-tagline">Stock, margens e rentabilidade sob controlo</p>
+                </div>
+            </div>
+            <div class="outcome-grid">
+                <div class="outcome-card">
+                    <span class="delivered-badge">Projeto entregue</span>
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v6l3-3"/><path d="M12 8l-3-3"/>
+                            <rect x="3" y="10" width="18" height="12" rx="2"/>
+                            <path d="M3 14h18"/>
+                        </svg>
+                    </div>
+                    <h3>Nunca fique sem stock</h3>
+                    <p>Alertas automáticos de inventário que sinalizam SKUs com baixa cobertura antes de ficarem esgotados.</p>
+                    <span class="metric-badge">Reativo → Proativo</span>
+                </div>
+                <div class="outcome-card">
+                    <span class="delivered-badge">Projeto entregue</span>
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v18h18"/>
+                            <path d="M7 16l4-6 4 4 5-8"/>
+                        </svg>
+                    </div>
+                    <h3>P&L mensal em minutos</h3>
+                    <p>Relatórios automáticos de margem de contribuição em todas as lojas e canais.</p>
+                    <span class="metric-badge">Dias → Minutos</span>
+                </div>
+                <div class="outcome-card">
+                    <span class="delivered-badge">Projeto entregue</span>
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                            <path d="M8 11h6"/><path d="M11 8v6"/>
+                        </svg>
+                    </div>
+                    <h3>Encontre os assassinos de margem</h3>
+                    <p>Análise de rentabilidade por SKU que identifica alvos para repricing e descontinuação.</p>
+                    <span class="metric-badge">Escondido → Visível</span>
+                </div>
+            </div>
         </div>
+
+        <!-- Vendas & Gestão de Leads -->
+        <div class="sector">
+            <div class="sector-header">
+                <div class="sector-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 4l4 8h8l-6 5 2 9-8-5-8 5 2-9-6-5h8z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Vendas & Gestão de Leads</h2>
+                    <p class="sector-tagline">Resposta rápida, pipeline visível, CRM atualizado</p>
+                </div>
+            </div>
+            <div class="outcome-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Responda a leads em segundos</h3>
+                    <p>Qualificação automática de leads e resposta instantânea.</p>
+                    <span class="metric-badge">Horas → Segundos</span>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M8 7h8"/><path d="M8 12h8"/><path d="M8 17h5"/>
+                        </svg>
+                    </div>
+                    <h3>CRM que se preenche sozinho</h3>
+                    <p>Enriquecimento automático de dados, resumos de interações e sugestões de próximos passos.</p>
+                    <span class="metric-badge">Manual → Automático</span>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 20h20"/><path d="M5 20V10"/><path d="M10 20V4"/><path d="M15 20V12"/><path d="M20 20V8"/>
+                        </svg>
+                    </div>
+                    <h3>Visibilidade do pipeline sem esforço</h3>
+                    <p>Resumos semanais de deal-flow entregues automaticamente.</p>
+                    <span class="metric-badge">Folhas de cálculo → Autopiloto</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Operações & Interno -->
+        <div class="sector">
+            <div class="sector-header">
+                <div class="sector-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="16" cy="16" r="6"/>
+                        <path d="M16 2v4"/><path d="M16 26v4"/><path d="M4.9 4.9l2.8 2.8"/><path d="M24.3 24.3l2.8 2.8"/><path d="M2 16h4"/><path d="M26 16h4"/><path d="M4.9 27.1l2.8-2.8"/><path d="M24.3 7.7l2.8-2.8"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Operações & Interno</h2>
+                    <p class="sector-tagline">Relatórios e documentos que se fazem sozinhos</p>
+                </div>
+            </div>
+            <div class="outcome-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <path d="M9 15l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Relatórios de clientes que se escrevem sozinhos</h3>
+                    <p>Relatórios mensais auto-gerados a partir dos seus dados existentes.</p>
+                    <span class="metric-badge">Horas → Minutos</span>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M7 9h10"/><path d="M7 13h6"/>
+                        </svg>
+                    </div>
+                    <h3>Faturas e contratos, estruturados</h3>
+                    <p>Extrair dados de documentos para formatos estruturados e utilizáveis.</p>
+                    <span class="metric-badge">Papel → Dados</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Suporte ao Cliente -->
+        <div class="sector">
+            <div class="sector-header">
+                <div class="sector-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 012 2v3a2 2 0 01-2 2H7l-4 4V7a2 2 0 012-2h12"/>
+                        <circle cx="24" cy="8" r="5"/><path d="M24 6v4"/><path d="M24 13v.01"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Suporte ao Cliente</h2>
+                    <p class="sector-tagline">Respostas rápidas, triagem automática, reviews geridas</p>
+                </div>
+            </div>
+            <div class="outcome-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3>Tickets encaminhados instantaneamente</h3>
+                    <p>Auto-categorizar e encaminhar pedidos de suporte para a pessoa certa.</p>
+                    <span class="metric-badge">Triagem Manual → Auto-Triagem</span>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                            <path d="M8 10h8"/><path d="M8 14h4"/>
+                        </svg>
+                    </div>
+                    <h3>Respostas a partir dos seus próprios docs</h3>
+                    <p>Respostas com IA a partir da base de conhecimento existente.</p>
+                    <span class="metric-badge">Pesquisa → Instantâneo</span>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Reviews geridas em escala</h3>
+                    <p>Monitorizar e rascunhar respostas em todas as plataformas.</p>
+                    <span class="metric-badge">Ignorado → Gerido</span>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Pronto para fazer crescer o seu negócio?</h2>
-        <p>Vamos discutir como o redesenho de workflows e automação com IA pode ajudar o seu negócio a poupar tempo e crescer.</p>
-        <button class="btn-primary" data-contact-trigger data-contact-context="general">Entre em contacto</button>
+        <h2>Tem um workflow para automatizar?</h2>
+        <p>Vamos analisar o seu caso e identificar onde a IA pode poupar tempo e dinheiro ao seu negócio.</p>
+        <button class="btn-primary" data-contact-trigger data-contact-context="general">Fale comigo</button>
     </section>
 
     <script>
@@ -199,155 +390,158 @@ body {
     opacity: 0.8;
 }
 
-/* Projects Grid */
-.projects-grid-section {
-    padding: 40px 108px 80px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 32px;
+/* Sectors */
+.sectors {
+    padding: 0 108px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
 }
 
-.project-card {
+.sector {
     background-color: var(--color-dark);
     border: 1px solid #333;
     border-radius: 16px;
-    overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    display: flex;
-    flex-direction: column;
+    padding: 48px;
 }
 
-.project-card:hover {
+.sector--featured {
     border-color: var(--color-accent);
-    transform: translateY(-4px);
+    box-shadow: 0 0 40px rgba(211, 233, 122, 0.06);
 }
 
-.project-card-image {
-    width: 100%;
-    height: 280px;
-    background-color: #0d0d0d;
-    overflow: hidden;
+.sector-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
-.project-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.sector-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background-color: rgba(211, 233, 122, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    flex-shrink: 0;
 }
 
-.project-card:hover .project-card-image img {
-    transform: scale(1.05);
+.sector-header h2 {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    letter-spacing: -0.4px;
+    line-height: 1;
+    margin-bottom: 4px;
 }
 
-.project-card-content {
-    padding: 32px;
+.sector-tagline {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/* Outcome Grid */
+.outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* 2-column sectors */
+.sector:nth-child(3) .outcome-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.outcome-card {
+    background-color: var(--color-bg);
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 28px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    flex: 1;
+    gap: 12px;
+    position: relative;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.project-card-tag {
+.outcome-card:hover {
+    border-color: #444;
+    transform: translateY(-2px);
+}
+
+.delivered-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: rgba(211, 233, 122, 0.15);
+    color: var(--color-accent);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.outcome-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(211, 233, 122, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+}
+
+.outcome-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.outcome-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.75;
+}
+
+.metric-badge {
     display: inline-block;
     background-color: rgba(211, 233, 122, 0.1);
     color: var(--color-accent);
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    width: fit-content;
-}
-
-.project-card h3 {
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 1.2;
-    color: var(--color-text);
-    margin: 0;
-}
-
-.project-card-description {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--color-text);
-    opacity: 0.85;
-}
-
-.project-card-metrics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    padding: 20px 0;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-}
-
-.metric-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    text-align: center;
-}
-
-.metric-number {
-    font-family: var(--font-heading);
-    font-size: 24px;
-    color: var(--color-accent);
-    line-height: 1;
-}
-
-.metric-text {
-    font-size: 11px;
-    color: var(--color-text);
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.project-card-actions {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.project-link {
-    color: var(--color-accent);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    transition: opacity 0.3s ease;
-}
-
-.project-link:hover {
-    opacity: 0.7;
-}
-
-.card-cta {
-    display: inline-block;
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    padding: 12px 24px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 600;
     font-size: 13px;
-    letter-spacing: 0.5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
     width: fit-content;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    font-family: var(--font-primary);
+    margin-top: auto;
+    letter-spacing: 0.2px;
 }
 
-.card-cta:hover {
-    background-color: #c5db6f;
-    transform: translateY(-2px);
+/* CTA Section */
+.cta-section {
+    padding: 80px 108px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-primary {
@@ -373,28 +567,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* CTA Section */
-.cta-section {
-    padding: 80px 108px;
-    text-align: center;
-    border-top: 1px solid #333;
-}
-
-.cta-section h2 {
-    font-family: var(--font-heading);
-    font-size: 64px;
-    letter-spacing: -0.64px;
-    margin-bottom: 24px;
-}
-
-.cta-section p {
-    font-size: 18px;
-    margin-bottom: 32px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
     .navigation {
@@ -405,14 +577,25 @@ body {
         padding: 80px 32px 60px;
     }
 
-    .projects-grid-section {
-        padding: 40px 32px 60px;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
+    .sectors {
+        padding: 0 32px 60px;
+        gap: 48px;
     }
 
-    .project-card-image {
-        height: 240px;
+    .sector {
+        padding: 36px;
+    }
+
+    .sector-header h2 {
+        font-size: 34px;
+    }
+
+    .outcome-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sector:nth-child(3) .outcome-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .cta-section {
@@ -472,40 +655,52 @@ body {
         font-size: 57px;
     }
 
-    .projects-grid-section {
-        padding: 32px 16px 40px;
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .sectors {
+        padding: 0 16px 40px;
+        gap: 32px;
     }
 
-    .project-card-image {
-        height: 200px;
-    }
-
-    .project-card-content {
+    .sector {
         padding: 24px;
+    }
+
+    .sector-header {
         gap: 16px;
+        margin-bottom: 28px;
     }
 
-    .project-card h3 {
-        font-size: 22px;
+    .sector-icon {
+        width: 48px;
+        height: 48px;
     }
 
-    .project-card-description {
+    .sector-header h2 {
+        font-size: 28px;
+    }
+
+    .sector-tagline {
         font-size: 14px;
     }
 
-    .project-card-metrics {
-        padding: 16px 0;
-        gap: 12px;
+    .outcome-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    .metric-number {
-        font-size: 20px;
+    .sector:nth-child(3) .outcome-grid {
+        grid-template-columns: 1fr;
     }
 
-    .metric-text {
-        font-size: 10px;
+    .outcome-card {
+        padding: 24px;
+    }
+
+    .outcome-card h3 {
+        font-size: 16px;
+    }
+
+    .outcome-card p {
+        font-size: 13px;
     }
 
     .cta-section {
@@ -514,6 +709,34 @@ body {
 
     .cta-section h2 {
         font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-hero h1 {
+        font-size: 44px;
+    }
+
+    .sector {
+        padding: 20px;
+    }
+
+    .sector-header h2 {
+        font-size: 24px;
+    }
+
+    .outcome-card {
+        padding: 20px;
+    }
+
+    .delivered-badge {
+        position: static;
+        align-self: flex-start;
+        order: -1;
+    }
+
+    .cta-section h2 {
+        font-size: 36px;
     }
 }
 </style>
