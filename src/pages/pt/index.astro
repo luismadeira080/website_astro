@@ -332,9 +332,12 @@ import Footer from "../../components/Footer.astro";
 
     :root {
         --color-bg: #0d0d0d;
-        --color-text: #c7c7c7;
+        --color-surface: #141416;
+        --color-text: #d4d4d4;
+        --color-text-muted: #9a9a9a;
         --color-accent: #d3e97a;
         --color-dark: #1a1a1a;
+        --color-border: #222;
         --font-primary: "Inter", sans-serif;
         --font-heading: "Bebas Neue", sans-serif;
     }
@@ -585,7 +588,9 @@ import Footer from "../../components/Footer.astro";
     /* Sectors Section */
     .sectors-section {
         padding: 80px 108px;
-        border-top: 1px solid #333;
+        background-color: var(--color-surface);
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
     }
 
     .sectors-grid {
@@ -596,8 +601,8 @@ import Footer from "../../components/Footer.astro";
     }
 
     .sector-card {
-        background-color: var(--color-dark);
-        border: 1px solid #333;
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-border);
         border-radius: 16px;
         padding: 32px;
         text-decoration: none;
@@ -634,8 +639,7 @@ import Footer from "../../components/Footer.astro";
     .sector-card p {
         font-size: 14px;
         line-height: 1.5;
-        color: var(--color-text);
-        opacity: 0.7;
+        color: var(--color-text-muted);
     }
 
     .sector-card-badge {
@@ -658,7 +662,6 @@ import Footer from "../../components/Footer.astro";
     /* Our Process Section */
     .our-process-section {
         padding: 120px 108px;
-        border-top: 1px solid #333;
         background-color: var(--color-bg);
     }
 
@@ -678,8 +681,7 @@ import Footer from "../../components/Footer.astro";
 
     .process-header p {
         font-size: 20px;
-        color: var(--color-text);
-        opacity: 0.8;
+        color: var(--color-text-muted);
     }
 
     .process-grid {
@@ -690,8 +692,8 @@ import Footer from "../../components/Footer.astro";
     }
 
     .process-card {
-        background-color: var(--color-dark);
-        border: 1px solid #333;
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
         border-radius: 16px;
         padding: 40px;
         display: flex;
@@ -731,8 +733,7 @@ import Footer from "../../components/Footer.astro";
     .card-content p {
         font-size: 16px;
         line-height: 1.6;
-        color: var(--color-text);
-        opacity: 0.8;
+        color: var(--color-text-muted);
     }
 
     .process-tagline {
@@ -755,8 +756,7 @@ import Footer from "../../components/Footer.astro";
     .process-bullets li {
         font-size: 15px;
         line-height: 1.6;
-        color: var(--color-text);
-        opacity: 0.8;
+        color: var(--color-text-muted);
         padding-left: 20px;
         position: relative;
     }
@@ -1261,7 +1261,9 @@ import Footer from "../../components/Footer.astro";
     /* About Section */
     .about-section {
         padding: 80px 108px;
-        border-top: 1px solid #333;
+        background-color: var(--color-surface);
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
     }
 
     .about-section h2 {
