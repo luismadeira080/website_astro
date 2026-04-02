@@ -122,30 +122,39 @@ import Footer from "../components/Footer.astro";
                         <div class="step">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h3>Map & Prioritize</h3>
-                                <p>
-                                    Deep-dive into your business operations. I identify every area where AI can generate ROI and rank them by impact, effort, and risk.
-                                </p>
+                                <h3>Discover & Diagnose</h3>
+                                <p class="step-tagline">Understand first, automate second.</p>
+                                <ul>
+                                    <li>I learn how your business actually works: goals, constraints, handoffs, and what a 'win' looks like.</li>
+                                    <li>I map your tech stack and where data lives: CRMs, inboxes, spreadsheets, internal tools.</li>
+                                    <li>I audit processes to find real bottlenecks and decide what should and shouldn't be automated.</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="step">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h3>Build & Validate</h3>
-                                <p>
-                                    I implement the highest-priority processes first. Every workflow is tested for reliability, edge cases are handled, and outputs are validated before going live.
-                                </p>
+                                <h3>Design, Build & Validate</h3>
+                                <p class="step-tagline">Reliable solutions, tested before launch.</p>
+                                <ul>
+                                    <li>I prioritize high-impact opportunities and decide where AI helps, and where it doesn't.</li>
+                                    <li>I design and build custom workflows, test different approaches on real data, and explain my choices in plain language.</li>
+                                    <li>I run evaluations in a real-world environment before full rollout.</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="step">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h3>Evolve & Expand</h3>
-                                <p>
-                                    As your business changes, so do the processes. I stay with you to optimize what's running, tackle the next priority on the roadmap, and train your team along the way.
-                                </p>
+                                <h3>Launch, Monitor & Optimize</h3>
+                                <p class="step-tagline">Continuous improvement, not a one-off project.</p>
+                                <ul>
+                                    <li>I launch into production with clear success metrics and safeguards.</li>
+                                    <li>I monitor performance, collect feedback from your team and customers, and fix issues quickly.</li>
+                                    <li>I continuously refine prompts, logic, and models so the system improves as your business evolves.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -509,6 +518,41 @@ import Footer from "../components/Footer.astro";
         margin: 0;
         font-size: 16px;
         opacity: 0.9;
+    }
+
+    .step-tagline {
+        color: var(--color-accent);
+        font-weight: 500;
+        opacity: 1 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .step-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .step-content ul li {
+        font-size: 15px;
+        line-height: 1.6;
+        opacity: 0.85;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .step-content ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--color-accent);
     }
 
     /* Capabilities List */

@@ -137,32 +137,47 @@ import Footer from '../components/Footer.astro';
     <!-- My Process Section -->
     <section class="our-process-section">
         <div class="process-header">
-            <h2>HOW IT WORKS</h2>
-            <p>An ongoing partnership, not a one-off project. Reliable processes, auditable results.</p>
+            <h2>HOW I WORK</h2>
+            <p>A methodical, low-risk approach that starts with understanding your business — not jumping straight into tools.</p>
         </div>
 
         <div class="process-grid">
             <div class="process-card">
                 <div class="card-number">01</div>
                 <div class="card-content">
-                    <h3>Map & Prioritize</h3>
-                    <p>I deep-dive into your operations and map every area where AI can generate ROI. You get a prioritized roadmap ranked by impact, effort, and risk.</p>
+                    <h3>Discover & Diagnose</h3>
+                    <p class="process-tagline">Understand first, automate second.</p>
+                    <ul class="process-bullets">
+                        <li>I learn how your business actually works: goals, constraints, handoffs, and what a 'win' looks like.</li>
+                        <li>I map your tech stack and where data lives: CRMs, inboxes, spreadsheets, internal tools.</li>
+                        <li>I audit processes to find real bottlenecks and decide what should and shouldn't be automated.</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="process-card">
                 <div class="card-number">02</div>
                 <div class="card-content">
-                    <h3>Build & Validate</h3>
-                    <p>I implement the highest-priority processes first. Every workflow is tested for reliability — consistent outputs, edge cases handled, fully auditable.</p>
+                    <h3>Design, Build & Validate</h3>
+                    <p class="process-tagline">Reliable solutions, tested before launch.</p>
+                    <ul class="process-bullets">
+                        <li>I prioritize high-impact opportunities and decide where AI helps, and where it doesn't.</li>
+                        <li>I design and build custom workflows, test different approaches on real data, and explain my choices in plain language.</li>
+                        <li>I run evaluations in a real-world environment before full rollout.</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="process-card">
                 <div class="card-number">03</div>
                 <div class="card-content">
-                    <h3>Evolve & Expand</h3>
-                    <p>As your business changes, so do the processes. I stay with you to optimize, expand to the next priority, and train your team along the way.</p>
+                    <h3>Launch, Monitor & Optimize</h3>
+                    <p class="process-tagline">Continuous improvement, not a one-off project.</p>
+                    <ul class="process-bullets">
+                        <li>I launch into production with clear success metrics and safeguards.</li>
+                        <li>I monitor performance, collect feedback from your team and customers, and fix issues quickly.</li>
+                        <li>I continuously refine prompts, logic, and models so the system improves as your business evolves.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -654,6 +669,43 @@ body {
     line-height: 1.6;
     color: var(--color-text);
     opacity: 0.8;
+}
+
+.process-tagline {
+    color: var(--color-accent);
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 1;
+    margin-bottom: 20px;
+}
+
+.process-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.process-bullets li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-text);
+    opacity: 0.8;
+    padding-left: 20px;
+    position: relative;
+}
+
+.process-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
 }
 
 @media (max-width: 1024px) {
