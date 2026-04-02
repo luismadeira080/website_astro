@@ -95,6 +95,20 @@ import Footer from '../../components/Footer.astro';
                 <p><strong>Experiência:</strong> 2 anos em Venture Capital. Antes disso, web developer e especialista em SEO a trabalhar com negócios locais, gerando mais de 80.000 impressões.</p>
                 <p><strong>Localização:</strong> Madrid (estudos) e Porto (origem). Trabalho remotamente com negócios em todo Portugal.</p>
             </div>
+
+            <div class="content-block">
+                <h3>Certificações</h3>
+                <div class="certs-grid">
+                    <div class="cert-item">Developing AI Systems with the OpenAI API</div>
+                    <div class="cert-item">Prompt Engineering with the OpenAI API</div>
+                    <div class="cert-item">Working with the OpenAI API</div>
+                    <div class="cert-item">LLMOps Concepts</div>
+                    <div class="cert-item">Working with Hugging Face</div>
+                    <div class="cert-item">Understanding Data Science</div>
+                    <div class="cert-item">Introduction to Python</div>
+                    <div class="cert-item">Introduction to SQL</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -384,6 +398,27 @@ body {
     margin-bottom: 0;
 }
 
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.cert-item {
+    background-color: var(--color-dark);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: border-color 0.2s ease;
+}
+
+.cert-item:hover {
+    border-color: var(--color-accent);
+}
+
 .values-list {
     list-style: none;
     padding: 0;
@@ -593,6 +628,10 @@ body {
 
     .content-block h3 {
         font-size: 28px;
+    }
+
+    .certs-grid {
+        grid-template-columns: 1fr;
     }
 
     .cta-section {
