@@ -98,6 +98,7 @@ import Footer from '../../components/Footer.astro';
 
             <div class="content-block">
                 <h3>Certificações</h3>
+                <p class="certs-source"><svg class="datacamp-logo" width="20" height="18" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.105 13.697L12.623.85a1.27 1.27 0 012.146-.053l16.15 23.49a1.27 1.27 0 01-.084 1.513l-3.21 3.828a1.27 1.27 0 01-1.989-.07L13.003 12.772l-5.46 8.245a1.27 1.27 0 01-1.973.17L4.03 19.6l-.002-.002a1.27 1.27 0 01.078-1.493" fill="#03EF62"/><path d="M28.835 24.287L17.573 7.901l-4.57 6.871 8.845 13.06a1.27 1.27 0 001.989.07l5.082-6.055-.084 2.44z" fill="#03EF62" opacity=".5"/></svg> DataCamp</p>
                 <div class="certs-grid">
                     <div class="cert-item">Developing AI Systems with the OpenAI API</div>
                     <div class="cert-item">Prompt Engineering with the OpenAI API</div>
@@ -396,6 +397,21 @@ body {
 
 .content-block p:last-child {
     margin-bottom: 0;
+}
+
+.certs-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #03EF62;
+    margin-bottom: 20px !important;
+    letter-spacing: 0.3px;
+}
+
+.datacamp-logo {
+    flex-shrink: 0;
 }
 
 .certs-grid {
