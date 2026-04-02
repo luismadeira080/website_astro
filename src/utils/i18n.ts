@@ -20,6 +20,7 @@ const pathMappings: Record<string, { en: string; pt: string }> = {
   about: { en: '/about', pt: '/pt/sobre' },
   consulting: { en: '/consulting', pt: '/pt/consultoria' },
   projects: { en: '/projects', pt: '/pt/projetos' },
+  contact: { en: '/ai-contact', pt: '/pt/ai-contact' },
 };
 
 /**
