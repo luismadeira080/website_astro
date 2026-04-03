@@ -90,10 +90,40 @@ import Footer from '../components/Footer.astro';
 
 
             <div class="content-block">
-                <h3>Background</h3>
-                <p><strong>Education:</strong> Pursuing Master's in Management at IE Business School (Madrid).</p>
-                <p><strong>Experience:</strong> 2 years in Venture Capital. Before that, web developer and SEO specialist working with local businesses, generating over 80,000 impressions.</p>
-                <p><strong>Location:</strong> Madrid (studies) and Porto (origin). Working remotely with businesses throughout Portugal.</p>
+                <h3>Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2025 – Present</span>
+                            <strong>Master's in Management</strong>
+                            <span class="timeline-place">IE Business School, Madrid</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2020 – 2024</span>
+                            <strong>Bachelor's in Management</strong>
+                            <span class="timeline-place">Nova SBE, Lisbon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Professional Experience</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 – 2025</span>
+                            <strong>Venture Capital</strong>
+                            <span class="timeline-place">IM Gestão de Ativos</span>
+                            <p class="timeline-note">During my last year, I began building websites and doing SEO for local businesses — which ultimately led me to AI automation.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="content-block">
@@ -396,6 +426,73 @@ body {
 }
 
 .content-block p:last-child {
+    margin-bottom: 0;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 32px;
+    margin-top: 24px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: #333;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    border: 2px solid var(--color-bg);
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.timeline-content strong {
+    font-size: 17px;
+    color: #fff;
+}
+
+.timeline-date {
+    font-size: 14px;
+    color: var(--color-accent);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.timeline-place {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.timeline-note {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-top: 4px;
     margin-bottom: 0;
 }
 
