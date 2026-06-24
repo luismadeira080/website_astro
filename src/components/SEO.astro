@@ -1,10 +1,5 @@
 ---
-/**
- * SEO Meta Component
- * Adds comprehensive SEO meta tags to pages
- * Includes: Title, Description, Open Graph, Twitter Cards, Hreflang
- * All invisible to users but critical for Google rankings
- */
+import { getAlternatePath } from '../utils/i18n.ts';
 
 export interface Props {
   title: string;
@@ -40,14 +35,10 @@ const ogImageURL = ogImage.startsWith('http')
   ? ogImage
   : new URL(ogImage, siteURL).href;
 
-// Determine hreflang URLs
+// Determine hreflang URLs using path mappings so localised slugs resolve correctly
 const currentPath = Astro.url.pathname;
-const enURL = locale === 'pt'
-  ? currentPath.replace('/pt/', '/').replace('/pt', '/')
-  : currentPath;
-const ptURL = locale === 'en'
-  ? `/pt${currentPath}`
-  : currentPath;
+const enURL = locale === 'pt' ? getAlternatePath(currentPath, 'pt') : currentPath;
+const ptURL = locale === 'en' ? getAlternatePath(currentPath, 'en') : currentPath;
 
 const enFullURL = new URL(enURL, siteURL).href;
 const ptFullURL = new URL(ptURL, siteURL).href;
