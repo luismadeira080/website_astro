@@ -38,9 +38,13 @@ const baseUrl = isPortuguese ? '/pt' : '';
 </footer>
 
 <style>
+/* Footer stays dark in the light theme (a dark divider band), so it uses
+   fixed dark values rather than the page tokens — keeps it correct on the
+   light homepage and on the still-dark inner pages. */
 .footer {
-    background-color: var(--color-dark);
-    border-top: 1px solid #333;
+    background-color: #0d0d0d;
+    color: #ededea;
+    border-top: 1px solid #2a2a2a;
     padding: 60px 108px 24px;
 }
 
@@ -54,7 +58,7 @@ const baseUrl = isPortuguese ? '/pt' : '';
 .footer-section h4 {
     font-size: 16px;
     font-weight: 600;
-    color: var(--color-accent);
+    color: #d3e97a;
     margin-bottom: 16px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -77,7 +81,7 @@ const baseUrl = isPortuguese ? '/pt' : '';
 }
 
 .footer-links a {
-    color: var(--color-text);
+    color: #ededea;
     text-decoration: none;
     font-size: 14px;
     opacity: 0.75;
@@ -86,11 +90,11 @@ const baseUrl = isPortuguese ? '/pt' : '';
 
 .footer-links a:hover {
     opacity: 1;
-    color: var(--color-accent);
+    color: #d3e97a;
 }
 
 .footer-bottom {
-    border-top: 1px solid #333;
+    border-top: 1px solid #2a2a2a;
     padding-top: 24px;
     text-align: center;
 }

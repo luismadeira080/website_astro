@@ -3,6 +3,7 @@ import SEO from '../components/SEO.astro';
 import Schema from '../components/Schema.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/tokens.css';
 ---
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ import Footer from '../components/Footer.astro';
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- SEO Meta Tags -->
     <SEO
@@ -215,14 +216,7 @@ import Footer from '../components/Footer.astro';
     box-sizing: border-box;
 }
 
-:root {
-    --color-bg: #0d0d0d;
-    --color-text: #c7c7c7;
-    --color-accent: #d3e97a;
-    --color-dark: #1a1a1a;
-    --font-primary: 'Inter', sans-serif;
-    --font-heading: 'Bebas Neue', sans-serif;
-}
+/* design tokens loaded from tokens.css */
 
 body {
     font-family: var(--font-primary);
@@ -269,7 +263,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--color-accent);
+    color: var(--accent-deep);
 }
 
 /* Dropdown Navigation */
@@ -294,7 +288,7 @@ body {
 }
 
 .nav-dropdown-toggle:hover {
-    color: var(--color-accent);
+    color: var(--accent-deep);
 }
 
 .nav-dropdown-toggle svg {
@@ -310,8 +304,8 @@ body {
     top: calc(100% + 16px);
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--color-dark);
-    border: 1px solid #333;
+    background-color: var(--card);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 8px;
     min-width: 160px;
@@ -337,8 +331,8 @@ body {
 }
 
 .nav-dropdown-menu a:hover {
-    background-color: rgba(211, 233, 122, 0.1);
-    color: var(--color-accent);
+    background-color: rgba(79, 94, 29, 0.06);
+    color: var(--accent-deep);
 }
 
 .mobile-menu-toggle {
@@ -358,7 +352,7 @@ body {
 /* About Hero */
 .about-hero {
     padding: 80px 108px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border);
 }
 
 .about-hero-content {
@@ -388,7 +382,7 @@ body {
     height: 500px;
     border-radius: 16px;
     overflow: hidden;
-    background-color: var(--color-dark);
+    background-color: var(--paper-2);
 }
 
 .hero-image-section img {
@@ -434,6 +428,17 @@ body {
     margin-bottom: 0;
 }
 
+.content-block a {
+    color: var(--accent-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.content-block a:hover {
+    color: var(--accent-deep-hover);
+}
+
 .timeline {
     position: relative;
     padding-left: 32px;
@@ -447,7 +452,7 @@ body {
     top: 8px;
     bottom: 8px;
     width: 1px;
-    background: #333;
+    background: var(--border);
 }
 
 .timeline-item {
@@ -466,8 +471,8 @@ body {
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: var(--color-accent);
-    border: 2px solid var(--color-bg);
+    background: var(--accent-deep);
+    border: 2px solid var(--paper);
 }
 
 .timeline-content {
@@ -478,12 +483,12 @@ body {
 
 .timeline-content strong {
     font-size: 17px;
-    color: #fff;
+    color: var(--ink);
 }
 
 .timeline-date {
     font-size: 14px;
-    color: var(--color-accent);
+    color: var(--accent-deep);
     font-weight: 500;
     letter-spacing: 0.5px;
 }
@@ -518,18 +523,19 @@ body {
 }
 
 .cert-item {
-    background-color: var(--color-dark);
-    border: 1px solid #333;
+    background-color: var(--card);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 16px 20px;
     font-size: 14px;
     font-weight: 500;
     color: var(--color-text);
+    box-shadow: var(--shadow-card);
     transition: border-color 0.2s ease;
 }
 
 .cert-item:hover {
-    border-color: var(--color-accent);
+    border-color: var(--accent-deep);
 }
 
 .values-list {
@@ -550,7 +556,7 @@ body {
     content: '→';
     position: absolute;
     left: 0;
-    color: var(--color-accent);
+    color: var(--accent-deep);
     font-weight: 600;
     font-size: 20px;
 }
@@ -558,7 +564,7 @@ body {
 /* CTA Section */
 .cta-section {
     padding: 120px 108px;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--border);
     text-align: center;
 }
 
@@ -590,7 +596,7 @@ body {
 .cta-button {
     display: inline-block;
     background-color: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--on-accent);
     padding: 16px 40px;
     border-radius: 8px;
     text-decoration: none;
@@ -606,9 +612,9 @@ body {
 
 .cta-button-secondary {
     display: inline-block;
-    color: var(--color-accent);
+    color: var(--accent-deep);
     padding: 16px 40px;
-    border: 1px solid var(--color-accent);
+    border: 1px solid var(--accent-deep);
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -617,7 +623,7 @@ body {
 }
 
 .cta-button-secondary:hover {
-    background-color: rgba(211, 233, 122, 0.1);
+    background-color: rgba(79, 94, 29, 0.08);
 }
 
 /* Responsive Design */
@@ -670,7 +676,7 @@ body {
         justify-content: flex-start;
         padding: 40px 0;
         transition: right 0.3s ease;
-        border-top: 1px solid #333;
+        border-top: 1px solid var(--border);
     }
 
     .nav-links.active {

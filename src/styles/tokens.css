@@ -1,0 +1,77 @@
+/*
+ * Luís Madeira — Global design tokens (LIGHT theme)
+ * Source of truth: Claude Design project "Luís Madeira Design System"
+ * (81d099db-93d9-4ff8-ba31-b79b940f5215), file colors_and_type.css.
+ *
+ * The site was refreshed dark -> light: warm paper background, ink text,
+ * lime (#d3e97a) used as solid FILL blocks (dark text on top) instead of
+ * as text, and deep olive (#4f5e1d) for accent TEXT / lines on light.
+ *
+ * Legacy token names (--color-bg, --color-text, ...) are aliased to the
+ * new light values at the bottom so existing rules keep working without a
+ * full rename. NOTE: lime-as-text usages still need per-instance fixes to
+ * olive (--accent-deep) — aliasing alone can't tell a fill from text.
+ */
+
+:root {
+  /* ------- Surfaces (light) ------- */
+  --paper: #f7f7f4;          /* page background, warm light grey */
+  --paper-2: #efefe9;        /* alternating band / subtle fill */
+  --card: #ffffff;           /* card / panel background */
+  --ink-surface: #0d0d0d;    /* retained near-black, for dark dividers/footer */
+  --ink-surface-2: #1a1a1a;
+
+  /* ------- Borders (light) ------- */
+  --border: #e4e4dc;
+  --border-strong: #d6d6cc;
+  --border-ink: #2a2a2a;     /* border on dark surfaces (footer) */
+
+  /* ------- Text ------- */
+  --ink: #1a1a1a;            /* primary text + headlines on paper */
+  --ink-soft: #3c3c37;       /* secondary heading / strong body */
+  --muted: #6e6e66;          /* captions, secondary text */
+  --muted-2: #8a8a80;
+  --on-ink: #ededea;         /* text on dark surfaces (footer) */
+  --on-ink-muted: #9a9a90;
+
+  /* ------- Accent ------- */
+  --accent: #d3e97a;         /* lime — FILL blocks only (dark text on top) */
+  --accent-hover: #c5db6f;
+  --accent-deep: #4f5e1d;    /* deep olive — accent TEXT / lines on light */
+  --accent-deep-hover: #3e4a16;
+  --on-accent: #1a1a1a;      /* text that sits on a lime fill */
+
+  /* ------- Type ------- */
+  --font-primary: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Bebas Neue', 'Inter', sans-serif;
+
+  /* ------- Radii ------- */
+  --radius-pill: 27px;
+  --radius-capsule: 24px;
+  --radius-xl: 32px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --radius-full: 50%;
+
+  /* ------- Shadows (light theme uses soft elevation) ------- */
+  --shadow-card: 0 1px 2px rgba(26,26,26,0.04), 0 6px 20px rgba(26,26,26,0.05);
+  --shadow-card-hover: 0 2px 4px rgba(26,26,26,0.06), 0 14px 36px rgba(26,26,26,0.09);
+
+  /* ------- Transitions ------- */
+  --t-fast: 0.2s ease;
+  --t-base: 0.3s ease;
+
+  /* =====================================================================
+   * Legacy aliases — old names mapped to new light values.
+   * Keeps existing CSS working. Structural mappings only; lime-as-text
+   * is corrected per-instance in the page styles.
+   * ===================================================================== */
+  --color-bg: var(--paper);
+  --color-surface: var(--paper-2);
+  --color-text: var(--ink);
+  --color-text-muted: var(--muted);
+  --color-dark: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);   /* lime fill; text usages -> --accent-deep */
+}

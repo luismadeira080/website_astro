@@ -1,6 +1,7 @@
 ---
 import SEO from '../../components/SEO.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import '../../styles/tokens.css';
 ---
 
 <!DOCTYPE html>
@@ -181,14 +182,7 @@ import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 </html>
 
 <style>
-:root {
-    --color-bg: #0d0d0d;
-    --color-dark: #1a1a1a;
-    --color-text: #c7c7c7;
-    --color-accent: #d3e97a;
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: 'Bebas Neue', sans-serif;
-}
+/* design tokens loaded from tokens.css */
 
 * {
     margin: 0;
@@ -215,7 +209,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 28px 108px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border);
     background-color: var(--color-bg);
 }
 
@@ -242,7 +236,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--color-accent);
+    color: var(--accent-deep);
 }
 
 .nav-dropdown {
@@ -264,15 +258,15 @@ body {
 }
 
 .nav-dropdown-toggle:hover {
-    color: var(--color-accent);
+    color: var(--accent-deep);
 }
 
 .nav-dropdown-menu {
     position: absolute;
     top: calc(100% + 16px);
     left: 0;
-    background-color: var(--color-dark);
-    border: 1px solid #333;
+    background-color: var(--card);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 12px 0;
     min-width: 200px;
@@ -299,8 +293,8 @@ body {
 }
 
 .nav-dropdown-menu a:hover {
-    background-color: rgba(211, 233, 122, 0.1);
-    color: var(--color-accent);
+    background-color: rgba(79, 94, 29, 0.06);
+    color: var(--accent-deep);
 }
 
 .mobile-menu-toggle {
@@ -362,9 +356,9 @@ body {
 .form-group textarea,
 .form-group select {
     padding: 14px 16px;
-    border: 1px solid #333;
+    border: 1px solid var(--border);
     border-radius: 8px;
-    background-color: var(--color-dark);
+    background-color: var(--card);
     color: var(--color-text);
     font-size: 15px;
     font-family: var(--font-primary);
@@ -375,7 +369,7 @@ body {
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
-    border-color: var(--color-accent);
+    border-color: var(--accent-deep);
 }
 
 .form-group input::placeholder,
@@ -403,7 +397,7 @@ body {
 .submit-btn {
     padding: 16px 48px;
     background-color: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--on-accent);
     border: none;
     border-radius: 12px;
     font-size: 16px;
@@ -434,7 +428,7 @@ body {
         flex-direction: column;
         gap: 0;
         background-color: var(--color-bg);
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid var(--border);
         padding: 0;
         opacity: 0;
         visibility: hidden;
@@ -451,7 +445,7 @@ body {
     .nav-links a {
         padding: 20px 16px;
         width: 100%;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid var(--border);
     }
 
     .nav-dropdown-menu {

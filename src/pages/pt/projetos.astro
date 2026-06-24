@@ -4,6 +4,7 @@ import Schema from '../../components/Schema.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
 import ContactModal from '../../components/ContactModal.astro';
+import '../../styles/tokens.css';
 ---
 
 <!DOCTYPE html>
@@ -23,7 +24,7 @@ import ContactModal from '../../components/ContactModal.astro';
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- SEO Meta Tags -->
     <SEO
@@ -245,14 +246,7 @@ import ContactModal from '../../components/ContactModal.astro';
     box-sizing: border-box;
 }
 
-:root {
-    --color-bg: #0d0d0d;
-    --color-text: #c7c7c7;
-    --color-accent: #d3e97a;
-    --color-dark: #1a1a1a;
-    --font-primary: 'Inter', sans-serif;
-    --font-heading: 'Bebas Neue', sans-serif;
-}
+/* design tokens loaded from tokens.css */
 
 body {
     font-family: var(--font-primary);
@@ -298,7 +292,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--color-accent);
+    color: var(--accent-deep);
 }
 
 .mobile-menu-toggle {
@@ -343,15 +337,16 @@ body {
 }
 
 .sector {
-    background-color: var(--color-dark);
-    border: 1px solid #333;
+    background-color: var(--paper-2);
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 48px;
+    box-shadow: var(--shadow-card);
 }
 
 .sector--featured {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 40px rgba(211, 233, 122, 0.06);
+    border-color: var(--accent-deep);
+    box-shadow: 0 0 40px rgba(79, 94, 29, 0.06);
 }
 
 .sector-header {
@@ -365,11 +360,11 @@ body {
     width: 56px;
     height: 56px;
     border-radius: 12px;
-    background-color: rgba(211, 233, 122, 0.1);
+    background-color: rgba(79, 94, 29, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-accent);
+    color: var(--accent-deep);
     flex-shrink: 0;
 }
 
@@ -399,8 +394,8 @@ body {
 }
 
 .outcome-card {
-    background-color: var(--color-bg);
-    border: 1px solid #2a2a2a;
+    background-color: var(--card);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 28px;
     display: flex;
@@ -408,10 +403,11 @@ body {
     gap: 12px;
     position: relative;
     transition: border-color 0.3s ease, transform 0.3s ease;
+    box-shadow: var(--shadow-card);
 }
 
 .outcome-card:hover {
-    border-color: #444;
+    border-color: var(--accent-deep);
     transform: translateY(-2px);
 }
 
@@ -419,8 +415,8 @@ body {
     position: absolute;
     top: 16px;
     right: 16px;
-    background-color: rgba(211, 233, 122, 0.15);
-    color: var(--color-accent);
+    background-color: rgba(79, 94, 29, 0.1);
+    color: var(--accent-deep);
     font-size: 11px;
     font-weight: 600;
     padding: 4px 10px;
@@ -433,18 +429,18 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    background-color: rgba(211, 233, 122, 0.08);
+    background-color: rgba(79, 94, 29, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-accent);
+    color: var(--accent-deep);
 }
 
 .outcome-card h3 {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.3;
-    color: #fff;
+    color: var(--ink);
 }
 
 .outcome-card p {
@@ -455,8 +451,8 @@ body {
 
 .metric-badge {
     display: inline-block;
-    background-color: rgba(211, 233, 122, 0.1);
-    color: var(--color-accent);
+    background-color: rgba(79, 94, 29, 0.1);
+    color: var(--accent-deep);
     font-size: 13px;
     font-weight: 600;
     padding: 6px 14px;
@@ -470,7 +466,7 @@ body {
 .cta-section {
     padding: 80px 108px;
     text-align: center;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--border);
 }
 
 .cta-section h2 {
@@ -493,7 +489,7 @@ body {
     align-items: center;
     gap: 12px;
     background-color: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--on-accent);
     padding: 16px 32px;
     border-radius: 27px;
     text-decoration: none;
@@ -568,7 +564,7 @@ body {
         justify-content: flex-start;
         padding: 40px 0;
         transition: right 0.3s ease;
-        border-top: 1px solid #333;
+        border-top: 1px solid var(--border);
     }
 
     .nav-links.active {
