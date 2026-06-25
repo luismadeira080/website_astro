@@ -10,10 +10,16 @@ Design tokens are defined using CSS custom properties (CSS variables) in the `:r
 
 ```css
 :root {
-    --color-bg: #0d0d0d;        /* Main background - dark */
-    --color-text: #c7c7c7;      /* Primary text - light gray */
-    --color-accent: #d3e97a;    /* Accent/CTA - lime green */
-    --color-dark: #1a1a1a;      /* Secondary background */
+    --paper: #f7f7f4;           /* Main page background - warm paper */
+    --ink: #1a1a1a;             /* Primary text / headlines */
+    --accent: #d3e97a;          /* Accent fill / CTA blocks */
+    --card: #ffffff;            /* Card / panel background */
+
+    /* Legacy aliases used by existing page CSS */
+    --color-bg: var(--paper);
+    --color-text: var(--ink);
+    --color-accent: var(--accent);
+    --color-dark: var(--card);
 }
 ```
 
@@ -689,10 +695,11 @@ window.addEventListener('scroll', () => {
    - Ensure images are 600×600px for project cards
 
 ### Color Usage Rules
-- Background: `var(--color-bg)` (#0d0d0d)
-- Text: `var(--color-text)` (#c7c7c7)
-- CTAs/Links: `var(--color-accent)` (#d3e97a)
-- Cards/Borders: `var(--color-dark)` (#1a1a1a) or #333
+- Background: `var(--color-bg)` (`#f7f7f4` via `--paper`)
+- Text: `var(--color-text)` (`#1a1a1a` via `--ink`)
+- CTAs/Fill blocks: `var(--color-accent)` (`#d3e97a` via `--accent`)
+- Cards/panels: `var(--color-dark)` (`#ffffff` via `--card`)
+- Dark bands/footer: use explicit dark surface tokens or fixed values
 - Hover accent: `#c5db6f` (darker lime)
 
 ### Typography Rules

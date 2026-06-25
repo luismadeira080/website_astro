@@ -37,13 +37,12 @@ const baseUrl = isPortuguese ? '/pt' : '';
 </footer>
 
 <style>
-/* Footer stays dark in the light theme (a dark divider band), so it uses
-   fixed dark values rather than the page tokens — keeps it correct on the
-   light homepage and on the still-dark inner pages. */
+/* Footer uses the explicit dark surface tokens for contrast inside the
+   otherwise light site theme. */
 .footer {
-    background-color: #0d0d0d;
-    color: #ededea;
-    border-top: 1px solid #2a2a2a;
+    background-color: var(--ink-surface, #0d0d0d);
+    color: var(--on-ink, #ededea);
+    border-top: 1px solid var(--border-ink, #2a2a2a);
     padding: 60px 108px 24px;
 }
 
@@ -57,7 +56,7 @@ const baseUrl = isPortuguese ? '/pt' : '';
 .footer-section h4 {
     font-size: 16px;
     font-weight: 600;
-    color: #d3e97a;
+    color: var(--accent, #d3e97a);
     margin-bottom: 16px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -80,7 +79,7 @@ const baseUrl = isPortuguese ? '/pt' : '';
 }
 
 .footer-links a {
-    color: #ededea;
+    color: var(--on-ink, #ededea);
     text-decoration: none;
     font-size: 14px;
     opacity: 0.75;
@@ -89,11 +88,11 @@ const baseUrl = isPortuguese ? '/pt' : '';
 
 .footer-links a:hover {
     opacity: 1;
-    color: #d3e97a;
+    color: var(--accent, #d3e97a);
 }
 
 .footer-bottom {
-    border-top: 1px solid #2a2a2a;
+    border-top: 1px solid var(--border-ink, #2a2a2a);
     padding-top: 24px;
     text-align: center;
 }

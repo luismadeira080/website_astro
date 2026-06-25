@@ -284,8 +284,8 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
 
 .modal-content {
   position: relative;
-  background-color: var(--color-dark, #1a1a1a);
-  border: 1px solid #333;
+  background-color: var(--color-dark, #ffffff);
+  border: 1px solid var(--color-border, #e4e4dc);
   border-radius: 24px;
   padding: 48px;
   max-width: 500px;
@@ -305,7 +305,7 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
   right: 20px;
   background: transparent;
   border: none;
-  color: var(--color-text, #c7c7c7);
+  color: var(--color-text, #1a1a1a);
   cursor: pointer;
   padding: 8px;
   display: flex;
@@ -316,7 +316,7 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
 }
 
 .modal-close:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(26, 26, 26, 0.06);
   color: var(--color-accent, #d3e97a);
 }
 
@@ -329,7 +329,7 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
   font-family: var(--font-heading, 'Bebas Neue', sans-serif);
   font-size: 42px;
   letter-spacing: -0.42px;
-  color: var(--color-text, #c7c7c7);
+  color: var(--color-text, #1a1a1a);
   margin: 0;
   line-height: 1.1;
 }
@@ -383,7 +383,7 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
 
 .phone-btn {
   background: linear-gradient(135deg, var(--color-accent, #d3e97a) 0%, #c5db6f 100%);
-  color: var(--color-bg, #0d0d0d);
+  color: var(--on-accent, #1a1a1a);
   box-shadow: 0 4px 20px rgba(211, 233, 122, 0.3);
 }
 
@@ -395,7 +395,7 @@ const whatsappUrl = `https://wa.me/351924466899?text=${encodedMessage}`;
 
 .form-btn {
   background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
-  color: var(--color-text, #c7c7c7);
+  color: var(--color-text, #1a1a1a);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border: 2px solid #333;
 }

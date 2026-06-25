@@ -41,7 +41,7 @@ No test framework or linter is configured.
 **SEO infrastructure:** `robots.txt.js` and `sitemap.xml.js` are dynamic Astro endpoints in `src/pages/`.
 
 **Styling:** Pure CSS with scoped `<style>` tags per `.astro` file. No CSS framework. Uses CSS custom properties for theming:
-- `--color-bg: #0d0d0d`, `--color-text: #c7c7c7`, `--color-accent: #d3e97a`, `--color-dark: #1a1a1a`
+- `--color-bg: var(--paper)` (`#f7f7f4`), `--color-text: var(--ink)` (`#1a1a1a`), `--color-accent: var(--accent)` (`#d3e97a`), `--color-dark: var(--card)` (`#ffffff`)
 - Fonts: Bebas Neue (headings), Inter (body) via Google Fonts CDN
 
 **Page structure:** Each page is a full HTML document (no layout component). Navigation, GTM script, font links, and CSS reset are repeated per page.
