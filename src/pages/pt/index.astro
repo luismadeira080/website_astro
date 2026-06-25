@@ -2088,19 +2088,20 @@ import "../../styles/tokens.css";
         font-size: 13px;
         line-height: 1.4;
         color: var(--muted);
-        padding-left: 18px;
+        padding-left: 20px;
         position: relative;
     }
 
     .sector-outcomes li::before {
-        content: '✓';
+        content: '';
         position: absolute;
         left: 0;
-        top: 0.15em;
-        color: var(--accent-deep);
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 1;
+        top: 0.38em;
+        width: 8px;
+        height: 4px;
+        border-left: 2px solid var(--accent-deep);
+        border-bottom: 2px solid var(--accent-deep);
+        transform: rotate(-45deg);
     }
 
 /* Testimonials */
