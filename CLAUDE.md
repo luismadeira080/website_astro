@@ -28,7 +28,7 @@ No test framework or linter is configured.
 - `/` and `/pt/` — Homepage (AI-focused hero, services, process)
 - `/consulting` and `/pt/consultoria` — Main services page (AI consulting)
 - `/about` and `/pt/sobre` — About page
-- `/pt/ai-contact` — AI contact form (PT only)
+- `/ai-contact` and `/pt/ai-contact` — AI contact form (noindex)
 
 **Components** (`src/components/`):
 - `SEO.astro` — Meta tags, Open Graph, Twitter Cards, hreflang
