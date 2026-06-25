@@ -10,6 +10,16 @@
       ],
       "destination": "https://www.estudiolm.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/consulting",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/pt/consultoria",
+      "destination": "/pt/servicos",
+      "permanent": true
     }
   ],
   "headers": [

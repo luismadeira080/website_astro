@@ -45,7 +45,7 @@ import '../styles/tokens.css';
     <nav class="navigation">
         <a href="/" class="logo">luís madeira</a>
         <div class="nav-links">
-            <a href="/consulting">What I Do</a>
+            <a href="/services">Services</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
             <LanguageSwitcher currentPath="/" />
@@ -60,17 +60,11 @@ import '../styles/tokens.css';
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>LUÍS MADEIRA</h1>
-                <p class="hero-subtitle">Your ongoing AI partner. I map your business for the highest-ROI opportunities, then build reliable, auditable processes that deliver consistent results.</p>
-                <div class="hero-badge">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
-                    </svg>
-                    <span>Ongoing AI Partner</span>
-                </div>
+                <h1>ENABLING GROWTH THROUGH CUSTOM SOLUTIONS.</h1>
+                <p class="hero-subtitle">I build automation and AI tailored to how your business actually works.</p>
             </div>
             <div class="hero-actions">
-                <a href="/ai-contact" class="btn-primary">Start Project</a>
+                <a href="/ai-contact" class="btn-primary">Let's talk</a>
                 <a href="https://www.linkedin.com/in/lumadeira" class="social-icon" target="_blank" aria-label="LinkedIn">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="currentColor"/>
@@ -83,15 +77,15 @@ import '../styles/tokens.css';
         </div>
     </section>
 
-    <!-- Sectors Section -->
+    <!-- Business Areas Section -->
     <section class="sectors-section">
         <div class="section-header">
             <h2>Where I Help</h2>
-            <p>AI applied to real business areas.</p>
+            <p>Automation and AI applied to the parts of your business that cost you the most time.</p>
         </div>
 
-        <div class="sectors-grid">
-            <a href="/consulting" class="sector-card">
+        <div class="sectors-grid sectors-grid--5">
+            <a href="/services" class="sector-card">
                 <div class="sector-card-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -99,57 +93,97 @@ import '../styles/tokens.css';
                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
                 </div>
-                <h3>Sales & Leads</h3>
-                <p>Faster responses, cleaner data, full pipeline visibility</p>
+                <h3>Sales & Commercial</h3>
+                <ul class="sector-outcomes">
+                    <li>Faster lead follow-up</li>
+                    <li>Clean pipeline data, always up to date</li>
+                    <li>Full visibility at every stage</li>
+                </ul>
             </a>
 
-            <a href="/consulting" class="sector-card">
+            <a href="/services" class="sector-card">
                 <div class="sector-card-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                        <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
                     </svg>
                 </div>
-                <h3>E-Commerce</h3>
-                <p>Inventory, margins, and profitability on autopilot</p>
+                <h3>Operations & Logistics</h3>
+                <ul class="sector-outcomes">
+                    <li>Fewer manual handoffs</li>
+                    <li>Less time coordinating across teams</li>
+                    <li>No more tracking things in spreadsheets</li>
+                </ul>
             </a>
 
-            <a href="/consulting" class="sector-card">
+            <a href="/services" class="sector-card">
                 <div class="sector-card-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
                     </svg>
                 </div>
-                <h3>Operations & Back-Office</h3>
-                <p>Less time on admin. More time on decisions that matter.</p>
+                <h3>Admin & Back Office</h3>
+                <ul class="sector-outcomes">
+                    <li>Invoice processing without manual effort</li>
+                    <li>Document classification and routing</li>
+                    <li>Reports generated automatically</li>
+                </ul>
             </a>
 
+            <a href="/services" class="sector-card">
+                <div class="sector-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <h3>Customer Service</h3>
+                <ul class="sector-outcomes">
+                    <li>Faster response times</li>
+                    <li>Consistent answers across channels</li>
+                    <li>Fewer repetitive tickets for your team</li>
+                </ul>
+            </a>
 
+            <a href="/services" class="sector-card">
+                <div class="sector-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+                        <line x1="6" y1="20" x2="6" y2="14"/>
+                    </svg>
+                </div>
+                <h3>Reporting & Decisions</h3>
+                <ul class="sector-outcomes">
+                    <li>Real-time dashboards, not month-end surprises</li>
+                    <li>Data consolidated from every source</li>
+                    <li>Management visibility without asking around</li>
+                </ul>
+            </a>
         </div>
 
         <div class="sectors-cta">
-            <a href="/consulting" class="text-link">SEE ALL AREAS</a>
+            <a href="/services" class="text-link">SEE HOW IT WORKS</a>
         </div>
     </section>
 
-    <!-- My Process Section -->
+    <!-- How It Works / Service Layers -->
     <section class="our-process-section">
         <div class="process-header">
-            <h2>HOW I WORK</h2>
-            <p>I start by understanding your business before jumping into tools.</p>
+            <h2>HOW IT WORKS</h2>
+            <p>Three layers that work together — each one builds on the last.</p>
         </div>
 
         <div class="process-grid">
             <div class="process-card">
                 <div class="card-number">01</div>
                 <div class="card-content">
-                    <h3>Discover & Diagnose</h3>
-                    <p class="process-tagline">Understand first, automate second.</p>
+                    <h3>Operations Audit</h3>
+                    <p class="process-tagline">Fixed price. Low risk. Clear output.</p>
                     <ul class="process-bullets">
-                        <li>I learn how your business actually works — goals, constraints, handoffs, and what success looks like for you.</li>
-                        <li>I map your tech stack and where data lives: CRMs, inboxes, spreadsheets, internal tools.</li>
-                        <li>I audit processes to find real bottlenecks and figure out what makes sense to automate.</li>
+                        <li>I map your operations end-to-end — how work moves, where data lives, where time gets lost.</li>
+                        <li>I identify the highest-ROI automation and AI opportunities in your specific business.</li>
+                        <li>You get a prioritized roadmap: what to tackle first, what impact to expect, how we'll measure it.</li>
                     </ul>
                 </div>
             </div>
@@ -157,12 +191,12 @@ import '../styles/tokens.css';
             <div class="process-card">
                 <div class="card-number">02</div>
                 <div class="card-content">
-                    <h3>Design, Build & Validate</h3>
-                    <p class="process-tagline">Reliable solutions, tested before launch.</p>
+                    <h3>Implementation</h3>
+                    <p class="process-tagline">Built for your operations.</p>
                     <ul class="process-bullets">
-                        <li>We prioritize high-impact opportunities and figure out where AI helps — and where it doesn't.</li>
-                        <li>I design and build custom workflows, test different approaches on real data, and walk you through my choices.</li>
-                        <li>Everything gets tested in a real-world environment before full rollout.</li>
+                        <li><strong>Custom solutions</strong> for complex needs — data consolidation, multi-system automation, process redesign. Priced on time and value.</li>
+                        <li><strong>Productized solutions</strong> for common patterns — invoice processing, CRM enrichment, report generation, document classification. Fast deployment, fixed price.</li>
+                        <li>Your team learns how it works as we build it. No black boxes.</li>
                     </ul>
                 </div>
             </div>
@@ -170,13 +204,44 @@ import '../styles/tokens.css';
             <div class="process-card">
                 <div class="card-number">03</div>
                 <div class="card-content">
-                    <h3>Launch, Monitor & Optimize</h3>
-                    <p class="process-tagline">Continuous improvement, not a one-off project.</p>
+                    <h3>Monthly Retainer</h3>
+                    <p class="process-tagline">Ongoing, as your business evolves.</p>
                     <ul class="process-bullets">
-                        <li>We launch into production with clear success metrics and safeguards.</li>
-                        <li>I monitor performance, collect feedback from your team and customers, and fix things quickly.</li>
-                        <li>I keep refining prompts, logic, and models so the system improves as your business evolves.</li>
+                        <li>I monitor what's running, fix issues before they become problems, and optimize over time.</li>
+                        <li>New requests get handled as part of the retainer — no need to start from scratch each time.</li>
+                        <li>You get a partner who knows your operations, not a vendor you have to re-brief every project.</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <h2>Results</h2>
+            <p>What clients have been able to do differently.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"[PLACEHOLDER — client quote tied to a specific outcome, e.g. 'We went from spending 2 days a week on reporting to having it ready every morning automatically.']"</p>
+                <div class="testimonial-author">
+                    <strong>[Client Name]</strong>
+                    <span>[Role, Company]</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"[PLACEHOLDER — client quote tied to a specific outcome]"</p>
+                <div class="testimonial-author">
+                    <strong>[Client Name]</strong>
+                    <span>[Role, Company]</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"[PLACEHOLDER — client quote tied to a specific outcome]"</p>
+                <div class="testimonial-author">
+                    <strong>[Client Name]</strong>
+                    <span>[Role, Company]</span>
                 </div>
             </div>
         </div>
@@ -187,10 +252,10 @@ import '../styles/tokens.css';
         <h2>ABOUT ME</h2>
         <div class="about-content">
             <div class="about-intro">
-                <h3>I map businesses for AI opportunity and build processes you can trust.</h3>
+                <h3>I understand business models, not just tools.</h3>
             </div>
             <div class="about-description">
-                <p>From Porto, doing a Master's in Management at IE Business School. I help Portuguese SMEs work smarter through AI-powered workflow redesign and automation.</p>
+                <p>Before this, I spent two years in Venture Capital — evaluating businesses, understanding unit economics, and figuring out what actually drives growth. That's the lens I bring to every project: where does the investment pay off, and what's the fastest path to results.</p>
                 <a href="/about" class="text-link">MORE ABOUT ME</a>
             </div>
         </div>
@@ -201,8 +266,8 @@ import '../styles/tokens.css';
         <div class="contact-container">
             <div class="cta-content">
                 <h2>Let's talk about your business</h2>
-                <p class="cta-subtext">Let's figure out where AI can save you time and money.</p>
-                <a href="/ai-contact" class="cta-button">Get Started</a>
+                <p class="cta-subtext">Tell me what's slowing you down. I'll tell you what I can do about it.</p>
+                <a href="/ai-contact" class="cta-button">Get in touch</a>
             </div>
             <div class="cta-background-text">LM</div>
         </div>
@@ -1960,6 +2025,119 @@ body {
 
     .cta-background-text {
         font-size: 150px;
+    }
+}
+
+/* 5-column business areas grid */
+.sectors-grid--5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sector-outcomes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sector-outcomes li {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--muted);
+    padding-left: 14px;
+    position: relative;
+}
+
+.sector-outcomes li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent-deep);
+    font-size: 11px;
+}
+
+/* Testimonials */
+.testimonials-section {
+    padding: 120px 108px;
+    background-color: var(--paper-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 64px;
+}
+
+.testimonial-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: var(--shadow-card);
+}
+
+.testimonial-quote {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    flex: 1;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.testimonial-author strong {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.testimonial-author span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+@media (max-width: 1200px) {
+    .sectors-grid--5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .testimonials-section {
+        padding: 80px 32px;
+    }
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectors-grid--5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .testimonials-section {
+        padding: 60px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectors-grid--5 {
+        grid-template-columns: 1fr;
     }
 }
 </style>

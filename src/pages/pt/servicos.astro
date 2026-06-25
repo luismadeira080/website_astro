@@ -1,13 +1,13 @@
 ---
-import SEO from "../components/SEO.astro";
-import Schema from "../components/Schema.astro";
-import LanguageSwitcher from "../components/LanguageSwitcher.astro";
-import Footer from "../components/Footer.astro";
-import '../styles/tokens.css';
+import SEO from "../../components/SEO.astro";
+import Schema from "../../components/Schema.astro";
+import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
+import Footer from "../../components/Footer.astro";
+import '../../styles/tokens.css';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pt">
     <head>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -44,9 +44,9 @@ import '../styles/tokens.css';
 
         <!-- SEO Meta Tags -->
         <SEO
-            title="AI Consulting"
-            description="Ongoing AI partner for SMEs. I map highest-ROI opportunities, build reliable and auditable AI processes, and stay with you as your operations evolve."
-            locale="en"
+            title="Consultoria de IA"
+            description="Parceiro contínuo de IA para PMEs. Mapeio onde a IA gera mais retorno, construo processos fiáveis e auditáveis, e evoluo consigo."
+            locale="pt"
         />
 
         <!-- Structured Data -->
@@ -59,12 +59,12 @@ import '../styles/tokens.css';
         <!-- End Google Tag Manager (noscript) -->
         <!-- Navigation -->
         <nav class="navigation">
-            <a href="/" class="logo">luís madeira</a>
+            <a href="/pt" class="logo">luís madeira</a>
             <div class="nav-links">
-                <a href="/consulting">What I Do</a>
-                <a href="/about">About</a>
-                <a href="/#contact">Contact</a>
-                <LanguageSwitcher currentPath="/consulting" />
+                <a href="/pt/servicos">Serviços</a>
+                <a href="/pt/sobre">Sobre</a>
+                <a href="/pt/#contact">Contacto</a>
+                <LanguageSwitcher currentPath="/pt/servicos" />
             </div>
             <div class="mobile-menu-toggle">
                 <span></span>
@@ -75,9 +75,9 @@ import '../styles/tokens.css';
         <!-- Hero Section -->
         <section class="page-hero">
             <div class="page-hero-content">
-                <h1>YOUR ONGOING AI PARTNER</h1>
+                <h1>SOLUÇÕES À MEDIDA. RESULTADOS REAIS.</h1>
                 <p class="page-hero-subtitle">
-                    I map your business to find the best opportunities for AI, then build reliable processes that deliver consistent results you can verify. Not a one-off project — an ongoing partnership.
+                    Encontro onde o seu negócio perde tempo e dinheiro, construo automação que resolve, e fico consigo à medida que as coisas evoluem.
                 </p>
             </div>
         </section>
@@ -86,119 +86,150 @@ import '../styles/tokens.css';
         <section class="content-section">
             <div class="content-wrapper">
                 <div class="content-main">
-                    <h2>It Starts With Mapping Your Business</h2>
-                    <p>
-                        Before touching any tool, I dig into your operations. I map your business to find where AI would actually make a difference — not where it's flashiest, but where it moves the needle.
-                    </p>
-                    <p>
-                        This produces a prioritized roadmap: which processes to tackle first, what impact to expect, and how we'll measure success. You know where your money goes before anything is built.
-                    </p>
 
-                    <h2>Built to Work Every Time</h2>
-                    <ul>
-                        <li>
-                            <strong>Consistent outputs</strong> — same input, same result.
-                        </li>
-                        <li>
-                            <strong>Auditable processes:</strong> Full traceability from data in to decision out.
-                        </li>
-                        <li>
-                            <strong>Failure handling:</strong> When something breaks, it flags — it doesn't guess.
-                        </li>
-                        <li>
-                            <strong>Human oversight</strong> — AI handles the work, your team makes the calls.
-                        </li>
-                    </ul>
+                    <!-- Service Layer 1: Audit -->
+                    <div class="service-layer">
+                        <div class="service-layer-label">Começar aqui</div>
+                        <h2>Diagnóstico Operacional</h2>
+                        <p class="service-layer-price">Preço fixo — baixo risco, resultado claro</p>
+                        <p>
+                            Antes de construir o que quer que seja, mapeio as suas operações de ponta a ponta. Como o trabalho flui no negócio, onde estão os dados, onde se perde tempo, e o que está a travar o crescimento.
+                        </p>
+                        <p>
+                            O resultado é um roadmap priorizado: as oportunidades de maior retorno no seu negócio específico, o que cada uma envolve, que impacto esperar, e como vamos medir. Sabe exatamente onde vai o investimento antes de se construir o que quer que seja.
+                        </p>
+                        <p>A maioria dos clientes começa aqui. É de baixo risco, e garante que tudo o que se segue está assente nas suas operações reais — não em suposições.</p>
+                    </div>
 
-                    <h2>How The Partnership Works</h2>
-                    <p>
-                        I don't deliver a report and leave. I work as your ongoing AI partner — embedded in your operations, evolving processes as your business changes.
-                    </p>
+                    <!-- Service Layer 2: Implementation -->
+                    <div class="service-layer">
+                        <div class="service-layer-label">Construir</div>
+                        <h2>Implementação</h2>
+                        <p>Dois modelos de entrega consoante o que precisa:</p>
 
-                    <div class="process-steps">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Discover & Diagnose</h3>
-                                <p class="step-tagline">Before building anything, I need to know how your business actually runs.</p>
+                        <div class="impl-grid">
+                            <div class="impl-card">
+                                <h3>Soluções à Medida</h3>
+                                <p class="impl-pricing">Tempo e materiais</p>
+                                <p>Para necessidades complexas e específicas — automação multi-sistema, consolidação de dados de fontes dispersas, redesenho de processos que atravessa várias equipas. Âmbito e preço definidos por tempo e valor entregue.</p>
                                 <ul>
-                                    <li>I learn how your business actually works — goals, constraints, handoffs, and what success looks like for you.</li>
-                                    <li>I map your tech stack and where data lives: CRMs, inboxes, spreadsheets, internal tools.</li>
-                                    <li>I audit processes to find real bottlenecks and figure out what makes sense to automate.</li>
+                                    <li>Automação de workflows multi-sistema</li>
+                                    <li>Consolidação de dados de várias fontes</li>
+                                    <li>Redesenho de processos complexos</li>
+                                    <li>Integrações de IA à medida</li>
+                                </ul>
+                            </div>
+                            <div class="impl-card">
+                                <h3>Soluções Produtizadas</h3>
+                                <p class="impl-pricing">Preço fixo</p>
+                                <p>Padrões recorrentes que já tenho desenvolvidos e refinados. Implementação rápida, custo previsível. Indicado para dores operacionais comuns onde precisa de resultados rapidamente.</p>
+                                <ul>
+                                    <li>Processamento de faturas e documentos</li>
+                                    <li>Enriquecimento e limpeza de CRM</li>
+                                    <li>Geração automática de relatórios</li>
+                                    <li>Classificação e encaminhamento de documentos</li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>Design, Build & Validate</h3>
-                                <p class="step-tagline">Reliable solutions, tested before launch.</p>
-                                <ul>
-                                    <li>We prioritize high-impact opportunities and figure out where AI helps — and where it doesn't.</li>
-                                    <li>I design and build custom workflows, test different approaches on real data, and walk you through my choices.</li>
-                                    <li>Everything gets tested in a real-world environment before full rollout.</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p class="impl-note">Em ambos os casos, a sua equipa aprende como funciona enquanto construímos. Sem caixas negras, sem dependência de mim para manter o sistema a correr.</p>
+                    </div>
 
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Launch, Monitor & Optimize</h3>
-                                <p class="step-tagline">Continuous improvement, not a one-off project.</p>
-                                <ul>
-                                    <li>We launch into production with clear success metrics and safeguards.</li>
-                                    <li>I monitor performance, collect feedback from your team and customers, and fix things quickly.</li>
-                                    <li>I keep refining prompts, logic, and models so the system improves as your business evolves.</li>
-                                </ul>
-                            </div>
+                    <!-- Service Layer 3: Retainer -->
+                    <div class="service-layer">
+                        <div class="service-layer-label">Contínuo</div>
+                        <h2>Retainer Mensal</h2>
+                        <p class="service-layer-price">Recorrente — evolui com o negócio</p>
+                        <p>
+                            Quando algo está em produção, precisa de ser mantido, otimizado, e adaptado à medida que o negócio muda. O retainer é para clientes que querem um parceiro permanente, não um fornecedor que têm de contextualizar de cada vez.
+                        </p>
+                        <ul>
+                            <li>Monitorização e manutenção proativa dos sistemas em produção</li>
+                            <li>Otimização contínua com base em dados reais</li>
+                            <li>Novos pedidos de automação tratados no âmbito do retainer</li>
+                            <li>Suporte prioritário quando algo falha</li>
+                        </ul>
+                    </div>
+
+                    <!-- Business Areas -->
+                    <h2>Onde Trabalho</h2>
+                    <p>Organizado por função do negócio — não por setor. A mesma dor operacional aparece em empresas diferentes.</p>
+
+                    <div class="areas-grid">
+                        <div class="area-item">
+                            <h3>Vendas & Comercial</h3>
+                            <ul>
+                                <li>Qualificação e follow-up de leads automático</li>
+                                <li>Pipeline sempre limpo e atualizado</li>
+                                <li>Geração de propostas e orçamentos</li>
+                                <li>Visibilidade total em todas as fases do funil</li>
+                            </ul>
+                        </div>
+                        <div class="area-item">
+                            <h3>Operações & Logística</h3>
+                            <ul>
+                                <li>Menos handoffs manuais entre equipas</li>
+                                <li>Rastreamento de encomendas sem Excel</li>
+                                <li>Automação de gestão de fornecedores e stock</li>
+                                <li>Gestão de exceções sem depender de uma pessoa</li>
+                            </ul>
+                        </div>
+                        <div class="area-item">
+                            <h3>Admin & Back Office</h3>
+                            <ul>
+                                <li>Processamento de faturas sem intervenção manual</li>
+                                <li>Classificação e encaminhamento de documentos</li>
+                                <li>Revisão e extração de contratos</li>
+                                <li>Automação de compliance e arquivo</li>
+                            </ul>
+                        </div>
+                        <div class="area-item">
+                            <h3>Serviço ao Cliente</h3>
+                            <ul>
+                                <li>Tempos de resposta mais rápidos em todos os canais</li>
+                                <li>Respostas consistentes a perguntas frequentes</li>
+                                <li>Triagem e encaminhamento de tickets</li>
+                                <li>Menos trabalho repetitivo para a equipa de suporte</li>
+                            </ul>
+                        </div>
+                        <div class="area-item">
+                            <h3>Reporting & Decisões</h3>
+                            <ul>
+                                <li>Dashboards em tempo real em vez de surpresas no fim do mês</li>
+                                <li>Dados consolidados de todas as fontes automaticamente</li>
+                                <li>Monitorização de KPIs com alertas quando algo foge ao normal</li>
+                                <li>Visibilidade de gestão sem andar a pedir números a toda a gente</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <h2>Who This Is For</h2>
-                    <p>I work with SMEs that:</p>
-                    <ul>
-                        <li>Want a long-term AI partner or help with a specific project</li>
-                        <li>Want to understand where AI actually makes a difference in their business</li>
-                        <li>Want processes they can trust, explain, and verify</li>
-                        <li>Need to increase capacity without hiring more people</li>
-                    </ul>
+                    <!-- Training note -->
+                    <div class="training-note">
+                        <strong>A capacitação da equipa faz parte de cada projeto.</strong> Construo sistemas que a sua equipa percebe e consegue usar — não caixas negras de que dependem de mim para manter. Para empresas que queiram ir mais longe, workshops standalone estão disponíveis como um engagement separado.
+                    </div>
+
                 </div>
 
                 <div class="content-sidebar">
                     <div class="sidebar-card">
-                        <h3>What You Get</h3>
-                        <ul>
-                            <li>Full business mapping for AI opportunities</li>
-                            <li>Prioritized roadmap based on impact</li>
-                            <li>Reliable, deterministic AI processes</li>
-                            <li>Ongoing partnership as your business evolves</li>
-                        </ul>
+                        <h3>Não sabe por onde começar?</h3>
+                        <p>O Diagnóstico Operacional é o primeiro passo certo. Fica com uma visão clara das oportunidades antes de se comprometer com o que quer que seja.</p>
                     </div>
 
                     <div class="sidebar-card">
-                        <h3>My Principles</h3>
-                        <p>You see exactly how every result was produced</p>
-                        <p>We start where it moves the needle most</p>
-                        <p>Ongoing partnership or one-off project</p>
+                        <h3>Como abordo o trabalho</h3>
+                        <ul>
+                            <li>Impacto no negócio primeiro, ferramentas depois</li>
+                            <li>Começar onde o retorno é maior</li>
+                            <li>Sem caixas negras — a sua equipa percebe o que está a correr</li>
+                            <li>Medir tudo para saber o que está a funcionar</li>
+                        </ul>
                     </div>
 
                     <div class="sidebar-card cta-card">
-                        <h3>Let's Talk</h3>
-                        <p>
-                            If you're curious about what AI could do for
-                            your business, let's talk.
-                        </p>
-                        <a
-                            href="mailto:luismadeira@ruimadeira.pt"
-                            class="sidebar-cta">Send Email</a
-                        >
-                        <a
-                            href="https://www.linkedin.com/in/lumadeira"
-                            target="_blank"
-                            class="sidebar-cta-secondary">LinkedIn</a
-                        >
+                        <h3>Vamos falar</h3>
+                        <p>Diga-me o que o está a travar. Digo-lhe o que posso fazer.</p>
+                        <a href="/pt/ai-contact" class="sidebar-cta">Entrar em contacto</a>
                     </div>
                 </div>
             </div>
@@ -251,7 +282,7 @@ import '../styles/tokens.css';
             }
         </script>
 
-        <Footer locale="en" />
+        <Footer locale="pt" />
     </body>
 </html>
 
@@ -774,4 +805,175 @@ import '../styles/tokens.css';
             padding: 24px;
         }
     }
+
+/* Service layers */
+.service-layer {
+    margin-bottom: 64px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+}
+
+.service-layer:last-of-type {
+    border-bottom: none;
+}
+
+.service-layer-label {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--on-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.service-layer h2 {
+    margin-bottom: 6px;
+}
+
+.service-layer-price {
+    font-size: 14px;
+    color: var(--accent-deep);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.service-layer p {
+    margin-bottom: 16px;
+}
+
+.service-layer ul {
+    margin: 16px 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.service-layer ul li {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+}
+
+.impl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.impl-card {
+    background-color: var(--paper-2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.impl-card h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--ink);
+    margin-bottom: 4px;
+}
+
+.impl-pricing {
+    font-size: 13px;
+    color: var(--accent-deep);
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.impl-card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.impl-card ul {
+    padding-left: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.impl-card ul li {
+    font-size: 14px;
+    color: var(--ink-soft);
+}
+
+.impl-note {
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 8px !important;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 24px 0 40px;
+}
+
+.area-item h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+}
+
+.area-item ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.area-item ul li {
+    font-size: 14px;
+    color: var(--ink-soft);
+    padding-left: 14px;
+    position: relative;
+}
+
+.area-item ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent-deep);
+    font-size: 11px;
+}
+
+.training-note {
+    background-color: var(--paper-2);
+    border-left: 3px solid var(--accent-deep);
+    padding: 20px 24px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-top: 32px;
+}
+
+.training-note strong {
+    color: var(--ink);
+}
+
+@media (max-width: 768px) {
+    .impl-grid {
+        grid-template-columns: 1fr;
+    }
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>

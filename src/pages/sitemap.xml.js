@@ -49,13 +49,13 @@ export async function GET() {
       ]
     },
     {
-      url: '/consulting',
+      url: '/services',
       lastmod,
       changefreq: 'monthly',
       priority: '0.9',
       alternates: [
-        { lang: 'en', url: '/consulting' },
-        { lang: 'pt', url: '/pt/consultoria' }
+        { lang: 'en', url: '/services' },
+        { lang: 'pt', url: '/pt/servicos' }
       ]
     },
     // Portuguese Pages
@@ -80,13 +80,13 @@ export async function GET() {
       ]
     },
     {
-      url: '/pt/consultoria',
+      url: '/pt/servicos',
       lastmod,
       changefreq: 'monthly',
       priority: '0.9',
       alternates: [
-        { lang: 'en', url: '/consulting' },
-        { lang: 'pt', url: '/pt/consultoria' }
+        { lang: 'en', url: '/services' },
+        { lang: 'pt', url: '/pt/servicos' }
       ]
     },
   ];
