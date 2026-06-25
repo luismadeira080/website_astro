@@ -24,10 +24,9 @@ No test framework or linter is configured.
 
 **Routing:** File-based. Every EN page under `src/pages/` has a PT mirror under `src/pages/pt/`.
 
-**Current pages (9 total):**
+**Current pages (7 total):**
 - `/` and `/pt/` — Homepage (AI-focused hero, services, process)
 - `/consulting` and `/pt/consultoria` — Main services page (AI consulting)
-- `/projects` and `/pt/projetos` — Projects listing (empty, awaiting AI case studies)
 - `/about` and `/pt/sobre` — About page
 - `/pt/ai-contact` — AI contact form (PT only)
 
