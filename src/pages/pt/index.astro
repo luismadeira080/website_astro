@@ -195,57 +195,38 @@ import "../../styles/tokens.css";
             </div>
 
             <div class="sectors-cta">
-                <a href="/pt/servicos" class="text-link">VER COMO FUNCIONA</a>
+                <a href="/pt/servicos" class="text-link">VER COMO TRABALHAMOS</a>
             </div>
         </section>
 
-        <!-- How It Works / Service Layers -->
+        <!-- Consultoria & Implementação -->
         <section class="our-process-section">
             <div class="process-header">
-                <h2>COMO FUNCIONA</h2>
-                <p>Três camadas que funcionam em conjunto. Cada uma constrói sobre a anterior.</p>
+                <h2>CONSULTORIA & IMPLEMENTAÇÃO</h2>
+                <p>Duas formas de trabalhar em conjunto, consoante o ponto de partida.</p>
             </div>
 
             <div class="process-grid">
                 <div class="process-card">
-                    <div class="card-number">01</div>
                     <div class="card-content">
-                        <h3>Diagnóstico Operacional</h3>
-                        <p class="process-tagline">Preço fixo. Baixo risco. Resultado claro.</p>
-                        <ul class="process-bullets">
-                            <li>Mapeio as suas operações de ponta a ponta: como o trabalho flui, onde estão os dados, onde se perde tempo.</li>
-                            <li>Identifico onde soluções internas geram mais retorno no seu negócio.</li>
-                            <li>Entrego um roadmap priorizado: o que trabalhar primeiro, que impacto esperar, como vamos medir.</li>
-                        </ul>
+                        <h3>Ainda não sabe onde está a oportunidade?</h3>
+                        <p class="process-tagline">Começar pelo Diagnóstico</p>
+                        <p>Mapeamos o negócio de ponta a ponta e identificamos onde uma abordagem orientada a AI gera mais retorno, entregue como um roadmap priorizado.</p>
+                        <a href="/pt/servicos#diagnostico" class="text-link">Começar pelo Diagnóstico</a>
                     </div>
                 </div>
 
                 <div class="process-card">
-                    <div class="card-number">02</div>
                     <div class="card-content">
-                        <h3>Implementação</h3>
-                        <p class="process-tagline">Construído para as suas operações.</p>
-                        <ul class="process-bullets">
-                            <li><strong>Soluções à medida</strong> para necessidades complexas: consolidação de dados, integração entre sistemas, redesenho de processos. Preço por tempo e valor.</li>
-                            <li><strong>Soluções produtizadas</strong> para padrões comuns: processamento de faturas, enriquecimento de CRM, geração de relatórios, classificação de documentos. Implementação rápida, preço fixo.</li>
-                            <li>A sua equipa aprende como funciona enquanto construímos. Sem caixas negras.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="process-card">
-                    <div class="card-number">03</div>
-                    <div class="card-content">
-                        <h3>Retainer Mensal</h3>
-                        <p class="process-tagline">Contínuo, à medida que o negócio evolui.</p>
-                        <ul class="process-bullets">
-                            <li>Monitorizo o que está a correr, corrijo problemas antes de se tornarem críticos, e otimizo ao longo do tempo.</li>
-                            <li>Novos pedidos são tratados no âmbito do retainer: não é preciso começar do zero em cada projeto.</li>
-                            <li>Tem um parceiro que conhece as suas operações, não um fornecedor que precisa de ser contextualizado de cada vez.</li>
-                        </ul>
+                        <h3>Já sabe o que precisa?</h3>
+                        <p class="process-tagline">Ir direto para a Implementação</p>
+                        <p>Avançamos diretamente para a construção, seja uma solução à medida ou um dos padrões já produtizados.</p>
+                        <a href="/pt/servicos#implementacao" class="text-link">Ir direto para a Implementação</a>
                     </div>
                 </div>
             </div>
+
+            <p class="process-retainer-note">Qualquer um dos caminhos pode continuar num acompanhamento contínuo, para quem quiser um parceiro em evolução. É opcional, não é o destino padrão.</p>
         </section>
 
         <!-- Social Proof Section -->
@@ -725,9 +706,21 @@ import "../../styles/tokens.css";
 
     .process-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 40px;
         align-items: start;
+    }
+
+    .process-retainer-note {
+        margin-top: 48px;
+        padding: 24px 32px;
+        background-color: var(--paper-2);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--color-text-muted);
+        text-align: center;
     }
 
     .process-card {
@@ -749,21 +742,6 @@ import "../../styles/tokens.css";
         transform: translateY(-8px);
         border-color: var(--accent-deep);
         box-shadow: var(--shadow-card-hover);
-    }
-
-    .card-number {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 64px;
-        height: 46px;
-        background-color: var(--accent);
-        border-radius: 10px;
-        font-family: var(--font-heading);
-        font-size: 34px;
-        color: var(--on-accent);
-        line-height: 1;
-        margin-bottom: 28px;
     }
 
     .card-content h3 {

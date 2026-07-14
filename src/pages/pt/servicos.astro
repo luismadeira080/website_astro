@@ -87,9 +87,25 @@ import '../../styles/tokens.css';
             <div class="content-wrapper">
                 <div class="content-main">
 
+                    <!-- Consultoria & Implementação intro -->
+                    <div class="engagement-intro">
+                        <h2>Consultoria & Implementação</h2>
+                        <p>Duas formas de trabalhar em conjunto, consoante o ponto de partida.</p>
+                        <div class="engagement-paths">
+                            <a href="#diagnostico" class="engagement-path">
+                                <h3>Ainda não sabe onde está a oportunidade?</h3>
+                                <p>Comece pelo Diagnóstico.</p>
+                            </a>
+                            <a href="#implementacao" class="engagement-path">
+                                <h3>Já sabe o que precisa?</h3>
+                                <p>Vá direto para a Implementação.</p>
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Service Layer 1: Audit -->
-                    <div class="service-layer">
-                        <div class="service-layer-label">Começar aqui</div>
+                    <div class="service-layer" id="diagnostico">
+                        <div class="service-layer-label">Diagnóstico</div>
                         <h2>Diagnóstico Operacional</h2>
                         <p class="service-layer-price">Preço fixo. Baixo risco. Resultado claro.</p>
                         <p>
@@ -98,14 +114,14 @@ import '../../styles/tokens.css';
                         <p>
                             O resultado é um roadmap priorizado: as oportunidades de maior retorno no seu negócio específico, o que cada uma envolve, que impacto esperar, e como vamos medir. Sabe exatamente onde vai o investimento antes de se construir o que quer que seja.
                         </p>
-                        <p>A maioria dos clientes começa aqui. É de baixo risco, e garante que tudo o que se segue está assente nas suas operações reais, não em suposições.</p>
+                        <p>Este é o ponto de partida certo se ainda não tem a certeza de onde está a oportunidade. É de baixo risco, e garante que tudo o que se segue está assente nas suas operações reais, não em suposições. Se já sabe o que precisa, pode avançar diretamente para a Implementação abaixo.</p>
                     </div>
 
                     <!-- Service Layer 2: Implementation -->
-                    <div class="service-layer">
+                    <div class="service-layer" id="implementacao">
                         <div class="service-layer-label">Construir</div>
                         <h2>Implementação</h2>
-                        <p>Dois modelos de entrega consoante o que precisa:</p>
+                        <p>Dois modelos de entrega consoante o que precisa. Funciona igualmente bem quer tenha acabado de fazer um Diagnóstico, quer já saiba exatamente o que precisa de ser construído.</p>
 
                         <div class="impl-grid">
                             <div class="impl-card">
@@ -135,13 +151,13 @@ import '../../styles/tokens.css';
                         <p class="impl-note">Em ambos os casos, a sua equipa aprende como funciona enquanto construímos. Sem caixas negras, sem dependência de mim para manter o sistema a correr.</p>
                     </div>
 
-                    <!-- Service Layer 3: Retainer -->
+                    <!-- Opcional: Retainer -->
                     <div class="service-layer">
-                        <div class="service-layer-label">Contínuo</div>
-                        <h2>Retainer Mensal</h2>
-                        <p class="service-layer-price">Recorrente. Evolui com o negócio.</p>
+                        <div class="service-layer-label">Opcional</div>
+                        <h2>Acompanhamento Contínuo</h2>
+                        <p class="service-layer-price">Recorrente, só se quiser. Evolui com o negócio.</p>
                         <p>
-                            Quando algo está em produção, precisa de ser mantido, otimizado, e adaptado à medida que o negócio muda. O retainer é para clientes que querem um parceiro permanente, não um fornecedor que têm de contextualizar de cada vez.
+                            Alguns clientes querem suporte contínuo depois do lançamento: monitorização, otimização, e novos pedidos tratados sem recomeçar do zero de cada vez. O retainer existe exatamente para isso. É opcional, não é um passo obrigatório depois da Implementação.
                         </p>
                         <ul>
                             <li>Monitorização e manutenção proativa dos sistemas em produção</li>
@@ -829,6 +845,56 @@ import '../../styles/tokens.css';
             padding: 24px;
         }
     }
+
+/* Consultoria & Implementação intro */
+.engagement-intro {
+    margin-bottom: 64px;
+}
+
+.engagement-intro > p {
+    margin-bottom: 32px;
+}
+
+.engagement-paths {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.engagement-path {
+    display: block;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.engagement-path:hover {
+    border-color: var(--accent-deep);
+    transform: translateY(-2px);
+}
+
+.engagement-path h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 8px;
+}
+
+.engagement-path p {
+    font-size: 15px;
+    color: var(--accent-deep);
+    font-weight: 600;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .engagement-paths {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Service layers */
 .service-layer {

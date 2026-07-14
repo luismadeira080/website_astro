@@ -87,9 +87,25 @@ import '../styles/tokens.css';
             <div class="content-wrapper">
                 <div class="content-main">
 
+                    <!-- Consulting & Implementation intro -->
+                    <div class="engagement-intro">
+                        <h2>Consulting & Implementation</h2>
+                        <p>Two ways to work together, depending on where you're starting from.</p>
+                        <div class="engagement-paths">
+                            <a href="#diagnostic" class="engagement-path">
+                                <h3>Not sure where the opportunity is?</h3>
+                                <p>Start with a Diagnostic.</p>
+                            </a>
+                            <a href="#implementation" class="engagement-path">
+                                <h3>Already know what you need?</h3>
+                                <p>Go straight to Implementation.</p>
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Service Layer 1: Audit -->
-                    <div class="service-layer">
-                        <div class="service-layer-label">Start here</div>
+                    <div class="service-layer" id="diagnostic">
+                        <div class="service-layer-label">Diagnostic</div>
                         <h2>Operations Audit</h2>
                         <p class="service-layer-price">Fixed price. Low risk. Clear output.</p>
                         <p>
@@ -98,14 +114,14 @@ import '../styles/tokens.css';
                         <p>
                             The output is a prioritized roadmap: the highest-ROI opportunities specific to your business, what each one involves, what impact to expect, and how we'll measure it. You know exactly where your investment goes before anything gets built.
                         </p>
-                        <p>Most clients start here. It's low risk, and it means every decision after is grounded in your real operations, not assumptions.</p>
+                        <p>This is the right starting point if you're not yet sure where the opportunity is. It's low risk, and it means every decision after is grounded in your real operations, not assumptions. If you already know what you need, you can go straight to Implementation below.</p>
                     </div>
 
                     <!-- Service Layer 2: Implementation -->
-                    <div class="service-layer">
+                    <div class="service-layer" id="implementation">
                         <div class="service-layer-label">Build</div>
                         <h2>Implementation</h2>
-                        <p>Two delivery models depending on what you need:</p>
+                        <p>Two delivery models depending on what you need. This works equally well whether you've just finished a Diagnostic or you already know exactly what needs to be built.</p>
 
                         <div class="impl-grid">
                             <div class="impl-card">
@@ -135,13 +151,13 @@ import '../styles/tokens.css';
                         <p class="impl-note">In both cases, your team learns how it works as we build it. No black boxes, no dependency on me to keep the lights on.</p>
                     </div>
 
-                    <!-- Service Layer 3: Retainer -->
+                    <!-- Optional: Retainer -->
                     <div class="service-layer">
-                        <div class="service-layer-label">Ongoing</div>
-                        <h2>Monthly Retainer</h2>
-                        <p class="service-layer-price">Recurring. Evolves with your business.</p>
+                        <div class="service-layer-label">Optional</div>
+                        <h2>Ongoing Retainer</h2>
+                        <p class="service-layer-price">Recurring, only if you want it. Evolves with your business.</p>
                         <p>
-                            Once something is live, it needs to be maintained, optimized, and adapted as the business changes. The retainer is for clients who want a permanent partner, not a vendor they have to re-brief every quarter.
+                            Some clients want ongoing support after launch: monitoring, optimization, and new requests handled without restarting from scratch each time. The retainer exists for exactly that. It's optional, not a required next step after Implementation.
                         </p>
                         <ul>
                             <li>Monitoring and proactive maintenance of live systems</li>
@@ -829,6 +845,56 @@ import '../styles/tokens.css';
             padding: 24px;
         }
     }
+
+/* Consulting & Implementation intro */
+.engagement-intro {
+    margin-bottom: 64px;
+}
+
+.engagement-intro > p {
+    margin-bottom: 32px;
+}
+
+.engagement-paths {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.engagement-path {
+    display: block;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.engagement-path:hover {
+    border-color: var(--accent-deep);
+    transform: translateY(-2px);
+}
+
+.engagement-path h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 8px;
+}
+
+.engagement-path p {
+    font-size: 15px;
+    color: var(--accent-deep);
+    font-weight: 600;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .engagement-paths {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Service layers */
 .service-layer {
