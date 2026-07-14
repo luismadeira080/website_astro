@@ -157,6 +157,14 @@ import '../styles/tokens.css';
 
                     <div class="areas-grid">
                         <div class="area-item">
+                            <h3>Stock & Procurement</h3>
+                            <ul>
+                                <li>Real visibility into what's actually in stock, not five spreadsheets that don't agree</li>
+                                <li>Reorder decisions based on actual sales data, not whoever remembers to check</li>
+                                <li>Purchasing pulled straight from what's already in your ERP</li>
+                            </ul>
+                        </div>
+                        <div class="area-item">
                             <h3>Sales & Commercial</h3>
                             <ul>
                                 <li>Lead qualification and follow-up automation</li>
@@ -169,9 +177,8 @@ import '../styles/tokens.css';
                             <h3>Operations & Logistics</h3>
                             <ul>
                                 <li>Fewer manual handoffs between teams</li>
-                                <li>Order tracking without spreadsheets</li>
-                                <li>Supplier and inventory management automation</li>
                                 <li>Exception handling that doesn't rely on one person</li>
+                                <li>Smoother coordination across locations and partners</li>
                             </ul>
                         </div>
                         <div class="area-item">
@@ -201,6 +208,21 @@ import '../styles/tokens.css';
                                 <li>Management visibility without chasing people for numbers</li>
                             </ul>
                         </div>
+                    </div>
+
+                    <!-- Flagship Spotlight -->
+                    <div class="flagship-spotlight">
+                        <div class="service-layer-label">Proven pattern</div>
+                        <h3>A closer look: Stock & Procurement</h3>
+                        <p>Many businesses run stock control across multiple spreadsheets that rarely agree with each other, with purchasing decisions depending on whoever happens to check the numbers at a given moment. We recognize this as one of the most recurring operational patterns among the businesses we work with.</p>
+                        <p>To address it, we build a solution that integrates real movement data, often already sitting in the company's ERP, into a single, unified view of stock and sales, replacing manual checks with a data-driven automatic reorder system.</p>
+                        <p class="flagship-spotlight-label">What this delivers:</p>
+                        <ul>
+                            <li>A single, consolidated view of stock, not multiple spreadsheets</li>
+                            <li>Demand forecasting based on real sales data, not guesswork</li>
+                            <li>Automated reorder points, connected to the company's ERP</li>
+                            <li>A solution already tested and running in a real deployment</li>
+                        </ul>
                     </div>
 
                     <!-- Training note -->
@@ -958,6 +980,67 @@ import '../styles/tokens.css';
     font-size: 12px;
     font-weight: 700;
     line-height: 1;
+}
+
+/* Flagship spotlight */
+.flagship-spotlight {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: var(--shadow-card);
+}
+
+.flagship-spotlight h3 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    letter-spacing: -0.28px;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.flagship-spotlight p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+}
+
+.flagship-spotlight-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-deep);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px !important;
+}
+
+.flagship-spotlight ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flagship-spotlight ul li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    padding-left: 22px;
+    position: relative;
+}
+
+.flagship-spotlight ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    color: var(--accent-deep);
+    font-weight: 700;
+    font-size: 13px;
 }
 
 /* Training note */
