@@ -16,7 +16,8 @@
 :root {
   /* ------- Surfaces (light) ------- */
   --paper: #f7f7f4;          /* page background, warm light grey */
-  --paper-2: #efefe9;        /* alternating band / subtle fill */
+  --paper-2: #e2e2d6;        /* alternating band / subtle fill — 1.22:1 vs paper,
+                                the old #efefe9 was 1.07:1 and read as no edge */
   --card: #ffffff;           /* card / panel background */
   --ink-surface: #0d0d0d;    /* retained near-black, for dark dividers/footer */
   --ink-surface-2: #1a1a1a;

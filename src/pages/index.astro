@@ -586,10 +586,8 @@ body {
 
 /* Sectors Section */
 .sectors-section {
-    padding: 80px 108px;
-    background-color: var(--color-surface);
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    padding: 120px 108px;
+    background-color: var(--color-bg);
 }
 
 .sectors-grid {
@@ -661,9 +659,14 @@ body {
 }
 
 /* Our Process Section */
+/* Page rhythm: paper -> paper-2 -> paper -> paper-2 -> paper -> lime -> ink.
+   Tones alternate on every boundary, so no two neighbours share a background
+   and the 1px hairlines that used to stand in for an edge are gone. The body
+   stays in one tonal family; inversion is saved for the closing CTA and
+   footer, so going dark keeps meaning "you've reached the end". */
 .our-process-section {
     padding: 120px 108px;
-    background-color: var(--color-bg);
+    background-color: var(--color-surface);
 }
 
 .process-header {
@@ -1048,12 +1051,6 @@ body {
     margin-bottom: 8px;
 }
 
-/* Testimonials Section */
-.testimonials-section {
-    padding: 80px 108px;
-    border-top: 1px solid #333;
-}
-
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1286,10 +1283,8 @@ body {
 
 /* About Section */
 .about-section {
-    padding: 80px 108px;
-    background-color: var(--color-surface);
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    padding: 120px 108px;
+    background-color: var(--color-bg);
 }
 
 .about-section h2 {
@@ -2089,12 +2084,12 @@ body {
     overflow: hidden;
 }
 
+/* Same treatment as .sector-card-line next to it: an uppercase accent kicker
+   reads as a badge inside a card and fights the Bebas titles below it. */
 .sectors-rail-label {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: var(--accent-deep);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-muted);
     padding: 24px 28px 16px;
 }
 
@@ -2128,7 +2123,7 @@ body {
 }
 
 .sectors-rail-item:hover {
-    background-color: var(--color-surface);
+    background-color: var(--color-bg);
     color: var(--accent-deep);
 }
 
@@ -2137,12 +2132,11 @@ body {
     color: var(--accent-deep);
 }
 
-/* Testimonials */
+/* Testimonials — paper-2, which also lifts the white quote cards off the
+   background instead of leaving them to float on near-identical paper. */
 .testimonials-section {
     padding: 120px 108px;
-    background-color: var(--paper-2);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background-color: var(--color-surface);
 }
 
 .testimonials-grid {

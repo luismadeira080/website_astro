@@ -613,12 +613,9 @@ import "../../styles/tokens.css";
         object-position: center;
     }
 
-    /* Sectors Section */
     .sectors-section {
-        padding: 80px 108px;
-        background-color: var(--color-surface);
-        border-top: 1px solid var(--color-border);
-        border-bottom: 1px solid var(--color-border);
+        padding: 120px 108px;
+        background-color: var(--color-bg);
     }
 
     .sectors-grid {
@@ -690,9 +687,14 @@ import "../../styles/tokens.css";
     }
 
     /* Our Process Section */
+    /* Ritmo da página: paper -> paper-2 -> paper -> paper-2 -> paper -> lima ->
+       ink. Os tons alternam em cada fronteira, por isso não há duas secções
+       vizinhas com o mesmo fundo e as réguas de 1px deixaram de ser precisas.
+       O corpo fica numa só família tonal; a inversão fica guardada para o CTA
+       final e o footer, para o escuro continuar a significar "chegaste ao fim". */
     .our-process-section {
         padding: 120px 108px;
-        background-color: var(--color-bg);
+        background-color: var(--color-surface);
     }
 
     .process-header {
@@ -1081,12 +1083,6 @@ import "../../styles/tokens.css";
         margin-bottom: 8px;
     }
 
-    /* Testimonials Section */
-    .testimonials-section {
-        padding: 80px 108px;
-        border-top: 1px solid #333;
-    }
-
     .testimonials-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1319,10 +1315,8 @@ import "../../styles/tokens.css";
 
     /* About Section */
     .about-section {
-        padding: 80px 108px;
-        background-color: var(--color-surface);
-        border-top: 1px solid var(--color-border);
-        border-bottom: 1px solid var(--color-border);
+        padding: 120px 108px;
+        background-color: var(--color-bg);
     }
 
     .about-section h2 {
@@ -2131,12 +2125,13 @@ import "../../styles/tokens.css";
     overflow: hidden;
 }
 
+/* Mesmo tratamento do .sector-card-line ao lado: um kicker em maiúsculas e cor
+   de acento lê-se como etiqueta dentro de um cartão e compete com os títulos
+   em Bebas logo por baixo. */
 .sectors-rail-label {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: var(--accent-deep);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-muted);
     padding: 24px 28px 16px;
 }
 
@@ -2170,7 +2165,7 @@ import "../../styles/tokens.css";
 }
 
 .sectors-rail-item:hover {
-    background-color: var(--color-surface);
+    background-color: var(--color-bg);
     color: var(--accent-deep);
 }
 
@@ -2179,12 +2174,11 @@ import "../../styles/tokens.css";
     color: var(--accent-deep);
 }
 
-/* Testimonials */
+/* Testimonials — paper-2, que também levanta os cards brancos das citações do
+   fundo, em vez de os deixar a flutuar sobre paper quase igual. */
 .testimonials-section {
     padding: 120px 108px;
-    background-color: var(--paper-2);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background-color: var(--color-surface);
 }
 
 .testimonials-grid {
