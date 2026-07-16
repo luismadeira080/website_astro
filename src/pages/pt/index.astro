@@ -163,61 +163,76 @@ import "../../styles/tokens.css";
         <section class="sectors-section">
             <div class="section-header reveal">
                 <h2>O que faço</h2>
-                <p>Soluções internas potenciadas por IA, aplicadas a todas as áreas do seu negócio. Quatro capacidades por baixo de tudo o que construo.</p>
+                <p>Soluções internas potenciadas por IA, aplicadas a todas as áreas do seu negócio.</p>
             </div>
 
+            <!-- Snippet apenas: uma linha por cartão. A linha de dor e os
+                 resultados vivem em /pt/servicos, nada aqui os repete. -->
+            <div class="sectors-layout">
             <div class="sectors-grid">
-                <a href="/pt/servicos" class="sector-card reveal">
-                    <div class="sector-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <ellipse cx="12" cy="5" r="9"/><path d="M3 5v14a9 9 0 0 0 18 0V5"/><path d="M3 12a9 9 0 0 0 18 0"/>
-                        </svg>
-                    </div>
-                    <h3>Data & Integration Layer</h3>
-                    <ul class="sector-outcomes">
-                        <li>Fonte de verdade única entre folhas, ERP, email e documentos</li>
-                        <li>Fundação com contexto, AI-ready</li>
-                    </ul>
-                </a>
-
-                <a href="/pt/servicos" class="sector-card reveal">
-                    <div class="sector-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" y1="12" x2="17" y2="12"/>
-                        </svg>
-                    </div>
-                    <h3>Intelligent Document Processing</h3>
-                    <ul class="sector-outcomes">
-                        <li>Faturas, contratos e recibos lidos automaticamente</li>
-                        <li>Classificados e encaminhados, sem ordenação manual</li>
-                    </ul>
-                </a>
-
-                <a href="/pt/servicos" class="sector-card reveal">
-                    <div class="sector-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>
-                        </svg>
-                    </div>
-                    <h3>AI-Powered Dashboards</h3>
-                    <ul class="sector-outcomes">
-                        <li>Dashboards em tempo real, sem esperar pelo fecho do mês</li>
-                        <li>Analytics conversacional: perguntar em linguagem natural</li>
-                    </ul>
-                </a>
-
-                <a href="/pt/servicos" class="sector-card reveal">
+                <a href="/pt/servicos#process-mining" class="sector-card reveal">
                     <div class="sector-card-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="3" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/>
                         </svg>
                     </div>
                     <h3>Process Mining & Discovery</h3>
-                    <ul class="sector-outcomes">
-                        <li>Um mapa data-driven de como o trabalho realmente flui</li>
-                        <li>Um heatmap de onde tempo e dinheiro vazam</li>
-                    </ul>
+                    <p class="sector-card-line">Para onde vai mesmo o tempo e o dinheiro, a partir dos seus dados.</p>
                 </a>
+
+                <a href="/pt/servicos#stock" class="sector-card reveal">
+                    <div class="sector-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Stock & Compras</h3>
+                    <p class="sector-card-line">Reposição que corre sobre movimento real, não sobre memória.</p>
+                </a>
+
+                <a href="/pt/servicos#data-layer" class="sector-card reveal">
+                    <div class="sector-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" r="9"/><path d="M3 5v14a9 9 0 0 0 18 0V5"/><path d="M3 12a9 9 0 0 0 18 0"/>
+                        </svg>
+                    </div>
+                    <h3>Data & Integration Layer</h3>
+                    <p class="sector-card-line">Os seus sistemas dispersos, unidos numa só fonte de verdade.</p>
+                </a>
+
+                <a href="/pt/servicos#operations-admin" class="sector-card reveal">
+                    <div class="sector-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3>Operações & Admin</h3>
+                    <p class="sector-card-line">O trabalho repetitivo de back-office, tratado em segundo plano.</p>
+                </a>
+            </div>
+
+            <aside class="sectors-rail reveal">
+                <span class="sectors-rail-label">Também construo</span>
+                <a href="/pt/servicos#idp" class="sectors-rail-item">
+                    <h3>Intelligent Document Processing</h3>
+                    <svg class="sectors-rail-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </a>
+                <a href="/pt/servicos#dashboards" class="sectors-rail-item">
+                    <h3>AI-Powered Dashboards</h3>
+                    <svg class="sectors-rail-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </a>
+                <a href="/pt/servicos#sales" class="sectors-rail-item">
+                    <h3>Vendas & Previsões de Receita</h3>
+                    <svg class="sectors-rail-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </a>
+            </aside>
             </div>
 
             <div class="sectors-cta">
@@ -610,7 +625,6 @@ import "../../styles/tokens.css";
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
-        margin-bottom: 48px;
     }
 
     .sector-card {
@@ -673,67 +687,6 @@ import "../../styles/tokens.css";
     .sectors-cta {
         text-align: center;
         margin-top: 48px;
-    }
-
-    /* Flagship spotlight */
-    .flagship-spotlight {
-        background-color: var(--card);
-        border: 1px solid var(--color-border);
-        border-radius: 16px;
-        padding: 40px;
-        margin: 48px 0;
-        box-shadow: var(--shadow-card);
-    }
-
-    .flagship-spotlight h3 {
-        font-family: var(--font-heading);
-        font-size: 28px;
-        letter-spacing: -0.28px;
-        color: var(--color-text);
-        margin: 16px 0 20px;
-    }
-
-    .flagship-spotlight p {
-        font-size: 16px;
-        line-height: 1.7;
-        color: var(--color-text-muted);
-        margin-bottom: 16px;
-    }
-
-    .flagship-spotlight-label {
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--accent-deep);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 12px !important;
-    }
-
-    .flagship-spotlight ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .flagship-spotlight ul li {
-        font-size: 15px;
-        line-height: 1.6;
-        color: var(--color-text-muted);
-        padding-left: 22px;
-        position: relative;
-    }
-
-    .flagship-spotlight ul li::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        top: 0.1em;
-        color: var(--accent-deep);
-        font-weight: 700;
-        font-size: 13px;
     }
 
     /* Our Process Section */
@@ -1711,6 +1664,10 @@ import "../../styles/tokens.css";
             padding: 60px 32px;
         }
 
+        .sectors-layout {
+            grid-template-columns: 1fr;
+        }
+
         .sectors-grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
@@ -2142,34 +2099,85 @@ import "../../styles/tokens.css";
         }
     }
 
-.sector-outcomes {
-    list-style: none;
-    padding: 0;
+.sector-card-line {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
 }
 
-    .sector-outcomes li {
-        font-size: 13px;
-        line-height: 1.4;
-        color: var(--muted);
-        padding-left: 20px;
-        position: relative;
-    }
+/* A medida partilhada de 600px parte esta frase para uma segunda linha; é uma
+   frase de intro, não um parágrafo, por isso deixa-se usar a largura toda. */
+.sectors-section .section-header p {
+    max-width: none;
+}
 
-    .sector-outcomes li::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0.38em;
-        width: 8px;
-        height: 4px;
-        border-left: 2px solid var(--accent-deep);
-        border-bottom: 2px solid var(--accent-deep);
-        transform: rotate(-45deg);
-    }
+/* Quatro cartões à esquerda, as três restantes num pilar de altura completa à
+   direita, para o catálogo se ler como sete áreas e não quatro mais um extra. */
+.sectors-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.sectors-rail {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.sectors-rail-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+    padding: 24px 28px 16px;
+}
+
+/* flex: 1 divide a altura restante por igual, para as três linhas ficarem
+   alinhadas com a grelha 2x2 ao lado seja qual for a altura dos cartões. */
+.sectors-rail-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 28px;
+    border-top: 1px solid var(--color-border);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sectors-rail-item h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    letter-spacing: -0.22px;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.sectors-rail-arrow {
+    flex-shrink: 0;
+    color: var(--color-text-muted);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.sectors-rail-item:hover {
+    background-color: var(--color-surface);
+    color: var(--accent-deep);
+}
+
+.sectors-rail-item:hover .sectors-rail-arrow {
+    transform: translateX(4px);
+    color: var(--accent-deep);
+}
 
 /* Testimonials */
 .testimonials-section {

@@ -122,7 +122,7 @@ import '../../styles/tokens.css';
                         </div>
                     </div>
 
-                    <!-- 02 · Stock & Compras (flagship, padrão comprovado) -->
+                    <!-- 02 · Stock & Compras -->
                     <div class="area-block reveal" id="stock">
                         <div class="area-block-summary" role="button" tabindex="0" aria-expanded="false">
                             <span class="area-block-icon">
@@ -133,7 +133,6 @@ import '../../styles/tokens.css';
                             </span>
                             <span class="area-block-pill">02</span>
                             <h2 class="area-block-title">Stock &amp; Compras</h2>
-                            <span class="area-block-badge">Padrão comprovado</span>
                             <span class="area-block-chevron" aria-hidden="true">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="6 9 12 15 18 9"/>
@@ -148,7 +147,6 @@ import '../../styles/tokens.css';
                                 <li>Visão única e consolidada do stock, não múltiplas folhas</li>
                                 <li>Previsão de procura baseada em vendas reais</li>
                                 <li>Pontos de reposição automáticos, ligados ao ERP</li>
-                                <li>Solução já em funcionamento num caso real</li>
                             </ul>
                         </div>
                         </div>
@@ -411,6 +409,24 @@ import '../../styles/tokens.css';
                     }
                 });
             });
+
+            // Deep links dos cartões da homepage (/pt/servicos#stock): chegar
+            // com essa área já aberta, não num acordeão fechado.
+            function openFromHash() {
+                const id = window.location.hash.slice(1);
+                if (!id) return;
+                const target = document.getElementById(id);
+                if (!target || !target.classList.contains("area-block")) return;
+                if (!target.classList.contains("is-open")) toggleBlock(target);
+                // "start" + scroll-margin-top deixa o título logo abaixo da nav,
+                // e coincide com o sítio onde o salto nativo do browser aterra,
+                // por isso não há correção visível seja qual for o que corre por último.
+                requestAnimationFrame(() => {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                });
+            }
+            openFromHash();
+            window.addEventListener("hashchange", openFromHash);
 
             // Scroll reveal (shared .reveal / .in-view utility from tokens.css)
             const revealEls = document.querySelectorAll(".reveal");
@@ -882,10 +898,14 @@ import '../../styles/tokens.css';
 }
 
 /* Area accordions */
+/* A nav sticky tapa o topo do viewport, por isso um deep link que encoste o
+   bloco a y=0 esconde o título atrás dela. Isto compensa tanto o salto nativo
+   do browser para o fragmento como o nosso scrollIntoView, que assim coincidem. */
 .area-block {
     position: relative;
     border-bottom: 1px solid var(--border);
     transition: background-color 0.24s ease;
+    scroll-margin-top: 124px;
 }
 
 .area-block.is-open {
@@ -951,19 +971,6 @@ import '../../styles/tokens.css';
     transition: color 0.2s ease;
 }
 
-.area-block-badge {
-    display: inline-block;
-    background-color: rgba(211, 233, 122, 0.1);
-    color: var(--accent-deep);
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 4px 10px;
-    border-radius: 6px;
-    flex-shrink: 0;
-}
-
 .area-block-chevron {
     margin-left: auto;
     display: inline-flex;
@@ -993,8 +1000,6 @@ import '../../styles/tokens.css';
 .area-block-body {
     display: grid;
     grid-template-rows: 0fr;
-    /* Clips at 0: the inner element's bottom padding sits inside its own
-       overflow box, so it stays visible when collapsed without this. */
     overflow: hidden;
     transition: grid-template-rows 0.34s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1003,10 +1008,18 @@ import '../../styles/tokens.css';
     grid-template-rows: 1fr;
 }
 
+/* min-height: 0 only zeroes the content box, so any vertical padding here
+   would floor the 0fr track at that height and leak a sliver of text. Bottom
+   spacing goes on the last child instead, where it stays inside the box. */
 .area-block-body-inner {
     overflow: hidden;
     min-height: 0;
-    padding: 0 16px 28px;
+    padding: 0 16px;
+}
+
+/* Specificity has to clear .area-block .area-checklist { padding: 0 }. */
+.area-block .area-block-body-inner > *:last-child {
+    padding-bottom: 28px;
 }
 
 .area-block .area-block-label {

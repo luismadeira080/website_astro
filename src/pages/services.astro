@@ -122,7 +122,7 @@ import '../styles/tokens.css';
                         </div>
                     </div>
 
-                    <!-- 02 · Stock & Procurement (flagship, proven pattern) -->
+                    <!-- 02 · Stock & Procurement -->
                     <div class="area-block reveal" id="stock">
                         <div class="area-block-summary" role="button" tabindex="0" aria-expanded="false">
                             <span class="area-block-icon">
@@ -133,7 +133,6 @@ import '../styles/tokens.css';
                             </span>
                             <span class="area-block-pill">02</span>
                             <h2 class="area-block-title">Stock &amp; Procurement</h2>
-                            <span class="area-block-badge">Proven pattern</span>
                             <span class="area-block-chevron" aria-hidden="true">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="6 9 12 15 18 9"/>
@@ -148,7 +147,6 @@ import '../styles/tokens.css';
                                 <li>A single, consolidated view of stock, not multiple spreadsheets</li>
                                 <li>Demand forecasting based on real sales data</li>
                                 <li>Automated reorder points, connected to your ERP</li>
-                                <li>A solution already running in a real deployment</li>
                             </ul>
                         </div>
                         </div>
@@ -411,6 +409,24 @@ import '../styles/tokens.css';
                     }
                 });
             });
+
+            // Deep links from the homepage cards (/services#stock): land with
+            // that area already open, not on a closed accordion.
+            function openFromHash() {
+                const id = window.location.hash.slice(1);
+                if (!id) return;
+                const target = document.getElementById(id);
+                if (!target || !target.classList.contains("area-block")) return;
+                if (!target.classList.contains("is-open")) toggleBlock(target);
+                // "start" + scroll-margin-top puts the title just under the nav,
+                // and matches where the browser's own fragment jump lands, so
+                // whichever of the two runs last there is no visible correction.
+                requestAnimationFrame(() => {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                });
+            }
+            openFromHash();
+            window.addEventListener("hashchange", openFromHash);
 
             // Scroll reveal (shared .reveal / .in-view utility from tokens.css)
             const revealEls = document.querySelectorAll(".reveal");
@@ -881,10 +897,14 @@ import '../styles/tokens.css';
 }
 
 /* Area accordions */
+/* The sticky nav overlays the top of the viewport, so a deep link that lands a
+   block flush at y=0 hides its title behind the nav. This offsets the browser's
+   own fragment jump and our scrollIntoView alike, so both land the same way. */
 .area-block {
     position: relative;
     border-bottom: 1px solid var(--border);
     transition: background-color 0.24s ease;
+    scroll-margin-top: 124px;
 }
 
 .area-block.is-open {
@@ -950,19 +970,6 @@ import '../styles/tokens.css';
     transition: color 0.2s ease;
 }
 
-.area-block-badge {
-    display: inline-block;
-    background-color: rgba(211, 233, 122, 0.1);
-    color: var(--accent-deep);
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 4px 10px;
-    border-radius: 6px;
-    flex-shrink: 0;
-}
-
 .area-block-chevron {
     margin-left: auto;
     display: inline-flex;
@@ -992,8 +999,6 @@ import '../styles/tokens.css';
 .area-block-body {
     display: grid;
     grid-template-rows: 0fr;
-    /* Clips at 0: the inner element's bottom padding sits inside its own
-       overflow box, so it stays visible when collapsed without this. */
     overflow: hidden;
     transition: grid-template-rows 0.34s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1002,10 +1007,18 @@ import '../styles/tokens.css';
     grid-template-rows: 1fr;
 }
 
+/* min-height: 0 only zeroes the content box, so any vertical padding here
+   would floor the 0fr track at that height and leak a sliver of text. Bottom
+   spacing goes on the last child instead, where it stays inside the box. */
 .area-block-body-inner {
     overflow: hidden;
     min-height: 0;
-    padding: 0 16px 28px;
+    padding: 0 16px;
+}
+
+/* Specificity has to clear .area-block .area-checklist { padding: 0 }. */
+.area-block .area-block-body-inner > *:last-child {
+    padding-bottom: 28px;
 }
 
 .area-block .area-block-label {
