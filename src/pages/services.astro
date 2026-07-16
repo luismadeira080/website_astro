@@ -88,107 +88,20 @@ import '../styles/tokens.css';
                 <div class="content-main">
 
                     <!-- Section lead -->
-                    <div class="catalog-group">
+                    <div class="catalog-group reveal">
                         <h2 class="catalog-group-title">What I build</h2>
                         <p class="catalog-group-intro">Applied across every area of your business: marketing, finance, HR, ops, anywhere work flows. Below is what I build, and a few areas where it's already running.</p>
                     </div>
 
-                    <!-- Capability: Data & Integration Layer (open by default) -->
-                    <details class="area-block" id="data-layer" open>
-                        <summary>
-                            <span class="area-block-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <ellipse cx="12" cy="5" r="9"/><path d="M3 5v14a9 9 0 0 0 18 0V5"/><path d="M3 12a9 9 0 0 0 18 0"/>
-                                </svg>
-                            </span>
-                            <span class="area-block-pill">01</span>
-                            <h2 class="area-block-title">Data &amp; Integration Layer</h2>
-                            <span class="area-block-chevron" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            </span>
-                            <span class="area-block-teaser">Your data is scattered across spreadsheets, the ERP, emails, and PDFs, so nothing has the full picture.</span>
-                        </summary>
-                        <div class="area-block-body">
-                            <p class="area-block-label">What this involves</p>
-                            <p>I connect those sources into a single, AI-ready source of truth, with context, so the automations on top of it actually understand your business.</p>
-                            <p class="area-block-label">What you get</p>
-                            <ul class="area-checklist">
-                                <li>One source of truth across spreadsheets, ERP, email, and documents</li>
-                                <li>Context-aware data: automations decide with the full picture, not fragments</li>
-                                <li>An AI-ready foundation that everything else builds on</li>
-                            </ul>
-                        </div>
-                    </details>
-
-                    <!-- Capability: Intelligent Document Processing -->
-                    <details class="area-block" id="idp">
-                        <summary>
-                            <span class="area-block-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" y1="12" x2="17" y2="12"/>
-                                </svg>
-                            </span>
-                            <span class="area-block-pill">02</span>
-                            <h2 class="area-block-title">Intelligent Document Processing</h2>
-                            <span class="area-block-chevron" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            </span>
-                            <span class="area-block-teaser">Invoices, contracts, and receipts handled by hand, one at a time.</span>
-                        </summary>
-                        <div class="area-block-body">
-                            <p class="area-block-label">What this involves</p>
-                            <p>I set up document processing that reads and extracts from unstructured documents with near-human accuracy, then classifies and routes them automatically.</p>
-                            <p class="area-block-label">What you get</p>
-                            <ul class="area-checklist">
-                                <li>Invoices, contracts, and receipts read and extracted automatically</li>
-                                <li>Documents classified and routed without manual sorting</li>
-                                <li>An audit trail on every extraction</li>
-                            </ul>
-                        </div>
-                    </details>
-
-                    <!-- Capability: AI-Powered Dashboards -->
-                    <details class="area-block" id="dashboards">
-                        <summary>
-                            <span class="area-block-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>
-                                </svg>
-                            </span>
-                            <span class="area-block-pill">03</span>
-                            <h2 class="area-block-title">AI-Powered Dashboards</h2>
-                            <span class="area-block-chevron" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            </span>
-                            <span class="area-block-teaser">Decisions made on stale, fragmented data, and management asking around for the numbers.</span>
-                        </summary>
-                        <div class="area-block-body">
-                            <p class="area-block-label">What this involves</p>
-                            <p>I consolidate every data source into live dashboards, with conversational analytics: you ask your business questions in plain language and get answers.</p>
-                            <p class="area-block-label">What you get</p>
-                            <ul class="area-checklist">
-                                <li>Real-time dashboards, not month-end surprises</li>
-                                <li>Conversational analytics: ask in plain language, get answers</li>
-                                <li>Forward-looking signals, not just a rear-view mirror</li>
-                            </ul>
-                        </div>
-                    </details>
-
-                    <!-- Capability: Process Mining & Discovery -->
-                    <details class="area-block" id="process-mining">
-                        <summary>
+                    <!-- 01 · Process Mining & Discovery -->
+                    <div class="area-block reveal" id="process-mining">
+                        <div class="area-block-summary" role="button" tabindex="0" aria-expanded="false">
                             <span class="area-block-icon">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="3" y="3" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/>
                                 </svg>
                             </span>
-                            <span class="area-block-pill">04</span>
+                            <span class="area-block-pill">01</span>
                             <h2 class="area-block-title">Process Mining &amp; Discovery</h2>
                             <span class="area-block-chevron" aria-hidden="true">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -196,29 +109,29 @@ import '../styles/tokens.css';
                                 </svg>
                             </span>
                             <span class="area-block-teaser">You know time and money are leaking, but not exactly where.</span>
-                        </summary>
-                        <div class="area-block-body">
-                            <p class="area-block-label">What this involves</p>
+                        </div>
+                        <div class="area-block-body"><div class="area-block-body-inner">
                             <p>I map how work actually flows through your business using your own data, then build a heatmap of inefficiency and a value-vs-effort matrix to prioritize what to fix first.</p>
-                            <p class="area-block-label">What you get</p>
+                            <p class="area-block-label">Outcomes</p>
                             <ul class="area-checklist">
                                 <li>A data-driven map of how work really moves</li>
                                 <li>A heatmap of where time and money leak</li>
                                 <li>A value-vs-effort matrix: the 20% of changes that drive 80% of the impact</li>
                             </ul>
                         </div>
-                    </details>
+                        </div>
+                    </div>
 
-                    <!-- Domain: Stock & Procurement (flagship) -->
-                    <details class="area-block" id="stock">
-                        <summary>
+                    <!-- 02 · Stock & Procurement (flagship, proven pattern) -->
+                    <div class="area-block reveal" id="stock">
+                        <div class="area-block-summary" role="button" tabindex="0" aria-expanded="false">
                             <span class="area-block-icon">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
                                     <polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/>
                                 </svg>
                             </span>
-                            <span class="area-block-pill">05</span>
+                            <span class="area-block-pill">02</span>
                             <h2 class="area-block-title">Stock &amp; Procurement</h2>
                             <span class="area-block-badge">Proven pattern</span>
                             <span class="area-block-chevron" aria-hidden="true">
@@ -227,11 +140,10 @@ import '../styles/tokens.css';
                                 </svg>
                             </span>
                             <span class="area-block-teaser">Stock spread across spreadsheets that rarely agree, with purchasing driven by whoever remembers to check.</span>
-                        </summary>
-                        <div class="area-block-body">
-                            <p class="area-block-label">What this involves</p>
+                        </div>
+                        <div class="area-block-body"><div class="area-block-body-inner">
                             <p>I build a reorder system on top of your ERP that reads real movement data, forecasts demand, and reorders on its own, rerouting when supply is disrupted.</p>
-                            <p class="area-block-label">What you get</p>
+                            <p class="area-block-label">Outcomes</p>
                             <ul class="area-checklist">
                                 <li>A single, consolidated view of stock, not multiple spreadsheets</li>
                                 <li>Demand forecasting based on real sales data</li>
@@ -239,11 +151,99 @@ import '../styles/tokens.css';
                                 <li>A solution already running in a real deployment</li>
                             </ul>
                         </div>
-                    </details>
+                        </div>
+                    </div>
 
-                    <!-- Domain: Sales & Revenue Predictions -->
-                    <details class="area-block" id="sales">
-                        <summary>
+                    <!-- 03 · Data & Integration Layer -->
+                    <div class="area-block reveal" id="data-layer">
+                        <div class="area-block-summary" role="button" tabindex="0" aria-expanded="false">
+                            <span class="area-block-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <ellipse cx="12" cy="5" r="9"/><path d="M3 5v14a9 9 0 0 0 18 0V5"/><path d="M3 12a9 9 0 0 0 18 0"/>
+                                </svg>
+                            </span>
+                            <span class="area-block-pill">03</span>
+                            <h2 class="area-block-title">Data &amp; Integration Layer</h2>
+                            <span class="area-block-chevron" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </span>
+                            <span class="area-block-teaser">Your data is scattered across spreadsheets, the ERP, emails, and PDFs, so nothing has the full picture.</span>
+                        </div>
+                        <div class="area-block-body"><div class="area-block-body-inner">
+                            <p>I connect those sources into a single, AI-ready source of truth, with context, so the automations on top of it actually understand your business.</p>
+                            <p class="area-block-label">Outcomes</p>
+                            <ul class="area-checklist">
+                                <li>One source of truth across spreadsheets, ERP, email, and documents</li>
+                                <li>Context-aware data: automations decide with the full picture, not fragments</li>
+                                <li>An AI-ready foundation that everything else builds on</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- 04 · Intelligent Document Processing -->
+                    <div class="area-block reveal" id="idp">
+                        <div class="area-block-summary" role="button" tabindex="0" aria-expanded="false">
+                            <span class="area-block-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" y1="12" x2="17" y2="12"/>
+                                </svg>
+                            </span>
+                            <span class="area-block-pill">04</span>
+                            <h2 class="area-block-title">Intelligent Document Processing</h2>
+                            <span class="area-block-chevron" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </span>
+                            <span class="area-block-teaser">Invoices, contracts, and receipts handled by hand, one at a time.</span>
+                        </div>
+                        <div class="area-block-body"><div class="area-block-body-inner">
+                            <p>I set up document processing that reads and extracts from unstructured documents with near-human accuracy, then classifies and routes them automatically.</p>
+                            <p class="area-block-label">Outcomes</p>
+                            <ul class="area-checklist">
+                                <li>Invoices, contracts, and receipts read and extracted automatically</li>
+                                <li>Documents classified and routed without manual sorting</li>
+                                <li>An audit trail on every extraction</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- 05 · AI-Powered Dashboards -->
+                    <div class="area-block reveal" id="dashboards">
+                        <div class="area-block-summary" role="button" tabindex="0" aria-expanded="false">
+                            <span class="area-block-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>
+                                </svg>
+                            </span>
+                            <span class="area-block-pill">05</span>
+                            <h2 class="area-block-title">AI-Powered Dashboards</h2>
+                            <span class="area-block-chevron" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </span>
+                            <span class="area-block-teaser">Decisions made on stale, fragmented data, and management asking around for the numbers.</span>
+                        </div>
+                        <div class="area-block-body"><div class="area-block-body-inner">
+                            <p>I consolidate every data source into live dashboards, with conversational analytics: you ask your business questions in plain language and get answers.</p>
+                            <p class="area-block-label">Outcomes</p>
+                            <ul class="area-checklist">
+                                <li>Real-time dashboards, not month-end surprises</li>
+                                <li>Conversational analytics: ask in plain language, get answers</li>
+                                <li>Forward-looking signals, not just a rear-view mirror</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- 06 · Sales & Revenue Predictions -->
+                    <div class="area-block reveal" id="sales">
+                        <div class="area-block-summary" role="button" tabindex="0" aria-expanded="false">
                             <span class="area-block-icon">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
@@ -257,22 +257,22 @@ import '../styles/tokens.css';
                                 </svg>
                             </span>
                             <span class="area-block-teaser">Revenue is a guess, the pipeline is a feeling, and you find out too late which deals will actually close.</span>
-                        </summary>
-                        <div class="area-block-body">
-                            <p class="area-block-label">What this involves</p>
+                        </div>
+                        <div class="area-block-body"><div class="area-block-body-inner">
                             <p>I build predictive models on your sales data: which leads are most likely to convert, which deals will close and when, and what revenue to expect next month, so commercial decisions run on forecasts, not gut feel.</p>
-                            <p class="area-block-label">What you get</p>
+                            <p class="area-block-label">Outcomes</p>
                             <ul class="area-checklist">
                                 <li>Lead scoring: which prospects are most likely to convert</li>
                                 <li>Deal and revenue forecasting for the weeks and months ahead</li>
                                 <li>Early warning on pipeline at risk, before it slips</li>
                             </ul>
                         </div>
-                    </details>
+                        </div>
+                    </div>
 
-                    <!-- Domain: Operations & Admin -->
-                    <details class="area-block" id="operations-admin">
-                        <summary>
+                    <!-- 07 · Operations & Admin -->
+                    <div class="area-block reveal" id="operations-admin">
+                        <div class="area-block-summary" role="button" tabindex="0" aria-expanded="false">
                             <span class="area-block-icon">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                     <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
@@ -286,11 +286,10 @@ import '../styles/tokens.css';
                                 </svg>
                             </span>
                             <span class="area-block-teaser">Work stalls at handoffs, back-office piles up, and repetitive customer queries bury the team.</span>
-                        </summary>
-                        <div class="area-block-body">
-                            <p class="area-block-label">What this involves</p>
+                        </div>
+                        <div class="area-block-body"><div class="area-block-body-inner">
                             <p>I connect the systems that hand work between them, automate back-office document processing, and triage repetitive customer requests, so ops, admin, and support run as one quiet background process.</p>
-                            <p class="area-block-label">What you get</p>
+                            <p class="area-block-label">Outcomes</p>
                             <ul class="area-checklist">
                                 <li>Fewer manual handoffs between people and systems</li>
                                 <li>Back-office documents processed and routed automatically</li>
@@ -298,10 +297,11 @@ import '../styles/tokens.css';
                                 <li>Onboarding and internal requests handled without chasing</li>
                             </ul>
                         </div>
-                    </details>
+                        </div>
+                    </div>
 
                     <!-- AI enablement (separate, featured offering) -->
-                    <div class="enablement-panel">
+                    <div class="enablement-panel reveal">
                         <div class="enablement-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M22 10L12 5 2 10l10 5z"/>
@@ -321,12 +321,12 @@ import '../styles/tokens.css';
                 </div>
 
                 <div class="content-sidebar">
-                    <div class="sidebar-card">
+                    <div class="sidebar-card reveal">
                         <h3>Two ways to start</h3>
                         <p>An Operations Audit if you're unsure where the opportunity is, or go straight to building if you already know. I adapt to where your business is.</p>
                     </div>
 
-                    <div class="sidebar-card cta-card">
+                    <div class="sidebar-card cta-card reveal">
                         <h3>Let's talk</h3>
                         <p>Tell me what's slowing you down. I'll tell you what I can do about it.</p>
                         <a href="/ai-contact" class="sidebar-cta">Get in touch</a>
@@ -381,43 +381,55 @@ import '../styles/tokens.css';
                 });
             }
 
-            // Accordion open/close animation + open/closed relationship
-            document.querySelectorAll("details.area-block").forEach((detail) => {
-                const summary = detail.querySelector("summary");
-                const body = detail.querySelector(".area-block-body");
-                if (!summary || !body) return;
+            // Accordion: single-open. Animation is pure CSS (grid-template-rows
+            // on the body), so JS only toggles a class — no height measurement.
+            const areaBlocks = document.querySelectorAll(".area-block");
 
-                summary.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    if (detail.open) {
-                        // closing: fix current height, then collapse
-                        body.style.height = body.scrollHeight + "px";
-                        void body.offsetHeight;
-                        body.style.height = "0px";
-                        const onClose = () => {
-                            detail.open = false;
-                            body.style.height = "";
-                            body.removeEventListener("transitionend", onClose);
-                        };
-                        body.addEventListener("transitionend", onClose);
-                    } else {
-                        // opening: render, collapse to 0, then expand
-                        detail.open = true;
-                        body.style.overflow = "hidden";
-                        const target = body.scrollHeight;
-                        body.style.height = "0px";
-                        requestAnimationFrame(() => {
-                            body.style.height = target + "px";
-                            const onOpen = () => {
-                                body.style.height = "";
-                                body.style.overflow = "";
-                                body.removeEventListener("transitionend", onOpen);
-                            };
-                            body.addEventListener("transitionend", onOpen);
-                        });
+            function toggleBlock(block) {
+                const willOpen = !block.classList.contains("is-open");
+                // single-open: close every block first, then open the clicked one
+                areaBlocks.forEach((b) => {
+                    b.classList.remove("is-open");
+                    const t = b.querySelector(".area-block-summary");
+                    if (t) t.setAttribute("aria-expanded", "false");
+                });
+                if (willOpen) {
+                    block.classList.add("is-open");
+                    const t = block.querySelector(".area-block-summary");
+                    if (t) t.setAttribute("aria-expanded", "true");
+                }
+            }
+
+            areaBlocks.forEach((block) => {
+                const trigger = block.querySelector(".area-block-summary");
+                if (!trigger) return;
+                trigger.addEventListener("click", () => toggleBlock(block));
+                trigger.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+                        e.preventDefault();
+                        toggleBlock(block);
                     }
                 });
             });
+
+            // Scroll reveal (shared .reveal / .in-view utility from tokens.css)
+            const revealEls = document.querySelectorAll(".reveal");
+            if (revealEls.length && "IntersectionObserver" in window) {
+                const revealIO = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("in-view");
+                                revealIO.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+                );
+                revealEls.forEach((el) => revealIO.observe(el));
+            } else {
+                revealEls.forEach((el) => el.classList.add("in-view"));
+            }
         </script>
 
         <Footer locale="en" />
@@ -870,34 +882,44 @@ import '../styles/tokens.css';
 
 /* Area accordions */
 .area-block {
+    position: relative;
     border-bottom: 1px solid var(--border);
-    transition: background-color 0.3s ease, opacity 0.3s ease;
+    transition: background-color 0.24s ease;
 }
 
-.area-block[open] {
+.area-block.is-open {
     background-color: rgba(211, 233, 122, 0.06);
-}
-
-.content-main:has(details.area-block[open]) details.area-block:not([open]) {
-    opacity: 0.6;
 }
 
 .area-block:last-of-type {
     border-bottom: none;
 }
 
-.area-block > summary {
-    list-style: none;
+.area-block-summary {
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px 14px;
     padding: 22px 16px;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    font-size: 1rem;
+    color: inherit;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
 }
 
-.area-block > summary::-webkit-details-marker {
-    display: none;
+.area-block-summary:hover {
+    background-color: rgba(211, 233, 122, 0.08);
+}
+
+.area-block-summary:focus-visible {
+    outline: 2px solid var(--accent-deep);
+    outline-offset: -2px;
 }
 
 .area-block-icon {
@@ -947,15 +969,15 @@ import '../styles/tokens.css';
     align-items: center;
     color: var(--muted);
     flex-shrink: 0;
-    transition: transform 0.25s ease, color 0.2s ease;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
 }
 
-.area-block[open] > summary .area-block-chevron {
+.area-block.is-open .area-block-summary .area-block-chevron {
     transform: rotate(180deg);
     color: var(--accent-deep);
 }
 
-.area-block > summary:hover .area-block-title {
+.area-block-summary:hover .area-block-title {
     color: var(--accent-deep);
 }
 
@@ -968,20 +990,30 @@ import '../styles/tokens.css';
 }
 
 .area-block-body {
-    padding: 0 16px 28px;
+    display: grid;
+    grid-template-rows: 0fr;
+    /* Clips at 0: the inner element's bottom padding sits inside its own
+       overflow box, so it stays visible when collapsed without this. */
     overflow: hidden;
-    transition: height 0.3s ease;
+    transition: grid-template-rows 0.34s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.area-block.is-open .area-block-body {
+    grid-template-rows: 1fr;
+}
+
+.area-block-body-inner {
+    overflow: hidden;
+    min-height: 0;
+    padding: 0 16px 28px;
 }
 
 .area-block .area-block-label {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
-    color: var(--accent-deep);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    opacity: 1;
-    margin-top: 4px;
-    margin-bottom: 8px !important;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    margin-bottom: 10px !important;
 }
 
 .area-block .area-checklist {

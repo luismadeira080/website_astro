@@ -61,6 +61,7 @@
   /* ------- Transitions ------- */
   --t-fast: 0.2s ease;
   --t-base: 0.3s ease;
+  --ease-smooth: cubic-bezier(0.32, 0.72, 0, 1); /* reveal / accordion motion */
 
   /* =====================================================================
    * Legacy aliases — old names mapped to new light values.
@@ -74,4 +75,31 @@
   --color-dark: var(--card);
   --color-border: var(--border);
   --color-accent: var(--accent);   /* lime fill; text usages -> --accent-deep */
+}
+
+/* =====================================================================
+ * Scroll-reveal utilities (shared across pages)
+ * Each page adds an IntersectionObserver that toggles .in-view.
+ * ===================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s var(--ease-smooth),
+    transform 0.7s var(--ease-smooth);
+  will-change: opacity, transform;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect users who prefer reduced motion: show everything immediately. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
