@@ -60,7 +60,7 @@ import '../styles/tokens.css';
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>ENABLING GROWTH THROUGH AI-POWERED SOLUTIONS.</h1>
+                <h1>ENABLING <span class="hero-mark"><span>GROWTH</span></span> THROUGH AI-POWERED SOLUTIONS.</h1>
                 <p class="hero-subtitle">I build AI-powered internal solutions, tailored to how your business actually works.</p>
             </div>
             <div class="hero-actions">
@@ -138,9 +138,6 @@ import '../styles/tokens.css';
             </li>
         </ol>
 
-        <div class="sectors-cta">
-            <a href="/services" class="text-link">SEE YOUR SOLUTIONS</a>
-        </div>
     </section>
 
     <!-- Business Areas Section -->
@@ -157,18 +154,38 @@ import '../styles/tokens.css';
         <div class="svc reveal" data-svc>
             <div class="svc-scopes" role="tablist" aria-label="Services" aria-orientation="vertical">
                 <button type="button" class="svc-scope is-active" role="tab" id="svc-tab-1" aria-controls="svc-panel-1" aria-selected="true">
+                    <span class="svc-scope-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/>
+                        </svg>
+                    </span>
                     <span class="svc-scope-name">Process Mining &amp; Discovery</span>
                     <span class="svc-scope-timer" aria-hidden="true"></span>
                 </button>
                 <button type="button" class="svc-scope" role="tab" id="svc-tab-2" aria-controls="svc-panel-2" aria-selected="false" tabindex="-1">
+                    <span class="svc-scope-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/>
+                        </svg>
+                    </span>
                     <span class="svc-scope-name">Stock &amp; Procurement</span>
                     <span class="svc-scope-timer" aria-hidden="true"></span>
                 </button>
                 <button type="button" class="svc-scope" role="tab" id="svc-tab-3" aria-controls="svc-panel-3" aria-selected="false" tabindex="-1">
+                    <span class="svc-scope-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/>
+                        </svg>
+                    </span>
                     <span class="svc-scope-name">Data &amp; Integration Layer</span>
                     <span class="svc-scope-timer" aria-hidden="true"></span>
                 </button>
                 <button type="button" class="svc-scope" role="tab" id="svc-tab-4" aria-controls="svc-panel-4" aria-selected="false" tabindex="-1">
+                    <span class="svc-scope-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
+                        </svg>
+                    </span>
                     <span class="svc-scope-name">Operations &amp; Admin</span>
                     <span class="svc-scope-timer" aria-hidden="true"></span>
                 </button>
@@ -176,87 +193,63 @@ import '../styles/tokens.css';
 
             <div class="svc-panels">
                 <div class="svc-panel is-active" role="tabpanel" id="svc-panel-1" aria-labelledby="svc-tab-1">
+                    <span class="svc-panel-icon" aria-hidden="true">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/>
+                        </svg>
+                    </span>
                     <h3 class="svc-panel-title">Process Mining &amp; Discovery</h3>
-                    <p class="svc-panel-copy">I map how work actually flows through the business using its own data, then prioritise what to fix first.</p>
+                    <p class="svc-panel-copy">Understand where time and money actually go, with end-to-end process mapping, analysis grounded in the business's own data, and a clear order of what to fix first.</p>
                     <ul class="svc-caps">
                         <li>Process mapping</li>
                         <li>Inefficiency heatmap</li>
                         <li>Value vs. effort matrix</li>
                     </ul>
-                    <dl class="svc-facts">
-                        <div class="svc-fact">
-                            <dt>The problem</dt>
-                            <dd>Time and money leak, but nobody knows exactly where.</dd>
-                        </div>
-                        <div class="svc-fact">
-                            <dt>The outcome</dt>
-                            <dd>A heatmap of the leaks and a matrix that ranks the fixes.</dd>
-                        </div>
-                    </dl>
-                    <a class="svc-panel-link" href="/services#process-mining">See the detail</a>
                 </div>
 
                 <div class="svc-panel" role="tabpanel" id="svc-panel-2" aria-labelledby="svc-tab-2">
+                    <span class="svc-panel-icon" aria-hidden="true">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/>
+                        </svg>
+                    </span>
                     <h3 class="svc-panel-title">Stock &amp; Procurement</h3>
-                    <p class="svc-panel-copy">I build a reorder system on top of the ERP that reads real movement data, forecasts demand, and reorders on its own.</p>
+                    <p class="svc-panel-copy">Bring stock, purchasing and supplier decisions under control, with demand forecasting, automated replenishment, and systems that adapt as the operation changes.</p>
                     <ul class="svc-caps">
                         <li>Demand forecasting</li>
                         <li>Automated reorder points</li>
                         <li>Supply rerouting</li>
                     </ul>
-                    <dl class="svc-facts">
-                        <div class="svc-fact">
-                            <dt>The problem</dt>
-                            <dd>Stock spread across spreadsheets that rarely agree.</dd>
-                        </div>
-                        <div class="svc-fact">
-                            <dt>The outcome</dt>
-                            <dd>One consolidated view, reordering itself against the ERP.</dd>
-                        </div>
-                    </dl>
-                    <a class="svc-panel-link" href="/services#stock">See the detail</a>
                 </div>
 
                 <div class="svc-panel" role="tabpanel" id="svc-panel-3" aria-labelledby="svc-tab-3">
+                    <span class="svc-panel-icon" aria-hidden="true">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/>
+                        </svg>
+                    </span>
                     <h3 class="svc-panel-title">Data &amp; Integration Layer</h3>
-                    <p class="svc-panel-copy">I connect scattered sources into a single, AI-ready source of truth, with the forecasting that runs on top of it.</p>
+                    <p class="svc-panel-copy">Turn scattered data into a single source of truth, with system integration, records that carry their context, and the forecasting that commercial decisions depend on.</p>
                     <ul class="svc-caps">
                         <li>ERP and database integration</li>
                         <li>One source of truth</li>
                         <li>Sales and revenue forecasting</li>
                     </ul>
-                    <dl class="svc-facts">
-                        <div class="svc-fact">
-                            <dt>The problem</dt>
-                            <dd>Data scattered across spreadsheets, the ERP, email and PDFs.</dd>
-                        </div>
-                        <div class="svc-fact">
-                            <dt>The outcome</dt>
-                            <dd>A foundation everything else builds on, and forecasts on top.</dd>
-                        </div>
-                    </dl>
-                    <a class="svc-panel-link" href="/services#data-layer">See the detail</a>
                 </div>
 
                 <div class="svc-panel" role="tabpanel" id="svc-panel-4" aria-labelledby="svc-tab-4">
+                    <span class="svc-panel-icon" aria-hidden="true">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
+                        </svg>
+                    </span>
                     <h3 class="svc-panel-title">Operations &amp; Admin</h3>
-                    <p class="svc-panel-copy">I connect the systems that hand work between them, process the documents that trigger it, and triage the requests that repeat.</p>
+                    <p class="svc-panel-copy">Take the work that repeats off people's hands, with process automation, intelligent document handling, and systems that route work the way the business actually runs.</p>
                     <ul class="svc-caps">
                         <li>Process automation</li>
                         <li>Document processing</li>
                         <li>Workflow orchestration</li>
                     </ul>
-                    <dl class="svc-facts">
-                        <div class="svc-fact">
-                            <dt>The problem</dt>
-                            <dd>Work stalls at handoffs and the back office piles up.</dd>
-                        </div>
-                        <div class="svc-fact">
-                            <dt>The outcome</dt>
-                            <dd>Ops, admin and support running as one quiet background process.</dd>
-                        </div>
-                    </dl>
-                    <a class="svc-panel-link" href="/services#operations-admin">See the detail</a>
                 </div>
             </div>
         </div>
@@ -704,6 +697,34 @@ body {
     margin-bottom: 24px;
 }
 
+/* Hero highlight: only the lime leans. Bebas Neue has no true oblique, so
+   skewing the letters would mean a synthetic italic; skewing just the block
+   gives the same movement while the letterforms stay untouched.
+
+   The block is an absolutely positioned pseudo-element, so the word is
+   wrapped in a positioned span to paint above it. inline-block keeps the
+   skew from breaking across a line wrap. */
+.hero-mark {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.2em;
+}
+
+.hero-mark::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8%;
+    bottom: 8%;
+    background-color: var(--accent);
+    transform: skewX(-11deg);
+}
+
+.hero-mark > span {
+    position: relative;
+}
+
 .hero-subtitle {
     font-size: 18px;
     line-height: 1.5;
@@ -807,39 +828,50 @@ body {
     border-bottom: 0;
 }
 
+/* Icon, then copy, then the capability list: the same order the panel
+   keeps on mobile, where the title is visible between icon and copy.
+   Matched to the service's icon on /services so a service reads as the
+   same thing on both pages. */
+.svc-panel-icon {
+    display: flex;
+    align-self: flex-start;
+    color: var(--accent-deep);
+    margin-bottom: 28px;
+}
+
 .svc-panel-title {
     font-family: var(--font-heading);
     font-size: 32px;
     letter-spacing: -0.32px;
     line-height: 1.05;
     color: var(--color-text);
-    margin-bottom: 14px;
+    margin-bottom: 18px;
 }
 
 .svc-panel-copy {
     font-size: 18px;
-    line-height: 1.6;
-    color: var(--ink-soft);
-    max-width: 60ch;
-    margin: 0 0 28px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 54ch;
+    margin: 0 0 34px;
 }
 
 /* A vertical list, not a wrapping row: the block keeps the same shape for
    every scope, which is what makes the panel feel stable while cycling. */
 .svc-caps {
     list-style: none;
-    margin: 0 0 32px;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .svc-caps li {
     font-size: 15.5px;
     font-weight: 500;
     color: var(--ink);
-    padding-left: 20px;
+    padding-left: 16px;
     position: relative;
 }
 
@@ -847,61 +879,22 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    top: 7px;
-    width: 7px;
-    height: 7px;
+    top: 8px;
+    width: 6px;
+    height: 6px;
     background-color: var(--accent);
-    box-shadow: 0 0 0 1px var(--accent-deep);
 }
 
-.svc-facts {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px;
-    margin: 0 0 32px;
-    padding-top: 28px;
-    border-top: 1px solid var(--border);
-}
 
-.svc-fact dt {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--accent-deep);
-    margin-bottom: 8px;
-}
 
-.svc-fact dd {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-}
 
-.svc-panel-link {
-    align-self: flex-start;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--accent-deep);
-    text-decoration: none;
-    border-bottom: 1px solid var(--accent-deep);
-    padding-bottom: 3px;
-    transition: color 0.2s var(--ease-smooth), border-color 0.2s var(--ease-smooth);
-}
 
-.svc-panel-link:hover {
-    color: var(--accent-deep-hover);
-    border-color: var(--accent-deep-hover);
-}
 
 /* ---- enhanced: scopes on the left, one panel on the right ---- */
 @media (min-width: 861px) {
     .svc.is-enhanced {
         display: grid;
-        grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 480px) minmax(0, 1fr);
         background-color: transparent;
     }
 
@@ -916,6 +909,9 @@ body {
     .svc.is-enhanced .svc-scope {
         flex: 1;
         position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
         appearance: none;
         background: none;
         border: 0;
@@ -946,6 +942,21 @@ body {
     .svc.is-enhanced .svc-scope.is-active {
         background-color: var(--card);
         color: var(--color-text);
+    }
+
+    .svc.is-enhanced .svc-scope-icon {
+        display: flex;
+        flex-shrink: 0;
+        color: var(--muted-2);
+        transition: color 0.3s var(--ease-smooth);
+    }
+
+    .svc.is-enhanced .svc-scope:hover .svc-scope-icon {
+        color: var(--ink-soft);
+    }
+
+    .svc.is-enhanced .svc-scope.is-active .svc-scope-icon {
+        color: var(--accent-deep);
     }
 
     .svc.is-enhanced .svc-scope:focus-visible {
@@ -1012,20 +1023,8 @@ body {
         transform: none;
     }
 
-    /* Pins the link to the bottom of every panel, so the block reads as the
-       same shape at the same height whichever scope is showing. */
-    .svc.is-enhanced .svc-panel-link {
-        margin-top: auto;
-    }
 
-    .svc.is-enhanced .svc-facts {
-        margin-bottom: 36px;
-    }
 
-    /* The scope list already names the service. */
-    .svc.is-enhanced .svc-panel-title {
-        display: none;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
