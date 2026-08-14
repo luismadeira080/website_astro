@@ -300,10 +300,13 @@ import "../../styles/tokens.css";
                     </div>
                 </div>
                 <div class="testimonial-card reveal">
-                    <p class="testimonial-quote">"[PLACEHOLDER — citação do cliente ligada a um resultado específico]"</p>
+                    <div class="testimonial-logo">
+                        <img src="/logos/portocar-care.png" alt="PortoCar Care" width="400" height="90" loading="lazy">
+                    </div>
+                    <p class="testimonial-quote">"Sempre houve a vontade de poder reativar clientes com base no último serviço prestado ao carro. Agora, o sistema sabe o que cada carro levou e quando, tratando da tentativa de reativação sozinho. 20% das marcações dos últimos 6 meses vieram daí."</p>
                     <div class="testimonial-author">
-                        <strong>[Nome do Cliente]</strong>
-                        <span>[Cargo, Empresa]</span>
+                        <strong>Pedro Pinto</strong>
+                        <span>CEO, PortoCar Care</span>
                     </div>
                 </div>
             </div>
@@ -2637,6 +2640,23 @@ import "../../styles/tokens.css";
     flex-direction: column;
     gap: 24px;
     box-shadow: var(--shadow-card);
+}
+
+/* Fixed-height slot, not a fixed width: logos come in different aspect
+   ratios, and matching their heights is what makes them read as the same
+   size. New clients need only the file and one <img>. */
+.testimonial-logo {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.testimonial-logo img {
+    height: 100%;
+    width: auto;
+    max-width: 190px;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .testimonial-quote {

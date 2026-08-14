@@ -282,10 +282,13 @@ import '../styles/tokens.css';
                 </div>
             </div>
             <div class="testimonial-card reveal">
-                <p class="testimonial-quote">"[PLACEHOLDER — client quote tied to a specific outcome]"</p>
+                <div class="testimonial-logo">
+                    <img src="/logos/portocar-care.png" alt="PortoCar Care" width="400" height="90" loading="lazy">
+                </div>
+                <p class="testimonial-quote">"We had always wanted to bring customers back based on the last service their car had. Now the system knows what each car had done and when, and handles that outreach on its own. 20% of bookings over the last six months came from it."</p>
                 <div class="testimonial-author">
-                    <strong>[Client Name]</strong>
-                    <span>[Role, Company]</span>
+                    <strong>Pedro Pinto</strong>
+                    <span>CEO, PortoCar Care</span>
                 </div>
             </div>
         </div>
@@ -2589,6 +2592,23 @@ body {
     flex-direction: column;
     gap: 24px;
     box-shadow: var(--shadow-card);
+}
+
+/* Fixed-height slot, not a fixed width: logos come in different aspect
+   ratios, and matching their heights is what makes them read as the same
+   size. New clients need only the file and one <img>. */
+.testimonial-logo {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.testimonial-logo img {
+    height: 100%;
+    width: auto;
+    max-width: 190px;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .testimonial-quote {
