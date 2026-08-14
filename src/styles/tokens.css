@@ -42,6 +42,21 @@
   --accent-deep-hover: #3e4a16;
   --on-accent: #1a1a1a;      /* text that sits on a lime fill */
 
+  /* ------- Layout -------
+   * One content column for the whole site. Sections stay full-bleed so the
+   * alternating backgrounds still run edge to edge; only their inner content
+   * is capped, by growing the side padding once the viewport exceeds
+   * --content-max. On narrower screens the padding falls back to --gutter,
+   * so nothing changes below ~1460px.
+   *
+   * --pad-x resolves 100% against the element's containing block, so apply it
+   * only to top-level sections. Using it on a nested element would cap the
+   * content twice. */
+  --content-max: 1240px;
+  --gutter: 108px;
+  --pad-x: max(var(--gutter), calc((100% - var(--content-max)) / 2));
+  --pad-x-nav: max(60px, calc((100% - var(--content-max)) / 2));
+
   /* ------- Type ------- */
   --font-primary: 'Inter', system-ui, sans-serif;
   --font-heading: 'Bebas Neue', 'Inter', sans-serif;

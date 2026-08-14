@@ -75,7 +75,6 @@ import '../styles/tokens.css';
     <!-- My Process -->
     <section class="our-process-section">
         <div class="process-header reveal">
-            <span class="process-kicker">HOW I WORK</span>
             <h2>MY PROCESS</h2>
             <p>A methodical, low-risk approach.</p>
         </div>
@@ -151,74 +150,117 @@ import '../styles/tokens.css';
             <p>AI-powered internal solutions, applied across every area of your business.</p>
         </div>
 
-        <!-- Snippet only: one line per card. The pain line and the outcomes
-             live on /services, so nothing here repeats them. -->
-        <div class="sectors-layout">
-        <div class="sectors-grid">
-            <a href="/services#process-mining" class="sector-card reveal">
-                <div class="sector-card-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/>
-                    </svg>
-                </div>
-                <h3>Process Mining & Discovery</h3>
-                <p class="sector-card-line">Data-driven process analysis to identify inefficiencies and optimization opportunities.</p>
-            </a>
+        <!-- Scope list on the left drives one shared panel on the right. The
+             panels carry their own title and sit in normal flow until the
+             script adds .is-enhanced, so with no JS (and on mobile) this
+             degrades to a plain stacked list with every service readable. -->
+        <div class="svc reveal" data-svc>
+            <div class="svc-scopes" role="tablist" aria-label="Services" aria-orientation="vertical">
+                <button type="button" class="svc-scope is-active" role="tab" id="svc-tab-1" aria-controls="svc-panel-1" aria-selected="true">
+                    <span class="svc-scope-name">Process Mining &amp; Discovery</span>
+                    <span class="svc-scope-timer" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="svc-scope" role="tab" id="svc-tab-2" aria-controls="svc-panel-2" aria-selected="false" tabindex="-1">
+                    <span class="svc-scope-name">Stock &amp; Procurement</span>
+                    <span class="svc-scope-timer" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="svc-scope" role="tab" id="svc-tab-3" aria-controls="svc-panel-3" aria-selected="false" tabindex="-1">
+                    <span class="svc-scope-name">Data &amp; Integration Layer</span>
+                    <span class="svc-scope-timer" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="svc-scope" role="tab" id="svc-tab-4" aria-controls="svc-panel-4" aria-selected="false" tabindex="-1">
+                    <span class="svc-scope-name">Operations &amp; Admin</span>
+                    <span class="svc-scope-timer" aria-hidden="true"></span>
+                </button>
+            </div>
 
-            <a href="/services#stock" class="sector-card reveal">
-                <div class="sector-card-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                        <polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/>
-                    </svg>
+            <div class="svc-panels">
+                <div class="svc-panel is-active" role="tabpanel" id="svc-panel-1" aria-labelledby="svc-tab-1">
+                    <h3 class="svc-panel-title">Process Mining &amp; Discovery</h3>
+                    <p class="svc-panel-copy">I map how work actually flows through the business using its own data, then prioritise what to fix first.</p>
+                    <ul class="svc-caps">
+                        <li>Process mapping</li>
+                        <li>Inefficiency heatmap</li>
+                        <li>Value vs. effort matrix</li>
+                    </ul>
+                    <dl class="svc-facts">
+                        <div class="svc-fact">
+                            <dt>The problem</dt>
+                            <dd>Time and money leak, but nobody knows exactly where.</dd>
+                        </div>
+                        <div class="svc-fact">
+                            <dt>The outcome</dt>
+                            <dd>A heatmap of the leaks and a matrix that ranks the fixes.</dd>
+                        </div>
+                    </dl>
+                    <a class="svc-panel-link" href="/services#process-mining">See the detail</a>
                 </div>
-                <h3>Stock & Procurement</h3>
-                <p class="sector-card-line">Advanced accessibility to support decision making in operations and administration.</p>
-            </a>
 
-            <a href="/services#data-layer" class="sector-card reveal">
-                <div class="sector-card-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <ellipse cx="12" cy="5" r="9"/><path d="M3 5v14a9 9 0 0 0 18 0V5"/><path d="M3 12a9 9 0 0 0 18 0"/>
-                    </svg>
+                <div class="svc-panel" role="tabpanel" id="svc-panel-2" aria-labelledby="svc-tab-2">
+                    <h3 class="svc-panel-title">Stock &amp; Procurement</h3>
+                    <p class="svc-panel-copy">I build a reorder system on top of the ERP that reads real movement data, forecasts demand, and reorders on its own.</p>
+                    <ul class="svc-caps">
+                        <li>Demand forecasting</li>
+                        <li>Automated reorder points</li>
+                        <li>Supply rerouting</li>
+                    </ul>
+                    <dl class="svc-facts">
+                        <div class="svc-fact">
+                            <dt>The problem</dt>
+                            <dd>Stock spread across spreadsheets that rarely agree.</dd>
+                        </div>
+                        <div class="svc-fact">
+                            <dt>The outcome</dt>
+                            <dd>One consolidated view, reordering itself against the ERP.</dd>
+                        </div>
+                    </dl>
+                    <a class="svc-panel-link" href="/services#stock">See the detail</a>
                 </div>
-                <h3>Data & Integration Layer</h3>
-                <p class="sector-card-line">Interoperability between different data systems for a unified business view.</p>
-            </a>
 
-            <a href="/services#operations-admin" class="sector-card reveal">
-                <div class="sector-card-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
-                    </svg>
+                <div class="svc-panel" role="tabpanel" id="svc-panel-3" aria-labelledby="svc-tab-3">
+                    <h3 class="svc-panel-title">Data &amp; Integration Layer</h3>
+                    <p class="svc-panel-copy">I connect scattered sources into a single, AI-ready source of truth, with the forecasting that runs on top of it.</p>
+                    <ul class="svc-caps">
+                        <li>ERP and database integration</li>
+                        <li>One source of truth</li>
+                        <li>Sales and revenue forecasting</li>
+                    </ul>
+                    <dl class="svc-facts">
+                        <div class="svc-fact">
+                            <dt>The problem</dt>
+                            <dd>Data scattered across spreadsheets, the ERP, email and PDFs.</dd>
+                        </div>
+                        <div class="svc-fact">
+                            <dt>The outcome</dt>
+                            <dd>A foundation everything else builds on, and forecasts on top.</dd>
+                        </div>
+                    </dl>
+                    <a class="svc-panel-link" href="/services#data-layer">See the detail</a>
                 </div>
-                <h3>Operations & Admin</h3>
-                <p class="sector-card-line">The repetitive back-office work, handled in the background.</p>
-            </a>
+
+                <div class="svc-panel" role="tabpanel" id="svc-panel-4" aria-labelledby="svc-tab-4">
+                    <h3 class="svc-panel-title">Operations &amp; Admin</h3>
+                    <p class="svc-panel-copy">I connect the systems that hand work between them, process the documents that trigger it, and triage the requests that repeat.</p>
+                    <ul class="svc-caps">
+                        <li>Process automation</li>
+                        <li>Document processing</li>
+                        <li>Workflow orchestration</li>
+                    </ul>
+                    <dl class="svc-facts">
+                        <div class="svc-fact">
+                            <dt>The problem</dt>
+                            <dd>Work stalls at handoffs and the back office piles up.</dd>
+                        </div>
+                        <div class="svc-fact">
+                            <dt>The outcome</dt>
+                            <dd>Ops, admin and support running as one quiet background process.</dd>
+                        </div>
+                    </dl>
+                    <a class="svc-panel-link" href="/services#operations-admin">See the detail</a>
+                </div>
+            </div>
         </div>
 
-        <aside class="sectors-rail reveal">
-            <span class="sectors-rail-label">I also build</span>
-            <a href="/services#idp" class="sectors-rail-item">
-                <h3>Intelligent Document Processing</h3>
-                <svg class="sectors-rail-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-                </svg>
-            </a>
-            <a href="/services#dashboards" class="sectors-rail-item">
-                <h3>AI-Powered Dashboards</h3>
-                <svg class="sectors-rail-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-                </svg>
-            </a>
-            <a href="/services#sales" class="sectors-rail-item">
-                <h3>Sales & Revenue Predictions</h3>
-                <svg class="sectors-rail-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-                </svg>
-            </a>
-        </aside>
-        </div>
 
         <div class="sectors-cta">
             <a href="/services" class="text-link">SEE YOUR SOLUTIONS</a>
@@ -408,6 +450,7 @@ import '../styles/tokens.css';
                 });
             };
 
+
             const queueRail = () => {
                 if (railTicking) return;
                 railTicking = true;
@@ -417,6 +460,84 @@ import '../styles/tokens.css';
             updateRail();
             window.addEventListener("scroll", queueRail, { passive: true });
             window.addEventListener("resize", queueRail);
+        }
+
+        // Services: scope list drives one shared panel, cycling on its own.
+        // The active scope's timer bar is the clock — its CSS animation ending
+        // is what advances the panel. That means pausing the animation in CSS
+        // (on hover or focus) pauses the cycle too, with no timer to manage,
+        // and reduced-motion users get no animation and so no auto-advance.
+        const svc = document.querySelector("[data-svc]");
+        const svcTabs = svc ? Array.from(svc.querySelectorAll(".svc-scope")) : [];
+        const svcPanels = svc ? Array.from(svc.querySelectorAll(".svc-panel")) : [];
+
+        if (svc && svcTabs.length && svcTabs.length === svcPanels.length) {
+            svc.classList.add("is-enhanced");
+            let svcCurrent = 0;
+            let svcCycling = true;
+
+            const svcShow = (next) => {
+                svcCurrent = (next + svcTabs.length) % svcTabs.length;
+                svcTabs.forEach((tab, i) => {
+                    const on = i === svcCurrent;
+                    tab.classList.toggle("is-active", on);
+                    tab.setAttribute("aria-selected", on ? "true" : "false");
+                    tab.tabIndex = on ? 0 : -1;
+                    svcPanels[i].classList.toggle("is-active", on);
+                });
+            };
+
+            // Once the reader picks a scope, stop moving content under them.
+            const svcStop = () => {
+                svcCycling = false;
+                svc.classList.remove("is-running");
+            };
+
+            svc.addEventListener("animationend", (event) => {
+                if (svcCycling && event.target.classList.contains("svc-scope-timer")) {
+                    svcShow(svcCurrent + 1);
+                }
+            });
+
+            const svcStep = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 };
+
+            svcTabs.forEach((tab, i) => {
+                tab.addEventListener("click", () => {
+                    svcStop();
+                    svcShow(i);
+                });
+                tab.addEventListener("keydown", (event) => {
+                    let target = null;
+                    if (event.key in svcStep) target = svcCurrent + svcStep[event.key];
+                    else if (event.key === "Home") target = 0;
+                    else if (event.key === "End") target = svcTabs.length - 1;
+                    if (target === null) return;
+                    event.preventDefault();
+                    svcStop();
+                    svcShow(target);
+                    svcTabs[svcCurrent].focus();
+                });
+            });
+
+            // Only cycle while the section is on screen, so the reader does not
+            // arrive to find it already three panels in.
+            if ("IntersectionObserver" in window) {
+                const svcIO = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (svcCycling) {
+                                svc.classList.toggle("is-running", entry.isIntersecting);
+                            }
+                        });
+                    },
+                    { threshold: 0.35 },
+                );
+                svcIO.observe(svc);
+            } else {
+                svc.classList.add("is-running");
+            }
+
+            svcShow(0);
         }
     </script>
 
@@ -448,7 +569,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 60px;
+    padding: 24px var(--pad-x-nav);
     position: sticky;
     top: 0;
     background-color: var(--color-bg);
@@ -569,7 +690,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 480px;
     gap: 60px;
-    padding: 80px 108px;
+    padding: 80px var(--pad-x);
     min-height: 75vh;
     align-items: center;
 }
@@ -654,71 +775,268 @@ body {
 
 /* Sectors Section */
 .sectors-section {
-    padding: 120px 108px;
+    padding: 120px var(--pad-x);
     background-color: var(--color-bg);
 }
 
-.sectors-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+/* Services — scope list and panel inside ONE frame.
+   Everything is closed: the frame borders all four sides, the scope rows
+   divide its height evenly, and the panel fills the rest. Nothing floats,
+   and the structure is identical whichever scope is selected.
+
+   Base state (no JS, and mobile) stacks every panel inside the same frame,
+   titled and readable, so the content survives without scripting.
+   .is-enhanced splits the frame into list + panel. */
+.svc {
+    background-color: var(--card);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
 }
 
-.sector-card {
-    background-color: var(--card);
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-    padding: 32px;
-    text-decoration: none;
+.svc-scopes {
+    display: none;
+}
+
+.svc-panel {
+    padding: 32px 28px;
+    border-bottom: 1px solid var(--border-strong);
+}
+
+.svc-panel:last-child {
+    border-bottom: 0;
+}
+
+.svc-panel-title {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    letter-spacing: -0.32px;
+    line-height: 1.05;
+    color: var(--color-text);
+    margin-bottom: 14px;
+}
+
+.svc-panel-copy {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 28px;
+}
+
+/* A vertical list, not a wrapping row: the block keeps the same shape for
+   every scope, which is what makes the panel feel stable while cycling. */
+.svc-caps {
+    list-style: none;
+    margin: 0 0 32px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    box-shadow: var(--shadow-card);
-    transition: border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.svc-caps li {
+    font-size: 15.5px;
+    font-weight: 500;
+    color: var(--ink);
+    padding-left: 20px;
     position: relative;
 }
 
-.sector-card:hover {
-    border-color: var(--accent-deep);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-card-hover);
+.svc-caps li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 7px;
+    height: 7px;
+    background-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent-deep);
 }
 
-.sector-card--featured {
-    border-color: rgba(211, 233, 122, 0.3);
-    background: linear-gradient(135deg, var(--color-dark) 0%, rgba(211, 233, 122, 0.05) 100%);
+.svc-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    margin: 0 0 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
 }
 
-.sector-card-icon {
-    color: var(--accent-deep);
-    margin-bottom: 4px;
-}
-
-.sector-card h3 {
-    font-family: var(--font-heading);
-    font-size: 28px;
-    letter-spacing: -0.28px;
-    color: var(--color-text);
-    line-height: 1.1;
-}
-
-.sector-card p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--color-text-muted);
-}
-
-.sector-card-badge {
-    display: inline-block;
-    background-color: rgba(211, 233, 122, 0.1);
-    color: var(--color-accent);
-    padding: 4px 10px;
-    border-radius: 6px;
+.svc-fact dt {
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    width: fit-content;
+    color: var(--accent-deep);
+    margin-bottom: 8px;
+}
+
+.svc-fact dd {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+}
+
+.svc-panel-link {
+    align-self: flex-start;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-deep);
+    padding-bottom: 3px;
+    transition: color 0.2s var(--ease-smooth), border-color 0.2s var(--ease-smooth);
+}
+
+.svc-panel-link:hover {
+    color: var(--accent-deep-hover);
+    border-color: var(--accent-deep-hover);
+}
+
+/* ---- enhanced: scopes on the left, one panel on the right ---- */
+@media (min-width: 861px) {
+    .svc.is-enhanced {
+        display: grid;
+        grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+        background-color: transparent;
+    }
+
+    .svc.is-enhanced .svc-scopes {
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid var(--border-strong);
+    }
+
+    /* flex: 1 makes the four rows split the frame height evenly, so the list
+       and the panel always end on the same line. */
+    .svc.is-enhanced .svc-scope {
+        flex: 1;
+        position: relative;
+        appearance: none;
+        background: none;
+        border: 0;
+        border-bottom: 1px solid var(--border-strong);
+        font-family: var(--font-heading);
+        font-size: 26px;
+        letter-spacing: -0.26px;
+        line-height: 1.1;
+        text-align: left;
+        color: var(--muted);
+        padding: 22px 32px 22px 28px;
+        cursor: pointer;
+        transition:
+            color 0.3s var(--ease-smooth),
+            background-color 0.3s var(--ease-smooth);
+    }
+
+    .svc.is-enhanced .svc-scope:last-child {
+        border-bottom: 0;
+    }
+
+    .svc.is-enhanced .svc-scope:hover {
+        color: var(--ink-soft);
+    }
+
+    /* The selected scope takes the panel's white and carries a solid olive
+       edge, so which one is live never depends on a shade of grey alone. */
+    .svc.is-enhanced .svc-scope.is-active {
+        background-color: var(--card);
+        color: var(--color-text);
+    }
+
+    .svc.is-enhanced .svc-scope:focus-visible {
+        outline: 2px solid var(--accent-deep);
+        outline-offset: -2px;
+    }
+
+    /* One element, two jobs: it marks the live scope and, by filling top to
+       bottom over the cycle, it is also the clock that advances the panel.
+       Pausing this animation in CSS therefore pauses the cycle. */
+    .svc.is-enhanced .svc-scope-timer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background-color: var(--accent-deep);
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    .svc.is-enhanced:not(.is-running) .svc-scope.is-active .svc-scope-timer {
+        transform: scaleY(1);
+    }
+
+    .svc.is-enhanced.is-running .svc-scope.is-active .svc-scope-timer {
+        animation: svc-timer var(--svc-cycle, 7.5s) linear forwards;
+    }
+
+    .svc.is-enhanced:hover .svc-scope-timer,
+    .svc.is-enhanced:focus-within .svc-scope-timer {
+        animation-play-state: paused;
+    }
+
+    @keyframes svc-timer {
+        from { transform: scaleY(0); }
+        to { transform: scaleY(1); }
+    }
+
+    .svc.is-enhanced .svc-panels {
+        display: grid;
+        background-color: var(--card);
+        padding: 44px 48px;
+    }
+
+    .svc.is-enhanced .svc-panel {
+        grid-area: 1 / 1;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition:
+            opacity 0.45s var(--ease-smooth),
+            transform 0.45s var(--ease-smooth),
+            visibility 0.45s;
+    }
+
+    .svc.is-enhanced .svc-panel.is-active {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    /* Pins the link to the bottom of every panel, so the block reads as the
+       same shape at the same height whichever scope is showing. */
+    .svc.is-enhanced .svc-panel-link {
+        margin-top: auto;
+    }
+
+    .svc.is-enhanced .svc-facts {
+        margin-bottom: 36px;
+    }
+
+    /* The scope list already names the service. */
+    .svc.is-enhanced .svc-panel-title {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .svc.is-enhanced.is-running .svc-scope.is-active .svc-scope-timer {
+        animation: none;
+        transform: scaleY(1);
+    }
+
+    .svc.is-enhanced .svc-panel {
+        transition: none;
+    }
 }
 
 .sectors-cta {
@@ -733,7 +1051,7 @@ body {
    stays in one tonal family; inversion is saved for the closing CTA and
    footer, so going dark keeps meaning "you've reached the end". */
 .our-process-section {
-    padding: 120px 108px;
+    padding: 120px var(--pad-x);
     background-color: var(--color-surface);
 }
 
@@ -744,30 +1062,24 @@ body {
 .process-header {
     margin: 0 auto 88px;
     max-width: 900px;
+    text-align: center;
 }
 
-.process-kicker {
-    display: block;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--accent-deep);
-    margin-bottom: 12px;
-}
 
 .process-header h2 {
     font-family: var(--font-heading);
     font-size: 76px;
     letter-spacing: -0.76px;
     color: var(--color-text);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     line-height: 1;
 }
 
 .process-header p {
     font-size: 20px;
-    color: var(--color-text-muted);
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto;
 }
 
 /* The three steps read as one continuous timeline instead of three cards.
@@ -782,8 +1094,12 @@ body {
 .process-rail {
     list-style: none;
     margin: 0 auto;
-    padding: 0;
     max-width: 900px;
+    /* The steps sit left inside their block (the copy caps at 680px), so
+       centring the block still reads as left-of-centre. This nudges the
+       content, rail line included, back toward the optical centre without
+       widening the block: box-sizing is border-box. */
+    padding: 0 0 0 72px;
 }
 
 .rail-step {
@@ -960,6 +1276,10 @@ body {
 }
 
 @media (max-width: 1024px) {
+    .process-rail {
+        padding-left: 0;
+    }
+
     .rail-body {
         padding-bottom: 140px;
     }
@@ -979,7 +1299,7 @@ body {
 
 /* Case Study Section */
 .case-study-section {
-    padding: 120px 108px;
+    padding: 120px var(--pad-x);
     border-top: 1px solid #333;
     background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
     position: relative;
@@ -1268,7 +1588,7 @@ body {
 
 /* Featured Projects - keeping for projects page */
 .featured-projects {
-    padding: 80px 108px;
+    padding: 80px var(--pad-x);
     border-top: 1px solid #333;
 }
 
@@ -1437,7 +1757,7 @@ body {
 
 /* About Section */
 .about-section {
-    padding: 120px 108px;
+    padding: 120px var(--pad-x);
     background-color: var(--color-bg);
 }
 
@@ -1487,7 +1807,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    padding: 80px 108px;
+    padding: 80px var(--pad-x);
     border-top: 1px solid #333;
 }
 
@@ -1543,7 +1863,7 @@ body {
 /* Simple Contact Section */
 .contact-section-simple {
     padding: 0;
-    margin: 80px 108px;
+    margin: 80px var(--pad-x);
     position: relative;
     overflow: hidden;
 }
@@ -1776,14 +2096,7 @@ body {
         padding: 60px 32px;
     }
 
-    .sectors-layout {
-        grid-template-columns: 1fr;
-    }
 
-    .sectors-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
 
     .our-process-section {
         padding: 80px 32px;
@@ -2004,18 +2317,8 @@ body {
         padding: 40px 16px;
     }
 
-    .sectors-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
 
-    .sector-card {
-        padding: 24px;
-    }
 
-    .sector-card h3 {
-        font-size: 24px;
-    }
 
     .our-process-section {
         padding: 60px 16px;
@@ -2247,12 +2550,6 @@ body {
     }
 }
 
-.sector-card-line {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--muted);
-    margin: 0;
-}
 
 /* The shared 600px measure breaks this one-liner onto a second line; it is a
    single intro sentence, not a paragraph, so let it use the full width. */
@@ -2262,75 +2559,18 @@ body {
 
 /* Four cards left, the remaining three as a full-height pillar right, so the
    catalog reads as seven areas rather than four plus an afterthought. */
-.sectors-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: 24px;
-    align-items: stretch;
-}
 
-.sectors-rail {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--card);
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-    box-shadow: var(--shadow-card);
-    overflow: hidden;
-}
 
-/* Same treatment as .sector-card-line next to it: an uppercase accent kicker
-   reads as a badge inside a card and fights the Bebas titles below it. */
-.sectors-rail-label {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--color-text-muted);
-    padding: 24px 28px 16px;
-}
 
-/* flex: 1 splits the leftover height evenly, so the three rows stay aligned
-   with the 2x2 grid next to them at any card height. */
-.sectors-rail-item {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 20px 28px;
-    border-top: 1px solid var(--color-border);
-    text-decoration: none;
-    color: var(--color-text);
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
 
-.sectors-rail-item h3 {
-    font-family: var(--font-heading);
-    font-size: 22px;
-    letter-spacing: -0.22px;
-    line-height: 1.1;
-    color: inherit;
-}
 
-.sectors-rail-arrow {
-    flex-shrink: 0;
-    color: var(--color-text-muted);
-    transition: transform 0.2s ease, color 0.2s ease;
-}
 
-.sectors-rail-item:hover {
-    background-color: var(--color-bg);
-    color: var(--accent-deep);
-}
 
-.sectors-rail-item:hover .sectors-rail-arrow {
-    transform: translateX(4px);
-    color: var(--accent-deep);
-}
 
 /* Testimonials — paper-2, which also lifts the white quote cards off the
    background instead of leaving them to float on near-identical paper. */
 .testimonials-section {
-    padding: 120px 108px;
+    padding: 120px var(--pad-x);
     background-color: var(--color-surface);
 }
 
@@ -2395,7 +2635,6 @@ body {
 }
 /* Reveal-friendly transitions for cards: lets .reveal opacity + transform
    animate, while keeping hover lifts smooth. Placed last so it wins. */
-.sector-card,
 .testimonial-card {
     transition:
         transform 0.45s var(--ease-smooth),
