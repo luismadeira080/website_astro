@@ -278,10 +278,13 @@ import '../styles/tokens.css';
                 </div>
             </div>
             <div class="testimonial-card reveal">
-                <p class="testimonial-quote">"[PLACEHOLDER — client quote tied to a specific outcome]"</p>
+                <div class="testimonial-logo testimonial-logo--lg">
+                    <img src="/logos/hephaesnus.png" alt="Hephaesnus" width="225" height="159" loading="lazy">
+                </div>
+                <p class="testimonial-quote">"Luís set up a complete e-commerce operation for our flagship product: payments, tax-compliant invoicing, and logistics, all automated, running across five European markets. It's still our production platform today, and now we run it ourselves, intuitively."</p>
                 <div class="testimonial-author">
-                    <strong>[Client Name]</strong>
-                    <span>[Role, Company]</span>
+                    <strong>Henrique Bastos</strong>
+                    <span>Hephaesnus</span>
                 </div>
             </div>
             <div class="testimonial-card reveal">
@@ -305,7 +308,7 @@ import '../styles/tokens.css';
                 <h3>Two years in Venture Capital, evaluating business models across sectors.</h3>
             </div>
             <div class="about-description">
-                <p>That's the lens I bring to every project: understanding unit economics, figuring out what actually drives growth, and asking where the investment pays off before anything gets built.</p>
+                <p>Understanding unit economics and the real pain points still shapes my initial approach to every project, before building the solution.</p>
                 <a href="/about" class="text-link">MORE ABOUT ME</a>
             </div>
         </div>
@@ -2604,6 +2607,10 @@ body {
     display: flex;
     align-items: center;
     height: 30px;
+}
+
+.testimonial-logo--lg {
+    height: 46px;
 }
 
 .testimonial-logo img {
